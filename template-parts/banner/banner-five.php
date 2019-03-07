@@ -30,7 +30,7 @@ if( $banner_query->have_posts() ) {
                                 if( $count < $item_no ) {
                                     ?>
                                     <div class="item">
-                                        <div class="post_thumb lazy-thumb lazyloading" style="background-image: url(<?php esc_url( the_post_thumbnail_url( 'full' ) ); ?>)">
+                                        <div class="<?php cream_magazine_thumbnail_class(); ?>" style="background-image: url(<?php esc_url( the_post_thumbnail_url( 'full' ) ); ?>)">
                                             <div class="post-holder">
                                                 <?php cream_magazine_post_categories_meta( $show_categories_meta ); ?>
                                                 <div class="post_title">
@@ -61,7 +61,7 @@ if( $banner_query->have_posts() ) {
                                     ?>
                                     <div class="col small_posts">
                                         <article class="card">
-                                            <div class="post_thumb lazy-thumb lazyloading" style="background-image: url(<?php esc_url( the_post_thumbnail_url( 'full' ) ); ?>);">
+                                            <div class="<?php cream_magazine_thumbnail_class(); ?>" style="background-image: url(<?php esc_url( the_post_thumbnail_url( 'full' ) ); ?>);">
                                                 <div class="post-holder">
                                                     <?php cream_magazine_post_categories_meta( $show_categories_meta ); ?>
                                                     <div class="post_title">
