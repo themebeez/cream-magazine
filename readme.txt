@@ -12,7 +12,7 @@ Tags: custom-background, custom-header, custom-logo, custom-menu, featured-image
 
 == Description ==
 
-Cream Magazine is a news & magazine WordPress theme with a clean & modern design suitable for everyone who wish to share their stories, publish a breaking daily news or write on different topics. Everything in Cream Magazine is very easy to deal with, after assigning a front-page one can fully get started to build a website though WordPress Live Customizer.Cream magazine is build taking SEO, Speed & Responsive in mind. Build-in features like lazy load for images has been implemented to make cream mag load faster & extra library files have been bundled to minimize  HTTP requests.
+Cream Magazine is a news & magazine WordPress theme with a clean & modern design suitable for everyone who wish to share their stories, publish a breaking daily news or write on different topics. Everything in Cream Magazine is very easy to deal with, after assigning a front-page one can fully get started to build a website though WordPress Live Customizer.Cream magazine is build taking SEO, Speed & Responsive in mind. Build-in features like lazy load for images has been implemented to make cream mag load faster & extra library files have been bundled to minimize  HTTP requests. For more information go to https://themebeez.com/themes/cream-magazine/
 
 
 == License ==
@@ -104,6 +104,13 @@ Cream Magazine includes support for Contact Form 7 and Woocommerce.
 
 
 == Changelog ==
+
+
+= Version 1.0.3 - 07 March, 2019 =
+
+- Added missing assets/src/js files
+- Updated langauge pot file
+
 
 = Version 1.0.2 - 07 March, 2019 =
 
