@@ -241,6 +241,16 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 				) 
 			);
 
+
+			// Site Image Options
+			$wp_customize->add_section( 
+				'cream_magazine_site_image_options', 
+				array(
+					'title'			=> esc_html__( 'Site Image', 'cream-magazine' ),
+					'panel'			=> 'cream_magazine_theme_customization',
+				) 
+			);
+
 			// Theme Color
 			$wp_customize->add_section( 
 				'cream_magazine_theme_color_options', 
@@ -617,6 +627,15 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 				) 
 			);
 
+			// Post Single Enable Featured Image
+			$wp_customize->add_setting( 
+				'cream_magazine_enable_post_single_featured_image', 
+				array(
+					'sanitize_callback'	=> 'wp_validate_boolean',
+					'default'			=> $defaults['cream_magazine_enable_post_single_featured_image'],
+				) 
+			);
+
 			// Post Single Enable Author Section
 			$wp_customize->add_setting( 
 				'cream_magazine_enable_author_section', 
@@ -839,6 +858,16 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_sticky_sidebar'],
+				) 
+			);
+
+
+			// Enable Lazy Load
+			$wp_customize->add_setting( 
+				'cream_magazine_enable_lazy_load', 
+				array(
+					'sanitize_callback'	=> 'wp_validate_boolean',
+					'default'			=> $defaults['cream_magazine_enable_lazy_load'],
 				) 
 			);
 
@@ -1295,6 +1324,16 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 				) 
 			);
 
+			// Post Single Enable Featured Image
+			$wp_customize->add_control( 
+				'cream_magazine_enable_post_single_featured_image', 
+				array(
+					'label'				=> esc_html__( 'Enable Featured Image', 'cream-magazine' ),
+					'section'			=> 'cream_magazine_single_post_options',
+					'type'				=> 'checkbox' 
+				) 
+			);
+
 			// Post Single Enable Author Section
 			$wp_customize->add_control( 
 				'cream_magazine_enable_author_section', 
@@ -1537,6 +1576,17 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 				array(
 					'label'			=> esc_html__( 'Enable Sticky Sidebar', 'cream-magazine' ),
 					'section'		=> 'cream_magazine_sidebar_options',
+					'type'			=> 'checkbox',
+				) 
+			);
+
+
+			// Enable Lazy Load
+			$wp_customize->add_control(
+				'cream_magazine_enable_lazy_load', 
+				array(
+					'label'			=> esc_html__( 'Enable Lazy Load', 'cream-magazine' ),
+					'section'		=> 'cream_magazine_site_image_options',
 					'type'			=> 'checkbox',
 				) 
 			);

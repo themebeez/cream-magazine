@@ -270,9 +270,9 @@ class Cream_Magazine {
 		// Load main widget class
 		require get_template_directory() . '/inc/widget/class-cream-magazine-widget-init.php';
 		// Load breadcrumb class
-		require get_template_directory() . '/inc/breadcrumbs.php';
+		require get_template_directory() . '/third-party/breadcrumbs.php';
 		// Load class for plugin recommendation
-		require get_template_directory() . '/inc/class-tgm-plugin-activation.php';
+		require get_template_directory() . '/third-party/class-tgm-plugin-activation.php';
 		// Load woocommerce
 		if( class_exists( 'WooCommerce' ) ) {
 			require get_template_directory() . '/inc/woocommerce/class-cream-magazine-woocommerce.php';

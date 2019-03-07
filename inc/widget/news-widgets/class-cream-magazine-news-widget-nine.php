@@ -67,18 +67,17 @@ class Cream_Magazine_News_Widget_Nine extends WP_Widget {
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="left-container">
                                         <article class="card">
-                                            <div class="post_thumb imghover lazy-thumb lazyloading">
+                                            <div class="<?php cream_magazine_thumbnail_class(); ?>">
                                                 <?php
                                                 if( has_post_thumbnail() ) {
-                                                    $thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'cream-magazine-thumbnail-3' );
-                                                    ?>
-                                                    <a href="<?php the_permalink(); ?>">
-                                                        <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
-                                                        <noscript>
-                                                            <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
-                                                        </noscript>
-                                                    </a>
-                                                    <?php
+                                                    
+                                                    $lazy_thumbnail = cream_magazine_get_option( 'cream_magazine_enable_lazy_load' );
+
+                                                    if( $lazy_thumbnail == true ) {
+                                                        cream_magazine_lazy_thumbnail( 'cream-magazine-thumbnail-3' );
+                                                    } else {
+                                                        cream_magazine_normal_thumbnail( 'cream-magazine-thumbnail-3' );
+                                                    }
                                                 }
                                                 ?>
                                             </div><!-- .post_thumb -->
@@ -115,7 +114,7 @@ class Cream_Magazine_News_Widget_Nine extends WP_Widget {
                                                 <div class="col-md-12">
                                                     <div class="row clearfix">
                                                         <div class="col-md-5 col-sm-5 col-xs-4">
-                                                            <div class="post_thumb imghover lazy-thumb lazyloading">
+                                                            <div class="<?php cream_magazine_thumbnail_class(); ?>">
                                                                 <?php
                                                                 if( has_post_thumbnail() ) {
                                                                     $thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'cream-magazine-thumbnail-3' );

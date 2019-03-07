@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Cream Magazine 1.0.1\n"
+"Project-Id-Version: Cream Magazine 1.0.2\n"
 "Report-Msgid-Bugs-To: https://themebeez.com/support\n"
-"POT-Creation-Date: 2019-01-14 17:21:46+00:00\n"
+"POT-Creation-Date: 2019-03-07 10:29:44+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,47 +43,6 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: inc/breadcrumbs.php:264
-msgid "Browse:"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Home"
-msgstr ""
-
-#: inc/breadcrumbs.php:267
-msgid "404 Not Found"
-msgstr ""
-
-#: inc/breadcrumbs.php:268
-msgid "Archives"
-msgstr ""
-
-#: inc/breadcrumbs.php:270
-#. Translators: %s is the search query.
-msgid "Search results for: %s"
-msgstr ""
-
-#: inc/breadcrumbs.php:272
-#. Translators: %s is the page number.
-msgid "Page %s"
-msgstr ""
-
-#: inc/breadcrumbs.php:274
-#. Translators: %s is the page number.
-msgid "Comment Page %s"
-msgstr ""
-
-#: inc/breadcrumbs.php:276
-#. Translators: Minute archive title. %s is the minute time format.
-msgid "Minute %s"
-msgstr ""
-
-#: inc/breadcrumbs.php:278
-#. Translators: Weekly archive title. %s is the week date format.
-msgid "Week %s"
-msgstr ""
-
 #: inc/class-cream-magazine.php:71
 msgid "Primary Menu"
 msgstr ""
@@ -102,360 +61,6 @@ msgstr ""
 
 #: inc/class-cream-magazine.php:334
 msgid "Search"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:334
-msgid "Install Required Plugins"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:335
-msgid "Install Plugins"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:337
-#. translators: %s: plugin name.
-msgid "Installing Plugin: %s"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:339
-#. translators: %s: plugin name.
-msgid "Updating Plugin: %s"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:340
-msgid "Something went wrong with the plugin API."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:377
-#. translators: 1: plugin name(s).
-msgid "Begin installing plugin"
-msgid_plural "Begin installing plugins"
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/class-tgm-plugin-activation.php:382
-msgid "Begin updating plugin"
-msgid_plural "Begin updating plugins"
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/class-tgm-plugin-activation.php:387
-msgid "Begin activating plugin"
-msgid_plural "Begin activating plugins"
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/class-tgm-plugin-activation.php:392
-msgid "Return to Required Plugins Installer"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:393
-#: inc/class-tgm-plugin-activation.php:923
-#: inc/class-tgm-plugin-activation.php:2647
-#: inc/class-tgm-plugin-activation.php:3696
-msgid "Return to the Dashboard"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:394
-#: inc/class-tgm-plugin-activation.php:3275
-msgid "Plugin activated successfully."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:395
-#: inc/class-tgm-plugin-activation.php:3068
-msgid "The following plugin was activated successfully:"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:397
-#. translators: 1: plugin name.
-msgid "No action taken. Plugin %1$s was already active."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:399
-#. translators: 1: plugin name.
-msgid ""
-"Plugin not activated. A higher version of %s is needed for this theme. "
-"Please update the plugin."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:401
-#. translators: 1: dashboard link.
-msgid "All plugins installed and activated successfully. %1$s"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:402
-msgid "Dismiss this notice"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:403
-msgid ""
-"There are one or more required or recommended plugins to install, update or "
-"activate."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:404
-msgid "Please contact the administrator of this site for help."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:610
-msgid "This plugin needs to be updated to be compatible with your theme."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:611
-msgid "Update Required"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:728
-msgid "Set the parent_slug config variable instead."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:1030
-msgid ""
-"The remote plugin package does not contain a folder with the desired slug "
-"and renaming did not work."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:1030
-#: inc/class-tgm-plugin-activation.php:1033
-msgid ""
-"Please contact the plugin provider and ask them to package their plugin "
-"according to the WordPress guidelines."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:1033
-msgid ""
-"The remote plugin package consists of more than one file, but the files are "
-"not packaged in a folder."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2078
-#. translators: %s: version number
-msgid "TGMPA v%s"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2387
-msgid "Required"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2390
-msgid "Recommended"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2406
-msgid "WordPress Repository"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2409
-msgid "External Source"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2412
-msgid "Pre-Packaged"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2429
-msgid "Not Installed"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2433
-msgid "Installed But Not Activated"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2435
-msgid "Active"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2441
-msgid "Required Update not Available"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2444
-msgid "Requires Update"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2447
-msgid "Update recommended"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2506
-#. translators: 1: number of plugins.
-msgid "To Install <span class=\"count\">(%s)</span>"
-msgid_plural "To Install <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/class-tgm-plugin-activation.php:2510
-#. translators: 1: number of plugins.
-msgid "Update Available <span class=\"count\">(%s)</span>"
-msgid_plural "Update Available <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/class-tgm-plugin-activation.php:2514
-#. translators: 1: number of plugins.
-msgid "To Activate <span class=\"count\">(%s)</span>"
-msgid_plural "To Activate <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/class-tgm-plugin-activation.php:2604
-msgid "Installed version:"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2612
-msgid "Minimum required version:"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2624
-msgid "Available version:"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2647
-msgid "No plugins to install, update or activate."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2661
-msgid "Plugin"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2662
-msgid "Source"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2663
-msgid "Type"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2667
-msgid "Version"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2668
-msgid "Status"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2717
-#. translators: %2$s: plugin name in screen reader markup
-msgid "Install %2$s"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2722
-#. translators: %2$s: plugin name in screen reader markup
-msgid "Update %2$s"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2728
-#. translators: %2$s: plugin name in screen reader markup
-msgid "Activate %2$s"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2800
-msgid "Upgrade message from the plugin author:"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2833
-msgid "Install"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2839
-msgid "Update"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2842
-msgid "Activate"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2873
-msgid "No plugins were selected to be installed. No action taken."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2875
-msgid "No plugins were selected to be updated. No action taken."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2916
-msgid "No plugins are available to be installed at this time."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2918
-msgid "No plugins are available to be updated at this time."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3024
-msgid "No plugins were selected to be activated. No action taken."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3050
-msgid "No plugins are available to be activated at this time."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3274
-msgid "Plugin activation failed."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3614
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3617
-#. translators: 1: plugin name, 2: error message.
-msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3619
-#. translators: 1: plugin name.
-msgid "The installation of %1$s failed."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3623
-msgid ""
-"The installation and activation process is starting. This process may take "
-"a while on some hosts, so please be patient."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3625
-#. translators: 1: plugin name.
-msgid "%1$s installed and activated successfully."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3625
-#: inc/class-tgm-plugin-activation.php:3633
-msgid "Show Details"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3625
-#: inc/class-tgm-plugin-activation.php:3633
-msgid "Hide Details"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3626
-msgid "All installations and activations have been completed."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3628
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3631
-msgid ""
-"The installation process is starting. This process may take a while on some "
-"hosts, so please be patient."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3633
-#. translators: 1: plugin name.
-msgid "%1$s installed successfully."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3634
-msgid "All installations have been completed."
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:3636
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #: inc/customizer/class-cream-magazine-customize.php:62
@@ -576,201 +181,213 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:248
+#: inc/customizer/class-cream-magazine-customize.php:249
+msgid "Site Image"
+msgstr ""
+
+#: inc/customizer/class-cream-magazine-customize.php:258
 msgid "Theme Color"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:259
-#: inc/customizer/class-cream-magazine-customize.php:1563
+#: inc/customizer/class-cream-magazine-customize.php:269
+#: inc/customizer/class-cream-magazine-customize.php:1613
 msgid "Woocommerce Sidebar Position"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:886
+#: inc/customizer/class-cream-magazine-customize.php:915
 msgid "Select Site Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:890
+#: inc/customizer/class-cream-magazine-customize.php:919
 msgid "Boxed Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:891
+#: inc/customizer/class-cream-magazine-customize.php:920
 msgid "Fullwidth Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:900
+#: inc/customizer/class-cream-magazine-customize.php:929
 msgid "Enable Ticker News"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:901
+#: inc/customizer/class-cream-magazine-customize.php:930
 msgid ""
 "This option will be effective only for the ticker news section that is "
 "displayed below the header section."
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:911
+#: inc/customizer/class-cream-magazine-customize.php:940
 msgid "Ticker News: Section Title"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:923
+#: inc/customizer/class-cream-magazine-customize.php:952
 msgid "Ticker News: Categories"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:935
+#: inc/customizer/class-cream-magazine-customize.php:964
 msgid "Ticker News: Posts Number"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:946
+#: inc/customizer/class-cream-magazine-customize.php:975
 msgid "Enable Banner/Slider"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:956
-#: inc/customizer/class-cream-magazine-customize.php:1099
-#: inc/customizer/class-cream-magazine-customize.php:1153
-#: inc/customizer/class-cream-magazine-customize.php:1207
-#: inc/customizer/class-cream-magazine-customize.php:1262
-#: inc/customizer/class-cream-magazine-customize.php:1344
-#: inc/customizer/class-cream-magazine-customize.php:1388
+#: inc/customizer/class-cream-magazine-customize.php:985
+#: inc/customizer/class-cream-magazine-customize.php:1128
+#: inc/customizer/class-cream-magazine-customize.php:1182
+#: inc/customizer/class-cream-magazine-customize.php:1236
+#: inc/customizer/class-cream-magazine-customize.php:1291
+#: inc/customizer/class-cream-magazine-customize.php:1383
+#: inc/customizer/class-cream-magazine-customize.php:1427
 msgid "Enable Post Author Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:966
-#: inc/customizer/class-cream-magazine-customize.php:1109
-#: inc/customizer/class-cream-magazine-customize.php:1163
-#: inc/customizer/class-cream-magazine-customize.php:1217
-#: inc/customizer/class-cream-magazine-customize.php:1272
-#: inc/customizer/class-cream-magazine-customize.php:1355
-#: inc/customizer/class-cream-magazine-customize.php:1398
+#: inc/customizer/class-cream-magazine-customize.php:995
+#: inc/customizer/class-cream-magazine-customize.php:1138
+#: inc/customizer/class-cream-magazine-customize.php:1192
+#: inc/customizer/class-cream-magazine-customize.php:1246
+#: inc/customizer/class-cream-magazine-customize.php:1301
+#: inc/customizer/class-cream-magazine-customize.php:1394
+#: inc/customizer/class-cream-magazine-customize.php:1437
 msgid "Enable Posted Date Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:976
-#: inc/customizer/class-cream-magazine-customize.php:1119
-#: inc/customizer/class-cream-magazine-customize.php:1173
-#: inc/customizer/class-cream-magazine-customize.php:1227
-#: inc/customizer/class-cream-magazine-customize.php:1282
-#: inc/customizer/class-cream-magazine-customize.php:1366
-#: inc/customizer/class-cream-magazine-customize.php:1408
+#: inc/customizer/class-cream-magazine-customize.php:1005
+#: inc/customizer/class-cream-magazine-customize.php:1148
+#: inc/customizer/class-cream-magazine-customize.php:1202
+#: inc/customizer/class-cream-magazine-customize.php:1256
+#: inc/customizer/class-cream-magazine-customize.php:1311
+#: inc/customizer/class-cream-magazine-customize.php:1405
+#: inc/customizer/class-cream-magazine-customize.php:1447
 msgid "Enable Post Comments Number Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:986
-#: inc/customizer/class-cream-magazine-customize.php:1129
-#: inc/customizer/class-cream-magazine-customize.php:1183
-#: inc/customizer/class-cream-magazine-customize.php:1237
-#: inc/customizer/class-cream-magazine-customize.php:1377
-#: inc/customizer/class-cream-magazine-customize.php:1418
+#: inc/customizer/class-cream-magazine-customize.php:1015
+#: inc/customizer/class-cream-magazine-customize.php:1158
+#: inc/customizer/class-cream-magazine-customize.php:1212
+#: inc/customizer/class-cream-magazine-customize.php:1266
+#: inc/customizer/class-cream-magazine-customize.php:1416
+#: inc/customizer/class-cream-magazine-customize.php:1457
 msgid "Enable Post Categories Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:997
+#: inc/customizer/class-cream-magazine-customize.php:1026
 msgid "Banner/Slider Post Categories"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1009
+#: inc/customizer/class-cream-magazine-customize.php:1038
 msgid "Banner/Slider Posts Number"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1022
+#: inc/customizer/class-cream-magazine-customize.php:1051
 #: inc/metabox/class-cream-magazine-post-meta.php:40
 msgid "Sidebar Position"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1034
+#: inc/customizer/class-cream-magazine-customize.php:1063
 msgid "Enable Top Header"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1045
+#: inc/customizer/class-cream-magazine-customize.php:1074
 msgid "Enable Home Button"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1055
+#: inc/customizer/class-cream-magazine-customize.php:1084
 msgid "Enable Search Button"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1067
+#: inc/customizer/class-cream-magazine-customize.php:1096
 msgid "Select Header Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1079
+#: inc/customizer/class-cream-magazine-customize.php:1108
 msgid "Enable Scroll Top Button"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1089
+#: inc/customizer/class-cream-magazine-customize.php:1118
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1141
-#: inc/customizer/class-cream-magazine-customize.php:1195
-#: inc/customizer/class-cream-magazine-customize.php:1249
+#: inc/customizer/class-cream-magazine-customize.php:1170
+#: inc/customizer/class-cream-magazine-customize.php:1224
+#: inc/customizer/class-cream-magazine-customize.php:1278
 msgid "Select Sidebar Position"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1292
-#: inc/customizer/class-cream-magazine-customize.php:1428
+#: inc/customizer/class-cream-magazine-customize.php:1321
+#: inc/customizer/class-cream-magazine-customize.php:1467
 msgid "Enable Post Tags Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1302
+#: inc/customizer/class-cream-magazine-customize.php:1331
+msgid "Enable Featured Image"
+msgstr ""
+
+#: inc/customizer/class-cream-magazine-customize.php:1341
 msgid "Enable Author Section"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1312
+#: inc/customizer/class-cream-magazine-customize.php:1351
 msgid "Enable Related Posts Section"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1322
+#: inc/customizer/class-cream-magazine-customize.php:1361
 msgid "Related Posts Section Title"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1333
+#: inc/customizer/class-cream-magazine-customize.php:1372
 msgid "Related Section Posts Number"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1438
+#: inc/customizer/class-cream-magazine-customize.php:1477
 msgid "Excerpt Length"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1448
+#: inc/customizer/class-cream-magazine-customize.php:1487
 msgid "Facebook Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1458
+#: inc/customizer/class-cream-magazine-customize.php:1497
 msgid "Twitter Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1468
+#: inc/customizer/class-cream-magazine-customize.php:1507
 msgid "Instagram Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1478
+#: inc/customizer/class-cream-magazine-customize.php:1517
 msgid "Youtube Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1488
+#: inc/customizer/class-cream-magazine-customize.php:1527
 msgid "Google Plus Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1498
+#: inc/customizer/class-cream-magazine-customize.php:1537
 msgid "VK Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1508
+#: inc/customizer/class-cream-magazine-customize.php:1547
 msgid "Linkedin Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1518
+#: inc/customizer/class-cream-magazine-customize.php:1557
 msgid "Vimeo Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1528
+#: inc/customizer/class-cream-magazine-customize.php:1567
 msgid "Enable Breadcrumb"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1538
+#: inc/customizer/class-cream-magazine-customize.php:1577
 msgid "Enable Sticky Sidebar"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1550
+#: inc/customizer/class-cream-magazine-customize.php:1588
+msgid "Enable Lazy Load"
+msgstr ""
+
+#: inc/customizer/class-cream-magazine-customize.php:1600
 msgid "Primary Theme Color"
 msgstr ""
 
@@ -778,7 +395,7 @@ msgstr ""
 msgid "Breaking News"
 msgstr ""
 
-#: inc/helper-functions.php:333
+#: inc/helper-functions.php:357
 msgid "Themebeez Toolkit"
 msgstr ""
 
@@ -797,22 +414,17 @@ msgstr ""
 #: inc/metabox/class-cream-magazine-post-meta.php:75
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:136
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:141
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:194
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:199
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:185
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:190
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:191
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:196
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:151
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:156
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:147
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:152
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:193
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:198
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:183
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:188
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:189
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:194
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:150
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:155
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:146
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:151
 msgid "selected"
-msgstr ""
-
-#: inc/theme-functions.php:183 inc/theme-functions.php:210
-#. translators: 1: list of categories.
-msgid " %1$s"
 msgstr ""
 
 #: inc/theme-hooks.php:180
@@ -933,49 +545,49 @@ msgid "Displays posts of selected category."
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:120
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:178
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:169
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:175
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:135
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:131
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:99
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:125
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:177
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:167
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:173
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:134
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:130
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:97
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:124
 msgid "Title"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:126
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:136
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:184
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:194
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:185
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:147
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:183
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:193
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:183
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:146
 msgid "Select Category"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:136
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:194
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:185
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:191
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:151
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:147
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:193
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:183
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:189
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:150
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:146
 msgid "none"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:147
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:205
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:196
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:202
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:162
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:158
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:204
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:194
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:200
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:161
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:157
 msgid "If no category is selected, then recent posts will be displayed."
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:152
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:210
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:201
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:207
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:167
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:163
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:209
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:199
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:205
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:166
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:162
 msgid "No of Posts"
 msgstr ""
 
@@ -983,66 +595,66 @@ msgstr ""
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:166
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:173
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:180
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:217
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:224
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:231
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:238
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:208
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:215
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:222
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:229
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:214
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:221
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:228
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:235
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:174
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:181
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:188
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:170
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:177
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:184
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:191
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:163
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:170
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:177
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:216
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:223
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:230
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:237
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:206
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:213
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:220
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:227
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:212
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:219
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:226
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:233
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:173
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:180
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:187
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:169
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:176
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:183
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:190
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:162
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:169
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:176
 msgid "checked"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:160
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:218
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:209
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:215
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:171
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:217
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:207
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:213
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:170
 msgid "Show Post Categories"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:167
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:225
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:216
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:222
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:175
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:178
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:164
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:224
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:214
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:220
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:174
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:177
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:163
 msgid "Show Post Author"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:174
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:232
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:223
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:229
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:182
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:185
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:171
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:231
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:221
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:227
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:181
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:184
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:170
 msgid "Show Posted Date"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:181
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:239
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:230
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:236
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:189
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:192
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:178
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:238
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:228
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:234
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:188
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:191
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:177
 msgid "Show Post Comments Number"
 msgstr ""
 
@@ -1054,10 +666,10 @@ msgstr ""
 msgid "CM Full: News Widget One"
 msgstr ""
 
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:175
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:181
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:141
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:137
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:173
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:179
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:140
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:136
 msgid "Select Category: "
 msgstr ""
 
@@ -1065,8 +677,8 @@ msgstr ""
 msgid "CM Half: News Widget One"
 msgstr ""
 
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:191
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:151
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:189
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:150
 msgid "Select Categories"
 msgstr ""
 
@@ -1086,15 +698,15 @@ msgstr ""
 msgid "Displays Brief Author Description."
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:105
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:103
 msgid "Author Page"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:112
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:110
 msgid "&mdash; Select Page &mdash;"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:120
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:118
 msgid "Author Link Title"
 msgstr ""
 
@@ -1106,19 +718,19 @@ msgstr ""
 msgid "Displays Recent, Most Commented or Editor Picked Posts."
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:132
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:131
 msgid "Type of Posts:"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:137
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:136
 msgid "Recent Posts"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:138
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:137
 msgid "Most Commented"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:156
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:155
 msgid "No of Popular Posts"
 msgstr ""
 
@@ -1215,13 +827,408 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:22 template-parts/content-single.php:27
+#: template-parts/content-page.php:22 template-parts/content-single.php:32
 msgid "Pages:"
 msgstr ""
 
 #: template-parts/content-page.php:30
 #. translators: %s: Name of current post. Only visible to screen readers
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: third-party/breadcrumbs.php:264
+msgid "Browse:"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Home"
+msgstr ""
+
+#: third-party/breadcrumbs.php:267
+msgid "404 Not Found"
+msgstr ""
+
+#: third-party/breadcrumbs.php:268
+msgid "Archives"
+msgstr ""
+
+#: third-party/breadcrumbs.php:270
+#. Translators: %s is the search query.
+msgid "Search results for: %s"
+msgstr ""
+
+#: third-party/breadcrumbs.php:272
+#. Translators: %s is the page number.
+msgid "Page %s"
+msgstr ""
+
+#: third-party/breadcrumbs.php:274
+#. Translators: %s is the page number.
+msgid "Comment Page %s"
+msgstr ""
+
+#: third-party/breadcrumbs.php:276
+#. Translators: Minute archive title. %s is the minute time format.
+msgid "Minute %s"
+msgstr ""
+
+#: third-party/breadcrumbs.php:278
+#. Translators: Weekly archive title. %s is the week date format.
+msgid "Week %s"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:337
+#. translators: %s: plugin name.
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:339
+#. translators: %s: plugin name.
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:377
+#. translators: 1: plugin name(s).
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: third-party/class-tgm-plugin-activation.php:382
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: third-party/class-tgm-plugin-activation.php:387
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: third-party/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:393
+#: third-party/class-tgm-plugin-activation.php:923
+#: third-party/class-tgm-plugin-activation.php:2647
+#: third-party/class-tgm-plugin-activation.php:3696
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:394
+#: third-party/class-tgm-plugin-activation.php:3275
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:395
+#: third-party/class-tgm-plugin-activation.php:3068
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:397
+#. translators: 1: plugin name.
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:399
+#. translators: 1: plugin name.
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:401
+#. translators: 1: dashboard link.
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:610
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:611
+msgid "Update Required"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:728
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:1030
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:1030
+#: third-party/class-tgm-plugin-activation.php:1033
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:1033
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2078
+#. translators: %s: version number
+msgid "TGMPA v%s"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2387
+msgid "Required"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2390
+msgid "Recommended"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2406
+msgid "WordPress Repository"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2409
+msgid "External Source"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2412
+msgid "Pre-Packaged"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2429
+msgid "Not Installed"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2433
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2435
+msgid "Active"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2441
+msgid "Required Update not Available"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2444
+msgid "Requires Update"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2447
+msgid "Update recommended"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2506
+#. translators: 1: number of plugins.
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: third-party/class-tgm-plugin-activation.php:2510
+#. translators: 1: number of plugins.
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: third-party/class-tgm-plugin-activation.php:2514
+#. translators: 1: number of plugins.
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: third-party/class-tgm-plugin-activation.php:2604
+msgid "Installed version:"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2612
+msgid "Minimum required version:"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2624
+msgid "Available version:"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2647
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2661
+msgid "Plugin"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2662
+msgid "Source"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2663
+msgid "Type"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2667
+msgid "Version"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2668
+msgid "Status"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2717
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Install %2$s"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2722
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Update %2$s"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2728
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Activate %2$s"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2800
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2833
+msgid "Install"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2839
+msgid "Update"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2842
+msgid "Activate"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2873
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2875
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2916
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2918
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3024
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3050
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3274
+msgid "Plugin activation failed."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3614
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3617
+#. translators: 1: plugin name, 2: error message.
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3619
+#. translators: 1: plugin name.
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3623
+msgid ""
+"The installation and activation process is starting. This process may take "
+"a while on some hosts, so please be patient."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3625
+#. translators: 1: plugin name.
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3625
+#: third-party/class-tgm-plugin-activation.php:3633
+msgid "Show Details"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3625
+#: third-party/class-tgm-plugin-activation.php:3633
+msgid "Hide Details"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3626
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3628
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3631
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3633
+#. translators: 1: plugin name.
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3634
+msgid "All installations have been completed."
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:3636
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #. Theme Name of the plugin/theme
@@ -1260,85 +1267,19 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/breadcrumbs.php:265
-msgctxt "breadcrumbs aria label"
-msgid "Breadcrumbs"
-msgstr ""
-
-#: inc/breadcrumbs.php:738
-msgctxt "minute and hour archives time format"
-msgid "g:i a"
-msgstr ""
-
-#: inc/breadcrumbs.php:755
-msgctxt "minute archives time format"
-msgid "i"
-msgstr ""
-
-#: inc/breadcrumbs.php:772
-msgctxt "hour archives time format"
-msgid "g a"
-msgstr ""
-
-#: inc/breadcrumbs.php:788 inc/breadcrumbs.php:817 inc/breadcrumbs.php:844
-#: inc/breadcrumbs.php:871 inc/breadcrumbs.php:1211
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-#: inc/breadcrumbs.php:789 inc/breadcrumbs.php:845 inc/breadcrumbs.php:1215
-msgctxt "monthly archives date format"
-msgid "F"
-msgstr ""
-
-#: inc/breadcrumbs.php:790 inc/breadcrumbs.php:1219
-msgctxt "daily archives date format"
-msgid "j"
-msgstr ""
-
-#: inc/breadcrumbs.php:818
-msgctxt "weekly archives date format"
-msgid "W"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:1217
-#: inc/class-tgm-plugin-activation.php:3064
-msgctxt "plugin A *and* plugin B"
-msgid "and"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2456
-#. translators: 1: install status, 2: update status
-msgctxt "Install/Update Status"
-msgid "%1$s, %2$s"
-msgstr ""
-
-#: inc/class-tgm-plugin-activation.php:2502
-#. translators: 1: number of plugins.
-msgctxt "plugins"
-msgid "All <span class=\"count\">(%s)</span>"
-msgid_plural "All <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/class-tgm-plugin-activation.php:2596
-msgctxt "as in: \"version nr unknown\""
-msgid "unknown"
-msgstr ""
-
-#: inc/helper-functions.php:166
+#: inc/helper-functions.php:169
 #. translators: If there are characters in your language that are not supported
 #. by Merriweather, translate this to 'off'. Do not translate into your own
 #. language.
-msgctxt "Roboto font: on or off"
+msgctxt "Ubuntu font: on or off"
 msgid "on"
 msgstr ""
 
-#: inc/helper-functions.php:173
+#: inc/helper-functions.php:176
 #. translators: If there are characters in your language that are not supported
 #. by Merriweather, translate this to 'off'. Do not translate into your own
 #. language.
-msgctxt "Poppins font: on or off"
+msgctxt "Muli font: on or off"
 msgid "on"
 msgstr ""
 
@@ -1353,4 +1294,72 @@ msgstr ""
 #. translators: %1$s: i tag open, %2$s: i tag close, %3$s: post date.
 msgctxt "post date"
 msgid "%1$s %2$s %3$s"
+msgstr ""
+
+#: third-party/breadcrumbs.php:265
+msgctxt "breadcrumbs aria label"
+msgid "Breadcrumbs"
+msgstr ""
+
+#: third-party/breadcrumbs.php:738
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr ""
+
+#: third-party/breadcrumbs.php:755
+msgctxt "minute archives time format"
+msgid "i"
+msgstr ""
+
+#: third-party/breadcrumbs.php:772
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr ""
+
+#: third-party/breadcrumbs.php:788 third-party/breadcrumbs.php:817
+#: third-party/breadcrumbs.php:844 third-party/breadcrumbs.php:871
+#: third-party/breadcrumbs.php:1211
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: third-party/breadcrumbs.php:789 third-party/breadcrumbs.php:845
+#: third-party/breadcrumbs.php:1215
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr ""
+
+#: third-party/breadcrumbs.php:790 third-party/breadcrumbs.php:1219
+msgctxt "daily archives date format"
+msgid "j"
+msgstr ""
+
+#: third-party/breadcrumbs.php:818
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:1217
+#: third-party/class-tgm-plugin-activation.php:3064
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2456
+#. translators: 1: install status, 2: update status
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: third-party/class-tgm-plugin-activation.php:2502
+#. translators: 1: number of plugins.
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: third-party/class-tgm-plugin-activation.php:2596
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
 msgstr ""

@@ -42,7 +42,7 @@ if( is_archive() ) {
 <div class="<?php echo esc_attr( $post_class ); ?>">
 	<article id="post-<?php the_ID(); ?>" <?php post_class('grid-post-holder'); ?> >
 	    <div class="card">
-	        <?php cream_magazine_post_thumbnail(); ?>
+            <?php cream_magazine_post_thumbnail(); ?>
 	        <div class="card_content">
        			<?php cream_magazine_post_categories_meta( $show_categories_meta ); ?>
                 <div class="post_title">

@@ -69,19 +69,18 @@ class Cream_Magazine_News_Widget_One extends WP_Widget {
                                 ?>
                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                     <article class="big-card">
-                                        <div class="post_thumb imghover lazy-thumb lazyloading">
+                                        <div class="<?php cream_magazine_thumbnail_class(); ?>">
                                             <?php
                                             if( has_post_thumbnail() ) {
-                                                $thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'cream-magazine-thumbnail-2' );
-                                                ?>
-                                                <a href="<?php the_permalink(); ?>">
-                                                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
-                                                    <noscript>
-                                                        <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
-                                                    </noscript>
-                                                </a>
-                                                <?php
-                                            } 
+                                                
+                                                $lazy_thumbnail = cream_magazine_get_option( 'cream_magazine_enable_lazy_load' );
+
+                                                if( $lazy_thumbnail == true ) {
+                                                    cream_magazine_lazy_thumbnail( 'cream-magazine-thumbnail-2' );
+                                                } else {
+                                                    cream_magazine_normal_thumbnail( 'cream-magazine-thumbnail-2' );
+                                                }
+                                            }
                                             ?>
                                             <div class="post-holder">
                                                 <?php cream_magazine_post_categories_meta( $show_categories_meta ); ?>
@@ -111,18 +110,17 @@ class Cream_Magazine_News_Widget_One extends WP_Widget {
                                 ?>
                                 <div class="col-md-3 col-sm-6 col-xs-12">
                                     <div class="small-card">
-                                        <div class="post_thumb imghover lazy-thumb lazyloading">
+                                        <div class="<?php cream_magazine_thumbnail_class(); ?>">
                                             <?php
                                             if( has_post_thumbnail() ) {
-                                                $thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'cream-magazine-thumbnail-2' );
-                                                ?>
-                                                <a href="<?php the_permalink(); ?>">
-                                                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
-                                                    <noscript>
-                                                        <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
-                                                    </noscript>
-                                                </a>
-                                                <?php
+                                                
+                                                $lazy_thumbnail = cream_magazine_get_option( 'cream_magazine_enable_lazy_load' );
+
+                                                if( $lazy_thumbnail == true ) {
+                                                    cream_magazine_lazy_thumbnail( 'cream-magazine-thumbnail-2' );
+                                                } else {
+                                                    cream_magazine_normal_thumbnail( 'cream-magazine-thumbnail-2' );
+                                                }
                                             }
                                             ?>
                                         </div><!-- .post_thumb -->
