@@ -72,7 +72,7 @@ class Cream_Magazine_News_Widget_Eleven extends WP_Widget {
                                 <?php 
                                 if( !empty( $thumbnail_url ) ) { 
                                     ?>
-                                    <div class="card lazy-thumb lazyloading" style="background-image: url( <?php echo esc_url( $thumbnail_url ); ?> )" >
+                                    <div class="card <?php cream_magazine_thumbnail_class(); ?>" style="background-image: url( <?php echo esc_url( $thumbnail_url ); ?> )" >
                                     <?php 
                                 } else { 
                                     ?>
