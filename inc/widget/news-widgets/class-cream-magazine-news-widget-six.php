@@ -127,7 +127,6 @@ class Cream_Magazine_News_Widget_Six extends WP_Widget {
                                                             }
                                                         }
                                                         ?>
-                                                        ?>
                                                     </div><!-- .post_thumb.imghover -->
                                                 </div><!-- .left_box -->
                                                 <div class="col-md-7 col-sm-7 col-xs-8">
