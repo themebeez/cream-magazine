@@ -2,12 +2,12 @@
 
 Contributors: themebeez
 Requires at least: 4.8.0
-Tested up to: 5.0.3
-Stable tag: 1.0.1
+Requires PHP: 5.4
+Tested up to: 5.1.0
+Stable tag: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, right-sidebar, theme-options, footer-widgets, left-sidebar, grid-layout
-
+Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, news, right-sidebar, theme-options, footer-widgets, left-sidebar, grid-layout
 
 
 == Description ==
@@ -15,12 +15,10 @@ Tags: custom-background, custom-header, custom-logo, custom-menu, featured-image
 Cream Magazine is a news & magazine WordPress theme with a clean & modern design suitable for everyone who wish to share their stories, publish a breaking daily news or write on different topics. Everything in Cream Magazine is very easy to deal with, after assigning a front-page one can fully get started to build a website though WordPress Live Customizer.Cream magazine is build taking SEO, Speed & Responsive in mind. Build-in features like lazy load for images has been implemented to make cream mag load faster & extra library files have been bundled to minimize  HTTP requests.
 
 
-
 == License ==
 
 Cream Magazine WordPress Theme, Copyright (C) 2018, themebeez.
 Cream Magazine is distributed under the terms of the GNU GPL
-
 
 
 == Credits ==
@@ -57,18 +55,38 @@ Cream Magazine is distributed under the terms of the GNU GPL
 
 * Choosen https://github.com/harvesthq/chosen, Copyright (c) 2011-2018 Harvest, [MIT](http://opensource.org/licenses/MIT)
 
+* Images Included, header_1.jpg, header_2.jpg, sidebar_left.jpg, sidebar_right.png, and sidebar_none.png, self created GPLv2 
 
-Images used in screenshot
-https://pxhere.com/en/photo/1183639 (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
-https://pxhere.com/en/photo/716424 (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
-https://pxhere.com/en/photo/767306 (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
-https://pxhere.com/en/photo/1417697 (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
-https://pxhere.com/en/photo/1133270 (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
-logo and advertisement banner, self created GPLv2
 
-Other Images  
-header_1.jpg, header_2.jpg, sidebar_left.jpg, sidebar_right, and sidebar_none, self created GPLv2 
+== Screenshot ==
 
+Hurdle race
+License: CC0 Public Domain (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
+Source: https://pxhere.com/en/photo/180869
+
+Baloon above lake
+License: CC0 Public Domain (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
+Source: https://pxhere.com/en/photo/31341
+
+Lady with scarf
+License: CC0 Public Domain (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
+Source: https://pxhere.com/en/photo/1389875
+
+People fixing race car
+License: CC0 Public Domain (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
+Source: https://pxhere.com/en/photo/918871
+
+Lady with hands on head
+License: CC0 Public Domain (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
+Source: https://pxhere.com/en/photo/1435765
+
+Wall background in advertisements
+License: CC0 Public Domain (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
+Source: https://pxhere.com/en/photo/675340
+
+
+logo and advertisement banner, self created
+License: GPLv2 (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
 
 == Installation ==
@@ -78,7 +96,6 @@ header_1.jpg, header_2.jpg, sidebar_left.jpg, sidebar_right, and sidebar_none, s
 3. Click Activate to use your new theme right away.
 
 
-
 == Frequently Asked Questions ==
 
 = Does this theme support any plugins? =
@@ -86,8 +103,15 @@ header_1.jpg, header_2.jpg, sidebar_left.jpg, sidebar_right, and sidebar_none, s
 Cream Magazine includes support for Contact Form 7 and Woocommerce.
 
 
-
 == Changelog ==
+
+= Version 1.0.2 - 07 March, 2019 =
+
+- readme.txt updated
+- screenshot.png has been changed
+- Added customizer option fields
+- Theme fonts changed
+- Minor CSS fixes
 
 = Version 1.0.1 - 10 January, 2019 =
 
@@ -98,4 +122,4 @@ Cream Magazine includes support for Contact Form 7 and Woocommerce.
 
 = Version 1.0.0 - 5 December, 2018 =
 
-- Inital Release 
+- Initial Release 

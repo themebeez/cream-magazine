@@ -44,22 +44,20 @@ class Cream_Magazine_Author_Widget extends WP_Widget {
                 while( $author->have_posts() ) : $author->the_post();
                     ?>
                     <div class="cm_author_widget">
-                        <?php
-                        $thumbnail_url = '';
-                        if( has_post_thumbnail() ) {
-                            $thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'cream-magazine-thumbnail-3' );
-                        }
-                        if( !empty(  $thumbnail_url)  ) {
-                            ?>
-                            <div class="author_thumb imghover lazy-thumb lazyloading">
-                                <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
-                                <noscript>
-                                    <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
-                                </noscript>
-                            </div><!-- .author_thumb -->
+                        <div class="author_thumb <?php cream_magazine_thumbnail_class(); ?>">
                             <?php
-                        }
-                        ?>
+                            if( has_post_thumbnail() ) {
+                                
+                                $lazy_thumbnail = cream_magazine_get_option( 'cream_magazine_enable_lazy_load' );
+
+                                if( $lazy_thumbnail == true ) {
+                                    cream_magazine_lazy_thumbnail( 'cream-magazine-thumbnail-3' );
+                                } else {
+                                    cream_magazine_normal_thumbnail( 'cream-magazine-thumbnail-3' );
+                                }
+                            }
+                            ?>
+                        </div><!-- .author_thumb -->
                         <div class="author_name">
                             <h4><?php the_title(); ?></h4>
                         </div><!-- .author_name -->

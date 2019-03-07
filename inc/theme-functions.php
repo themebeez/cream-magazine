@@ -178,9 +178,11 @@ if( ! function_exists( 'cream_magazine_post_categories_meta' ) ) {
 				$categories_list = get_the_category_list();
 
 				if ( $categories_list ) {
-
-					/* translators: 1: list of categories. */
-					printf( '<div class="entry_cats">' . esc_html__( ' %1$s', 'cream-magazine' ) . '</div>', $categories_list ); // WPCS: XSS OK.
+					?>
+					<div class="entry_cats">
+						<?php echo wp_kses_post( $categories_list ); // WPCS: XSS OK. ?>
+					</div><!-- .entry_cats -->
+					<?php
 				}
 			}
 		}
@@ -205,9 +207,11 @@ if( ! function_exists( 'cream_magazine_post_tags_meta' ) ) {
 				$tags_list = get_the_tag_list();
 
 				if ( $tags_list ) {
-
-					/* translators: 1: list of categories. */
-					printf( '<div class="post_tags">' . esc_html__( ' %1$s', 'cream-magazine' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+					?>
+					<div class="post_tags">
+						<?php echo wp_kses_post( $tags_list ); // WPCS: XSS OK. ?>
+					</div><!-- .post_tags -->
+					<?php
 				}
 			}
 		}
@@ -274,16 +278,17 @@ if ( ! function_exists( 'cream_magazine_post_thumbnail' ) ) :
 			}
 
 			if( has_post_thumbnail() ) {
-			
-			$thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), $thumbnail_size );
+
+				$lazy_thumbnail = cream_magazine_get_option( 'cream_magazine_enable_lazy_load' );
 				?>
-				<div class="post_thumb imghover lazy-thumb lazyloading">
-				 	<a href="<?php the_permalink(); ?>">
-					 	<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
-					 	<noscript>
-					 		<img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
-					 	</noscript>
-				 	</a>
+				<div class="<?php cream_magazine_thumbnail_class(); ?>">
+					<?php 
+					if( $lazy_thumbnail == true ) {
+						cream_magazine_lazy_thumbnail( $thumbnail_size );
+					} else {
+						cream_magazine_normal_thumbnail( $thumbnail_size );
+					} 
+					?>
 				</div>
 				<?php
 			}
@@ -304,6 +309,41 @@ if ( ! function_exists( 'cream_magazine_post_thumbnail' ) ) :
 		}
 	}
 endif;
+
+
+/**
+ * Function to get lazy post thumbnail
+ */
+if( ! function_exists( 'cream_magazine_lazy_thumbnail' ) ) {
+
+	function cream_magazine_lazy_thumbnail( $thumbnail_size ) {
+
+		$thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), $thumbnail_size );
+		?>
+	 	<a href="<?php the_permalink(); ?>">
+		 	<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
+		 	<noscript>
+		 		<img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
+		 	</noscript>
+	 	</a>
+		<?php
+	}
+}
+
+
+/**
+ * Function to get normal post thumbnail
+ */
+if( ! function_exists( 'cream_magazine_normal_thumbnail' ) ) {
+
+	function cream_magazine_normal_thumbnail( $thumbnail_size ) {
+		?>
+	 	<a href="<?php the_permalink(); ?>">
+		 	<?php the_post_thumbnail( $thumbnail_size, array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+	 	</a>
+		<?php
+	}
+}
 
 
 /**

@@ -11,6 +11,7 @@ $show_tags_meta = cream_magazine_get_option( 'cream_magazine_enable_post_single_
 $show_author_meta = cream_magazine_get_option( 'cream_magazine_enable_post_single_author_meta' );
 $show_date_meta = cream_magazine_get_option( 'cream_magazine_enable_post_single_date_meta' );
 $show_cmnt_no_meta = cream_magazine_get_option( 'cream_magazine_enable_post_single_cmnts_no_meta' );
+$show_featured_image = cream_magazine_get_option( 'cream_magazine_enable_post_single_featured_image' );
 ?>
 <div class="content-entry clearfix">
 	<article id="post-<?php the_ID(); ?>" <?php post_class('post-detail'); ?>>
@@ -18,7 +19,11 @@ $show_cmnt_no_meta = cream_magazine_get_option( 'cream_magazine_enable_post_sing
 	        <h2><?php the_title(); ?></h2>
 	    </div><!-- .the_title -->
 	    <?php cream_magazine_post_meta( $show_date_meta, $show_author_meta, $show_cmnt_no_meta ); ?>
-	    <?php cream_magazine_post_thumbnail(); ?>
+	    <?php 
+	    if( $show_featured_image == true ) {
+	    	cream_magazine_post_thumbnail();
+	    }
+	    ?>
 	    <div class="the_content">
 	    	<?php
 	    	the_content();

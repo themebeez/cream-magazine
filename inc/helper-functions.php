@@ -101,6 +101,7 @@ if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
         $defaults['cream_magazine_enable_post_single_tags_meta'] = true;
         $defaults['cream_magazine_enable_post_single_author_meta'] = true;
         $defaults['cream_magazine_enable_post_single_date_meta'] = true;
+        $defaults['cream_magazine_enable_post_single_featured_image'] = true;
         $defaults['cream_magazine_enable_post_single_cmnts_no_meta'] = true;
     	$defaults['cream_magazine_enable_author_section'] = true;
     	$defaults['cream_magazine_enable_related_section'] = true;
@@ -131,6 +132,8 @@ if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
         $defaults['cream_magazine_enable_breadcrumb'] = true;
         
         $defaults['cream_magazine_enable_sticky_sidebar'] = true;
+
+        $defaults['cream_magazine_enable_lazy_load'] = false;
 
         $defaults['cream_magazine_primary_theme_color'] = '#FF3D00';
 
@@ -163,16 +166,16 @@ if ( !function_exists( 'cream_magazine_fonts_url' ) ) :
         $subsets   = 'latin,latin-ext';
 
         /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-        if ('off' !== _x('on', 'Roboto font: on or off', 'cream-magazine')) {
+        if ('off' !== _x('on', 'Ubuntu font: on or off', 'cream-magazine')) {
 
-            $fonts[] = 'Roboto:400,500,700';
+            $fonts[] = 'Ubuntu:400,400i,500,500i,700,700i';
         }
 
         /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
         
-        if ('off' !== _x('on', 'Poppins font: on or off', 'cream-magazine')) {
+        if ('off' !== _x('on', 'Muli font: on or off', 'cream-magazine')) {
 
-            $fonts[] = 'Poppins:400,400i,500,600,700,700i';
+            $fonts[] = 'Muli:400,400i,600,600i,700,700i';
         }
 
         $fonts = array_unique( $fonts );
@@ -313,6 +316,27 @@ if( ! function_exists( 'cream_magazine_woocommerce_sidebar' ) ) {
             </div><!-- .col.sticky_portion -->
             <?php
         }
+    }
+}
+
+
+/**
+ * Function To Get Thumbnail Class
+ */
+if( ! function_exists( 'cream_magazine_thumbnail_class' ) ) {
+
+    function cream_magazine_thumbnail_class() {
+
+        $thumbnail_class = 'post_thumb imghover';
+
+        $lazy_thumbnail = cream_magazine_get_option( 'cream_magazine_enable_lazy_load' );
+
+        if( $lazy_thumbnail == true ) {
+
+            $thumbnail_class .= ' lazy-thumb lazyloading';
+        }
+
+        echo esc_attr( $thumbnail_class );
     }
 }
 
