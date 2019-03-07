@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cream Magazine 1.0.2\n"
 "Report-Msgid-Bugs-To: https://themebeez.com/support\n"
-"POT-Creation-Date: 2019-03-07 10:29:44+00:00\n"
+"POT-Creation-Date: 2019-03-07 10:45:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -418,8 +418,8 @@ msgstr ""
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:198
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:183
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:188
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:189
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:194
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:188
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:193
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:150
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:155
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:146
@@ -547,7 +547,7 @@ msgstr ""
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:120
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:177
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:167
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:173
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:172
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:134
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:130
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:97
@@ -567,7 +567,7 @@ msgstr ""
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:136
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:193
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:183
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:189
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:188
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:150
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:146
 msgid "none"
@@ -576,7 +576,7 @@ msgstr ""
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:147
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:204
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:194
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:200
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:199
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:161
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:157
 msgid "If no category is selected, then recent posts will be displayed."
@@ -585,7 +585,7 @@ msgstr ""
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:152
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:209
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:199
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:205
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:204
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:166
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:162
 msgid "No of Posts"
@@ -603,10 +603,10 @@ msgstr ""
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:213
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:220
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:227
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:212
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:219
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:226
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:233
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:211
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:218
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:225
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:232
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:173
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:180
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:187
@@ -623,7 +623,7 @@ msgstr ""
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:160
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:217
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:207
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:213
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:212
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:170
 msgid "Show Post Categories"
 msgstr ""
@@ -631,7 +631,7 @@ msgstr ""
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:167
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:224
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:214
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:220
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:219
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:174
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:177
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:163
@@ -641,7 +641,7 @@ msgstr ""
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:174
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:231
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:221
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:227
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:226
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:181
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:184
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:170
@@ -651,7 +651,7 @@ msgstr ""
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:181
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:238
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:228
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:234
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:233
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:188
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:191
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:177
@@ -667,7 +667,7 @@ msgid "CM Full: News Widget One"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:173
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:179
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:178
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:140
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:136
 msgid "Select Category: "
@@ -677,7 +677,7 @@ msgstr ""
 msgid "CM Half: News Widget One"
 msgstr ""
 
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:189
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:188
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:150
 msgid "Select Categories"
 msgstr ""
