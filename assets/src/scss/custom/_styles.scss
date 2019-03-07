@@ -1152,7 +1152,7 @@ header.cm_header_lay_four .widget {
 
 .cm_banner .post_title h2 {
 
-    font-size:21px;
+    font-size:24px;
     margin:15px 0px 0px;
     line-height:1.2;
     
@@ -1646,9 +1646,12 @@ header.cm_header_lay_four .widget {
 }
 
 .cm_banner-carousel-five {
+
     .owl-nav {
+
         button.owl-prev,
         button.owl-next {
+
             line-height: 35px;
             width: 35px;
             height: 35px;
@@ -1661,6 +1664,12 @@ header.cm_header_lay_four .widget {
     }
 }
 
+
+.cm_banner-five .gutter-right .meta ul li.comments,
+.cm_banner-five .gutter-right .meta ul li.post_author {
+
+    display:none;
+}
 
 
 
@@ -1947,7 +1956,7 @@ header.cm_header_lay_four .widget {
 
                 h2 {
                     margin-top: 10px;
-                    font-size: 21px;
+                    font-size: 24px;
                 }
             }
 
@@ -2859,7 +2868,7 @@ body.boxed .with_bg.cm_post_widget_nine  {
 
 .cm_middle_post_widget_six .post_title h2  {
 
-    font-size: 18px;
+    font-size: 21px;
     margin-top: 15px;
     margin-bottom: 10px;
 }
@@ -4429,6 +4438,7 @@ footer .widget_product_tag_cloud .tagcloud a:hover {
     display: block;
     object-fit: cover;
     object-position: center;
+    @include border_radius(100%);
 }
 
 .author_box .author_name,

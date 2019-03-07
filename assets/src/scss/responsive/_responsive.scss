@@ -518,12 +518,6 @@
 	    padding: 0px 0px 30px 0px;
 	}
 
-	.banner-area,
-	.news-area {
-
-		padding: 30px 0px 0px;
-	}
-
 	.cm-container {
 
 		max-width:98%;
@@ -1273,6 +1267,12 @@
 				}
 			}
 		}
+	}
+
+	.cm_banner-five .gutter-right .meta ul li.comments,
+	.cm_banner-five .gutter-right .meta ul li.post_author {
+
+    	display:inline-block;
 	}
 
 	// Ticker News

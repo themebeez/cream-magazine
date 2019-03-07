@@ -166,9 +166,9 @@ if ( !function_exists( 'cream_magazine_fonts_url' ) ) :
         $subsets   = 'latin,latin-ext';
 
         /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-        if ('off' !== _x('on', 'Ubuntu font: on or off', 'cream-magazine')) {
+        if ('off' !== _x('on', 'Roboto Condensed font: on or off', 'cream-magazine')) {
 
-            $fonts[] = 'Ubuntu:400,400i,500,500i,700,700i';
+            $fonts[] = 'Roboto+Condensed:400,400i,700,700i';
         }
 
         /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
