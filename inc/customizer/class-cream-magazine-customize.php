@@ -102,6 +102,25 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 
 			$wp_customize->get_section( 'background_image' )->title = esc_html__( 'Site Background', 'cream-magazine' );
 
+			// Upsell Class
+			require get_template_directory() . '/inc/customizer/upgrade-to-pro/upgrade.php';
+
+			$wp_customize->register_section_type( 'Cream_Magazine_Customize_Section_Upsell' );
+
+			// Register sections.
+			$wp_customize->add_section(
+				new Cream_Magazine_Customize_Section_Upsell(
+					$wp_customize,
+					'theme_upsell',
+					array(
+						'title'    => esc_html__( 'Cream Magazine Pro', 'cream-magazine' ),
+						'pro_text' => esc_html__( 'Buy Pro', 'cream-magazine' ),
+						'pro_url'  => 'https://themebeez.com/themes/cream-magazine-pro/',
+						'priority' => 1,
+					)
+				)
+			);
+
 			// Section - Site Layout
 			$wp_customize->add_section( 
 				'cream_magazine_site_layout_options', 
@@ -1693,9 +1712,13 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 
 			wp_enqueue_style( 'chosen', get_template_directory_uri() . '/admin/css/chosen.css' );
 
+			wp_enqueue_style( 'cream-magazine-upgrade', get_template_directory_uri() . '/inc/customizer/upgrade-to-pro/upgrade.css' );
+
 			wp_enqueue_style( 'cream-magazine-customizer-style', get_template_directory_uri() . '/admin/css/customizer-style.css' );
 
 			wp_enqueue_script( 'chosen', get_template_directory_uri() . '/admin/js/chosen.js', array( 'jquery' ), CREAM_MAGAZINE_VERSION, true );
+
+			wp_enqueue_script( 'cream-magazine-upgrade', get_template_directory_uri() . '/inc/customizer/upgrade-to-pro/upgrade.js', array( 'jquery' ), CREAM_MAGAZINE_VERSION, true );
 
 			wp_enqueue_script( 'cream-magazine-customizer-script', get_template_directory_uri() . '/admin/js/customizer-script.js', array( 'jquery' ), CREAM_MAGAZINE_VERSION, true );
 		}
