@@ -104,7 +104,7 @@ msgid "Cream Magazine Pro"
 msgstr ""
 
 #: inc/customizer/class-cream-magazine-customize.php:117
-msgid "Buy Pro"
+msgid "Get Pro"
 msgstr ""
 
 #: inc/customizer/class-cream-magazine-customize.php:128

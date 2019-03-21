@@ -4111,76 +4111,14 @@ footer .widget_product_tag_cloud .tagcloud a:hover {
 */
 
 
-.cm_post_page_lay_wrap .content-entry .post_thumb {
+.cm_post_page_lay_wrap .content-entry .the_title {
     
-    margin-top: 40px;
     margin-bottom: 30px;
 }
 
-.cm_post_page_lay_wrap .the_content {
+.cm_post_page_lay_wrap .content-entry .post_thumb {
     
     margin-bottom: 30px;
-
-    p {
-
-        line-height:1.8;
-    }
-
-    p,div,table {
-
-        padding: 10px 0;
-        color:inherit;
-    }
-
-    img {
-
-        margin-top:10px;
-        margin-bottom:10px;
-    }
-
-    strong {
-
-        font-weight:bold;
-    }
-
-    blockquote {
-        
-        position: relative;
-        margin:20px 0;
-        padding-right:10px;
-        padding-left:50px;
-        line-height: 1.9em;
-        font-size:15px;
-        letter-spacing:0.25px;
-        color:#666666;
-    }
-
-    ol,ul {
-
-        margin:10px 0 10px 20px;
-
-        li {
-
-            padding: 7px 0;
-        }
-    }
-
-    blockquote:before {
-
-        content:'\f10d';
-        font-family:'fontAwesome';
-        position:absolute;
-        left:0;
-        top:0;
-        font-size:32px;
-        color:$secondary_color;
-    }
-
-    h1,h2,h3,h4,h5,h6 {
-
-        font-weight:bold;
-        margin:10px 0;
-    }
 }
 
 
