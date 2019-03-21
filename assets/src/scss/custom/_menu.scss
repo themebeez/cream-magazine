@@ -45,6 +45,11 @@
     transition: all .3s ease-out;
 }
 
+.primary-navigation.dark li a:hover {
+
+    color:$secondary_color;
+}
+
 
 
 /* main level */

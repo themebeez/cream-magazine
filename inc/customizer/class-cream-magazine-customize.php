@@ -114,8 +114,8 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 					'theme_upsell',
 					array(
 						'title'    => esc_html__( 'Cream Magazine Pro', 'cream-magazine' ),
-						'pro_text' => esc_html__( 'Buy Pro', 'cream-magazine' ),
-						'pro_url'  => 'https://themebeez.com/themes/cream-magazine-pro/',
+						'pro_text' => esc_html__( 'Get Pro', 'cream-magazine' ),
+						'pro_url'  => 'https://themebeez.com/themes/cream-magazine-pro/?ref=cm-upsell-button',
 						'priority' => 1,
 					)
 				)
@@ -1935,7 +1935,8 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 					.woocommerce .woocommerce-pagination ul.page-numbers li a.page-numbers:hover,
 					.woocommerce div.product p.price, 
 					.woocommerce div.product span.price,
-					.video_section .video_details .post_title h2 a:hover {
+					.video_section .video_details .post_title h2 a:hover,
+					.primary-navigation.dark li a:hover {
 
 						color: <?php echo esc_attr( $primary_theme_color ); ?>;
 					}
@@ -1955,7 +1956,8 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 					.ticker_carousel .owl-nav button.owl-prev:hover, 
 					.ticker_carousel .owl-nav button.owl-next:hover,
 					footer .widget.widget_search form input[type="submit"]:hover,
-					.trending_widget_carousel .owl-dots button.owl-dot {
+					.trending_widget_carousel .owl-dots button.owl-dot,
+					.the_content blockquote {
 
 						border-color: <?php echo esc_attr( $primary_theme_color ); ?>;
 					}
