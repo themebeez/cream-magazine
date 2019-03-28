@@ -783,6 +783,11 @@ header .advertisement-area .widget_text .textwidget img {
     background: $secondary_color;
 }
 
+.primary-navigation.dark li.home-btn a:hover {
+
+    color:$white;
+}
+
 
 .primary-navigation li.primarynav_search_icon {
 
@@ -801,7 +806,7 @@ header .advertisement-area .widget_text .textwidget img {
    position:absolute;
    top:0;
    right:0;
-   z-index:10;
+   z-index:1000;
    width:400px;
    max-width:100%;
    background: $white;
