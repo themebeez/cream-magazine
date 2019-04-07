@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Cream Magazine 1.0.4\n"
+"Project-Id-Version: Cream Magazine 1.0.7\n"
 "Report-Msgid-Bugs-To: https://themebeez.com/support\n"
-"POT-Creation-Date: 2019-03-19 05:06:32+00:00\n"
+"POT-Creation-Date: 2019-04-07 06:46:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -56,7 +56,7 @@ msgid "Bottom Footer Menu"
 msgstr ""
 
 #: inc/class-cream-magazine.php:333
-msgid "Type Something"
+msgid "Type Here"
 msgstr ""
 
 #: inc/class-cream-magazine.php:333
