@@ -204,12 +204,6 @@ if( ! function_exists( 'cream_magazine_social_links_action' ) ) :
             	<li><a href="<?php echo esc_url( $vk_link ); ?>"><?php echo esc_html__( 'VK', 'cream-magazine' ); ?></a></li>
             	<?php
  			}
- 			$google_plus_link = cream_magazine_get_option( 'cream_magazine_google_plus_link' );
- 			if( !empty( $google_plus_link ) ) {
- 				?>       
-            	<li><a href="<?php echo esc_url( $google_plus_link ); ?>"><?php echo esc_html__( 'Google Plus', 'cream-magazine' ); ?></a></li>
-            	<?php
- 			}
  			$linkedin_link = cream_magazine_get_option( 'cream_magazine_linkedin_link' );
  			if( !empty( $linkedin_link ) ) {
  				?>       

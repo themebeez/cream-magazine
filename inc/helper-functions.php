@@ -124,7 +124,6 @@ if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
         $defaults['cream_magazine_twitter_link'] = '';
         $defaults['cream_magazine_instagram_link'] = '';
         $defaults['cream_magazine_youtube_link'] = '';
-        $defaults['cream_magazine_google_plus_link'] = '';
         $defaults['cream_magazine_vk_link'] = '';
         $defaults['cream_magazine_linkedin_link'] = '';
         $defaults['cream_magazine_vimeo_link'] = '';

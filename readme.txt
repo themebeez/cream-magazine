@@ -2,9 +2,9 @@
 
 Contributors: themebeez
 Requires at least: 4.8.0
-Requires PHP: 5.4
+Requires PHP: 5.6
 Tested up to: 5.1.1
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, news, right-sidebar, theme-options, footer-widgets, left-sidebar, grid-layout
@@ -55,7 +55,7 @@ Cream Magazine is distributed under the terms of the GNU GPL
 
 * Choosen https://github.com/harvesthq/chosen, Copyright (c) 2011-2018 Harvest, [MIT](http://opensource.org/licenses/MIT)
 
-* Images Included, header_1.jpg, header_2.jpg, sidebar_left.jpg, sidebar_right.png, and sidebar_none.png, self created GPLv2 
+* Images Included, header_1.jpg, header_2.jpg, cm-author-widget.png, cm-full-widget-one.png, cm-full-widget-three.png, cm-full-widget-two.png, cm-half-widget-one.png, cm-half-widget-three.png, cm-half-widget-two.png, cm-post-widget.png, cm-social-widget.png, sidebar_left.jpg, sidebar_right.png, and sidebar_none.png, self created GPLv2 
 
 
 == Screenshot ==
@@ -104,6 +104,11 @@ Cream Magazine includes support for Contact Form 7 and Woocommerce.
 
 
 == Changelog ==
+
+= Version 1.0.8 - 26 April, 2019 =
+
+- Google plus social link removed
+- Thumbnails added for widget description
 
 = Version 1.0.7 - 7 April, 2019 =
 
