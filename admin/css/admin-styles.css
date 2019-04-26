@@ -9,3 +9,10 @@ Widget at Apperence > widgets
     box-shadow: none !important;
     border: none !important;
 }
+
+.widgets-holder-wrap [id*="cream-magazine"] .widget-content p img {
+
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
