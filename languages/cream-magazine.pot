@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Cream Magazine 1.0.7\n"
+"Project-Id-Version: Cream Magazine 1.0.8\n"
 "Report-Msgid-Bugs-To: https://themebeez.com/support\n"
-"POT-Creation-Date: 2019-04-07 06:46:33+00:00\n"
+"POT-Creation-Date: 2019-04-26 10:53:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -198,204 +198,200 @@ msgid "Theme Color"
 msgstr ""
 
 #: inc/customizer/class-cream-magazine-customize.php:288
-#: inc/customizer/class-cream-magazine-customize.php:1632
+#: inc/customizer/class-cream-magazine-customize.php:1613
 msgid "Woocommerce Sidebar Position"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:934
+#: inc/customizer/class-cream-magazine-customize.php:925
 msgid "Select Site Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:938
+#: inc/customizer/class-cream-magazine-customize.php:929
 msgid "Boxed Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:939
+#: inc/customizer/class-cream-magazine-customize.php:930
 msgid "Fullwidth Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:948
+#: inc/customizer/class-cream-magazine-customize.php:939
 msgid "Enable Ticker News"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:949
+#: inc/customizer/class-cream-magazine-customize.php:940
 msgid ""
 "This option will be effective only for the ticker news section that is "
 "displayed below the header section."
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:959
+#: inc/customizer/class-cream-magazine-customize.php:950
 msgid "Ticker News: Section Title"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:971
+#: inc/customizer/class-cream-magazine-customize.php:962
 msgid "Ticker News: Categories"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:983
+#: inc/customizer/class-cream-magazine-customize.php:974
 msgid "Ticker News: Posts Number"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:994
+#: inc/customizer/class-cream-magazine-customize.php:985
 msgid "Enable Banner/Slider"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1004
-#: inc/customizer/class-cream-magazine-customize.php:1147
-#: inc/customizer/class-cream-magazine-customize.php:1201
-#: inc/customizer/class-cream-magazine-customize.php:1255
-#: inc/customizer/class-cream-magazine-customize.php:1310
-#: inc/customizer/class-cream-magazine-customize.php:1402
-#: inc/customizer/class-cream-magazine-customize.php:1446
+#: inc/customizer/class-cream-magazine-customize.php:995
+#: inc/customizer/class-cream-magazine-customize.php:1138
+#: inc/customizer/class-cream-magazine-customize.php:1192
+#: inc/customizer/class-cream-magazine-customize.php:1246
+#: inc/customizer/class-cream-magazine-customize.php:1301
+#: inc/customizer/class-cream-magazine-customize.php:1393
+#: inc/customizer/class-cream-magazine-customize.php:1437
 msgid "Enable Post Author Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1014
-#: inc/customizer/class-cream-magazine-customize.php:1157
-#: inc/customizer/class-cream-magazine-customize.php:1211
-#: inc/customizer/class-cream-magazine-customize.php:1265
-#: inc/customizer/class-cream-magazine-customize.php:1320
-#: inc/customizer/class-cream-magazine-customize.php:1413
-#: inc/customizer/class-cream-magazine-customize.php:1456
+#: inc/customizer/class-cream-magazine-customize.php:1005
+#: inc/customizer/class-cream-magazine-customize.php:1148
+#: inc/customizer/class-cream-magazine-customize.php:1202
+#: inc/customizer/class-cream-magazine-customize.php:1256
+#: inc/customizer/class-cream-magazine-customize.php:1311
+#: inc/customizer/class-cream-magazine-customize.php:1404
+#: inc/customizer/class-cream-magazine-customize.php:1447
 msgid "Enable Posted Date Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1024
-#: inc/customizer/class-cream-magazine-customize.php:1167
-#: inc/customizer/class-cream-magazine-customize.php:1221
-#: inc/customizer/class-cream-magazine-customize.php:1275
-#: inc/customizer/class-cream-magazine-customize.php:1330
-#: inc/customizer/class-cream-magazine-customize.php:1424
-#: inc/customizer/class-cream-magazine-customize.php:1466
+#: inc/customizer/class-cream-magazine-customize.php:1015
+#: inc/customizer/class-cream-magazine-customize.php:1158
+#: inc/customizer/class-cream-magazine-customize.php:1212
+#: inc/customizer/class-cream-magazine-customize.php:1266
+#: inc/customizer/class-cream-magazine-customize.php:1321
+#: inc/customizer/class-cream-magazine-customize.php:1415
+#: inc/customizer/class-cream-magazine-customize.php:1457
 msgid "Enable Post Comments Number Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1034
-#: inc/customizer/class-cream-magazine-customize.php:1177
-#: inc/customizer/class-cream-magazine-customize.php:1231
-#: inc/customizer/class-cream-magazine-customize.php:1285
-#: inc/customizer/class-cream-magazine-customize.php:1435
-#: inc/customizer/class-cream-magazine-customize.php:1476
+#: inc/customizer/class-cream-magazine-customize.php:1025
+#: inc/customizer/class-cream-magazine-customize.php:1168
+#: inc/customizer/class-cream-magazine-customize.php:1222
+#: inc/customizer/class-cream-magazine-customize.php:1276
+#: inc/customizer/class-cream-magazine-customize.php:1426
+#: inc/customizer/class-cream-magazine-customize.php:1467
 msgid "Enable Post Categories Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1045
+#: inc/customizer/class-cream-magazine-customize.php:1036
 msgid "Banner/Slider Post Categories"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1057
+#: inc/customizer/class-cream-magazine-customize.php:1048
 msgid "Banner/Slider Posts Number"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1070
+#: inc/customizer/class-cream-magazine-customize.php:1061
 #: inc/metabox/class-cream-magazine-post-meta.php:40
 msgid "Sidebar Position"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1082
+#: inc/customizer/class-cream-magazine-customize.php:1073
 msgid "Enable Top Header"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1093
+#: inc/customizer/class-cream-magazine-customize.php:1084
 msgid "Enable Home Button"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1103
+#: inc/customizer/class-cream-magazine-customize.php:1094
 msgid "Enable Search Button"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1115
+#: inc/customizer/class-cream-magazine-customize.php:1106
 msgid "Select Header Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1127
+#: inc/customizer/class-cream-magazine-customize.php:1118
 msgid "Enable Scroll Top Button"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1137
+#: inc/customizer/class-cream-magazine-customize.php:1128
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1189
-#: inc/customizer/class-cream-magazine-customize.php:1243
-#: inc/customizer/class-cream-magazine-customize.php:1297
+#: inc/customizer/class-cream-magazine-customize.php:1180
+#: inc/customizer/class-cream-magazine-customize.php:1234
+#: inc/customizer/class-cream-magazine-customize.php:1288
 msgid "Select Sidebar Position"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1340
-#: inc/customizer/class-cream-magazine-customize.php:1486
+#: inc/customizer/class-cream-magazine-customize.php:1331
+#: inc/customizer/class-cream-magazine-customize.php:1477
 msgid "Enable Post Tags Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1350
+#: inc/customizer/class-cream-magazine-customize.php:1341
 msgid "Enable Featured Image"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1360
+#: inc/customizer/class-cream-magazine-customize.php:1351
 msgid "Enable Author Section"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1370
+#: inc/customizer/class-cream-magazine-customize.php:1361
 msgid "Enable Related Posts Section"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1380
+#: inc/customizer/class-cream-magazine-customize.php:1371
 msgid "Related Posts Section Title"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1391
+#: inc/customizer/class-cream-magazine-customize.php:1382
 msgid "Related Section Posts Number"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1496
+#: inc/customizer/class-cream-magazine-customize.php:1487
 msgid "Excerpt Length"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1506
+#: inc/customizer/class-cream-magazine-customize.php:1497
 msgid "Facebook Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1516
+#: inc/customizer/class-cream-magazine-customize.php:1507
 msgid "Twitter Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1526
+#: inc/customizer/class-cream-magazine-customize.php:1517
 msgid "Instagram Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1536
+#: inc/customizer/class-cream-magazine-customize.php:1527
 msgid "Youtube Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1546
-msgid "Google Plus Link"
-msgstr ""
-
-#: inc/customizer/class-cream-magazine-customize.php:1556
+#: inc/customizer/class-cream-magazine-customize.php:1537
 msgid "VK Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1566
+#: inc/customizer/class-cream-magazine-customize.php:1547
 msgid "Linkedin Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1576
+#: inc/customizer/class-cream-magazine-customize.php:1557
 msgid "Vimeo Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1586
+#: inc/customizer/class-cream-magazine-customize.php:1567
 msgid "Enable Breadcrumb"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1596
+#: inc/customizer/class-cream-magazine-customize.php:1577
 msgid "Enable Sticky Sidebar"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1607
+#: inc/customizer/class-cream-magazine-customize.php:1588
 msgid "Enable Lazy Load"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1619
+#: inc/customizer/class-cream-magazine-customize.php:1600
 msgid "Primary Theme Color"
 msgstr ""
 
@@ -403,7 +399,7 @@ msgstr ""
 msgid "Breaking News"
 msgstr ""
 
-#: inc/helper-functions.php:357
+#: inc/helper-functions.php:356
 msgid "Themebeez Toolkit"
 msgstr ""
 
@@ -420,18 +416,18 @@ msgid "None"
 msgstr ""
 
 #: inc/metabox/class-cream-magazine-post-meta.php:75
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:136
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:141
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:193
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:146
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:198
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:183
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:203
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:188
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:188
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:193
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:193
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:150
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:198
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:155
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:146
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:160
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:151
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:156
 msgid "selected"
 msgstr ""
 
@@ -456,35 +452,31 @@ msgid "VK"
 msgstr ""
 
 #: inc/theme-hooks.php:210
-msgid "Google Plus"
-msgstr ""
-
-#: inc/theme-hooks.php:216
 msgid "Linkedin"
 msgstr ""
 
-#: inc/theme-hooks.php:222
+#: inc/theme-hooks.php:216
 msgid "Vimeo"
 msgstr ""
 
-#: inc/theme-hooks.php:331 single.php:45
+#: inc/theme-hooks.php:325 single.php:45
 msgid "Prev"
 msgstr ""
 
-#: inc/theme-hooks.php:332 single.php:46
+#: inc/theme-hooks.php:326 single.php:46
 msgid "Next"
 msgstr ""
 
-#: inc/theme-hooks.php:576
+#: inc/theme-hooks.php:570
 #. translators: 1: Copyright Text 2: Theme name, 3: Theme author.
 msgid "%1$s %2$s by %3$s"
 msgstr ""
 
-#: inc/theme-hooks.php:576 inc/theme-hooks.php:579
+#: inc/theme-hooks.php:570 inc/theme-hooks.php:573
 msgid "Themebeez"
 msgstr ""
 
-#: inc/theme-hooks.php:579
+#: inc/theme-hooks.php:573
 #. translators: 1: Theme name, 2: Theme author.
 msgid "%1$s by %2$s"
 msgstr ""
@@ -540,7 +532,7 @@ msgid "Woocommerce Sidebar"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:9
-msgid "CM Half: News Widget Three"
+msgid "CM Half: News Widget 3"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:11
@@ -552,42 +544,45 @@ msgstr ""
 msgid "Displays posts of selected category."
 msgstr ""
 
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:120
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:177
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:167
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:172
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:134
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:130
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:97
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:124
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:119
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:176
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:166
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:171
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:133
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:129
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:96
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:123
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:103
+msgid "At frontend this widget looks like as below:"
+msgstr ""
+
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:125
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:182
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:172
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:177
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:139
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:135
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:102
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:129
 msgid "Title"
 msgstr ""
 
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:126
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:136
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:183
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:193
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:183
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:146
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:131
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:141
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:188
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:198
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:188
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:151
 msgid "Select Category"
 msgstr ""
 
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:136
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:193
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:183
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:188
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:150
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:146
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:141
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:198
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:188
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:193
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:155
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:151
 msgid "none"
-msgstr ""
-
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:147
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:204
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:194
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:199
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:161
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:157
-msgid "If no category is selected, then recent posts will be displayed."
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:152
@@ -596,106 +591,115 @@ msgstr ""
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:204
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:166
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:162
+msgid "If no category is selected, then recent posts will be displayed."
+msgstr ""
+
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:157
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:214
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:204
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:209
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:171
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:167
 msgid "No of Posts"
 msgstr ""
 
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:159
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:166
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:173
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:180
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:216
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:223
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:230
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:237
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:206
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:213
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:220
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:227
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:211
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:218
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:225
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:232
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:173
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:180
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:187
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:169
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:176
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:183
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:190
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:162
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:169
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:176
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:164
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:171
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:178
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:185
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:221
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:228
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:235
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:242
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:211
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:218
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:225
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:232
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:216
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:223
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:230
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:237
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:178
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:185
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:192
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:174
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:181
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:188
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:195
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:167
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:174
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:181
 msgid "checked"
 msgstr ""
 
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:160
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:217
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:207
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:212
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:170
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:165
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:222
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:212
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:217
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:175
 msgid "Show Post Categories"
 msgstr ""
 
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:167
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:224
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:214
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:219
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:174
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:177
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:163
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:172
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:229
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:219
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:224
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:179
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:182
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:168
 msgid "Show Post Author"
 msgstr ""
 
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:174
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:231
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:221
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:226
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:181
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:184
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:170
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:179
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:236
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:226
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:231
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:186
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:189
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:175
 msgid "Show Posted Date"
 msgstr ""
 
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:181
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:238
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:228
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:233
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:188
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:191
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:177
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:186
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:243
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:233
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:238
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:193
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:196
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:182
 msgid "Show Post Comments Number"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:9
-msgid "CM Half: News Widget Two"
+msgid "CM Half: News Widget 2"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:9
-msgid "CM Full: News Widget One"
+msgid "CM Full: News Widget 1"
 msgstr ""
 
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:173
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:178
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:140
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:136
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:178
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:183
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:145
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:141
 msgid "Select Category: "
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:9
-msgid "CM Half: News Widget One"
+msgid "CM Half: News Widget 6"
 msgstr ""
 
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:188
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:150
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:193
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:155
 msgid "Select Categories"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:9
-msgid "CM Full: News Widget Three"
+msgid "CM Full: News Widget 3"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:9
-msgid "CM Full: News Widget Two"
+msgid "CM Full: News Widget 2"
 msgstr ""
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:9
@@ -706,15 +710,15 @@ msgstr ""
 msgid "Displays Brief Author Description."
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:103
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:108
 msgid "Author Page"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:110
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:115
 msgid "&mdash; Select Page &mdash;"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:118
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:123
 msgid "Author Link Title"
 msgstr ""
 
@@ -726,19 +730,19 @@ msgstr ""
 msgid "Displays Recent, Most Commented or Editor Picked Posts."
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:131
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:136
 msgid "Type of Posts:"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:136
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:141
 msgid "Recent Posts"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:137
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:142
 msgid "Most Commented"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:155
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:160
 msgid "No of Popular Posts"
 msgstr ""
 
@@ -750,51 +754,46 @@ msgstr ""
 msgid "Displays links to social sites."
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:42
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:41
 msgid "Like"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:49
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:56
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:70
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:77
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:84
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:48
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:55
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:69
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:76
 msgid "Follow"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:63
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:62
 msgid "Connect"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:113
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:109
 msgid "Title: "
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:120
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:116
 msgid "Facebook Link:"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:127
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:123
 msgid "Twitter Link:"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:134
-msgid "Google Plus Link:"
-msgstr ""
-
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:141
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:130
 msgid "Instagram Link:"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:148
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:137
 msgid "linkedin Link:"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:155
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:144
 msgid "Youtube Link:"
 msgstr ""
 
-#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:162
+#: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:151
 msgid "Pinterest Link:"
 msgstr ""
 
@@ -1276,7 +1275,7 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helper-functions.php:169
+#: inc/helper-functions.php:168
 #. translators: If there are characters in your language that are not supported
 #. by Merriweather, translate this to 'off'. Do not translate into your own
 #. language.
@@ -1284,7 +1283,7 @@ msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr ""
 
-#: inc/helper-functions.php:176
+#: inc/helper-functions.php:175
 #. translators: If there are characters in your language that are not supported
 #. by Merriweather, translate this to 'off'. Do not translate into your own
 #. language.

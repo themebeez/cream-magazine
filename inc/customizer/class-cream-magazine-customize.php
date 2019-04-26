@@ -817,15 +817,6 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 				) 
 			);
 
-			// Social Link - Google Plus
-			$wp_customize->add_setting( 
-				'cream_magazine_google_plus_link', 
-				array(
-					'sanitize_callback'		=> 'esc_url_raw',
-					'default'				=> $defaults['cream_magazine_google_plus_link'], 
-				) 
-			);
-
 			// Social Link - VK
 			$wp_customize->add_setting( 
 				'cream_magazine_vk_link', 
@@ -1534,16 +1525,6 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 				'cream_magazine_youtube_link', 
 				array(
 					'label' => esc_html__( 'Youtube Link', 'cream-magazine' ),
-					'section' => 'cream_magazine_social_links_options',
-					'type' => 'url',
-				) 
-			);
-
-			// Social Links - Google Plus
-			$wp_customize->add_control( 
-				'cream_magazine_google_plus_link', 
-				array(
-					'label' => esc_html__( 'Google Plus Link', 'cream-magazine' ),
 					'section' => 'cream_magazine_social_links_options',
 					'type' => 'url',
 				) 

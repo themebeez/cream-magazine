@@ -6,7 +6,7 @@ class Cream_Magazine_News_Widget_Eleven extends WP_Widget {
 
         parent::__construct(
             'cream-magazine-news-widget-eleven',  // Base ID
-            esc_html__( 'CM Half: News Widget Three', 'cream-magazine' ),   // Name
+            esc_html__( 'CM Half: News Widget 3', 'cream-magazine' ),   // Name
             array(
                 'description' => esc_html__( 'Displays posts of selected category.', 'cream-magazine' ), 
             )
@@ -116,6 +116,11 @@ class Cream_Magazine_News_Widget_Eleven extends WP_Widget {
 
 		?>
 		<p>
+            <strong><?php esc_html_e( 'At frontend this widget looks like as below:', 'cream-magazine' ); ?></strong> 
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/admin/images/widget-placeholders/cm-half-widget-three.png' ); ?>" style="max-width: 100%; height: auto;"> 
+        </p>
+
+        <p>
             <label for="<?php echo esc_attr( $this->get_field_name('title') ); ?>">
                 <strong><?php esc_html_e('Title', 'cream-magazine'); ?></strong>
             </label>

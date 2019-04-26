@@ -119,6 +119,11 @@ class Cream_Magazine_Post_Widget extends WP_Widget {
         $instance = wp_parse_args( (array) $instance, $defaults );
 
 		?>
+        <p>
+            <strong><?php esc_html_e( 'At frontend this widget looks like as below:', 'cream-magazine' ); ?></strong> 
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/admin/images/widget-placeholders/cm-post-widget.png' ); ?>" style="max-width: 100%; height: auto;"> 
+        </p>
+
 		<p>
             <label for="<?php echo esc_attr( $this->get_field_name('title') ); ?>">
                 <strong><?php esc_html_e('Title', 'cream-magazine'); ?></strong>

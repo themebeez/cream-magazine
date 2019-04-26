@@ -20,7 +20,6 @@ class Cream_Magazine_Social_Widget extends WP_Widget {
         $title          = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
         $facebook       = ! empty( $instance['facebook'] ) ? $instance['facebook'] : '';
         $twitter        = ! empty( $instance['twitter'] ) ? $instance['twitter'] : '';
-        $google_plus    = ! empty( $instance['google_plus'] ) ? $instance['google_plus'] : '';
         $instagram      = ! empty( $instance['instagram'] ) ? $instance['instagram'] : '';
         $linkedin       = ! empty( $instance['linkedin'] ) ? $instance['linkedin'] : '';
         $youtube        = ! empty( $instance['youtube'] ) ? $instance['youtube'] : '';
@@ -78,13 +77,6 @@ class Cream_Magazine_Social_Widget extends WP_Widget {
                     </li>
                     <?php
                 }
-                if( !empty( $google_plus ) ) {
-                    ?>
-                    <li class="gplus">
-                        <a href="<?php echo esc_url( $google_plus ); ?>"><i class="fa fa-google-plus"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
-                    </li>
-                    <?php
-                }
                 ?>
             </ul>
         </div><!-- .widget-contents -->
@@ -100,7 +92,6 @@ class Cream_Magazine_Social_Widget extends WP_Widget {
                 'title'         => '',
                 'facebook'      => '',
                 'twitter'       => '',
-                'google_plus'   => '',
                 'instagram'     => '',
                 'linkedin'      => '',
                 'youtube'       => '',
@@ -108,6 +99,11 @@ class Cream_Magazine_Social_Widget extends WP_Widget {
             ) 
         );
         ?>
+        <p>
+            <strong><?php esc_html_e( 'At frontend this widget looks like as below:', 'cream-magazine' ); ?></strong> 
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/admin/images/widget-placeholders/cm-social-widget.png' ); ?>" style="max-width: 100%; height: auto;"> 
+        </p>
+
         <p>
             <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
                 <strong><?php esc_html_e( 'Title: ', 'cream-magazine' ); ?></strong>
@@ -128,13 +124,6 @@ class Cream_Magazine_Social_Widget extends WP_Widget {
             </label>
             <input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'twitter' ) ); ?>" value="<?php echo esc_attr( $instance['twitter'] ); ?>">
         </p> 
-
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'google_plus' ) ); ?>">
-                <strong><?php esc_html_e( 'Google Plus Link:', 'cream-magazine' ); ?></strong>
-            </label>
-            <input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'google_plus' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'google_plus' ) ); ?>" value="<?php echo esc_attr( $instance['google_plus'] ); ?>">
-        </p>
 
         <p>
             <label for="<?php echo esc_attr( $this->get_field_id( 'instagram' ) ); ?>">
@@ -175,8 +164,6 @@ class Cream_Magazine_Social_Widget extends WP_Widget {
         $instance[ 'facebook' ]     = esc_url_raw( $new_instance[ 'facebook' ] );
 
         $instance[ 'twitter' ]      = esc_url_raw( $new_instance[ 'twitter' ] );
-
-        $instance[ 'google_plus' ]  = esc_url_raw( $new_instance[ 'google_plus' ] );
 
         $instance[ 'instagram' ]    = esc_url_raw( $new_instance[ 'instagram' ] );
 
