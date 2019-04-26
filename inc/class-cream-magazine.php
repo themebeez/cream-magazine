@@ -13,6 +13,7 @@ class Cream_Magazine {
 
 		add_action( 'after_setup_theme', array( $this, 'setup' ), 10 );		
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 10 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ), 10 );
 		add_filter( 'body_class', array( $this, 'body_classes' ), 10, 1 );
 		add_action( 'wp_head', array( $this, 'pingback_header' ), 10 );
 		add_filter( 'excerpt_more', array( $this, 'excerpt_more' ), 10, 1 );
@@ -190,6 +191,14 @@ class Cream_Magazine {
 		}
 	}
 
+
+	/**
+	 * Enqueue scripts and styles for backend
+	 */
+	public function enqueue_admin_scripts() {
+
+		wp_enqueue_style( 'cream-magazine-admin-styles', get_template_directory_uri() . '/admin/css/admin-styles.css' );
+	}
 
 	/**
 	 * Adds custom classes to the array of body classes.
