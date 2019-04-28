@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cream Magazine 1.0.8\n"
 "Report-Msgid-Bugs-To: https://themebeez.com/support\n"
-"POT-Creation-Date: 2019-04-26 16:55:18+00:00\n"
+"POT-Creation-Date: 2019-04-28 16:40:55+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,11 +55,11 @@ msgstr ""
 msgid "Bottom Footer Menu"
 msgstr ""
 
-#: inc/class-cream-magazine.php:342
+#: inc/class-cream-magazine.php:346
 msgid "Type Here"
 msgstr ""
 
-#: inc/class-cream-magazine.php:342
+#: inc/class-cream-magazine.php:346
 msgid "Search"
 msgstr ""
 
@@ -198,200 +198,204 @@ msgid "Theme Color"
 msgstr ""
 
 #: inc/customizer/class-cream-magazine-customize.php:288
-#: inc/customizer/class-cream-magazine-customize.php:1613
+#: inc/customizer/class-cream-magazine-customize.php:1639
 msgid "Woocommerce Sidebar Position"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:925
+#: inc/customizer/class-cream-magazine-customize.php:936
 msgid "Select Site Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:929
+#: inc/customizer/class-cream-magazine-customize.php:940
 msgid "Boxed Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:930
+#: inc/customizer/class-cream-magazine-customize.php:941
 msgid "Fullwidth Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:939
+#: inc/customizer/class-cream-magazine-customize.php:950
 msgid "Enable Ticker News"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:940
+#: inc/customizer/class-cream-magazine-customize.php:951
 msgid ""
 "This option will be effective only for the ticker news section that is "
 "displayed below the header section."
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:950
+#: inc/customizer/class-cream-magazine-customize.php:961
 msgid "Ticker News: Section Title"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:962
+#: inc/customizer/class-cream-magazine-customize.php:973
 msgid "Ticker News: Categories"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:974
+#: inc/customizer/class-cream-magazine-customize.php:985
 msgid "Ticker News: Posts Number"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:985
+#: inc/customizer/class-cream-magazine-customize.php:996
 msgid "Enable Banner/Slider"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:995
-#: inc/customizer/class-cream-magazine-customize.php:1138
-#: inc/customizer/class-cream-magazine-customize.php:1192
-#: inc/customizer/class-cream-magazine-customize.php:1246
-#: inc/customizer/class-cream-magazine-customize.php:1301
-#: inc/customizer/class-cream-magazine-customize.php:1393
-#: inc/customizer/class-cream-magazine-customize.php:1437
+#: inc/customizer/class-cream-magazine-customize.php:1006
+#: inc/customizer/class-cream-magazine-customize.php:1164
+#: inc/customizer/class-cream-magazine-customize.php:1218
+#: inc/customizer/class-cream-magazine-customize.php:1272
+#: inc/customizer/class-cream-magazine-customize.php:1327
+#: inc/customizer/class-cream-magazine-customize.php:1419
+#: inc/customizer/class-cream-magazine-customize.php:1463
 msgid "Enable Post Author Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1005
-#: inc/customizer/class-cream-magazine-customize.php:1148
-#: inc/customizer/class-cream-magazine-customize.php:1202
-#: inc/customizer/class-cream-magazine-customize.php:1256
-#: inc/customizer/class-cream-magazine-customize.php:1311
-#: inc/customizer/class-cream-magazine-customize.php:1404
-#: inc/customizer/class-cream-magazine-customize.php:1447
+#: inc/customizer/class-cream-magazine-customize.php:1016
+#: inc/customizer/class-cream-magazine-customize.php:1174
+#: inc/customizer/class-cream-magazine-customize.php:1228
+#: inc/customizer/class-cream-magazine-customize.php:1282
+#: inc/customizer/class-cream-magazine-customize.php:1337
+#: inc/customizer/class-cream-magazine-customize.php:1430
+#: inc/customizer/class-cream-magazine-customize.php:1473
 msgid "Enable Posted Date Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1015
-#: inc/customizer/class-cream-magazine-customize.php:1158
-#: inc/customizer/class-cream-magazine-customize.php:1212
-#: inc/customizer/class-cream-magazine-customize.php:1266
-#: inc/customizer/class-cream-magazine-customize.php:1321
-#: inc/customizer/class-cream-magazine-customize.php:1415
-#: inc/customizer/class-cream-magazine-customize.php:1457
+#: inc/customizer/class-cream-magazine-customize.php:1026
+#: inc/customizer/class-cream-magazine-customize.php:1184
+#: inc/customizer/class-cream-magazine-customize.php:1238
+#: inc/customizer/class-cream-magazine-customize.php:1292
+#: inc/customizer/class-cream-magazine-customize.php:1347
+#: inc/customizer/class-cream-magazine-customize.php:1441
+#: inc/customizer/class-cream-magazine-customize.php:1483
 msgid "Enable Post Comments Number Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1025
-#: inc/customizer/class-cream-magazine-customize.php:1168
-#: inc/customizer/class-cream-magazine-customize.php:1222
-#: inc/customizer/class-cream-magazine-customize.php:1276
-#: inc/customizer/class-cream-magazine-customize.php:1426
-#: inc/customizer/class-cream-magazine-customize.php:1467
+#: inc/customizer/class-cream-magazine-customize.php:1036
+#: inc/customizer/class-cream-magazine-customize.php:1194
+#: inc/customizer/class-cream-magazine-customize.php:1248
+#: inc/customizer/class-cream-magazine-customize.php:1302
+#: inc/customizer/class-cream-magazine-customize.php:1452
+#: inc/customizer/class-cream-magazine-customize.php:1493
 msgid "Enable Post Categories Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1036
+#: inc/customizer/class-cream-magazine-customize.php:1047
 msgid "Banner/Slider Post Categories"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1048
+#: inc/customizer/class-cream-magazine-customize.php:1059
 msgid "Banner/Slider Posts Number"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1061
+#: inc/customizer/class-cream-magazine-customize.php:1072
 #: inc/metabox/class-cream-magazine-post-meta.php:40
 msgid "Sidebar Position"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1073
+#: inc/customizer/class-cream-magazine-customize.php:1084
 msgid "Enable Top Header"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1084
+#: inc/customizer/class-cream-magazine-customize.php:1095
 msgid "Enable Home Button"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1094
+#: inc/customizer/class-cream-magazine-customize.php:1105
 msgid "Enable Search Button"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1106
+#: inc/customizer/class-cream-magazine-customize.php:1117
 msgid "Select Header Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1118
+#: inc/customizer/class-cream-magazine-customize.php:1131
+msgid "Header Overlay Color"
+msgstr ""
+
+#: inc/customizer/class-cream-magazine-customize.php:1144
 msgid "Enable Scroll Top Button"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1128
+#: inc/customizer/class-cream-magazine-customize.php:1154
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1180
-#: inc/customizer/class-cream-magazine-customize.php:1234
-#: inc/customizer/class-cream-magazine-customize.php:1288
+#: inc/customizer/class-cream-magazine-customize.php:1206
+#: inc/customizer/class-cream-magazine-customize.php:1260
+#: inc/customizer/class-cream-magazine-customize.php:1314
 msgid "Select Sidebar Position"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1331
-#: inc/customizer/class-cream-magazine-customize.php:1477
+#: inc/customizer/class-cream-magazine-customize.php:1357
+#: inc/customizer/class-cream-magazine-customize.php:1503
 msgid "Enable Post Tags Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1341
+#: inc/customizer/class-cream-magazine-customize.php:1367
 msgid "Enable Featured Image"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1351
+#: inc/customizer/class-cream-magazine-customize.php:1377
 msgid "Enable Author Section"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1361
+#: inc/customizer/class-cream-magazine-customize.php:1387
 msgid "Enable Related Posts Section"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1371
+#: inc/customizer/class-cream-magazine-customize.php:1397
 msgid "Related Posts Section Title"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1382
+#: inc/customizer/class-cream-magazine-customize.php:1408
 msgid "Related Section Posts Number"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1487
+#: inc/customizer/class-cream-magazine-customize.php:1513
 msgid "Excerpt Length"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1497
+#: inc/customizer/class-cream-magazine-customize.php:1523
 msgid "Facebook Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1507
+#: inc/customizer/class-cream-magazine-customize.php:1533
 msgid "Twitter Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1517
+#: inc/customizer/class-cream-magazine-customize.php:1543
 msgid "Instagram Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1527
+#: inc/customizer/class-cream-magazine-customize.php:1553
 msgid "Youtube Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1537
+#: inc/customizer/class-cream-magazine-customize.php:1563
 msgid "VK Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1547
+#: inc/customizer/class-cream-magazine-customize.php:1573
 msgid "Linkedin Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1557
+#: inc/customizer/class-cream-magazine-customize.php:1583
 msgid "Vimeo Link"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1567
+#: inc/customizer/class-cream-magazine-customize.php:1593
 msgid "Enable Breadcrumb"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1577
+#: inc/customizer/class-cream-magazine-customize.php:1603
 msgid "Enable Sticky Sidebar"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1588
+#: inc/customizer/class-cream-magazine-customize.php:1614
 msgid "Enable Lazy Load"
 msgstr ""
 
-#: inc/customizer/class-cream-magazine-customize.php:1600
+#: inc/customizer/class-cream-magazine-customize.php:1626
 msgid "Primary Theme Color"
 msgstr ""
 
@@ -399,7 +403,7 @@ msgstr ""
 msgid "Breaking News"
 msgstr ""
 
-#: inc/helper-functions.php:356
+#: inc/helper-functions.php:357
 msgid "Themebeez Toolkit"
 msgstr ""
 
@@ -1275,7 +1279,7 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helper-functions.php:168
+#: inc/helper-functions.php:169
 #. translators: If there are characters in your language that are not supported
 #. by Merriweather, translate this to 'off'. Do not translate into your own
 #. language.
@@ -1283,7 +1287,7 @@ msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr ""
 
-#: inc/helper-functions.php:175
+#: inc/helper-functions.php:176
 #. translators: If there are characters in your language that are not supported
 #. by Merriweather, translate this to 'off'. Do not translate into your own
 #. language.
