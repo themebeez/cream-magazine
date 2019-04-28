@@ -31,7 +31,7 @@ input[type="submit"] {
     padding: 14px 25px;
     display: inline-block;
     text-shadow: none;
-    background: $primary_color;
+    background: $secondary_color;
     @include transation_delay();
 }
 
@@ -43,7 +43,15 @@ input[type="submit"]:hover {
 
     color: $white;
     border:none;
-    background:$secondary_color;
+    background:$primary_color;
+}
+
+button,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+
+    outline:transparent;
 }
 
 input[type="checkbox"],
@@ -68,7 +76,7 @@ input[type="search"] {
 
     color: $primary_color;
     border: 1px solid $border_color;
-    height: 48px;
+    height: 43px;
     width: 100%;
     -webkit-appearance: none;
 }
@@ -80,7 +88,7 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
 
-    border: 1px solid #AAA;
+    border: 1px solid #eeeeee;
 }
 
 .searchform input[type="text"]:focus {
@@ -101,18 +109,21 @@ textarea {
 
     overflow: auto;
     /* Removes default vertical scrollbar in IE6/7/8/9 */
-    padding:30px;
+    padding:20px;
     vertical-align: top;
     /* Improves readability and alignment in all browsers */
     color: $primary_color;
     border: 1px solid $border_color;
-    height: 160px;
+    height: 100px;
     max-width: 100%;
     width: 100%;
 }
 
 
+select {
 
+    border:1px solid $border_color;
+}
 
 /*
 ***************************************************************
@@ -142,7 +153,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
-    @include transation_delay();   
+    @include transation_delay();
+    word-break: break-word;   
 }
 
 a {
@@ -187,6 +199,13 @@ a {
 .site-description {
 
     color: inherit;
+}
+
+
+body.rtl #toTop {
+
+    left:auto;
+    right:10px;
 }
 
 
@@ -3375,6 +3394,21 @@ body.boxed .footer_social {
 }
 
 
+// colors in footer 
+
+footer .widget_archive li,
+footer .widget_categories li,
+footer .widget_recent_entries li,
+footer .widget_meta li,
+footer .widget_recent_comments li,
+footer .widget_rss li,
+footer .widget_pages li,
+footer .widget_nav_menu li {
+
+    border-bottom-color:#272727;
+}
+
+
 /*
 =============================================
 =
@@ -5084,6 +5118,8 @@ footer .widget_product_tag_cloud .tagcloud a:hover {
     &:focus {
 
         padding-left: 10px;
+        -webkit-transition-duration: 0.6s;
+        -moz-transition-duration: 0.6s;
         transition-duration: 0.6s;
     }
 

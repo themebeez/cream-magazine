@@ -1817,6 +1817,12 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 				<?php
 				if( !empty( $primary_theme_color ) ) {
 					?>
+
+
+					button,
+					input[type="button"],
+					input[type="reset"],
+					input[type="submit"],
 					.primary-navigation > ul > li.home-btn,
 					.cm_header_lay_three .primary-navigation > ul > li.home-btn,
 					.news_ticker_wrap .ticker_head,

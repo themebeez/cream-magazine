@@ -13,6 +13,10 @@ var rename = require('gulp-rename');
 
 var cache = require('gulp-cache');
 
+var rtlcss = require('gulp-rtlcss');
+
+var autoprefixer = require('gulp-autoprefixer');
+
 
 
 
@@ -41,6 +45,19 @@ gulp.task('scripts', function() {
 });
 
 
+// do rlt
+
+gulp.task('do-rlt', function () {
+
+    return gulp.src(['assets/dist/css/main.css'])
+
+        .pipe(autoprefixer(["last 2 versions", "> 1%"])) // Other post-processing.
+        .pipe(rtlcss()) // Convert to RTL.
+        .pipe(rename({ suffix: '-rtl' })) // Append "-rtl" to the filename.
+        .pipe(gulp.dest('assets/dist/css/')); // Output RTL stylesheets.
+});
+
+
 // Task watch
 
 gulp.task('watch', function() {
@@ -48,6 +65,8 @@ gulp.task('watch', function() {
     // Watch .js files
 
     gulp.watch('assets/src/js/**/**.js', ['scripts']);
+
+    gulp.watch('assets/dist/css/main.css', ['do-rlt']);
 
 
 });
@@ -58,4 +77,4 @@ gulp.task('watch', function() {
 // just hit the command "gulp" it will run the following tasks...
 
 
-gulp.task('default', ['watch', 'scripts']);
+gulp.task('default', ['watch', 'scripts', 'do-rlt']);
