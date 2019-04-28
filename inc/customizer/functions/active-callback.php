@@ -52,6 +52,22 @@ if( ! function_exists( 'cream_magaine_is_header_one_active' ) ) {
 
 
 /*
+ * Active callback function for when header layout two is active	
+ */
+if( ! function_exists( 'cream_magaine_is_header_two_active' ) ) {
+
+	function cream_magaine_is_header_two_active( $control ) {
+		
+		if( $control->manager->get_setting( 'cream_magazine_select_header_layout' )->value() == 'header_2' ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+
+/*
  *	Active Callback For When Related Section Is Active
  */
 if( ! function_exists( 'cream_magaine_is_related_section_active' ) ) {

@@ -463,6 +463,15 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 				) 
 			);
 
+			// Header Mask Color
+			$wp_customize->add_setting( 
+				'cream_magazine_header_overlay_color', 
+				array(
+					'sanitize_callback'	=> 'sanitize_text_field',
+					'default'			=> $defaults['cream_magazine_header_overlay_color'],
+				) 
+			);
+
 			// Coyright & Credit Text
 			$wp_customize->add_setting( 
 				'cream_magazine_copyright_credit', 
@@ -917,6 +926,8 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 			require get_template_directory() . '/inc/customizer/controls/class-cream-magazine-multiple-select-dropdown-taxonomies.php';
 			// Radio Image Control
 			require get_template_directory() . '/inc/customizer/controls/class-cream-magazine-radio-image-control.php';
+			// Alpha Color Picker Control
+			require get_template_directory() . '/inc/customizer/controls/class-cream-magazine-alpha-color-picker-control.php';
 
 			// Select Site Layout
 			$wp_customize->add_control( 
@@ -1109,6 +1120,21 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 						'choices'			=> $this->get_header_layout(), 
 					) 
 				)
+			);
+
+			// Menu Color - Set Home Icon Color
+			$wp_customize->add_control( 
+				new Cream_Magazine_Alpha_Color_Control( 
+					$wp_customize, 
+					'cream_magazine_header_overlay_color', 
+					array(
+						'label'		=> esc_html__( 'Header Overlay Color', 'cream-magazine' ),
+						'section'	=> 'cream_magazine_header_options',
+						'show_opacity' => true,
+						'palette' => array( '#000', '#fff', '#df312c', '#df9a23', '#eef000', '#7ed934', '#1571c1', '#8309e7' ),
+						'active_callback' => 'cream_magaine_is_header_two_active',
+					) 
+				) 
 			);
 
 			// Enable Scroll Top Button
@@ -1792,6 +1818,7 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 
 			$enable_scroll_top = cream_magazine_get_option( 'cream_magazine_enable_scroll_top_button' );
 			$enable_header_search = cream_magazine_get_option( 'cream_magazine_enable_search_button' );
+			$header_overlay = cream_magazine_get_option( 'cream_magazine_header_overlay_color' );
 			?>
 			<style>
 				.primary-navigation li.primarynav_search_icon {
@@ -1947,6 +1974,14 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 					.the_content blockquote {
 
 						border-color: <?php echo esc_attr( $primary_theme_color ); ?>;
+					}
+					<?php
+				}
+
+				if( !empty( $header_overlay ) ) {
+					?>
+					header .mask {
+						background-color: <?php echo esc_attr( $header_overlay ); ?>;
 					}
 					<?php
 				}

@@ -182,10 +182,10 @@ class Cream_Magazine {
 
 		wp_enqueue_style( 'cream-magazine-fonts', cream_magazine_fonts_url() );
 
-		wp_enqueue_style( 'cream-magazine-main', get_template_directory_uri() . '/assets/dist/css/main.css' );
-
 		if( is_rtl() ) {
 			wp_enqueue_style( 'cream-magazine-main-rtl', get_template_directory_uri() . '/assets/dist/css/main-rtl.css' );
+		} else {
+			wp_enqueue_style( 'cream-magazine-main', get_template_directory_uri() . '/assets/dist/css/main.css' );
 		}
 
 		wp_enqueue_script( 'cream-magazine-bundle', get_template_directory_uri() . '/assets/dist/js/bundle.min.js', array( 'jquery'), CREAM_MAGAZINE_VERSION, true );

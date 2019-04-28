@@ -76,6 +76,7 @@ if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
     	$defaults['cream_magazine_enable_home_button'] = false;
     	$defaults['cream_magazine_enable_search_button'] = true;
         $defaults['cream_magazine_select_header_layout'] = 'header_1';
+        $defaults['cream_magazine_header_overlay_color'] = 'rgba(0,0,0,0.2)';
         
         $defaults['cream_magazine_enable_scroll_top_button'] = true;
     	$defaults['cream_magazine_copyright_credit'] = '';
