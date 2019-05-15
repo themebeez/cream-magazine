@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-05-14 23:05+0545\n"
+"PO-Revision-Date: 2019-05-15 11:38+0545\n"
 "Language-Team: themebeez <themebeez@gmail.com>\n"
 "X-Generator: Poedit 2.2.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: 404.php:30
 msgid "404"
-msgstr ""
+msgstr "404"
 
 #: 404.php:31
 msgid "Page Not Found !"
@@ -185,6 +185,9 @@ msgid ""
 "of full content. You can control the number of words to be displyed in this "
 "section."
 msgstr ""
+"Post Excerpt è il numero di parole di contenuto che vengono visualizzate al "
+"posto del contenuto completo. È possibile controllare il numero di parole da "
+"visualizzare in questa sezione."
 
 #: inc/customizer/class-cream-magazine-customize.php:240
 msgid "Social Links"
@@ -192,12 +195,12 @@ msgstr "Collegamenti sociali"
 
 #: inc/customizer/class-cream-magazine-customize.php:249
 msgid "Breadcrumb"
-msgstr ""
+msgstr "Breadcrumb"
 
 #: inc/customizer/class-cream-magazine-customize.php:258
 #: inc/widget/class-cream-magazine-widget-init.php:49
 msgid "Sidebar"
-msgstr ""
+msgstr "Sidebar"
 
 #: inc/customizer/class-cream-magazine-customize.php:268
 msgid "Site Image"
@@ -210,7 +213,7 @@ msgstr "Tema Colore"
 #: inc/customizer/class-cream-magazine-customize.php:288
 #: inc/customizer/class-cream-magazine-customize.php:1639
 msgid "Woocommerce Sidebar Position"
-msgstr ""
+msgstr "Woocommerce Sidebar Posizione"
 
 #: inc/customizer/class-cream-magazine-customize.php:936
 msgid "Select Site Layout"
@@ -226,7 +229,7 @@ msgstr "Layout a larghezza piena"
 
 #: inc/customizer/class-cream-magazine-customize.php:950
 msgid "Enable Ticker News"
-msgstr ""
+msgstr "Abilitare Ticker News"
 
 #: inc/customizer/class-cream-magazine-customize.php:951
 msgid ""
@@ -300,11 +303,11 @@ msgstr ""
 #: inc/customizer/class-cream-magazine-customize.php:1072
 #: inc/metabox/class-cream-magazine-post-meta.php:40
 msgid "Sidebar Position"
-msgstr ""
+msgstr "Sidebar Posizione"
 
 #: inc/customizer/class-cream-magazine-customize.php:1084
 msgid "Enable Top Header"
-msgstr ""
+msgstr "Abilita intestazione superiore"
 
 #: inc/customizer/class-cream-magazine-customize.php:1095
 msgid "Enable Home Button"
@@ -312,7 +315,7 @@ msgstr ""
 
 #: inc/customizer/class-cream-magazine-customize.php:1105
 msgid "Enable Search Button"
-msgstr ""
+msgstr "Abilita pulsante di ricerca"
 
 #: inc/customizer/class-cream-magazine-customize.php:1117
 msgid "Select Header Layout"
@@ -367,35 +370,35 @@ msgstr "Pubblica la lunghezza del dettaglio"
 
 #: inc/customizer/class-cream-magazine-customize.php:1523
 msgid "Facebook Link"
-msgstr ""
+msgstr "Facebook Link"
 
 #: inc/customizer/class-cream-magazine-customize.php:1533
 msgid "Twitter Link"
-msgstr ""
+msgstr "Twitter Link"
 
 #: inc/customizer/class-cream-magazine-customize.php:1543
 msgid "Instagram Link"
-msgstr ""
+msgstr "Instagram Link"
 
 #: inc/customizer/class-cream-magazine-customize.php:1553
 msgid "Youtube Link"
-msgstr ""
+msgstr "Youtube Link"
 
 #: inc/customizer/class-cream-magazine-customize.php:1563
 msgid "VK Link"
-msgstr ""
+msgstr "VK Link"
 
 #: inc/customizer/class-cream-magazine-customize.php:1573
 msgid "Linkedin Link"
-msgstr ""
+msgstr "Linkedin Link"
 
 #: inc/customizer/class-cream-magazine-customize.php:1583
 msgid "Vimeo Link"
-msgstr ""
+msgstr "Vimeo Link"
 
 #: inc/customizer/class-cream-magazine-customize.php:1593
 msgid "Enable Breadcrumb"
-msgstr ""
+msgstr "Abilitare Breadcrumb"
 
 #: inc/customizer/class-cream-magazine-customize.php:1603
 msgid "Enable Sticky Sidebar"
@@ -403,11 +406,11 @@ msgstr "Abilita barra laterale appiccicosa"
 
 #: inc/customizer/class-cream-magazine-customize.php:1614
 msgid "Enable Lazy Load"
-msgstr ""
+msgstr "Abilita il carico lento"
 
 #: inc/customizer/class-cream-magazine-customize.php:1626
 msgid "Primary Theme Color"
-msgstr ""
+msgstr "Tema primario"
 
 #: inc/helper-functions.php:63
 msgid "Breaking News"
@@ -415,7 +418,7 @@ msgstr "Ultime notizie"
 
 #: inc/helper-functions.php:357
 msgid "Themebeez Toolkit"
-msgstr ""
+msgstr "Themebeez Kit di strumenti"
 
 #: inc/metabox/class-cream-magazine-post-meta.php:61
 msgid "Right"
@@ -447,31 +450,31 @@ msgstr "selezionato"
 
 #: inc/theme-hooks.php:180
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: inc/theme-hooks.php:186
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: inc/theme-hooks.php:192
 msgid "Instagram"
-msgstr ""
+msgstr "Instagram"
 
 #: inc/theme-hooks.php:198
 msgid "Youtube"
-msgstr ""
+msgstr "Youtube"
 
 #: inc/theme-hooks.php:204
 msgid "VK"
-msgstr ""
+msgstr "VK"
 
 #: inc/theme-hooks.php:210
 msgid "Linkedin"
-msgstr ""
+msgstr "Linkedin"
 
 #: inc/theme-hooks.php:216
 msgid "Vimeo"
-msgstr ""
+msgstr "Vimeo"
 
 #: inc/theme-hooks.php:325 single.php:45
 msgid "Prev"
@@ -484,16 +487,16 @@ msgstr "Il prossimo"
 #. translators: 1: Copyright Text 2: Theme name, 3: Theme author.
 #: inc/theme-hooks.php:570
 msgid "%1$s %2$s by %3$s"
-msgstr ""
+msgstr "%1$s %2$s di %3$s"
 
 #: inc/theme-hooks.php:570 inc/theme-hooks.php:573
 msgid "Themebeez"
-msgstr ""
+msgstr "Themebeez"
 
 #. translators: 1: Theme name, 2: Theme author.
 #: inc/theme-hooks.php:573
 msgid "%1$s by %2$s"
-msgstr ""
+msgstr "%1$s di %2$s"
 
 #: inc/widget/class-cream-magazine-widget-init.php:51
 #: inc/widget/class-cream-magazine-widget-init.php:61
@@ -510,7 +513,7 @@ msgstr "Piè di pagina a sinistra"
 
 #: inc/widget/class-cream-magazine-widget-init.php:69
 msgid "Footer Middle"
-msgstr ""
+msgstr "Piede centrale"
 
 #: inc/widget/class-cream-magazine-widget-init.php:79
 msgid "Footer Right"
@@ -543,11 +546,11 @@ msgstr ""
 
 #: inc/widget/class-cream-magazine-widget-init.php:130
 msgid "Woocommerce Sidebar"
-msgstr ""
+msgstr "Woocommerce Sidebar"
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:9
 msgid "CM Half: News Widget 3"
-msgstr ""
+msgstr "CM Metà: Notizia Widget 3"
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:11
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:11
@@ -556,7 +559,7 @@ msgstr ""
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:11
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:11
 msgid "Displays posts of selected category."
-msgstr ""
+msgstr "Visualizza i post della categoria selezionata."
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:119
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:176
@@ -579,7 +582,7 @@ msgstr ""
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:102
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:129
 msgid "Title"
-msgstr ""
+msgstr "Titolo"
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:131
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:141
@@ -687,11 +690,11 @@ msgstr "Mostra numero commenti post"
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:9
 msgid "CM Half: News Widget 2"
-msgstr ""
+msgstr "CM Metà: Notizia Widget 2"
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:9
 msgid "CM Full: News Widget 1"
-msgstr ""
+msgstr "CM Pieno: NotiziaWidget 1"
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:178
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:183
@@ -702,7 +705,7 @@ msgstr "Seleziona categoria: "
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:9
 msgid "CM Half: News Widget 6"
-msgstr ""
+msgstr "CM Metà: Notizia Widget 6"
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:193
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:155
@@ -711,19 +714,19 @@ msgstr "Seleziona categorie"
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:9
 msgid "CM Full: News Widget 3"
-msgstr ""
+msgstr "CM Pieno: Notizia Widget 3"
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:9
 msgid "CM Full: News Widget 2"
-msgstr ""
+msgstr "CM Pieno: NotiziaWidget 2"
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:9
 msgid "CM: Author Widget"
-msgstr ""
+msgstr "CM: Autore Widget"
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:11
 msgid "Displays Brief Author Description."
-msgstr ""
+msgstr "Visualizza breve descrizione dell'autore."
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:108
 msgid "Author Page"
@@ -731,7 +734,7 @@ msgstr "Pagina dell'autore"
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:115
 msgid "&mdash; Select Page &mdash;"
-msgstr ""
+msgstr "&mdash; Seleziona Pagina &mdash;"
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-author-widget.php:123
 msgid "Author Link Title"
@@ -739,7 +742,7 @@ msgstr "Titolo del link dell'autore"
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:9
 msgid "CM: Posts Widget"
-msgstr ""
+msgstr "CM: Widget Messaggi"
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-post-widget.php:11
 msgid "Displays Recent, Most Commented or Editor Picked Posts."
@@ -763,7 +766,7 @@ msgstr "Numero di post popolari"
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:9
 msgid "CM: Social Widget"
-msgstr ""
+msgstr "CM: Sociale Widget"
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:12
 msgid "Displays links to social sites."
@@ -790,7 +793,7 @@ msgstr "Titolo: "
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:116
 msgid "Facebook Link:"
-msgstr ""
+msgstr "Facebook Link:"
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:123
 msgid "Twitter Link:"
@@ -798,7 +801,7 @@ msgstr ""
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:130
 msgid "Instagram Link:"
-msgstr ""
+msgstr "Instagram Link:"
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:137
 msgid "linkedin Link:"
@@ -806,11 +809,11 @@ msgstr ""
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:144
 msgid "Youtube Link:"
-msgstr ""
+msgstr "Youtube Link:"
 
 #: inc/widget/sidebar-footer-widgets/class-cream-magazine-social-widget.php:151
 msgid "Pinterest Link:"
-msgstr ""
+msgstr "Pinterest Link:"
 
 #: inc/woocommerce/woocommerce-template-functions.php:221
 msgid "View your shopping cart"
@@ -820,8 +823,8 @@ msgstr "Visualizza il tuo carrello"
 #: inc/woocommerce/woocommerce-template-functions.php:225
 msgid "%d item"
 msgid_plural "%d items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d articolo"
+msgstr[1] "%d elementi"
 
 #. translators: %s: search query.
 #: search.php:44
@@ -891,7 +894,7 @@ msgstr "Pagine %s"
 #. Translators: %s is the page number.
 #: third-party/breadcrumbs.php:274
 msgid "Comment Page %s"
-msgstr ""
+msgstr "Commento pagina %s"
 
 #. Translators: Minute archive title. %s is the minute time format.
 #: third-party/breadcrumbs.php:276
@@ -968,7 +971,7 @@ msgstr "La seguente estensione è stata attivata correttamente:"
 #. translators: 1: plugin name.
 #: third-party/class-tgm-plugin-activation.php:397
 msgid "No action taken. Plugin %1$s was already active."
-msgstr ""
+msgstr "Nessuna azione intrapresa. L'estensione %1$s era già attiva."
 
 #. translators: 1: plugin name.
 #: third-party/class-tgm-plugin-activation.php:399
@@ -976,11 +979,13 @@ msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 msgstr ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
 
 #. translators: 1: dashboard link.
 #: third-party/class-tgm-plugin-activation.php:401
 msgid "All plugins installed and activated successfully. %1$s"
-msgstr ""
+msgstr "Tutte le estensioni installate e attivate con successo. %1$s"
 
 #: third-party/class-tgm-plugin-activation.php:402
 msgid "Dismiss this notice"
@@ -991,14 +996,18 @@ msgid ""
 "There are one or more required or recommended plugins to install, update or "
 "activate."
 msgstr ""
+"Sono disponibili una o più estensioni obbligatorie o consigliate da "
+"installare, aggiornare o attivare."
 
 #: third-party/class-tgm-plugin-activation.php:404
 msgid "Please contact the administrator of this site for help."
-msgstr ""
+msgstr "Si prega di contattare l'amministratore di questo sito Web per aiuto."
 
 #: third-party/class-tgm-plugin-activation.php:610
 msgid "This plugin needs to be updated to be compatible with your theme."
 msgstr ""
+"Questa estensione deve essere aggiornata per essere compatibile con il tuo "
+"tema."
 
 #: third-party/class-tgm-plugin-activation.php:611
 msgid "Update Required"
@@ -1013,6 +1022,8 @@ msgid ""
 "The remote plugin package does not contain a folder with the desired slug "
 "and renaming did not work."
 msgstr ""
+"Il pacchetto dell'estensione remota non contiene una cartella con lo slug "
+"desiderato e la rinomina non ha funzionato."
 
 #: third-party/class-tgm-plugin-activation.php:1030
 #: third-party/class-tgm-plugin-activation.php:1033
@@ -1020,17 +1031,21 @@ msgid ""
 "Please contact the plugin provider and ask them to package their plugin "
 "according to the WordPress guidelines."
 msgstr ""
+"Contatta il provider di estensione e chiedi loro di comprimere la loro "
+"estensione in base alle linee guida di WordPress."
 
 #: third-party/class-tgm-plugin-activation.php:1033
 msgid ""
 "The remote plugin package consists of more than one file, but the files are "
 "not packaged in a folder."
 msgstr ""
+"Il pacchetto dell'estensione remota è composto da più di un file, ma i file "
+"non sono inclusi in una cartella."
 
 #. translators: %s: version number
 #: third-party/class-tgm-plugin-activation.php:2078
 msgid "TGMPA v%s"
-msgstr ""
+msgstr "TGMPA v%s"
 
 #: third-party/class-tgm-plugin-activation.php:2387
 msgid "Required"
@@ -1269,15 +1284,15 @@ msgstr "Tutte le installazioni sono state completate."
 #. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: third-party/class-tgm-plugin-activation.php:3636
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr ""
+msgstr "Installazione dell'estensione %1$s (%2$d/%3$d)"
 
 #. Theme Name of the plugin/theme
 msgid "Cream Magazine"
-msgstr ""
+msgstr "Cream Magazine"
 
 #. Theme URI of the plugin/theme
 msgid "https://themebeez.com/themes/cream-magazine/"
-msgstr ""
+msgstr "https://themebeez.com/themes/cream-magazine/"
 
 #. Description of the plugin/theme
 msgid ""
@@ -1294,19 +1309,19 @@ msgstr ""
 
 #. Author of the plugin/theme
 msgid "themebeez"
-msgstr ""
+msgstr "themebeez"
 
 #. Author URI of the plugin/theme
 msgid "https://themebeez.com/"
-msgstr ""
+msgstr "https://themebeez.com/"
 
 #. translators: 1: comment count number, 2: title.
 #: comments.php:41
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1$s pensato sopra &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s pensieri su &ldquo;%2$s&rdquo;"
 
 #. translators: If there are characters in your language that are not supported
 #. by Merriweather, translate this to 'off'. Do not translate into your own
@@ -1314,7 +1329,7 @@ msgstr[1] ""
 #: inc/helper-functions.php:169
 msgctxt "Roboto Condensed font: on or off"
 msgid "on"
-msgstr ""
+msgstr "abilitare"
 
 #. translators: If there are characters in your language that are not supported
 #. by Merriweather, translate this to 'off'. Do not translate into your own
@@ -1322,75 +1337,75 @@ msgstr ""
 #: inc/helper-functions.php:176
 msgctxt "Muli font: on or off"
 msgid "on"
-msgstr ""
+msgstr "abilitare"
 
 #. translators: %1$s: span i tag open, %2$s: span i tag close, %3$s: post
 #. author.
 #: inc/theme-functions.php:122
 msgctxt "post author"
 msgid "%1$s %2$s %3$s"
-msgstr ""
+msgstr "%1$s %2$s %3$s"
 
 #. translators: %1$s: i tag open, %2$s: i tag close, %3$s: post date.
 #: inc/theme-functions.php:138
 msgctxt "post date"
 msgid "%1$s %2$s %3$s"
-msgstr ""
+msgstr "%1$s %2$s %3$s"
 
 #: third-party/breadcrumbs.php:265
 msgctxt "breadcrumbs aria label"
 msgid "Breadcrumbs"
-msgstr ""
+msgstr "Briciole di pane"
 
 #: third-party/breadcrumbs.php:738
 msgctxt "minute and hour archives time format"
 msgid "g:i a"
-msgstr ""
+msgstr "g:i a"
 
 #: third-party/breadcrumbs.php:755
 msgctxt "minute archives time format"
 msgid "i"
-msgstr ""
+msgstr "i"
 
 #: third-party/breadcrumbs.php:772
 msgctxt "hour archives time format"
 msgid "g a"
-msgstr ""
+msgstr "g a"
 
 #: third-party/breadcrumbs.php:788 third-party/breadcrumbs.php:817
 #: third-party/breadcrumbs.php:844 third-party/breadcrumbs.php:871
 #: third-party/breadcrumbs.php:1211
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #: third-party/breadcrumbs.php:789 third-party/breadcrumbs.php:845
 #: third-party/breadcrumbs.php:1215
 msgctxt "monthly archives date format"
 msgid "F"
-msgstr ""
+msgstr "F"
 
 #: third-party/breadcrumbs.php:790 third-party/breadcrumbs.php:1219
 msgctxt "daily archives date format"
 msgid "j"
-msgstr ""
+msgstr "j"
 
 #: third-party/breadcrumbs.php:818
 msgctxt "weekly archives date format"
 msgid "W"
-msgstr ""
+msgstr "W"
 
 #: third-party/class-tgm-plugin-activation.php:1217
 #: third-party/class-tgm-plugin-activation.php:3064
 msgctxt "plugin A *and* plugin B"
 msgid "and"
-msgstr ""
+msgstr "e"
 
 #. translators: 1: install status, 2: update status
 #: third-party/class-tgm-plugin-activation.php:2456
 msgctxt "Install/Update Status"
 msgid "%1$s, %2$s"
-msgstr ""
+msgstr "%1$s, %2$s"
 
 #. translators: 1: number of plugins.
 #: third-party/class-tgm-plugin-activation.php:2502
