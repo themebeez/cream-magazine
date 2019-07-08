@@ -358,6 +358,11 @@ if ( ! function_exists( 'cream_magazine_recommended_plugins' ) ) :
                 'slug'     => 'themebeez-toolkit',
                 'required' => false,
             ),
+            array(
+                'name'     => esc_html__( 'Universal Google AdSense And Ads Manager', 'cream-magazine' ),
+                'slug'     => 'universal-google-adsense-and-ads-manager',
+                'required' => false,
+            ),
         );
 
         tgmpa( $plugins );

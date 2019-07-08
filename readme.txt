@@ -111,7 +111,7 @@ Cream Magazine includes support for Contact Form 7 and Woocommerce.
 - Fix: Responsive scrollbar at mobile device
 - Fix: General styling
 - Changed: Font family for headings
-- Added: Ugaam plugin recommedation
+- Added: UGAAM plugin recommedation
 
 
 = Version 1.0.9 - 15 May, 2019 =
