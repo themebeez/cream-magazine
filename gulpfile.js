@@ -5,71 +5,59 @@
 
 var gulp = require('gulp');
 
-var concat = require('gulp-concat');
+// var concat = require('gulp-concat');
 
-var uglify = require('gulp-uglify');
+// var uglify = require('gulp-uglify');
 
-var rename = require('gulp-rename');
+// var rename = require('gulp-rename');
 
-var cache = require('gulp-cache');
+// var cache = require('gulp-cache');
 
-var rtlcss = require('gulp-rtlcss');
-
-var autoprefixer = require('gulp-autoprefixer');
-
-
-
+var wpPot = require( 'gulp-wp-pot' );
 
 
 // Task defined for java scripts bundling and minifying
 
-gulp.task('scripts', function() {
+// gulp.task( 'scripts', function() {
 
 
-    return gulp.src([
+//     return gulp.src([
 
-            'assets/src/js/vendor/*.js',
-            'assets/src/js/plugins/*.js',
-            'assets/src/js/custom/*.js',
-        ])
+//             'assets/src/js/jquery/*.js',
+//             'assets/src/js/vendor/*.js',
+//             'assets/src/js/libraries/*.js',
+//             'assets/src/js/custom/*.js',
+//         ])
 
-        .pipe(concat('bundle.js'))
+//         .pipe(concat('bundle.js'))
 
-        .pipe(rename({ suffix: '.min' }))
+//         .pipe(rename({ suffix: '.min' }))
 
-        .pipe(uglify())
+//         .pipe(uglify())
 
-        .pipe(gulp.dest('assets/dist/js/'));
-
-
-});
+//         .pipe(gulp.dest('assets/dist/js/'));
 
 
-// do rlt
+// } );
 
-gulp.task('do-rlt', function () {
+gulp.task( 'makepot', function () {
 
-    return gulp.src(['assets/dist/css/main.css'])
-
-        .pipe(autoprefixer(["last 2 versions", "> 1%"])) // Other post-processing.
-        .pipe(rtlcss()) // Convert to RTL.
-        .pipe(rename({ suffix: '-rtl' })) // Append "-rtl" to the filename.
-        .pipe(gulp.dest('assets/dist/css/')); // Output RTL stylesheets.
-});
+    return gulp.src( ['**/*.php', '!node_modules/**'] )
+        .pipe( wpPot( {
+            package: 'cream-magazine'
+        } ) )
+        .pipe( gulp.dest( 'languages/cream-magazine.pot' ) );
+} );
 
 
 // Task watch
 
-gulp.task('watch', function() {
+// gulp.task( 'watch', function() {
 
-    // Watch .js files
-
-    gulp.watch('assets/src/js/**/**.js', ['scripts']);
-
-    gulp.watch('assets/dist/css/main.css', ['do-rlt']);
+//     gulp.watch( 'assets/src/js/**/**.js', ['scripts'] );
 
 
-});
+// } );
 
 
 // declaring final task and command tasker
@@ -77,4 +65,4 @@ gulp.task('watch', function() {
 // just hit the command "gulp" it will run the following tasks...
 
 
-gulp.task('default', ['watch', 'scripts', 'do-rlt']);
+gulp.task( 'default', gulp.series( 'makepot' ) );
