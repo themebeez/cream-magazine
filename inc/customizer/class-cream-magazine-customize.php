@@ -213,6 +213,15 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 				) 
 			);
 
+			// Single Page Options
+			$wp_customize->add_section( 
+				'cream_magazine_single_page_options', 
+				array(
+					'title'			=> esc_html__( 'Single Page', 'cream-magazine' ),
+					'panel'			=> 'cream_magazine_theme_customization',
+				) 
+			);
+
 			// Post Meta Options
 			$wp_customize->add_section( 
 				'cream_magazine_post_meta_options', 
@@ -735,6 +744,62 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 					'default'			=> $defaults['cream_magazine_enable_related_section_categories_meta'],
 				) 
 			);
+
+			// Post Single - Enable Common Sidebar Position
+			$wp_customize->add_setting( 
+				'cream_magazine_enable_related_section_categories_meta', 
+				array(
+					'sanitize_callback'	=> 'wp_validate_boolean',
+					'default'			=> $defaults['cream_magazine_enable_post_common_sidebar_position'],
+				) 
+			);
+
+			// Post Single - Enable Common Sidebar Position
+			$wp_customize->add_setting( 
+				'cream_magazine_enable_post_common_sidebar_position', 
+				array(
+					'sanitize_callback'	=> 'wp_validate_boolean',
+					'default'			=> $defaults['cream_magazine_enable_post_common_sidebar_position'],
+				) 
+			);
+
+			// Post Single - Select Common Sidebar Position
+			$wp_customize->add_setting( 
+				'cream_magazine_select_post_common_sidebar_position', 
+				array(
+					'sanitize_callback'	=> 'cream_magazine_sanitize_select',
+					'default'			=> $defaults['cream_magazine_select_post_common_sidebar_position'],
+				) 
+			);
+
+
+			// Page Single - Enable Featured Image
+			$wp_customize->add_setting( 
+				'cream_magazine_enable_page_single_featured_image', 
+				array(
+					'sanitize_callback'	=> 'wp_validate_boolean',
+					'default'			=> $defaults['cream_magazine_enable_page_single_featured_image'],
+				) 
+			);
+
+			// Page Single - Enable Common Sidebar Position
+			$wp_customize->add_setting( 
+				'cream_magazine_enable_page_common_sidebar_position', 
+				array(
+					'sanitize_callback'	=> 'wp_validate_boolean',
+					'default'			=> $defaults['cream_magazine_enable_page_common_sidebar_position'],
+				) 
+			);
+
+			// Page Single - Select Common Sidebar Position
+			$wp_customize->add_setting( 
+				'cream_magazine_select_page_common_sidebar_position', 
+				array(
+					'sanitize_callback'	=> 'cream_magazine_sanitize_select',
+					'default'			=> $defaults['cream_magazine_select_page_common_sidebar_position'],
+				) 
+			);
+
 
 			// Enable Author Meta
 			$wp_customize->add_setting( 
@@ -1454,6 +1519,68 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 					'type'				=> 'checkbox',
 					'active_callback'	=> 'cream_magaine_is_related_section_active', 
 				) 
+			);
+
+
+			// Post Single - Enable Common Sidebar
+			$wp_customize->add_control( 
+				'cream_magazine_enable_post_common_sidebar_position', 
+				array(
+					'label'				=> esc_html__( 'Enable Common Sidebar Position', 'cream-magazine' ),
+					'section'			=> 'cream_magazine_single_post_options',
+					'type'				=> 'checkbox',
+				) 
+			);
+
+			// Post Single - Select Common Sidebar Position
+			$wp_customize->add_control( 
+				new Cream_Magazine_Radio_Image_Control( 
+					$wp_customize,
+					'cream_magazine_select_post_common_sidebar_position', 
+					array(
+						'label'				=> esc_html__( 'Select Sidebar Position', 'cream-magazine' ),
+						'section'			=> 'cream_magazine_single_post_options',
+						'type'				=> 'select',
+						'choices'			=> $this->get_sidebar_position(), 
+						'active_callback'	=> 'cream_magazine_is_post_common_sidebar_position_active'
+					) 
+				)
+			);
+
+			// Page Single Enable Featured Image
+			$wp_customize->add_control( 
+				'cream_magazine_enable_page_single_featured_image', 
+				array(
+					'label'				=> esc_html__( 'Enable Featured Image', 'cream-magazine' ),
+					'section'			=> 'cream_magazine_single_page_options',
+					'type'				=> 'checkbox' 
+				) 
+			);
+
+
+			// Page Single - Enable Common Sidebar
+			$wp_customize->add_control( 
+				'cream_magazine_enable_page_common_sidebar_position', 
+				array(
+					'label'				=> esc_html__( 'Enable Common Sidebar Position', 'cream-magazine' ),
+					'section'			=> 'cream_magazine_single_page_options',
+					'type'				=> 'checkbox',
+				) 
+			);
+
+			// Page Single - Select Common Sidebar Position
+			$wp_customize->add_control( 
+				new Cream_Magazine_Radio_Image_Control( 
+					$wp_customize,
+					'cream_magazine_select_page_common_sidebar_position', 
+					array(
+						'label'				=> esc_html__( 'Select Sidebar Position', 'cream-magazine' ),
+						'section'			=> 'cream_magazine_single_page_options',
+						'type'				=> 'select',
+						'choices'			=> $this->get_sidebar_position(), 
+						'active_callback'	=> 'cream_magazine_is_page_common_sidebar_position_active'
+					) 
+				)
 			);
 
 			// Enable Author Meta

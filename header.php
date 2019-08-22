@@ -44,3 +44,6 @@
 	*/
 	do_action( 'cream_magazine_header_section' );
 
+	?>
+	<div id="content" class="site-content">
+

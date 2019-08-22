@@ -8,6 +8,9 @@
  *
  * @package Cream_Magazine
  */
+?>
+	</div><!-- #content.site-content -->
+	<?php
 	/**
 	* Hook - cream_magazine_footer_wrapper_start.
 	*

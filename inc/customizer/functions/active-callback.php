@@ -81,3 +81,35 @@ if( ! function_exists( 'cream_magaine_is_related_section_active' ) ) {
 		}
 	}
 }
+
+
+/*
+ *	Active Callback For When Enable Common Sidebar Position For Post Is Active
+ */
+if( ! function_exists( 'cream_magazine_is_post_common_sidebar_position_active' ) ) {
+
+	function cream_magazine_is_post_common_sidebar_position_active( $control ) {
+		
+		if( $control->manager->get_setting( 'cream_magazine_enable_post_common_sidebar_position' )->value() == true ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+
+/*
+ *	Active Callback For When Enable Common Sidebar Position For Page Is Active
+ */
+if( ! function_exists( 'cream_magazine_is_page_common_sidebar_position_active' ) ) {
+
+	function cream_magazine_is_page_common_sidebar_position_active( $control ) {
+		
+		if( $control->manager->get_setting( 'cream_magazine_enable_page_common_sidebar_position' )->value() == true ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
