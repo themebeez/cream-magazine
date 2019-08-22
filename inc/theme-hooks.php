@@ -52,7 +52,14 @@ if( ! function_exists( 'cream_magazine_body_before_action' ) ) :
  	function cream_magazine_body_before_action() {
  	?>
  		<body <?php body_class(); ?>>
- 	<?php
+            <?php
+            if( function_exists( 'wp_body_open' ) ) { 
+                wp_body_open(); 
+            }
+            ?>
+            <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cream-magazine' ); ?></a>
+        <?php
+
  	}
 endif;
 add_action( 'cream_magazine_body_before', 'cream_magazine_body_before_action', 10 );
@@ -567,10 +574,10 @@ if( ! function_exists( 'cream_magazine_copyright_action' ) ) :
             		<?php
                     if( !empty( $copyright_text ) ) {
                         /* translators: 1: Copyright Text 2: Theme name, 3: Theme author. */
-                        printf( esc_html__( '%1$s %2$s by %3$s','cream-magazine' ), $copyright_text, get_bloginfo( 'name' ), '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-magazine' ) . '</a>' );
+                        printf( esc_html__( '%1$s %2$s by %3$s','cream-magazine' ), $copyright_text, 'Cream Magazine', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-magazine' ) . '</a>' );
                     } else {
                         /* translators: 1: Theme name, 2: Theme author. */
-                        printf( esc_html__( '%1$s by %2$s', 'cream-magazine' ), get_bloginfo( 'name' ), '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-magazine' ) . '</a>' );
+                        printf( esc_html__( '%1$s by %2$s', 'cream-magazine' ), 'Cream Magazine', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-magazine' ) . '</a>' );
                     }
                     ?>
             	</p>

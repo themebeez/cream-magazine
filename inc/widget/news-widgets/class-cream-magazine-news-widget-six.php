@@ -190,12 +190,12 @@ class Cream_Magazine_News_Widget_Six extends WP_Widget {
             );
             ?>
             <select class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'post_cat' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'post_cat' ) ); ?>">
-                <option value="<?php esc_attr_e( 'none', 'cream-magazine' ); ?>"<?php if( $instance['post_cat'] == 'none' ) { esc_attr_e( 'selected', 'cream-magazine' ); } ?>><?php esc_html_e( 'Select Categories', 'cream-magazine' ); ?></option>
+                <option value="<?php esc_attr_e( 'none', 'cream-magazine' ); ?>" <?php selected( $instance['post_cat'], 'none' ); ?>><?php esc_html_e( 'Select Categories', 'cream-magazine' ); ?></option>
                 <?php
                 if( !empty( $categories ) ) {
                     foreach( $categories as $cat ) {
                         ?>
-                        <option value="<?php echo esc_attr( $cat->slug ); ?>" <?php if( $instance['post_cat'] == $cat->slug ) { esc_attr_e( 'selected', 'cream-magazine' ); } ?>><?php echo esc_html( $cat->name ); ?></option>
+                        <option value="<?php echo esc_attr( $cat->slug ); ?>" <?php selected( $instance['post_cat'], $cat->slug ); ?>><?php echo esc_html( $cat->name ); ?></option>
                         <?php
                     }
                 }
@@ -213,28 +213,28 @@ class Cream_Magazine_News_Widget_Six extends WP_Widget {
 
         <p>
             <label for="<?php echo esc_attr( $this->get_field_name('show_categories_meta') ); ?>">
-                <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id('show_categories_meta') ); ?>" name="<?php echo esc_attr( $this->get_field_name('show_categories_meta') ); ?>" <?php if( $instance['show_categories_meta'] == true ) { esc_attr_e( 'checked', 'cream-magazine' ); } ?> >
+                <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id('show_categories_meta') ); ?>" name="<?php echo esc_attr( $this->get_field_name('show_categories_meta') ); ?>" <?php checked( $instance['show_categories_meta'], true ); ?>>
                 <?php esc_html_e('Show Post Categories', 'cream-magazine'); ?>
             </label>
         </p> 
 
         <p>
             <label for="<?php echo esc_attr( $this->get_field_name('show_author_meta') ); ?>">
-                <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id('show_author_meta') ); ?>" name="<?php echo esc_attr( $this->get_field_name('show_author_meta') ); ?>" <?php if( $instance['show_author_meta'] == true ) { esc_attr_e( 'checked', 'cream-magazine' ); } ?> >
+                <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id('show_author_meta') ); ?>" name="<?php echo esc_attr( $this->get_field_name('show_author_meta') ); ?>" <?php checked( $instance['show_author_meta'], true ); ?>>
                 <?php esc_html_e('Show Post Author', 'cream-magazine'); ?>
             </label>
         </p> 
 
         <p>
             <label for="<?php echo esc_attr( $this->get_field_name('show_date_meta') ); ?>">
-                <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id('show_date_meta') ); ?>" name="<?php echo esc_attr( $this->get_field_name('show_date_meta') ); ?>" <?php if( $instance['show_date_meta'] == true ) { esc_attr_e( 'checked', 'cream-magazine' ); } ?> >
+                <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id('show_date_meta') ); ?>" name="<?php echo esc_attr( $this->get_field_name('show_date_meta') ); ?>" <?php checked( $instance['show_date_meta'], true ); ?>>
                 <?php esc_html_e('Show Posted Date', 'cream-magazine'); ?>
             </label>
         </p>  
 
         <p>
             <label for="<?php echo esc_attr( $this->get_field_name('show_cmnt_no_meta') ); ?>">
-                <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id('show_cmnt_no_meta') ); ?>" name="<?php echo esc_attr( $this->get_field_name('show_cmnt_no_meta') ); ?>" <?php if( $instance['show_cmnt_no_meta'] == true ) { esc_attr_e( 'checked', 'cream-magazine' ); } ?> >
+                <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id('show_cmnt_no_meta') ); ?>" name="<?php echo esc_attr( $this->get_field_name('show_cmnt_no_meta') ); ?>" <?php checked( $instance['show_cmnt_no_meta'], true ); ?>>
                 <?php esc_html_e('Show Post Comments Number', 'cream-magazine'); ?>
             </label>
         </p>  

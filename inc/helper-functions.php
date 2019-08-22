@@ -112,6 +112,12 @@ if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
         $defaults['cream_magazine_enable_related_section_author_meta'] = true;
         $defaults['cream_magazine_enable_related_section_date_meta'] = true;
         $defaults['cream_magazine_enable_related_section_cmnts_no_meta'] = true;
+        $defaults['cream_magazine_enable_post_common_sidebar_position'] = false;
+        $defaults['cream_magazine_select_post_common_sidebar_position'] = 'right';
+
+        $defaults['cream_magazine_enable_page_single_featured_image'] = true;
+        $defaults['cream_magazine_enable_page_common_sidebar_position'] = false;
+        $defaults['cream_magazine_select_page_common_sidebar_position'] = 'right';
 
     	$defaults['cream_magazine_enable_category_meta'] = true;
     	$defaults['cream_magazine_enable_date_meta'] = true;
@@ -226,11 +232,27 @@ if ( !function_exists( 'cream_magazine_sidebar_position' ) ) :
                 }
 
                 if( is_single() ) {
-                    $sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
+
+                    $common_post_sidebar = cream_magazine_get_option( 'cream_magazine_enable_post_common_sidebar_position' );
+                    
+                    if( $common_post_sidebar == true ) {
+                        $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_post_common_sidebar_position' );
+                    } else {
+
+                        $sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
+                    }
                 }
 
                 if( is_page() ) {
-                    $sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
+
+                    $common_post_sidebar = cream_magazine_get_option( 'cream_magazine_enable_page_common_sidebar_position' );
+
+                    if( $common_post_sidebar == true ) {
+                        $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_page_common_sidebar_position' );
+                    } else {
+
+                        $sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
+                    }
                 }
             }
         } else {
@@ -247,11 +269,27 @@ if ( !function_exists( 'cream_magazine_sidebar_position' ) ) :
             }
 
             if( is_single() ) {
-                $sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
+
+                $common_post_sidebar = cream_magazine_get_option( 'cream_magazine_enable_post_common_sidebar_position' );
+                
+                if( $common_post_sidebar == true ) {
+                    $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_post_common_sidebar_position' );
+                } else {
+
+                    $sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
+                }
             }
 
             if( is_page() ) {
-                $sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
+
+                $common_post_sidebar = cream_magazine_get_option( 'cream_magazine_enable_page_common_sidebar_position' );
+
+                if( $common_post_sidebar == true ) {
+                    $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_page_common_sidebar_position' );
+                } else {
+
+                    $sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
+                }
             }
         }
         

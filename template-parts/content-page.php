@@ -13,7 +13,14 @@
 	    <div class="the_title">
 	        <h2><?php the_title(); ?></h2>
 	    </div><!-- .the_title -->
-	    <?php cream_magazine_post_thumbnail(); ?>
+	    <?php
+	    $show_featured_image = cream_magazine_get_option( 'cream_magazine_enable_page_single_featured_image' );
+
+	    if( $show_featured_image == true ) { 
+	    	
+	    	cream_magazine_post_thumbnail(); 
+	    }
+	    ?>
 	    <div class="the_content">
 	    	<?php
 	    	the_content();
