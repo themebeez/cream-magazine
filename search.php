@@ -38,12 +38,12 @@ get_header();
 			                            	?>
 			                                <section class="list_page_iner">
 			                                    <div class="section-title">
-			                                    	<h2>
+			                                    	<h1>
 														<?php
 														/* translators: %s: search query. */
 														printf( esc_html__( 'Search Results for: %s', 'cream-magazine' ), '<span>' . get_search_query() . '</span>' );
 														?>
-													</h2><!-- .list_head -->
+													</h1><!-- .list_head -->
 			                                    </div><!-- .section-title -->
 		                                		<div class="list_entry">
 	                                                <section class="cm-post-widget-three">
