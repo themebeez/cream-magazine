@@ -1023,6 +1023,7 @@
 	}
 
 	// Post Page
+
 	.single {
 
 		.content-entry {
@@ -1031,9 +1032,9 @@
 
 				.the_title {
 
-					h2 {
+					h1 {
 
-						font-size: 24px;
+						font-size: 32px;
 					}
 				}
 			}
@@ -1171,6 +1172,12 @@
 		max-width: 98%;
 	}
 	
+	// Header 
+
+	header .site-title {
+
+		font-size: 26px;
+	}
 
 	// Banner 
 
@@ -1623,7 +1630,7 @@
 
 	.woocommerce .woocommerce-cart-form {
 
-		nargin-bottom: 20px;
+		margin-bottom: 20px;
 	}
 
 	#add_payment_method .wc-proceed-to-checkout a.checkout-button, 

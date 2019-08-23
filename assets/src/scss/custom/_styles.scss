@@ -517,6 +517,7 @@ ul.social-icons li a[href*=".com"]:hover::before {
     overflow:hidden;
 }
 
+.section-title h1,
 .section-title h2 {
     
     display: inline-block;
@@ -529,6 +530,7 @@ ul.social-icons li a[href*=".com"]:hover::before {
     width: 100%; 
 }
 
+.section-title h1::after,
 .section-title h2::after {
     content: '';
     position: absolute;
@@ -890,9 +892,10 @@ header .widget img {
 }
 
 header .site-title {
-
-    font-weight:800;
-    font-size: 34px;
+    
+    font-size: 32px;
+    font-weight:bold;
+    line-height:1.2;
 }
 
 header .advertisement-area {
@@ -4275,7 +4278,7 @@ footer .widget_product_tag_cloud .tagcloud a:hover {
     margin-bottom: 20px;
 }
 
-.cm_post_page_lay_wrap .content-entry .the_title h2 {
+.cm_post_page_lay_wrap .content-entry .the_title h1 {
 
     font-size: 38px;
 }
@@ -4873,9 +4876,9 @@ footer .widget_product_tag_cloud .tagcloud a:hover {
     margin-top: 30px;
 }
 
-.cm_archive_page .section-title h2,
-.cm_search_page .section-title h2,
-.cm_not_found_page .section-title h2 {
+.cm_archive_page .section-title h1,
+.cm_search_page .section-title h1,
+.cm_not_found_page .section-title h1 {
     
     display: block;
     font-size:18px;
