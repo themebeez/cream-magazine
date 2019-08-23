@@ -16,7 +16,7 @@ $show_featured_image = cream_magazine_get_option( 'cream_magazine_enable_post_si
 <div class="content-entry clearfix">
 	<article id="post-<?php the_ID(); ?>" <?php post_class('post-detail'); ?>>
 	    <div class="the_title">
-	        <h2><?php the_title(); ?></h2>
+	        <h1><?php the_title(); ?></h1>
 	    </div><!-- .the_title -->
 	    <?php cream_magazine_post_meta( $show_date_meta, $show_author_meta, $show_cmnt_no_meta ); ?>
 	    <?php 

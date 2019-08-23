@@ -11,7 +11,7 @@
 <div class="content-entry">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	    <div class="the_title">
-	        <h2><?php the_title(); ?></h2>
+	        <h1><?php the_title(); ?></h1>
 	    </div><!-- .the_title -->
 	    <?php
 	    $show_featured_image = cream_magazine_get_option( 'cream_magazine_enable_page_single_featured_image' );
