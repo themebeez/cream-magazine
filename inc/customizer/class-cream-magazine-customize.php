@@ -747,15 +747,6 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 
 			// Post Single - Enable Common Sidebar Position
 			$wp_customize->add_setting( 
-				'cream_magazine_enable_related_section_categories_meta', 
-				array(
-					'sanitize_callback'	=> 'wp_validate_boolean',
-					'default'			=> $defaults['cream_magazine_enable_post_common_sidebar_position'],
-				) 
-			);
-
-			// Post Single - Enable Common Sidebar Position
-			$wp_customize->add_setting( 
 				'cream_magazine_enable_post_common_sidebar_position', 
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
