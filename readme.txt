@@ -105,9 +105,10 @@ Cream Magazine includes support for Contact Form 7 and Woocommerce.
 
 == Changelog ==
 
-= Version 1.1.2 - 10 October, 2019 =
+= Version 1.1.2 - 13 October, 2019 =
 
 - Fix: Breadcrumb issue (The value provided for id must be a valid URL)
+- Fix: Footer menu issue
 
 
 = Version 1.1.1 - 22 August, 2019 =
