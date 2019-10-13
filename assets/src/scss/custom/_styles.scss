@@ -4137,6 +4137,12 @@ footer .widget_product_tag_cloud .tagcloud a:hover {
 
                 color:$secondary_color;
             }
+
+            a::after {
+
+                content:'';
+                display:none;
+            }
         }
     }
 }
