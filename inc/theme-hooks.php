@@ -603,7 +603,7 @@ if( ! function_exists( 'cream_magazine_footer_menu_action' ) ) :
  		<div class="col-md-5 col-sm-6 col-xs-12">
 	        <div class="footer_nav">
 	            <?php
-	            if( has_nav_menu( 'menu-2' ) ) {
+	            if( has_nav_menu( 'menu-3' ) ) {
 		 			wp_nav_menu( array( 
 		 				'theme_location' => 'menu-3',
 		 				'container' => '', 
