@@ -122,19 +122,33 @@ if ( ! function_exists( 'cream_magazine_woocommerce_wrapper_before' ) ) {
 		                    	<div class="woocommerce-container clearfix">
 			                    	<?php
 			                    	$sidebar_position = cream_magazine_sidebar_position(); 
+
 			                    	$is_sticky = cream_magazine_check_sticky_sidebar();
-			                    	$main_class = '';
+
+			                    	$sidebar_after_content = cream_magazine_get_option( 'cream_magazine_show_sidebar_after_contents_on_mobile_n_tablet' );
+
+									$main_class = 'cm-col-lg-8 cm-col-12';
+
 			                    	if( $sidebar_position != 'none' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
+
 			                    		if( $is_sticky == true ) {
-			                    			$main_class = 'col-md-8 col-sm-12 col-xs-12 sticky_portion';
-			                    		} else {
-			                    			$main_class = 'col-md-8 col-sm-12 col-xs-12';
-			                    		}
+
+											$main_class .= ' sticky_portion';
+										}
+
+										if( $sidebar_position == 'left' ) {
+
+											$main_class .= ' order-2';
+										}
+
+										if( $sidebar_after_content ) {
+
+											$main_class .= ' cm-order-1-mobile-tablet';
+										}
+
 			                    	} else {
-			                    		$main_class = 'col-md-12 col-sm-12 col-xs-12';
-			                    	}
-			                    	if( $sidebar_position == 'left' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
-			                    		cream_magazine_woocommerce_sidebar();
+
+			                    		$main_class = 'cm-col-lg-12 cm-col-12';
 			                    	}
 			                    	?>
 			                        <div class="<?php echo esc_attr( $main_class ); ?>">
@@ -156,13 +170,7 @@ if ( ! function_exists( 'cream_magazine_woocommerce_wrapper_after' ) ) {
 									?>
 									</div><!-- .content-entry -->
 		                        </div>
-
-		                        <?php 
-		                        $sidebar_position = cream_magazine_sidebar_position();
-		                        if( $sidebar_position == 'right' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
-		                        	cream_magazine_woocommerce_sidebar();
-		                        }
-		                        ?>
+		                        <?php cream_magazine_woocommerce_sidebar(); ?>
 		                        </div><!-- .woocommerce-container -->
 		                    </div><!-- .row -->
 		                </div><!-- .cm_woocommerce_pages -->

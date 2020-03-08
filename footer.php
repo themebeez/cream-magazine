@@ -18,40 +18,43 @@
 	*/
 	do_action( 'cream_magazine_footer_wrapper_start' );
 
-	/**
-	* Hook - cream_magazine_footer_widget_wrapper_start.
-	*
-	* @hooked cream_magazine_footer_widget_wrapper_start_action - 10
-	*/
-	do_action( 'cream_magazine_footer_widget_wrapper_start' );
+	if( cream_magazine_get_option( 'cream_magazine_show_footer_widget_area' ) ) {
 
-	/**
-	* Hook - cream_magazine_left_footer_widgetarea.
-	*
-	* @hooked cream_magazine_left_footer_widgetarea_action - 10
-	*/
-	do_action( 'cream_magazine_left_footer_widgetarea' );
+		/**
+		* Hook - cream_magazine_footer_widget_wrapper_start.
+		*
+		* @hooked cream_magazine_footer_widget_wrapper_start_action - 10
+		*/
+		do_action( 'cream_magazine_footer_widget_wrapper_start' );
 
-	/**
-	* Hook - cream_magazine_middle_footer_widgetarea.
-	*
-	* @hooked cream_magazine_middle_footer_widgetarea_action - 10
-	*/
-	do_action( 'cream_magazine_middle_footer_widgetarea' );
+		/**
+		* Hook - cream_magazine_left_footer_widgetarea.
+		*
+		* @hooked cream_magazine_left_footer_widgetarea_action - 10
+		*/
+		do_action( 'cream_magazine_left_footer_widgetarea' );
 
-	/**
-	* Hook - cream_magazine_right_footer_widgetarea.
-	*
-	* @hooked cream_magazine_right_footer_widgetarea_action - 10
-	*/
-	do_action( 'cream_magazine_right_footer_widgetarea' );
+		/**
+		* Hook - cream_magazine_middle_footer_widgetarea.
+		*
+		* @hooked cream_magazine_middle_footer_widgetarea_action - 10
+		*/
+		do_action( 'cream_magazine_middle_footer_widgetarea' );
 
-	/**
-	* Hook - cream_magazine_footer_widget_wrapper_end.
-	*
-	* @hooked cream_magazine_footer_widget_wrapper_end_action - 10
-	*/
-	do_action( 'cream_magazine_footer_widget_wrapper_end' );
+		/**
+		* Hook - cream_magazine_right_footer_widgetarea.
+		*
+		* @hooked cream_magazine_right_footer_widgetarea_action - 10
+		*/
+		do_action( 'cream_magazine_right_footer_widgetarea' );
+
+		/**
+		* Hook - cream_magazine_footer_widget_wrapper_end.
+		*
+		* @hooked cream_magazine_footer_widget_wrapper_end_action - 10
+		*/
+		do_action( 'cream_magazine_footer_widget_wrapper_end' );
+	}
 
 	/**
 	* Hook - cream_magazine_footer_copyright_wrapper_start.

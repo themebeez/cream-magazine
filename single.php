@@ -22,16 +22,9 @@ get_header();
     					*/
     					do_action( 'cream_magazine_breadcrumb' );
                         ?>
-                        <div class="row">
-                            <div class="single-container clearfix">
-                            	<?php
-                            	$sidebar_position = cream_magazine_sidebar_position();
-                            	$class = cream_magazine_main_container_class();
-                            	if( $sidebar_position == 'left' && is_active_sidebar( 'sidebar' ) ) {
-                            		get_sidebar();
-                            	}
-                            	?>
-                                <div class="<?php echo esc_attr( $class ); ?>">
+                        <div class="single-container">
+                            <div class="row">  
+                                <div class="<?php echo esc_attr( cream_magazine_main_container_class() ); ?>">
                                     <?php
         							while ( have_posts() ) :
 
@@ -56,13 +49,9 @@ get_header();
         							endwhile; // End of the loop.
         							?>
                                 </div><!-- .col -->
-                                <?php 
-                                if( $sidebar_position == 'right' && is_active_sidebar( 'sidebar' ) ) {
-                            		get_sidebar();
-                            	}
-                                ?>
-                            </div><!-- .single-container -->
-                        </div><!-- .row -->
+                                <?php get_sidebar(); ?>
+                            </div><!-- .row -->
+                        </div><!-- .single-container -->
                     </div><!-- .cm_post_page_lay_wrap -->
                 </main><!-- #main.site-main -->
             </div><!-- #primary.content-area -->

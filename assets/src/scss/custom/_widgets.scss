@@ -1,0 +1,348 @@
+.widget-title {
+    
+    margin-bottom: 25px;
+}
+
+.widget-title h2 {
+    
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.widget ul {
+    
+    margin: 0px;
+    list-style: none;
+}
+
+.widget ul li {
+    
+    margin: 0px;
+}
+
+.widget_archive li,
+.widget_categories li,
+.widget_recent_entries li,
+.widget_meta li,
+.widget_recent_comments li,
+.widget_rss li,
+.widget_pages li,
+.widget_nav_menu li {
+
+	position: relative;
+    border-bottom: 1px solid $border_color;
+    padding: 13px 0;
+    transition-duration: 0.6s;
+}
+
+.widget_archive li:hover,
+.widget_categories li:hover,
+.widget_recent_entries li:hover,
+.widget_meta li:hover,
+.widget_recent_comments li:hover,
+.widget_rss li:hover,
+.widget_pages li:hover,
+.widget_nav_menu li:hover {
+	
+	padding-left: 10px;
+    -webkit-transition-duration: 0.6s;
+    -moz-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+}
+
+.widget_archive ul li:first-child,
+.widget_categories ul li:first-child,
+.widget_pages ul li:first-child,
+.widget_meta ul li:first-child,
+.widget_rss li:first-child,
+.widget_recent_entries li:first-child,
+.widget_recent_comments li:first-child {
+
+    padding-top: 0;
+}
+
+.widget_archive a,
+.widget_categories a,
+.widget_recent_entries a,
+.widget_meta a,
+.widget_recent_comments li,
+.widget_rss li,
+.widget_nav_menu a {
+
+    position: relative;
+    display: inline-block;
+}
+
+.widget_recent_entries a {
+
+    display: block;
+}
+
+.widget_pages li.menu-item-has-children ul.sub-menu,
+.widget_categories li.menu-item-has-children ul.sub-menu {
+
+    margin-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.widget_nav_menu a span.menu-item-description {
+    
+    display: none;
+}
+
+
+
+/* Nav Widget */
+
+.widget_nav_menu ul.menu {
+	
+	list-style: none;
+}
+
+.widget_nav_menu li:last-child a {
+
+    border-bottom: none;
+}
+
+.widget_nav_menu ul.menu li.menu-item-has-children {
+	
+	border-bottom: none;
+    padding-bottom: 0px;
+}
+
+.widget_nav_menu ul.menu li.menu-item-has-children > a {
+	
+	display: block;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.widget_nav_menu ul.menu li.menu-item-has-children > a ul.sub-menu {
+	
+	list-style: none;
+    margin-left: 15px;
+    padding-top: 15px;
+}
+
+.widget_nav_menu ul.menu li.menu-item-has-children > a ul.sub-menu li:first-child {
+	
+	padding-top: 0px;	
+}
+
+
+
+/* Category, Archive Widget */
+
+.widget_categories select,
+.widget_archive select {
+
+    height: 45px;
+    width: 100%;
+    border-color: $border-color;
+    border-radius: 0px;
+    background-color: #ffffff;
+    padding-left: 5px;
+}
+
+.widget_archive label,
+.widget_categories label {
+
+    display:block;
+    margin-bottom: 10px;
+}
+
+
+
+/* Recent Posts Widget */
+
+.widget_recent_entries .post-date {
+
+    color: $special_purpose_color;
+    display: block;
+    margin-top: 5px;
+    padding-left: 0px;
+}
+
+
+/* RSS Widget */
+
+.widget_rss .widget-title h3 a:hover {
+	
+	color:$secondary_color;
+}
+
+.widget_rss ul li a {
+
+    font-style: italic;
+}
+
+.widget_rss ul li a:hover {
+
+
+    color:$secondary_color;
+}
+
+
+/* Search Widget */
+
+.widget_search {
+
+    display:block;
+}
+
+.widget_search form {
+    
+    display: block;
+    position: relative;
+    z-index: 5;
+    left: auto;
+    top: auto;
+    right: auto;
+    box-shadow: none;
+    padding: 0;
+    border-top: none;
+    animation: none;
+    margin: 0;
+}
+
+.widget_search form button.cm-submit-btn {
+
+    width: 50px;
+    text-align: center;
+    padding: 0px;
+    height: 43px;
+    line-height: 43px;
+}
+
+.widget_search form input[type="search"] {
+
+    width: calc( 100% - 50px);
+}
+
+
+
+/* Calendar Widget */
+
+.calendar_wrap caption {
+
+    background: none repeat scroll 0 0 $primary_color;
+    color: $white;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.calendar_wrap table {
+
+    border-collapse: collapse;
+    width: auto;
+}
+
+.calendar_wrap table th {
+
+    border: 1px solid $border_color;
+    font-weight: bold;
+    padding: 8px 0px;
+    text-align: center;
+    width: 5%
+}
+
+.calendar_wrap table td {
+
+    border: 1px solid $border_color;
+    padding: 8px 0px;
+    width: 5%;
+    text-align: center;
+}
+
+.calendar_wrap table td#prev,
+.calendar_wrap table td#next {
+
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.calendar_wrap table td#next {
+
+    text-align: right;
+}
+
+
+/* Text Widget */
+
+.widget_text .textwidget pre,
+.widget_text .textwidget code,
+.widget_text .textwidget h1,
+.widget_text .textwidget h2,
+.widget_text .textwidget h3,
+.widget_text .textwidget h4,
+.widget_text .textwidget h5,
+.widget_text .textwidget h6,
+.widget_text .textwidget p {
+	
+	display: block;
+    margin-bottom: 10px;
+}
+
+.widget_text .textwidget p img {
+    
+    margin-top: 10px;
+    marign-bottom: 10px;
+}
+
+.widget_text .textwidget form {
+	
+    width: 100%;
+}
+
+.widget_text .textwidget form select {
+    
+    height: 45px;
+    width: 100%;
+    border-color: $border-color;
+    border-radius: 0px;
+    background-color: #ffffff;
+    padding-left: 5px;
+}
+
+
+/* Tag Cloud Widget */
+
+.widget_tag_cloud .tagcloud {
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.widget_tag_cloud .tagcloud a {
+    
+    flex: 1 auto;
+    text-transform: capitalize;
+    font-size: 15px !important;
+    text-align: center;
+    padding: 5px 15px;
+    margin: 2px;
+    color: $white;
+    background: $secondary_color;
+    font-weight: 400;
+}
+
+.widget_tag_cloud .tagcloud a:hover {
+	
+	color: $white;
+    background: $secondary_color;
+}

@@ -18,22 +18,38 @@ class Cream_Magazine_News_Widget_Three extends WP_Widget {
 
         $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
-		$post_cat = !empty( $instance[ 'post_cat' ] ) ? $instance[ 'post_cat' ] : 'none';
+		$post_cat = '';
+
+        if( cream_magazine_get_option( 'cream_magazine_save_value_as' ) == 'slug' ) {
+
+            $post_cat = !empty( $instance[ 'post_cat' ] ) ? $instance[ 'post_cat' ] : 'none';
+        } else {
+
+            $post_cat = !empty( $instance[ 'post_cat' ] ) ? $instance[ 'post_cat' ] : 0;
+        }
 
 		$post_no = !empty( $instance[ 'post_no' ] ) ? $instance[ 'post_no' ] : 6;
 
-        $show_author_meta = $instance['show_author_meta'];
+        $show_author_meta = isset( $instance['show_author_meta'] ) ? $instance['show_author_meta'] : true;
 
-        $show_date_meta = $instance['show_date_meta'];
+        $show_date_meta = isset( $instance['show_date_meta'] ) ? $instance['show_date_meta'] : true;
 
-        $show_cmnt_no_meta = $instance['show_cmnt_no_meta'];
+        $show_cmnt_no_meta = isset( $instance['show_cmnt_no_meta'] ) ? $instance['show_cmnt_no_meta'] : true;
 
 		$post_args = array(
 			'post_type' => 'post',
+            'ignore_sticky_posts' => true,
 		);
 
-        if( $post_cat != 'none' ) {
-            $post_args['category_name'] = sanitize_text_field( $post_cat );
+        if( $post_cat ) {
+
+            if( cream_magazine_get_option( 'cream_magazine_save_value_as' ) == 'slug' ) {
+
+                $post_args['category_name'] = sanitize_text_field( $post_cat );
+            } else {
+
+                $post_args['cat'] = absint( $post_cat );
+            }
         }
 
         if( absint( $post_no ) > 0 ) {
@@ -44,7 +60,7 @@ class Cream_Magazine_News_Widget_Three extends WP_Widget {
 
 		if( $post_query->have_posts() ) {
             ?>
-            <section class="cm_post_widget_six cm-post-widget-section">
+            <section class="cm-post-widget-section cm_post_widget_six">
                 <div class="section_inner">
                     <?php 
                     if( !empty( $title ) ) {
@@ -58,24 +74,13 @@ class Cream_Magazine_News_Widget_Three extends WP_Widget {
                     <div class="post_widget_inner">
                         <div class="row">
                             <?php
-                            $break = 0;
                             while( $post_query->have_posts() ) {
                                 $post_query->the_post();
-                                if( $break%3 == 0 && $break > 0 ) {
-                                    ?>
-                                    <div class="row clearfix visible-md visible-lg"></div>
-                                    <?php
-                                }
-                                if( $break%2 == 0 && $break > 0 ) {
-                                    ?>
-                                    <div class="row clearfix visible-sm"></div>
-                                    <?php
-                                }
                                 ?>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="cm-col-lg-4 cm-col-md-6 cm-col-12">
                                     <div class="box">
                                         <div class="row">
-                                            <div class="col-md-5 col-sm-5 col-xs-4">
+                                            <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
                                                 <div class="<?php cream_magazine_thumbnail_class(); ?>">
                                                     <?php
                                                     if( has_post_thumbnail() ) {
@@ -91,7 +96,7 @@ class Cream_Magazine_News_Widget_Three extends WP_Widget {
                                                     ?>
                                                 </div><!-- .post_thumb.imghover -->
                                             </div><!-- .col -->
-                                            <div class="col-md-7 col-sm-7 col-xs-8">
+                                            <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
                                                 <div class="right_box">
                                                     <div class="post_title">
                                                         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -103,7 +108,6 @@ class Cream_Magazine_News_Widget_Three extends WP_Widget {
                                     </div><!-- .box -->
                                 </div><!-- .col -->
                                 <?php
-                                $break++;
                             }
                             wp_reset_postdata();
                             ?>
@@ -119,12 +123,19 @@ class Cream_Magazine_News_Widget_Three extends WP_Widget {
     public function form( $instance ) {
         $defaults = array(
             'title'       => '',
-            'post_cat'	=> 'none',
             'post_no'	  => 6,
             'show_author_meta' => true,
             'show_date_meta' => true,
             'show_cmnt_no_meta' => true,
         );
+
+        if( cream_magazine_get_option( 'cream_magazine_save_value_as' ) == 'slug' ) {
+
+            $defaults['post_cat'] = 'none';
+        } else {
+
+            $defaults['post_cat'] = 0;
+        }
 
         $instance = wp_parse_args( (array) $instance, $defaults );
 
@@ -135,7 +146,7 @@ class Cream_Magazine_News_Widget_Three extends WP_Widget {
         </p>
 
 		<p>
-            <label for="<?php echo esc_attr( $this->get_field_name('title') ); ?>">
+            <label for="<?php echo esc_attr( $this->get_field_id('title') ); ?>">
                 <strong><?php esc_html_e('Title', 'cream-magazine'); ?></strong>
             </label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('title') ); ?>" name="<?php echo esc_attr( $this->get_field_name('title') ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />   
@@ -156,9 +167,15 @@ class Cream_Magazine_News_Widget_Three extends WP_Widget {
                 <?php
                 if( !empty( $categories ) ) {
                     foreach( $categories as $cat ) {
-                        ?>
-                        <option value="<?php echo esc_attr( $cat->slug ); ?>" <?php selected( $instance['post_cat'], $cat->slug ); ?>><?php echo esc_html( $cat->name ); ?></option>
-                        <?php
+                        if( cream_magazine_get_option( 'cream_magazine_save_value_as' ) == 'slug' ) {
+                            ?>
+                            <option value="<?php echo esc_attr( $cat->slug ); ?>" <?php selected( $instance['post_cat'], $cat->slug ); ?>><?php echo esc_html( $cat->name ); ?></option>
+                            <?php
+                        } else {
+                            ?>
+                            <option value="<?php echo esc_attr( $cat->term_id ); ?>" <?php selected( $instance['post_cat'], $cat->term_id ); ?>><?php echo esc_html( $cat->name ); ?></option>
+                            <?php
+                        }
                     }
                 }
                 ?>
@@ -167,28 +184,28 @@ class Cream_Magazine_News_Widget_Three extends WP_Widget {
         </p>
 
 		<p>
-            <label for="<?php echo esc_attr( $this->get_field_name('post_no') ); ?>">
+            <label for="<?php echo esc_attr( $this->get_field_id('post_no') ); ?>">
                 <strong><?php esc_html_e('No of Posts', 'cream-magazine'); ?></strong>
             </label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('post_no') ); ?>" name="<?php echo esc_attr( $this->get_field_name('post_no') ); ?>" type="number" value="<?php echo esc_attr( $instance['post_no'] ); ?>" />
         </p>
 
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_name('show_author_meta') ); ?>">
+            <label for="<?php echo esc_attr( $this->get_field_id('show_author_meta') ); ?>">
                 <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id('show_author_meta') ); ?>" name="<?php echo esc_attr( $this->get_field_name('show_author_meta') ); ?>" <?php checked( $instance['show_author_meta'], true ); ?>>
                 <?php esc_html_e('Show Post Author', 'cream-magazine'); ?>
             </label>
         </p> 
 
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_name('show_date_meta') ); ?>">
+            <label for="<?php echo esc_attr( $this->get_field_id('show_date_meta') ); ?>">
                 <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id('show_date_meta') ); ?>" name="<?php echo esc_attr( $this->get_field_name('show_date_meta') ); ?>" <?php checked( $instance['show_date_meta'], true ); ?>>
                 <?php esc_html_e('Show Posted Date', 'cream-magazine'); ?>
             </label>
         </p>  
 
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_name('show_cmnt_no_meta') ); ?>">
+            <label for="<?php echo esc_attr( $this->get_field_id('show_cmnt_no_meta') ); ?>">
                 <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id('show_cmnt_no_meta') ); ?>" name="<?php echo esc_attr( $this->get_field_name('show_cmnt_no_meta') ); ?>" <?php checked( $instance['show_cmnt_no_meta'], true ); ?>>
                 <?php esc_html_e('Show Post Comments Number', 'cream-magazine'); ?>
             </label>
@@ -198,19 +215,25 @@ class Cream_Magazine_News_Widget_Three extends WP_Widget {
  
     public function update( $new_instance, $old_instance ) {
  
-        $instance = $old_instance;
+        $instance                       = $old_instance;
 
-        $instance['title']  	= sanitize_text_field( $new_instance['title'] );
+        $instance['title']              = isset( $new_instance['title'] ) ? sanitize_text_field( $new_instance['title'] ) : '';
 
-        $instance['post_cat']  	= sanitize_text_field( $new_instance['post_cat'] );
+        if( cream_magazine_get_option( 'cream_magazine_save_value_as' ) == 'slug' ) {
 
-        $instance['post_no']  	= absint( $new_instance['post_no'] );
+            $instance['post_cat']           = isset( $new_instance['post_cat'] ) ? sanitize_text_field( $new_instance['post_cat'] ) : 'none';
+        } else {
+
+            $instance['post_cat']           = isset( $new_instance['post_cat'] ) ? absint( $new_instance['post_cat'] ) : 0;
+        }
+
+        $instance['post_no']            = isset( $new_instance['post_no'] ) ? absint( $new_instance['post_no'] ) : 6;
         
-        $instance['show_author_meta']  = wp_validate_boolean( $new_instance['show_author_meta'] );
+        $instance['show_author_meta']   = isset( $new_instance['show_author_meta'] ) ? wp_validate_boolean( $new_instance['show_author_meta'] ) : false;
 
-        $instance['show_date_meta']  = wp_validate_boolean( $new_instance['show_date_meta'] );
+        $instance['show_date_meta']     = isset( $new_instance['show_date_meta'] ) ? wp_validate_boolean( $new_instance['show_date_meta'] ) : false;
 
-        $instance['show_cmnt_no_meta']  = wp_validate_boolean( $new_instance['show_cmnt_no_meta'] );
+        $instance['show_cmnt_no_meta']  = isset( $new_instance['show_cmnt_no_meta'] ) ? wp_validate_boolean( $new_instance['show_cmnt_no_meta'] ) : false;
 
         return $instance;
     } 

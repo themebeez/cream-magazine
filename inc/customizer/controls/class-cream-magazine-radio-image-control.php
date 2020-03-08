@@ -7,13 +7,13 @@ if( ! class_exists( 'Cream_Magazine_Radio_Image_Control' ) ) {
 
     class Cream_Magazine_Radio_Image_Control extends WP_Customize_Control {
     	
-      	public $type = 'radioimage';
+      	public $type = 'radio-image';
 
         public function render_content() {
             
             $name = '_customize-radio-' . $this->id;
             ?>
-            <span class="customize-control-title">
+            <span class="customize-control-title radio-image-control-title">
                 <?php echo esc_html( $this->label ); ?>
             </span>
             <div id="input_<?php echo esc_attr( $this->id ); ?>" class="image">

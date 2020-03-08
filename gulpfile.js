@@ -13,7 +13,24 @@ var gulp = require('gulp');
 
 // var cache = require('gulp-cache');
 
-var wpPot = require( 'gulp-wp-pot' );
+// var wpPot = require( 'gulp-wp-pot' );
+
+
+// SCSS Compiler
+
+var sass = require('gulp-sass');
+
+sass.compiler = require('node-sass');
+
+
+// CSS properties auto vendor prefixer
+
+var autoprefixer = require( 'gulp-autoprefixer' );
+
+
+// Constanly watch changes
+
+var watch = require('gulp-watch');
 
 
 // Task defined for java scripts bundling and minifying
@@ -40,14 +57,16 @@ var wpPot = require( 'gulp-wp-pot' );
 
 // } );
 
-gulp.task( 'makepot', function () {
 
-    return gulp.src( ['**/*.php', '!node_modules/**'] )
-        .pipe( wpPot( {
-            package: 'cream-magazine'
-        } ) )
-        .pipe( gulp.dest( 'languages/cream-magazine.pot' ) );
-} );
+
+// gulp.task( 'makepot', function () {
+
+//     return gulp.src( ['**/*.php', '!node_modules/**'] )
+//         .pipe( wpPot( {
+//             package: 'cream-magazine'
+//         } ) )
+//         .pipe( gulp.dest( 'languages/cream-magazine.pot' ) );
+// } );
 
 
 // Task watch
@@ -59,10 +78,28 @@ gulp.task( 'makepot', function () {
 
 // } );
 
+gulp.task( 'sass', function () {
+
+  	return gulp.src( 'assets/src/scss/main.scss' )
+  		.pipe( sass().on( 'error', sass.logError ) )
+  		.pipe( autoprefixer() )
+  		.pipe( gulp.dest( 'assets/dist/css/' ) );
+});
+
+gulp.task( 'stream', function () {
+
+  	gulp.watch( 'assets/src/scss/**/*.scss', gulp.series('sass') );
+
+});
+
+// gulp.watch(	'assets/src/scss/**/*.scss', ['sass']	);
+
 
 // declaring final task and command tasker
 
 // just hit the command "gulp" it will run the following tasks...
 
 
-gulp.task( 'default', gulp.series( 'makepot' ) );
+// gulp.task( 'default', gulp.series( 'makepot' ) );
+
+// gulp.task( 'default', gulp.series( 'stream' ) );

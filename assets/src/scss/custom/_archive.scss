@@ -1,0 +1,14 @@
+.archive-description {
+    
+    margin-top: 30px;
+}
+
+.cm_archive_page .section-title h1,
+.cm_search_page .section-title h1,
+.cm_not_found_page .section-title h1 {
+    
+    display: block;
+    background: transparent;
+    font-weight: bold;
+    color: $primary_color;
+}

@@ -73,7 +73,7 @@ class Cream_Magazine_Social_Widget extends WP_Widget {
                 if( !empty( $youtube ) ) {
                     ?>
                     <li class="yt">
-                        <a href="<?php echo esc_url( $youtube ); ?>"><i class="fa fa-youtube"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
+                        <a href="<?php echo esc_url( $youtube ); ?>"><i class="fa fa-youtube-play"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
                     </li>
                     <?php
                 }
@@ -157,21 +157,21 @@ class Cream_Magazine_Social_Widget extends WP_Widget {
  
     public function update( $new_instance, $old_instance ) {
  
-        $instance = $old_instance;
+        $instance                   = $old_instance;
 
-        $instance[ 'title' ]        = sanitize_text_field( $new_instance[ 'title' ] );
+        $instance[ 'title' ]        = isset( $new_instance[ 'title' ] ) ? sanitize_text_field( $new_instance[ 'title' ] ) : '';
 
-        $instance[ 'facebook' ]     = esc_url_raw( $new_instance[ 'facebook' ] );
+        $instance[ 'facebook' ]     = isset( $new_instance[ 'facebook' ] ) ? esc_url_raw( $new_instance[ 'facebook' ] ) : '';
 
-        $instance[ 'twitter' ]      = esc_url_raw( $new_instance[ 'twitter' ] );
+        $instance[ 'twitter' ]      = isset( $new_instance[ 'twitter' ] ) ? esc_url_raw( $new_instance[ 'twitter' ] ) : '';
 
-        $instance[ 'instagram' ]    = esc_url_raw( $new_instance[ 'instagram' ] );
+        $instance[ 'instagram' ]    = isset( $new_instance[ 'instagram' ] ) ? esc_url_raw( $new_instance[ 'instagram' ] ) : '';
 
-        $instance[ 'linkedin' ]     = esc_url_raw( $new_instance[ 'linkedin' ] );
+        $instance[ 'linkedin' ]     = isset( $new_instance[ 'linkedin' ] ) ? esc_url_raw( $new_instance[ 'linkedin' ] ) : '';
 
-        $instance[ 'youtube' ]      = esc_url_raw( $new_instance[ 'youtube' ] );
+        $instance[ 'youtube' ]      = isset( $new_instance[ 'youtube' ] ) ? esc_url_raw( $new_instance[ 'youtube' ] ) : '';
 
-        $instance[ 'pinterest' ]    = esc_url_raw( $new_instance[ 'pinterest' ] );
+        $instance[ 'pinterest' ]    = isset( $new_instance[ 'pinterest' ] ) ? esc_url_raw( $new_instance[ 'pinterest' ] ) : '';
 
         return $instance;
     } 

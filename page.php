@@ -27,28 +27,9 @@ get_header();
     					*/
     					do_action( 'cream_magazine_breadcrumb' );
                         ?>
-                        <div class="row">
-                            <div class="page-container clearfix">
-                            	<?php
-                            	$sidebar_position = cream_magazine_sidebar_position();
-                            	$class = cream_magazine_main_container_class();
-                                if( class_exists( 'Woocommerce' ) ) {
-                                    if( is_cart() || is_checkout() || is_account_page() ) {
-                                        if( $sidebar_position == 'left' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
-                                            cream_magazine_woocommerce_sidebar();
-                                        }
-                                    } else {
-                                        if( $sidebar_position == 'left' && is_active_sidebar( 'sidebar' ) ) {
-                                            get_sidebar();
-                                        }
-                                    }
-                                } else {
-                                    if( $sidebar_position == 'left' && is_active_sidebar( 'sidebar' ) ) {
-                                        get_sidebar();
-                                    }
-                                }
-                            	?>
-                                <div class="<?php echo esc_attr( $class ); ?>">
+                        <div class="page-container clearfix">
+                            <div class="row">                            
+                                <div class="<?php echo esc_attr( cream_magazine_main_container_class() ); ?>">
                                     <?php
         							while ( have_posts() ) :
 
@@ -66,23 +47,21 @@ get_header();
                                 </div><!-- .col -->
                                 <?php 
                                 if( class_exists( 'Woocommerce' ) ) {
+
                                     if( is_cart() || is_checkout() || is_account_page() ) {
-                                        if( $sidebar_position == 'right' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
-                                            cream_magazine_woocommerce_sidebar();
-                                        }
+
+                                        cream_magazine_woocommerce_sidebar();
                                     } else {
-                                        if( $sidebar_position == 'right' && is_active_sidebar( 'sidebar' ) ) {
-                                            get_sidebar();
-                                        }
-                                    }
-                                } else {
-                                    if( $sidebar_position == 'right' && is_active_sidebar( 'sidebar' ) ) {
+                                        
                                         get_sidebar();
                                     }
+                                } else {
+
+                                    get_sidebar();
                                 }
                                 ?>
-                            </div><!-- .page-container -->
-                        </div><!-- .row -->
+                            </div><!-- .row -->
+                        </div><!-- .page-container -->
                     </div><!-- .cm_post_page_lay_wrap -->
                 </main><!-- #main.site-main -->
             </div><!-- #primary.content-area -->

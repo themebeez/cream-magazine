@@ -67,14 +67,23 @@ if( ! function_exists( 'cream_magazine_banner_query' ) ) {
 		
 		$banner_args = array(
 		    'post_type' => 'post',
+		    'ignore_sticky_posts' => true,
 		);
 
 		if( absint( $banner_post_no ) > 0 ) {
+			
 		    $banner_args['posts_per_page'] = absint( $banner_post_no );
 		}
 
 		if( !empty( $banner_post_cats ) ) {
-		    $banner_args['category_name'] = implode( ',', $banner_post_cats );
+
+			if( cream_magazine_get_option( 'cream_magazine_save_value_as' ) == 'slug' ) {
+
+		    	$banner_args['category_name'] = implode( ',', $banner_post_cats );
+		    } else {
+
+		    	$banner_args['cat'] = implode( ',', $banner_post_cats );
+		    }
 		}  
 
 		$banner_query = new WP_Query( $banner_args );
@@ -109,20 +118,14 @@ if( ! function_exists( 'cream_magazine_post_meta' ) ) {
 
 		if( get_post_type() == 'post' ) {
 			?>
-			<div class="meta">
+			<div class="cm-post-meta">
 				<ul class="post_meta">
 					<?php 
 			        if( $enable_author == true ) {
 				        if( $show_author == true ) {
 				        	?>
 				        	<li class="post_author">
-				            	<?php
-				            	printf(
-									/* translators: %1$s: span i tag open, %2$s: span i tag close, %3$s: post author. */
-									esc_html_x( '%1$s %2$s %3$s', 'post author', 'cream-magazine' ),
-									'<span class="meta-icon"><i class="feather icon-user">', '</i></span>', '<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>'
-								);
-				            	?>
+				        		<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo esc_html( get_the_author() ); ?></a>
 				            </li><!-- .post_author -->
 				        	<?php
 				        }
@@ -132,12 +135,7 @@ if( ! function_exists( 'cream_magazine_post_meta' ) ) {
 						if( $show_date == true ) { 
 							?>
 				            <li class="posted_date">
-				            	<?php
-				            	printf(
-									/* translators: %1$s: i tag open, %2$s: i tag close, %3$s: post date. */
-									esc_html_x( '%1$s %2$s %3$s', 'post date', 'cream-magazine' ), '<span class="meta-icon"><i class="feather icon-calendar">', '</i></span>', '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-								);
-				            	?>
+				            	<a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo $time_string; // phpcs:ignore. ?></a>
 				           	</li><!-- .posted_date -->
 				           	<?php 
 				        } 
@@ -148,7 +146,7 @@ if( ! function_exists( 'cream_magazine_post_meta' ) ) {
 				        	if( ( comments_open() || get_comments_number() ) ) {
 				        		?>
 					            <li class="comments">
-					            	<span class="meta-icon"><i class="feather icon-message-square"></i></span><a href="<?php the_permalink(); ?>"><?php echo esc_html( get_comments_number() ); ?></a>
+					            	<a href="<?php the_permalink(); ?>"><?php echo esc_html( get_comments_number() ); ?></a>
 					            </li><!-- .comments -->
 					          	<?php
 					        }
@@ -218,6 +216,28 @@ if( ! function_exists( 'cream_magazine_post_tags_meta' ) ) {
 	}
 }
 
+
+/**
+ * Funtion to define container row class
+ */
+if( ! function_exists( 'cream_magazine_main_row_class' ) ) {
+
+	function cream_magazine_main_row_class() {
+
+		$row_class = 'row';
+
+		$sidebar_position = cream_magazine_sidebar_position();
+
+		if( $sidebar_position == 'left' ) {
+
+			$row_class = 'row-reverse';
+		}
+
+		return $row_class;
+
+	}
+}
+
 /*
  * Function to define container class
  */
@@ -227,7 +247,9 @@ if( ! function_exists( 'cream_magazine_main_container_class' ) ) {
 
 		$sidebar_position = cream_magazine_sidebar_position();
 		$is_sticky = cream_magazine_check_sticky_sidebar();
-		$main_class = '';
+		$sidebar_after_content = cream_magazine_get_option( 'cream_magazine_show_sidebar_after_contents_on_mobile_n_tablet' );
+
+		$main_class = 'cm-col-lg-8 cm-col-12';
 
 		if( is_archive() || is_search() || is_home() || is_single() || is_page() ) {
 
@@ -235,14 +257,21 @@ if( ! function_exists( 'cream_magazine_main_container_class' ) ) {
 
 				if( $is_sticky == true ) {
 
-					$main_class = 'col-md-8 col-sm-12 col-xs-12 sticky_portion';
-				} else {
+					$main_class .= ' sticky_portion';
+				}
 
-					$main_class = 'col-md-8 col-sm-12 col-xs-12';	
+				if( $sidebar_position == 'left' ) {
+
+					$main_class .= ' order-2';
+				}
+
+				if( $sidebar_after_content ) {
+
+					$main_class .= ' cm-order-1-mobile-tablet';
 				}
 			} else {
 				
-				$main_class = 'col-md-12 col-sm-12 col-xs-12';
+				$main_class = 'cm-col-lg-12 cm-col-12';
 			}
 		}
 		return $main_class;
@@ -262,8 +291,11 @@ if ( ! function_exists( 'cream_magazine_post_thumbnail' ) ) :
 	function cream_magazine_post_thumbnail() {
 
 		if ( post_password_required() || is_attachment() ) {
+
 			return;
 		}
+
+		$lazy_thumbnail = cream_magazine_get_option( 'cream_magazine_enable_lazy_load' );
 
 		if( is_archive() || is_search() || is_home() ) {
 
@@ -278,8 +310,6 @@ if ( ! function_exists( 'cream_magazine_post_thumbnail' ) ) :
 			}
 
 			if( has_post_thumbnail() ) {
-
-				$lazy_thumbnail = cream_magazine_get_option( 'cream_magazine_enable_lazy_load' );
 				?>
 				<div class="<?php cream_magazine_thumbnail_class(); ?>">
 					<?php 
@@ -300,9 +330,20 @@ if ( ! function_exists( 'cream_magazine_post_thumbnail' ) ) :
 			if( has_post_thumbnail() ) {
 				?>
 				<div class="post_thumb">
-				 	<a href="<?php the_permalink(); ?>">
-				 		<?php the_post_thumbnail( 'full', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
-				 	</a>
+					<figure>
+					<?php 
+
+					the_post_thumbnail( 'full', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) );
+
+				 	if( ( is_single() && cream_magazine_get_option( 'cream_magazine_enable_post_single_featured_image_caption' ) ) || ( is_page() && cream_magazine_get_option( 'cream_magazine_enable_page_single_featured_image_caption' ) ) ) {
+
+						$thumbnail_attachment_caption = wp_get_attachment_caption( get_post_thumbnail_id( get_the_ID() ) );
+						?>
+						<figcaption><?php echo esc_html( $thumbnail_attachment_caption ); ?></figcaption>
+						<?php
+					}
+					?>
+					</figure>
 				</div>
 				<?php
 			}
@@ -318,13 +359,28 @@ if( ! function_exists( 'cream_magazine_lazy_thumbnail' ) ) {
 
 	function cream_magazine_lazy_thumbnail( $thumbnail_size ) {
 
-		$thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), $thumbnail_size );
+		$thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+
+		$thumbnail_srcset = wp_get_attachment_image_srcset( $thumbnail_id, $thumbnail_size );
+
+		$thumbnail_sizes = wp_get_attachment_image_sizes( $thumbnail_id, $thumbnail_size );
+
+		$thumbnail_attachment = wp_get_attachment_image_src( $thumbnail_id, $thumbnail_size );
+
+		$padding_bottom = 0;
+
+		if( $thumbnail_attachment[1] > 0 ) {
+
+			$padding_bottom = ($thumbnail_attachment[2]/$thumbnail_attachment[1]) * 100;
+		}
 		?>
 	 	<a href="<?php the_permalink(); ?>">
-		 	<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
-		 	<noscript>
-		 		<img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
-		 	</noscript>
+	 		<figure class="imghover image-holder" style="padding-bottom: <?php echo esc_attr( $padding_bottom ); ?>%;">
+			 	<img class="lazy-image" src="" data-src="<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), $thumbnail_size ) ); ?>" data-srcset="<?php echo esc_attr( $thumbnail_srcset ); ?>" sizes="<?php echo esc_attr( $thumbnail_sizes ); ?>" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>" width="<?php echo esc_attr( $thumbnail_attachment[1] ); ?>" height="<?php echo esc_attr( $thumbnail_attachment[2] ); ?>">
+			 	<noscript>
+			 		<img src="<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), $thumbnail_size ) ); ?>" srcset="<?php echo esc_attr( $thumbnail_srcset ); ?>" class="image-fallback" alt="<?php cream_magazine_thumbnail_alt_text( get_the_ID() ); ?>">
+			 	</noscript>
+		 	</figure>
 	 	</a>
 		<?php
 	}
@@ -339,7 +395,9 @@ if( ! function_exists( 'cream_magazine_normal_thumbnail' ) ) {
 	function cream_magazine_normal_thumbnail( $thumbnail_size ) {
 		?>
 	 	<a href="<?php the_permalink(); ?>">
-		 	<?php the_post_thumbnail( $thumbnail_size, array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+	 		<figure class="imghover">
+		 		<?php the_post_thumbnail( $thumbnail_size, array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+		 	</figure>
 	 	</a>
 		<?php
 	}
@@ -374,6 +432,67 @@ if( !function_exists( 'cream_magazine_thumbnail_alt_text' ) ) {
 
 
 /**
+ * Function to check if news ticker is active
+ */
+if( ! function_exists( 'cream_magazine_show_news_ticker' ) ) {
+
+	function cream_magazine_show_news_ticker() {
+
+		if( cream_magazine_get_option( 'cream_magazine_enable_ticker_news' ) ) {
+
+			$show_on = cream_magazine_get_option( 'cream_magazine_show_ticker_news' );
+
+			switch( $show_on ) {
+
+				case 'choice_2' :
+
+	                if( is_home() && is_front_page() ) {
+
+	                    return true;
+	                } else {
+
+	                    if( is_home() && ! is_front_page() ) {
+
+	                        return true;
+	                    }
+	                }
+
+	                break;
+
+	            case 'choice_1' :
+
+	                if( ! is_home() && is_front_page() ) {
+
+	                    return true;
+	                }
+
+	                break;
+
+	            case 'choice_3' :
+
+	                if( is_home() || is_front_page() ) {
+
+	                    return true;
+	                }
+
+	                break;
+
+	            default :
+
+	                return false;
+			}
+
+			return false;
+			
+		} else {
+
+			return false;
+		}
+	}
+}
+
+
+/**
  * Filters For Excerpt Length
  */
 if( !function_exists( 'cream_magazine_excerpt_length' ) ) :
@@ -396,3 +515,26 @@ if( !function_exists( 'cream_magazine_excerpt_length' ) ) :
     }
 endif;
 add_filter( 'excerpt_length', 'cream_magazine_excerpt_length' );
+
+
+/**
+ * Function to enable menu description
+ */
+if( ! function_exists( 'cream_magazine_menu_description' ) ) {
+
+    function cream_magazine_menu_description( $item_output, $item, $depth, $args ) {
+
+    	if( ! cream_magazine_get_option( 'cream_magazine_enable_menu_description' ) ) {
+
+    		return $item_output;
+    	}
+
+        if ( !empty( $item->description ) ) {
+
+            $item_output = str_replace( $args->link_after . '</a>', '<span class="menu-item-description">' . $item->description . '</span>' . $args->link_after . '</a>', $item_output );
+        }
+     
+        return $item_output;
+    }
+}
+add_filter( 'walker_nav_menu_start_el', 'cream_magazine_menu_description', 10, 4 );

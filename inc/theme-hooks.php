@@ -245,10 +245,18 @@ if( ! function_exists( 'cream_magazine_ticker_news_action' ) ) :
 
  		$news_ticker_args = array(
  			'post_type' => 'post',
+            'ignore_sticky_posts' => true,
  		);
 
  		if( !empty( $news_ticker_post_cats ) ) {
- 			$news_ticker_args['category_name'] = implode( ',', $news_ticker_post_cats );
+
+            if( cream_magazine_get_option( 'cream_magazine_save_value_as' ) == 'slug' ) {
+
+                $news_ticker_args['category_name'] = implode( ',', $news_ticker_post_cats );
+            } else {
+
+                $news_ticker_args['cat'] = implode( ',', $news_ticker_post_cats );
+            }
  		}
 
  		if( absint( $news_ticker_post_nos ) > 0 ) {
@@ -264,7 +272,8 @@ if( ! function_exists( 'cream_magazine_ticker_news_action' ) ) :
 	 		<div class="news_ticker_wrap clearfix">
 	 			<?php if( !empty( $news_ticker_section_title ) ) { ?>
 		            <div class="ticker_head">
-		                <span><?php echo esc_html( $news_ticker_section_title ); ?></span>
+                        <span class="ticker_icon"><i class="fa fa-bolt" aria-hidden="true"></i></span>
+		                <div class="ticker_title"><?php echo esc_html( $news_ticker_section_title ); ?></div>
 		            </div><!-- .ticker_head -->
 		        <?php } ?>
 	            <div class="ticker_items">
@@ -324,17 +333,22 @@ add_action( 'cream_magazine_breadcrumb', 'cream_magazine_breadcrumb_action', 10 
 if( ! function_exists( 'cream_magazine_pagination_action' ) ) :
 
  	function cream_magazine_pagination_action() {
- 		?>
- 		<div class="pagination">
-	 		<?php
-        	the_posts_pagination( array(
-        		'mid_size' 			 => 2,
-        		'prev_text'          => esc_html__( 'Prev', 'cream-magazine' ),
-	            'next_text'          => esc_html__( 'Next', 'cream-magazine' ),
-        	) );
-	        ?>
-	    </div>
-		<?php
+
+        global $wp_query;
+
+        if( $wp_query->max_num_pages != 1 ) {
+     		?>
+     		<div class="pagination">
+    	 		<?php
+            	the_posts_pagination( array(
+            		'mid_size' 			 => 2,
+            		'prev_text'          => esc_html__( 'Prev', 'cream-magazine' ),
+    	            'next_text'          => esc_html__( 'Next', 'cream-magazine' ),
+            	) );
+    	        ?>
+    	    </div>
+    		<?php
+        }
  	}
 endif;
 add_action( 'cream_magazine_pagination', 'cream_magazine_pagination_action', 10 );
@@ -450,8 +464,17 @@ add_action( 'cream_magazine_footer_wrapper_start', 'cream_magazine_footer_wrappe
 if( ! function_exists( 'cream_magazine_footer_widget_wrapper_start_action' ) ) :
 
  	function cream_magazine_footer_widget_wrapper_start_action() {
+
+        $footer_widget_area_class = 'row footer-widget-container';
+
+        $show_on_mobile_n_tablet = cream_magazine_get_option( 'cream_magazine_show_footer_widget_area_on_mobile_n_tablet' );
+
+        if( ! $show_on_mobile_n_tablet ) {
+
+            $footer_widget_area_class .= ' hide-tablet hide-mobile';
+        }
  		?>
- 		<div class="row footer-widget-container">
+ 		<div class="<?php echo esc_attr( $footer_widget_area_class ); ?>">
  		<?php
  	}
 endif;
@@ -468,11 +491,11 @@ if( ! function_exists( 'cream_magazine_left_footer_widgetarea_action' ) ) :
 
  		if( is_active_sidebar( 'footer-left' ) ) {  
     		?>
-            <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="cm-col-lg-4 cm-col-12">
                 <div class="blocks">
                     <?php dynamic_sidebar( 'footer-left' ); ?>
                 </div><!-- .blocks -->
-            </div><!-- .col-->
+            </div><!-- .cm-col-->
     		<?php 
     	} 
  	}
@@ -491,11 +514,11 @@ if( ! function_exists( 'cream_magazine_middle_footer_widgetarea_action' ) ) :
 
  		if( is_active_sidebar( 'footer-middle' ) ) {  
     		?>
-            <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="cm-col-lg-4 cm-col-12">
                 <div class="blocks">
                     <?php dynamic_sidebar( 'footer-middle' ); ?>
                 </div><!-- .blocks -->
-            </div><!-- .col-->
+            </div><!-- .cm-col-->
     		<?php 
     	} 
  	}
@@ -514,11 +537,11 @@ if( ! function_exists( 'cream_magazine_right_footer_widgetarea_action' ) ) :
 
  		if( is_active_sidebar( 'footer-right' ) ) {  
     		?>
-            <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="cm-col-lg-4 cm-col-12">
                 <div class="blocks">
                     <?php dynamic_sidebar( 'footer-right' ); ?>
                 </div><!-- .blocks -->
-            </div><!-- .col-->
+            </div><!-- .cm-col-->
     		<?php 
     	} 
  	}
@@ -568,16 +591,16 @@ if( ! function_exists( 'cream_magazine_copyright_action' ) ) :
 
     	$copyright_text = cream_magazine_get_option( 'cream_magazine_copyright_credit' );
         ?>
-        <div class="col-md-7 col-sm-6 col-xs-12">
+        <div class="cm-col-lg-7 cm-col-md-6 cm-col-12">
             <div class="copyrights">
             	<p>
             		<?php
                     if( !empty( $copyright_text ) ) {
                         /* translators: 1: Copyright Text 2: Theme name, 3: Theme author. */
-                        printf( esc_html__( '%1$s %2$s by %3$s','cream-magazine' ), $copyright_text, 'Cream Magazine', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-magazine' ) . '</a>' );
+                        printf( __( '<span class="copyright-text">%1$s</span> %2$s by %3$s.','cream-magazine' ), esc_html( $copyright_text ), 'Cream Magazine', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-magazine' ) . '</a>' );
                     } else {
                         /* translators: 1: Theme name, 2: Theme author. */
-                        printf( esc_html__( '%1$s by %2$s', 'cream-magazine' ), 'Cream Magazine', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-magazine' ) . '</a>' );
+                        printf( esc_html__( '%1$s by %2$s.', 'cream-magazine' ), 'Cream Magazine', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-magazine' ) . '</a>' );
                     }
                     ?>
             	</p>
@@ -600,7 +623,7 @@ if( ! function_exists( 'cream_magazine_footer_menu_action' ) ) :
 
  	function cream_magazine_footer_menu_action() {
  		?>
- 		<div class="col-md-5 col-sm-6 col-xs-12">
+ 		<div class="cm-col-lg-5 cm-col-md-6 cm-col-12">
 	        <div class="footer_nav">
 	            <?php
 	            if( has_nav_menu( 'menu-3' ) ) {

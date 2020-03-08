@@ -27,6 +27,12 @@
 
 
 /* Radio Image */
+
+.customize-control-radio .radio-image-control-title {
+
+    margin-bottom: 5px;
+}
+
 .image label {
     position: relative;
     margin: 0 3% 3% 0;
@@ -180,4 +186,12 @@
         width: 172px;
         height: 33px;
     }
+}
+
+
+/* Separator */
+
+.customize-control-separator {
+
+    margin-bottom: 0px;
 }

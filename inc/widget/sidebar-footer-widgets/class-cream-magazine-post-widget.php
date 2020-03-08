@@ -24,11 +24,11 @@ class Cream_Magazine_Post_Widget extends WP_Widget {
 
         $layout = !empty( $instance[ 'layout' ] ) ? $instance[ 'layout' ] : 'layout_one';
 
-        $show_author_meta = $instance['show_author_meta'];
+        $show_author_meta = isset( $instance['show_author_meta'] ) ? $instance['show_author_meta'] : true;
 
-        $show_date_meta = $instance['show_date_meta'];
+        $show_date_meta = isset( $instance['show_date_meta'] ) ? $instance['show_date_meta'] : true;
 
-        $show_cmnt_no_meta = $instance['show_cmnt_no_meta'];
+        $show_cmnt_no_meta = isset( $instance['show_cmnt_no_meta'] ) ? $instance['show_cmnt_no_meta'] : true;
 
 		echo $args[ 'before_widget' ];
 
@@ -52,52 +52,42 @@ class Cream_Magazine_Post_Widget extends WP_Widget {
 				echo esc_html( $title );
 			echo $args[ 'after_title' ];
 			?>
-			<div class="cm_relatedpost_widget">
-                <div class="row clearfix">
-                    <?php
-                    $count = 0;
-                    while( $post_query->have_posts() ) {
-                        $post_query->the_post();
-                        if( $count%2 == 0 && $count > 0 ) {
-                            ?>
-                            <div class="row clearfix"></div>
-                            <?php
-                        }
-                        ?>
-                        <div class="col-md-12 col-sm-6 col-xs-12">
-                            <div class="row">
-                                <div class="box clearfix">
-                                    <div class="col-md-5 col-sm-5 col-xs-4">
-                                        <div class="<?php cream_magazine_thumbnail_class(); ?>">
-                                            <?php
-                                            if( has_post_thumbnail() ) {
-                                                
-                                                $lazy_thumbnail = cream_magazine_get_option( 'cream_magazine_enable_lazy_load' );
+			<div class="cm_recent_posts_widget">
+                <?php
+                while( $post_query->have_posts() ) {
 
-                                                if( $lazy_thumbnail == true ) {
-                                                    cream_magazine_lazy_thumbnail( 'cream-magazine-thumbnail-3' );
-                                                } else {
-                                                    cream_magazine_normal_thumbnail( 'cream-magazine-thumbnail-3' );
-                                                }
-                                            }
-                                            ?>
-                                        </div><!-- .post_thumb.imghover -->
-                                    </div>
-                                    <div class="col-md-7 col-sm-7 col-xs-8">
-                                        <div class="post_title">
-                                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                                        </div>
-                                        <?php cream_magazine_post_meta( $show_date_meta, $show_author_meta, $show_cmnt_no_meta ); ?>
-                                    </div>
-                                </div><!-- .box.clearfix -->
-                            </div><!-- .row -->
-                        </div>
-                        <?php
-                        $count++;
-                    }
-                    wp_reset_postdata();
+                    $post_query->the_post();
                     ?>
-                </div><!-- .row.clearfix -->
+                    <div class="box">
+                        <div class="row">
+                            <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
+                                <div class="<?php cream_magazine_thumbnail_class(); ?>">
+                                    <?php
+                                    if( has_post_thumbnail() ) {
+                                        
+                                        $lazy_thumbnail = cream_magazine_get_option( 'cream_magazine_enable_lazy_load' );
+
+                                        if( $lazy_thumbnail == true ) {
+                                            cream_magazine_lazy_thumbnail( 'cream-magazine-thumbnail-3' );
+                                        } else {
+                                            cream_magazine_normal_thumbnail( 'cream-magazine-thumbnail-3' );
+                                        }
+                                    }
+                                    ?>
+                                </div><!-- .post_thumb.imghover -->
+                            </div>
+                            <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
+                                <div class="post_title">
+                                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                </div>
+                                <?php cream_magazine_post_meta( $show_date_meta, $show_author_meta, $show_cmnt_no_meta ); ?>
+                            </div>
+                        </div><!-- .box.clearfix -->
+                    </div><!-- .row -->
+                    <?php
+                }
+                wp_reset_postdata();
+                ?>
             </div><!-- .cm_relatedpost_widget -->
 			<?php
 		endif;
@@ -125,15 +115,15 @@ class Cream_Magazine_Post_Widget extends WP_Widget {
         </p>
 
 		<p>
-            <label for="<?php echo esc_attr( $this->get_field_name('title') ); ?>">
+            <label for="<?php echo esc_attr( $this->get_field_id('title') ); ?>">
                 <strong><?php esc_html_e('Title', 'cream-magazine'); ?></strong>
             </label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('title') ); ?>" name="<?php echo esc_attr( $this->get_field_name('title') ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />   
         </p>
 
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_name('post_choice') ); ?>">
-                <?php esc_html_e('Type of Posts:', 'cream-magazine'); ?>
+            <label for="<?php echo esc_attr( $this->get_field_id('post_choice') ); ?>">
+                <strong><?php esc_html_e('Type of Posts:', 'cream-magazine'); ?></strong>
             </label>
             <select class="widefat" id="<?php echo esc_attr( $this->get_field_id('post_choice') ); ?>" name="<?php echo esc_attr( $this->get_field_name('post_choice') ); ?>">
             	<?php
@@ -152,28 +142,28 @@ class Cream_Magazine_Post_Widget extends WP_Widget {
         </p> 
 
 		<p>
-            <label for="<?php echo esc_attr( $this->get_field_name('post_no') ); ?>">
+            <label for="<?php echo esc_attr( $this->get_field_id('post_no') ); ?>">
                 <strong><?php esc_html_e('No of Popular Posts', 'cream-magazine'); ?></strong>
             </label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('post_no') ); ?>" name="<?php echo esc_attr( $this->get_field_name('post_no') ); ?>" type="number" value="<?php echo esc_attr( $instance['post_no'] ); ?>" />   
         </p>
 
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_name('show_author_meta') ); ?>">
+            <label for="<?php echo esc_attr( $this->get_field_id('show_author_meta') ); ?>">
                 <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id('show_author_meta') ); ?>" name="<?php echo esc_attr( $this->get_field_name('show_author_meta') ); ?>" <?php checked( $instance['show_author_meta'], true ); ?>>
                 <?php esc_html_e('Show Post Author', 'cream-magazine'); ?>
             </label>
         </p> 
 
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_name('show_date_meta') ); ?>">
+            <label for="<?php echo esc_attr( $this->get_field_id('show_date_meta') ); ?>">
                 <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id('show_date_meta') ); ?>" name="<?php echo esc_attr( $this->get_field_name('show_date_meta') ); ?>" <?php checked( $instance['show_date_meta'], true ); ?>>
                 <?php esc_html_e('Show Posted Date', 'cream-magazine'); ?>
             </label>
         </p>  
 
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_name('show_cmnt_no_meta') ); ?>">
+            <label for="<?php echo esc_attr( $this->get_field_id('show_cmnt_no_meta') ); ?>">
                 <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id('show_cmnt_no_meta') ); ?>" name="<?php echo esc_attr( $this->get_field_name('show_cmnt_no_meta') ); ?>" <?php checked( $instance['show_cmnt_no_meta'], true ); ?>>
                 <?php esc_html_e('Show Post Comments Number', 'cream-magazine'); ?>
             </label>
@@ -183,19 +173,19 @@ class Cream_Magazine_Post_Widget extends WP_Widget {
  
     public function update( $new_instance, $old_instance ) {
  
-        $instance = $old_instance;
+        $instance                           = $old_instance;
 
-        $instance['title']  	= sanitize_text_field( $new_instance['title'] );
+        $instance['title']                  = isset( $new_instance['title'] ) ? sanitize_text_field( $new_instance['title'] ) : '';
 
-        $instance['post_choice']  	= sanitize_text_field( $new_instance['post_choice'] );
+        $instance['post_choice']            = isset( $new_instance['post_choice'] ) ? sanitize_text_field( $new_instance['post_choice'] ) : 'recent';
 
-        $instance['post_no']  	= absint( $new_instance['post_no'] );
+        $instance['post_no']                = isset( $new_instance['post_no'] ) ? absint( $new_instance['post_no'] ) : 5;
         
-        $instance['show_author_meta']  = wp_validate_boolean( $new_instance['show_author_meta'] );
+        $instance['show_author_meta']       = isset( $new_instance['show_author_meta'] ) ? wp_validate_boolean( $new_instance['show_author_meta'] ) : false;
 
-        $instance['show_date_meta']  = wp_validate_boolean( $new_instance['show_date_meta'] );
+        $instance['show_date_meta']         = isset( $new_instance['show_date_meta'] ) ? wp_validate_boolean( $new_instance['show_date_meta'] ) : false;
 
-        $instance['show_cmnt_no_meta']  = wp_validate_boolean( $new_instance['show_cmnt_no_meta'] );
+        $instance['show_cmnt_no_meta']      = isset( $new_instance['show_cmnt_no_meta'] ) ? wp_validate_boolean( $new_instance['show_cmnt_no_meta'] ) : false;
 
         return $instance;
     } 
