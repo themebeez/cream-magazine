@@ -13,9 +13,10 @@
  */
 
 get_header();
-	?>
-	<div class="banner-area">
-	    <div class="cm-container">
+	
+	if( cream_magazine_get_option( 'cream_magazine_enable_banner' ) ) {
+		?>
+		<div class="banner-area">
 	        <?php
 	        /**
 	        * Hook - cream_magazine_banner_slider.
@@ -24,16 +25,18 @@ get_header();
 	        */
 	        do_action( 'cream_magazine_banner_slider' );
 	        ?>
-	    </div><!-- .cm-container -->
-	</div><!-- .banner-area -->
+		</div><!-- .banner-area -->
+		<?php
+	}
+	?>
 
 	<div class="cm-container">
 	    <div class="inner-page-wrapper">
 	        <div id="primary" class="content-area">
 	            <main id="main" class="site-main">
 	                <div class="cm_blog_page">
-	                    <div class="row">
-	                    	<div class="blog-container clearfix">
+	                	<div class="blog-container">
+	                    	<div class="row">	                    	
 		                    	<?php
 		                    	$sidebar_position = cream_magazine_sidebar_position();
 		                    	$class = cream_magazine_main_container_class();
@@ -108,8 +111,8 @@ get_header();
 		                    		get_sidebar();
 		                    	}
 		                        ?>
-	                    	</div><!-- .blog-container -->
-	                    </div><!-- .row -->
+	                    	</div><!-- .row -->
+	                    </div><!-- .blog-container -->
 	                </div><!-- .cm_archive_page -->
 	            </main><!-- #main.site-main -->
 	        </div><!-- #primary.content-area -->

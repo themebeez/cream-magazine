@@ -10,7 +10,7 @@
 ?>
 <section class="nothing-found list_page_iner">
     <div class="section-title">
-        <h2 class="list_head"><?php esc_html_e( 'Nothing Found', 'cream-magazine' ); ?></h2><!-- .list_head -->
+        <h1><?php esc_html_e( 'Nothing Found', 'cream-magazine' ); ?></h1><!-- .list_head -->
     </div><!-- .section-title -->
     <div class="error_foot">
         <?php

@@ -9,9 +9,9 @@
 $sidebar_position = cream_magazine_sidebar_position();
 $post_class = '';
 if( $sidebar_position != 'none' && is_active_sidebar( 'sidebar' ) ) {
-	$post_class = 'col-md-6 col-sm-6 col-xs-12';
+	$post_class = 'cm-col-lg-6 cm-col-md-6 cm-col-12';
 } else {
-	$post_class = 'col-md-4 col-sm-6 col-xs-12';
+	$post_class = 'cm-col-lg-4 cm-col-md-6 cm-col-12';
 }
 
 $show_categories_meta = true;

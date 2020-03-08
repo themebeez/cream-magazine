@@ -22,16 +22,9 @@ get_header();
 						*/
 						do_action( 'cream_magazine_breadcrumb' );
 	                    ?>
-	                    <div class="row">
-	                    	<div class="archive-container clearfix">
-		                    	<?php
-		                    	$sidebar_position = cream_magazine_sidebar_position();
-		                    	$class = cream_magazine_main_container_class();
-		                    	if( $sidebar_position == 'left' && is_active_sidebar( 'sidebar' ) ) {
-		                    		get_sidebar();
-		                    	}
-		                    	?>
-		                        <div class="<?php echo esc_attr( $class ); ?>">
+	                    <div class="archive-container">
+	                    	<div class="row">
+		                        <div class="<?php echo esc_attr( cream_magazine_main_container_class() ); ?>">
 		                            <div class="content-entry">
 		                            	<?php
 		                            	if( have_posts() ) {
@@ -48,28 +41,10 @@ get_header();
 	                                                    <div class="section_inner">
 	                                                        <div class="row">
 	                                                            <?php
-	                                                            $break = 0;
 				                                            	/* Start the Loop */
 																while ( have_posts() ) {
+
 																	the_post();
-																	if( $sidebar_position != 'none' ) {
-																		if( $break%2 == 0 && $break > 0 ) {
-																			?>
-																			<div class="row clearfix visible-sm visible-md visible-lg"></div>
-																			<?php
-																		}
-																	} else {
-																		if( $break%3 == 0 && $break > 0 ) {
-																			?>
-																			<div class="row clearfix visible-md visible-lg"></div>
-																			<?php
-																		}
-																		if( $break%2 == 0 && $break > 0 ) {
-																			?>
-																			<div class="row clearfix visible-sm"></div>
-																			<?php
-																		}
-																	}
 
 																	/*
 																	 * Include the Post-Type-specific template for the content.
@@ -77,8 +52,6 @@ get_header();
 																	 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 																	 */
 																	get_template_part( 'template-parts/layout/layout', 'grid' );
-
-																	$break++;
 																}
 																?>
 	                                                        </div><!-- .row -->
@@ -99,13 +72,9 @@ get_header();
 										?>
 		                            </div><!-- .content-entry -->
 		                        </div>
-		                        <?php 
-		                        if( $sidebar_position == 'right' && is_active_sidebar( 'sidebar' ) ) {
-		                    		get_sidebar();
-		                    	}
-		                        ?>
-		                    </div><!-- .archive-container -->
-	                    </div><!-- .row -->
+		                        <?php get_sidebar(); ?>
+		                    </div><!-- .row -->
+	                    </div><!-- .archive-container -->
 	                </div><!-- .cm_archive_page -->
 	            </main><!-- #main.site-main -->
 	        </div><!-- #primary.content-area -->

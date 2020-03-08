@@ -68,34 +68,15 @@ if( $related_posts->have_posts() && $enable_related_posts == true ) {
         	?>
             <div class="row clearfix">
             	<?php
-            	$break = 0;
             	$sidebar_position = cream_magazine_sidebar_position();
 				$container_class = '';
 				if( $sidebar_position != 'none' && is_active_sidebar( 'sidebar' ) ) {
-					$container_class = 'col-md-6 col-sm-6 col-xs-12';
+					$container_class = 'cm-col-lg-6 cm-col-md-6 cm-col-12';
 				} else {
-					$container_class = 'col-md-4 col-sm-6 col-xs-12';
+					$container_class = 'cm-col-lg-4 cm-col-md-6 cm-col-12';
 				}
 				while( $related_posts->have_posts() ) {
 					$related_posts->the_post();
-					if( $sidebar_position != 'none' && is_active_sidebar( 'sidebar' ) ) {
-						if( $break%2 == 0 && $break > 0 ) {
-							?>
-							<div class="row clearfix visible-sm visible-md visible-lg"></div>
-							<?php
-						}
-					} else {
-						if( $break%3 == 0 && $break > 0 ) {
-							?>
-							<div class="row clearfix visible-md visible-lg"></div>
-							<?php
-						}
-						if( $break%2 == 0 && $break > 0 ) {
-							?>
-							<div class="row clearfix visible-sm"></div>
-							<?php
-						}
-					}
 					?>
 					<div class="<?php echo esc_attr( $container_class ); ?>">
 	                    <div class="card">
@@ -123,7 +104,6 @@ if( $related_posts->have_posts() && $enable_related_posts == true ) {
 					    </div><!-- .card -->
 	                </div><!-- .col -->
 					<?php
-					$break++;
 				}
 				wp_reset_postdata();
             	?>

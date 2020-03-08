@@ -61,10 +61,15 @@ class Cream_Magazine_Author_Widget extends WP_Widget {
                         <div class="author_name">
                             <h4><?php the_title(); ?></h4>
                         </div><!-- .author_name -->
-                        <div class="author_desc">
-                            <?php the_excerpt(); ?>
-                        </div><!-- .author_desc -->
-                        <?php 
+                        <?php
+                        if( get_the_excerpt() ) {
+                            ?>
+                            <div class="author_desc">
+                                <?php the_excerpt(); ?>
+                            </div><!-- .author_desc -->
+                            <?php 
+                        }
+                        
                         if( !empty( $author_link_title ) ) { 
                             ?>
                             <div class="author-detail-link">
@@ -98,7 +103,7 @@ class Cream_Magazine_Author_Widget extends WP_Widget {
         </p>
 
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_name('title') ); ?>">
+            <label for="<?php echo esc_attr( $this->get_field_id('title') ); ?>">
                 <strong><?php esc_html_e('Title', 'cream-magazine'); ?></strong>
             </label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('title') ); ?>" name="<?php echo esc_attr( $this->get_field_name('title') ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />   
@@ -119,7 +124,7 @@ class Cream_Magazine_Author_Widget extends WP_Widget {
         </p>
 
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_name('author_link_title') ); ?>">
+            <label for="<?php echo esc_attr( $this->get_field_id('author_link_title') ); ?>">
                 <strong><?php esc_html_e('Author Link Title', 'cream-magazine'); ?></strong>
             </label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('author_link_title') ); ?>" name="<?php echo esc_attr( $this->get_field_name('author_link_title') ); ?>" type="text" value="<?php echo esc_attr( $instance['author_link_title'] ); ?>" />   
@@ -129,13 +134,13 @@ class Cream_Magazine_Author_Widget extends WP_Widget {
  
     public function update( $new_instance, $old_instance ) {
  
-        $instance = $old_instance;
+        $instance                       = $old_instance;
 
-        $instance['title']              = sanitize_text_field( $new_instance['title'] );
+        $instance['title']              = isset( $new_instance['title'] ) ? sanitize_text_field( $new_instance['title'] ) : '';
 
-        $instance['author_page']        = absint( $new_instance['author_page'] );
+        $instance['author_page']        = isset( $new_instance['author_page'] ) ? absint( $new_instance['author_page'] ) : '';
 
-        $instance['author_link_title']  = sanitize_text_field( $new_instance['author_link_title'] );
+        $instance['author_link_title']  = isset( $new_instance['author_link_title'] ) ? sanitize_text_field( $new_instance['author_link_title'] ) : '';
 
         return $instance;
     } 

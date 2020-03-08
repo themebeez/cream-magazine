@@ -1,0 +1,281 @@
+/* Header Common */
+header.cm-header-style-one {
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header .widget {
+
+    background:transparent;
+    padding:0;
+}
+
+header .widget img {
+
+    padding:0;
+}
+
+.top-header {
+
+    padding: 10px 0;
+    @include drop_shadow_alt();
+    background-color: #ffffff;
+}
+
+.top-header-left ul,
+.top-header-social-links ul {
+
+    list-style:none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.top-header-left ul li {
+
+    display:inline-block;
+    margin-right:10px;
+    margin-bottom: 0px;
+}
+
+.top-header-left ul li:last-child {
+
+   margin-right:0;
+}
+
+.top-header-left ul li a {
+   
+   display:inline-block;
+   line-height:30px;
+}
+
+.top-header-left ul li a span.menu-item-description {
+    
+    display: none;
+}
+
+.top-header-social-links ul {
+        
+    text-align:right;
+}
+
+.logo-container {
+
+    padding: 30px 0;
+}
+
+header .site-title {
+    
+    font-size: 36px;
+    font-weight:bold;
+    line-height:1.2;
+}
+
+header .advertisement-area {
+
+     text-align:right;
+     line-height:90px;
+     height:90px;
+}
+
+header .advertisement-area .widget_text .textwidget img {
+    
+    display:inline-block;
+    padding:0;
+    margin:0;
+}
+
+
+header.general-header #sticky-wrapper nav.main-navigation {
+    
+    z-index: 2 !important;
+}
+
+.primary-navigation ul li a {
+
+    position:relative;   
+}
+
+.primary-navigation ul li.current_page_item {
+    position: relative;
+}
+
+.primary-navigation > ul > li.home-btn {
+    
+    background: $secondary_color;
+}
+
+.primary-navigation.dark li.home-btn a:hover {
+
+    color:$white;
+}
+
+.primary-navigation li.primarynav_search_icon {
+
+   float:right;
+}
+
+.header-search-container {
+
+   position: relative;
+   display: none;
+
+}
+
+.header-search-container form {
+   
+   position:absolute;
+   top:0;
+   right:0;
+   z-index:1000;
+   width:400px;
+   max-width:100%;
+   background: $white;
+   padding: 20px;
+   border-top: 3px solid $secondary_color;
+   overflow: auto;
+   animation: 0.3s 0s fadeInUp both;
+   @include drop_shadow(); 
+}
+
+.header-search-container input[type="search"], 
+.header-search-container button.cm-submit-btn {
+    
+    position: relative;
+    height: 38px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333;
+    padding-left: 15px;
+    border: none;
+    border-radius: 0;
+}
+
+.header-search-container input[type="search"] {
+        
+    float: left;
+    width: calc(100% - 50px);
+    border-top: 1px solid $border_color;
+    border-bottom: 1px solid $border_color;
+    border-left: 1px solid $border_color;   
+}
+
+.header-search-container button.cm-submit-btn {
+
+    float: right;
+    background: $secondary_color;
+    color: $white;
+    width: 50px;
+    font-weight: 400;
+    line-height: inherit;
+    padding: 0 15px;
+    border-radius: 0;
+}
+
+
+
+/* Second Header */
+
+.cm_header-five .top-header {
+    
+    position: relative;
+    padding: 0;
+    box-shadow: none;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cm_header-five .top-header .logo-container {
+    
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 70px 0;
+    margin-bottom: 30px;
+}
+
+
+
+
+/* Header Social icons */
+
+ul.social-icons li {
+    
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+ul.social-icons li a {
+    
+    display: inline-block;
+    font-size: 0;
+    height: 0;
+    margin-right: 0;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+ul.social-icons li a[href*=".com"]::before {
+    
+    font-family: 'FontAwesome';
+    color: $primary_color;
+    @include transation_delay();
+    font-size: 14px;
+}
+
+ul.social-icons li a[href*="facebook.com"]::before {
+
+    content: "\f09a";
+    color:$facebook;
+}
+
+ul.social-icons li a[href*="twitter.com"]::before {
+
+    content: "\f099";
+    color:$twitter;
+}
+
+ul.social-icons li a[href*="instagram.com"]::before {
+
+    content: "\f16d";
+    color:$instagram;
+}
+
+ul.social-icons li a[href*="youtube.com"]::before {
+
+    content: "\f16a";
+    color:$youtube;
+}
+
+ul.social-icons li a[href*="vk.com"]::before {
+
+    content: "\f189";
+    color:$vk;
+}
+
+ul.social-icons li a[href*="linkedin.com"]::before {
+
+    content: "\f0e1";
+    color:$linkedin;
+}
+
+ul.social-icons li a[href*="vimeo.com"]::before {
+
+    content: "\f27d";
+    color: $vimeo;
+}
+
+ul.social-icons li a[href*="pinterest.com"]::before {
+
+    content: "\f0d2";
+    color: $pinterest;
+}
+
+ul.social-icons li a[href*=".com"]:hover::before {
+
+    color: $secondary_color;
+}

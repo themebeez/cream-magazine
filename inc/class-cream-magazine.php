@@ -94,6 +94,12 @@ class Cream_Magazine {
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		// Add support for responsive embedded content.
+		add_theme_support( 'responsive-embeds' );
+
+		// Add support for default block styles.
+		add_theme_support( 'wp-block-styles' );
+
 		/**
 		 * Add support for core custom logo.
 		 *
@@ -124,6 +130,42 @@ class Cream_Magazine {
 		// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 		$GLOBALS['content_width'] = apply_filters( 'cream_magazine_content_width', 640 );
+
+		/*
+		 * Add support custom font sizes.
+		 *
+		 * Add the line below to disable the custom color picker in the editor.
+		 * add_theme_support( 'disable-custom-font-sizes' );
+		 */
+		add_theme_support(
+			'editor-font-sizes',
+			array(
+				array(
+					'name'      => __( 'Small', 'cream-magazine' ),
+					'shortName' => __( 'S', 'cream-magazine' ),
+					'size'      => 16,
+					'slug'      => 'small',
+				),
+				array(
+					'name'      => __( 'Medium', 'cream-magazine' ),
+					'shortName' => __( 'M', 'cream-magazine' ),
+					'size'      => 28,
+					'slug'      => 'medium',
+				),
+				array(
+					'name'      => __( 'Large', 'cream-magazine' ),
+					'shortName' => __( 'L', 'cream-magazine' ),
+					'size'      => 32,
+					'slug'      => 'large',
+				),
+				array(
+					'name'      => __( 'Larger', 'cream-magazine' ),
+					'shortName' => __( 'XL', 'cream-magazine' ),
+					'size'      => 40,
+					'slug'      => 'larger',
+				),
+			)
+		);
 	}
 
 	/**
@@ -159,9 +201,12 @@ class Cream_Magazine {
 		// If the user has set a custom color for the text use that.
 		else :
 			?>
-			.site-title a,
-			.site-description {
+			.site-title a {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
+			}
+
+			.site-description {
+				color: <?php echo esc_attr( cream_magazine_get_option( 'cream_magazine_tagline_color' ) ); ?>
 			}
 		<?php endif; ?>
 		</style>
@@ -188,7 +233,56 @@ class Cream_Magazine {
 			wp_enqueue_style( 'cream-magazine-main', get_template_directory_uri() . '/assets/dist/css/main.css' );
 		}
 
-		wp_enqueue_script( 'cream-magazine-bundle', get_template_directory_uri() . '/assets/dist/js/bundle.min.js', array( 'jquery'), CREAM_MAGAZINE_VERSION, true );
+		wp_register_script( 'cream-magazine-bundle', get_template_directory_uri() . '/assets/dist/js/bundle.min.js', array( 'jquery'), CREAM_MAGAZINE_VERSION, true );
+
+		$cream_magazine_script_obj = array(
+			'show_search_icon' => false,
+			'show_news_ticker'	=> false,
+			'show_banner_slider' => false,
+			'show_to_top_btn' => false,
+			'enable_image_lazy_load' => false,
+			'enable_sticky_sidebar' => true,
+			'enable_sticky_menu_section' => false
+		);
+
+		if( cream_magazine_get_option( 'cream_magazine_enable_search_button' ) ) {
+
+			$cream_magazine_script_obj['show_search_icon'] = true;
+		}
+
+		if( cream_magazine_get_option( 'cream_magazine_enable_ticker_news' ) ) {
+
+			$cream_magazine_script_obj['show_news_ticker'] = true;
+		}
+
+		if( cream_magazine_get_option( 'cream_magazine_enable_banner' ) ) {
+
+			$cream_magazine_script_obj['show_banner_slider'] = true;
+		}
+
+		if( cream_magazine_get_option( 'cream_magazine_enable_scroll_top_button' ) ) {
+
+			$cream_magazine_script_obj['show_to_top_btn'] = true;
+		}
+
+		if( cream_magazine_get_option( 'cream_magazine_enable_lazy_load' ) ) {
+
+			$cream_magazine_script_obj['enable_image_lazy_load'] = true;
+		}
+
+		if( cream_magazine_get_option( 'cream_magazine_enable_sticky_sidebar' ) ) {
+
+			$cream_magazine_script_obj['enable_sticky_sidebar'] = true;
+		}
+
+		if( cream_magazine_get_option( 'cream_magazine_enable_sticky_menu_section' ) ) {
+
+			$cream_magazine_script_obj['enable_sticky_menu_section'] = true;
+		}
+
+		wp_localize_script( 'cream-magazine-bundle', 'cream_magazine_script_obj', $cream_magazine_script_obj );
+
+		wp_enqueue_script( 'cream-magazine-bundle' );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -218,8 +312,33 @@ class Cream_Magazine {
 		}
 
 		// Adds a class of no-sidebar when there is no sidebar present.
-		if ( ! is_active_sidebar( 'sidebar' ) ) {
+
+		$sidebar_position = '';
+
+		if( is_front_page() && ! is_home() ) {
+
+			$sidebar_position = cream_magazine_get_option( 'cream_magazine_homepage_sidebar' );
+		} else {
+
+			$sidebar_position = cream_magazine_sidebar_position();
+		}
+
+		if( cream_magazine_get_option( 'cream_magazine_show_sidebar_after_contents_on_mobile_n_tablet' ) ) {
+
+			$classes[] = 'cm-mobile-content-sidebar';
+		}
+
+		if ( ! is_active_sidebar( 'sidebar' ) && $sidebar_position == 'none' ) {
 			$classes[] = 'no-sidebar';
+		} else {
+
+			if( $sidebar_position == 'left' ) {
+
+				$classes[] = 'left-sidebar';
+			} else {
+
+				$classes[] = 'right-sidebar';
+			}
 		}
 
 		$site_layout = cream_magazine_get_option( 'cream_magazine_select_site_layout' );
@@ -273,6 +392,8 @@ class Cream_Magazine {
 		require get_template_directory() . '/inc/theme-hooks.php';
 		// Load helper functions
 		require get_template_directory() . '/inc/helper-functions.php';
+		// Load customizer options' choices
+		require get_template_directory() . '/inc/customizer/functions/control-choices.php';
 		// Load active callback for customizer options
 		require get_template_directory() . '/inc/customizer/functions/active-callback.php';
 		// Load customizer dependency
@@ -343,7 +464,7 @@ class Cream_Magazine {
 	 */
 	public function search_form() {
 
-		$form = '<form role="search" method="get" id="search-form" class="clearfix" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Type Here', 'cream-magazine' ) . '" value"' . get_search_query() . '" ><input type="submit" id="submit" value="'. esc_attr__( 'Search', 'cream-magazine' ).'"></form>';
+		$form = '<form role="search" class="cm-search-form" method="get" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Type Here', 'cream-magazine' ) . '" value"' . get_search_query() . '" ><button type="submit" class="cm-submit-btn"><i class="fa fa-search"></i></button></form>';
 
         return $form;
 	}

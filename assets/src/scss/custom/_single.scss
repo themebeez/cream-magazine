@@ -1,0 +1,462 @@
+/* Post Title */
+
+body.single .content-entry article,
+body.page .content-entry article {
+    
+    margin: 0px;
+}
+
+body.single  .content-entry article .the_title,
+body.page  .content-entry article .the_title {
+	
+	margin-bottom: 10px;
+}
+
+body.single  .content-entry article .the_title h1,
+body.page  .content-entry article .the_title h1 {
+	
+	font-size: 38px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+
+
+/* Post Meta */
+
+body.single  .content-entry article.post-detail .cm-post-meta {
+	
+	margin-bottom: 1.5em;
+}
+
+
+/* Featured Image */
+
+body.single  .content-entry article .post_thumb figure figcaption,
+body.page  .content-entry article .post_thumb figure figcaption {
+    
+    margin: 10px 0;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+/* Post Tags */
+
+body.single .content-entry article.post-detail .post_tags {
+	
+	text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+/* Related Posts */
+
+.cm_related_post_container {
+
+    margin-bottom: 10px;
+}
+
+.cm_related_post_container .lazy-thumb {
+
+    padding-bottom: 56.25%;
+}
+
+.cm_related_post_container .card_content {
+
+    padding: 20px;
+    background-color: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,.03);
+}
+
+.cm_related_post_container .entry_cats {
+	
+	margin-bottom: 10px;
+}
+
+.cm_related_post_container .post_title h2 {
+
+    font-size: $typo_medium;   
+}
+
+.cm_related_post_container .post_meta {
+
+    margin-top: 10px;
+}
+
+
+
+/* Author Section */
+
+.author_box {
+
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.author_box .author_thumb img {
+
+    @include border_radius(100%);
+}
+
+.author_box .author_details {
+    
+    margin-left: 30px;
+}
+
+.author_box .author_desc {
+
+    margin-bottom: 15px;
+}
+
+.author_box .author_name h3 {
+	
+    font-size: 24px;
+	text-transform: capitalize;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+
+
+/* Post Navigation */
+
+.post-navigation {
+
+    margin-bottom: 40px;
+}
+
+.post-navigation .nav-links {
+    
+    height: auto;
+    overflow: hidden;
+}
+
+
+.post-navigation .nav-links .nav-previous {
+
+    float: left;
+}
+
+.post-navigation .nav-links .nav-next {
+
+    float: right;
+}
+
+.post-navigation .nav-links .nav-previous a,
+.post-navigation .nav-links .nav-next a {
+    
+    display:block;
+    position:relative;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: $secondary_color;
+}
+
+.post-navigation .nav-links .nav-previous a::before {
+
+    content:"\f177";
+    font-family:'FontAwesome';
+    margin-right: 15px;
+}
+
+.post-navigation .nav-links .nav-next a::after {
+    
+    content:"\f178";
+    font-family:'FontAwesome';
+    margin-left: 15px;
+}
+
+
+
+/* Comments */
+
+#comments footer {
+
+    background: transparent;
+}
+
+#comments .comment-content {
+    
+    margin-top: 15px;
+}
+
+#comments h2.comments-title {
+
+    font-size: 20px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #FF3D00;
+}
+
+
+#comments div#respond {
+
+    background: transparent;
+    overflow: hidden;
+}
+
+
+#comments div#respond h3#reply-title {
+
+    position: relative;
+    font-size: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-transform: uppercase;
+    margin-top: 0px;
+}
+
+#comments div#respond h3#reply-title::after {
+
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    margin-left: 15px;
+    background-color: #FF3D00;
+}
+
+#comments form p.comment-notes {
+
+    display: block;
+}
+
+#comments form label {
+
+    display: block;
+    margin: 0;
+    font-weight: 400;
+    color: $primary_color;
+}
+
+#comments form input,
+#comments form textarea {
+
+    position: relative;
+    height: 38px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    color: $primary_color;
+    padding: 10px;
+    border: 1px solid $border_color;
+    border-radius: 0px;
+}
+
+
+#comments form textarea {
+
+    height: 150px;
+}
+
+#comments form input[type="submit"] {
+
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+#comments form input[type="submit"] {
+
+    display: inline-block;
+    width: 150px;
+    background: $secondary_color;
+    color: $white;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid $secondary_color;
+    padding: 0;
+    line-height: inherit;
+}
+
+#comments form input[type="submit"]:hover {
+
+    background: $primary_color;
+    color: $white;
+    border: 1px solid $primary_color;
+}
+
+#comments ul,
+#comments ol {
+
+   list-style:none; 
+   margin: 0px;
+   padding: 0px;
+}
+
+#comments ol.comment-list {
+    
+    margin-bottom: 30px;
+}
+
+#comments ol.comment-list article.comment-body {
+    
+    margin-bottom: 15px;
+}
+
+#comments ol.comment-list article.comment-body:last-child { 
+    
+    margin-bottom: 0px;
+}
+
+#comments ol.comment-list div#respond {
+    
+    margin-top: 15px;
+}
+
+#comments ol.comment-list div#respond h3#reply-title {
+	
+	margin-bottom: 10px;
+}
+
+#comments ol.comment-list div#respond .comment-form input#submit {
+	
+	margin-bottom: 0px;
+}
+
+#comments ol.comment-list li {
+
+    margin-bottom: 30px;
+}
+
+#comments ol.comment-list li ol.children {
+	
+	margin: 30px 0px 0px 30px;
+}
+
+#comments ol.comment-list li ol.children li:last-child {
+	
+	margin-bottom: 0px;
+}
+
+#comments ol.comment-list li ol.children:last-child {
+	
+	margin-bottom: 0px;
+}
+
+
+#comments ol.comment-list li article footer.comment-meta .comment-author.vcard img {
+
+    float: left;
+}
+
+#comments ol.comment-list li article footer.comment-meta .comment-author.vcard b {
+
+    position: relative;
+    display: inline-block;
+    padding-left: 15px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: $primary_color;
+}
+
+#comments ol.comment-list li article footer.comment-meta .comment-author.vcard b a {
+	
+	color: $primary_color !important;
+}
+
+#comments ol.comment-list li article footer.comment-meta .comment-author.vcard b a:hover {
+	
+	color: $secondary_color;
+}
+
+#comments ol.comment-list li article footer.comment-meta .comment-author.vcard span {
+
+    color: $primary_color !important;
+}
+
+
+#comments ol.comment-list li article footer.comment-meta .comment-metadata {
+
+    padding-left: 60px;
+}
+
+#comments ol.comment-list li article footer.comment-meta .comment-metadata a {
+
+    text-transform: capitalize;
+    font-size: 14px;
+    padding-right: 10px;
+    font-weight: 400;
+    color: $primary_color;
+    letter-spacing:0;
+}
+
+#comments ol.comment-list li article footer.comment-meta .comment-metadata span.edit-link a {
+
+    position: relative;
+}
+
+#comments ol.comment-list li article footer.comment-meta .comment-metadata span.edit-link a:hover {
+	
+	color: $secondary_color;
+}
+
+#comments ol.comment-list li article footer.comment-meta .comment-metadata span.edit-link a:before {
+
+    content: '\e915';
+    font-family: 'feather';
+    padding-right: 10px;
+}
+
+#comments ol.comment-list li article .comment-content p a {
+
+    color: $primary_color;
+}
+
+#comments ol.comment-list li article .reply a {
+
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: $primary_color;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing:0;
+}
+
+#comments ol.comment-list li article .reply a:hover {
+	
+	color: $secondary_color;
+}
+
+#comments p.comment-form-cookies-consent {
+
+    text-align:left;
+    margin-top:10px;
+}
+
+#comments p.comment-form-cookies-consent input[type="checkbox"] {
+
+    display:inline-block;
+    width:13px;
+    height:13px;
+    padding: 0;
+    margin: 0;
+}
+
+#comments p.comment-form-cookies-consent label {
+
+    display:inline-block;
+    padding-left:15px;
+    padding-bottom: 0;
+}
+
+#comments .form-submit {
+
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#comments .form-submit input[type="submit"] {
+
+    margin-bottom: 0;
+}

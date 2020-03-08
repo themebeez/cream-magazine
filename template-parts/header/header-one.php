@@ -9,12 +9,12 @@
 
 $show_top_header = cream_magazine_get_option( 'cream_magazine_enable_top_header' );
 ?>
-<header class="general-header">
+<header class="general-header cm-header-style-one">
     <?php if( $show_top_header == true ) { ?>
         <div class="top-header">
             <div class="cm-container">
                 <div class="row">
-                    <div class="col-md-8 col-sm-7 col-xs-12">
+                    <div class="cm-col-lg-8 cm-col-md-7 cm-col-12">
                         <div class="top-header-left">
                             <?php
                             /**
@@ -26,7 +26,7 @@ $show_top_header = cream_magazine_get_option( 'cream_magazine_enable_top_header'
                             ?>
                         </div><!-- .top-header-left -->
                     </div><!-- col -->
-                    <div class="col-md-4 col-sm-5 col-xs-12">
+                    <div class="cm-col-lg-4 cm-col-md-5 cm-col-12">
                         <div class="top-header-social-links">
                             <?php
                             /**
@@ -44,8 +44,8 @@ $show_top_header = cream_magazine_get_option( 'cream_magazine_enable_top_header'
     <?php } ?>
     <div class="cm-container">
         <div class="logo-container">
-            <div class="row">
-                <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="row align-items-center">
+                <div class="cm-col-lg-4 cm-col-12">
                     <?php
                     /**
                     * Hook - cream_magazine_site_identity.
@@ -56,7 +56,7 @@ $show_top_header = cream_magazine_get_option( 'cream_magazine_enable_top_header'
                     ?>
                 </div><!-- .col -->
                 <?php if( is_active_sidebar( 'header-advertisement' ) ) { ?>
-                    <div class="col-md-8 col-sm-12 col-xs-12">
+                    <div class="cm-col-lg-8 cm-col-12">
                         <div class="advertisement-area">
                             <?php dynamic_sidebar( 'header-advertisement' ); ?>
                         </div><!-- .advertisement-area -->

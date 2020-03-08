@@ -22,7 +22,7 @@ get_header();
 					do_action( 'cream_magazine_breadcrumb' );
 					?>
 	                <div class="row">
-	                    <div class="col-md-12 col-sm-12 col-xs-12">
+	                    <div class="cm-col-md-12 cm-col-sm-12 cm-col-xs-12">
 	                        <div class="content-entry">
 	                            <div class="error_page">
 	                            	<div class="error_page_top_portion">

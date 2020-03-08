@@ -22,16 +22,9 @@ get_header();
 						*/
 						do_action( 'cream_magazine_breadcrumb' );
 	                    ?>
-	                    <div class="row">
-	                    	<div class="search-container clearfix">
-		                    	<?php
-		                    	$sidebar_position = cream_magazine_sidebar_position();
-		                    	$class = cream_magazine_main_container_class();
-		                    	if( $sidebar_position == 'left' && is_active_sidebar( 'sidebar' ) ) {
-		                    		get_sidebar();
-		                    	}
-		                    	?>
-		                        <div class="<?php echo esc_attr( $class ); ?>">
+	                    <div class="search-container">
+	                    	<div class="row">
+		                        <div class="<?php echo esc_attr( cream_magazine_main_container_class() ); ?>">
 		                            <div class="content-entry">
 		                            	<?php
 		                            	if( have_posts() ) {
@@ -46,7 +39,7 @@ get_header();
 													</h1><!-- .list_head -->
 			                                    </div><!-- .section-title -->
 		                                		<div class="list_entry">
-	                                                <section class="cm-post-widget-three">
+	                                                <section class="post-display-grid">
 	                                                    <div class="section_inner">
 	                                                        <div class="row">
 	                                                            <?php
@@ -101,13 +94,9 @@ get_header();
 										?>
 		                            </div><!-- .content-entry -->
 		                        </div>
-		                        <?php 
-		                        if( $sidebar_position == 'right' && is_active_sidebar( 'sidebar' ) ) {
-		                    		get_sidebar();
-		                    	}
-		                        ?>
-		                    </div><!-- .search-container -->
-	                    </div><!-- .row -->
+		                        <?php get_sidebar(); ?>
+		                    </div><!-- .row -->
+	                    </div><!-- .search-container -->
 	                </div><!-- .cm_archive_page -->
 	            </main><!-- #main.site-main -->
 	        </div><!-- #primary.content-area -->

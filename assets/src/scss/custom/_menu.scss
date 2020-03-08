@@ -35,9 +35,7 @@
     
     padding: 8px 15px;
     display: block;
-    text-decoration: none;
     color: #777;
-    font-size: 15px;
     font-family: inherit;
     box-sizing: border-box;
     -webkit-transition: all .3s ease-out;
@@ -64,6 +62,21 @@
 }
 
 
+/* Dropdown */
+
+.primary-navigation ul li .sub-menu {
+    
+    display:block;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.primary-navigation ul li:hover > .sub-menu, 
+.primary-navigation ul li:focus > .sub-menu,
+.primary-navigation ul li:focus-within > .sub-menu,
+.primary-navigation ul li .sub-menu:focus-within {
+    
+    clip: auto !important;
+}
 
 /* first level dd */
 
@@ -554,6 +567,20 @@ body.primary-navigation-noscroll-x {
 .primary-navigation.mobile.left .close-menu.third span,
 .primary-navigation.mobile.right .close-menu.third span {
     display: none;
+}
+
+/* Menu Description */
+
+.primary-navigation ul li a span.menu-item-description {
+    
+    display: inline-block;
+    font-size: 12px;
+    color: #ffffff;
+    margin-left: 7px;
+    padding: 8px 5px 10px;
+    background-color: $third_color;
+    border-radius: 5px;
+    line-height: 0;
 }
 
 

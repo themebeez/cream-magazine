@@ -1,0 +1,43 @@
+.pagination .page-numbers {
+
+    display: inline-block;
+    font-size:16px;
+    margin-right: 10px;
+    border-radius:0;
+    text-align: center;
+    border: 1px solid $border_color;
+    line-height: 45px;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+.pagination .page-numbers:hover {
+
+    border:1px solid $secondary_color;
+}
+
+.pagination .page-numbers:last-child {
+
+    margin-right:0;
+}
+
+.pagination .page-numbers.current {
+
+    background: $secondary_color;
+    color: $white;
+    border: none;
+}
+
+.pagination .page-numbers.current:hover {
+    
+    color: $white;
+}
+
+.pagination .page-numbers.next,
+.pagination .page-numbers.prev {
+
+    width: auto;
+    padding: 0 15px;
+    text-transform:uppercase;
+}
