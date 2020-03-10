@@ -298,6 +298,8 @@ if( ! class_exists( 'Cream_Magazine_Customize' ) ) {
 
 			wp_enqueue_script( 'cream-magazine-upgrade', get_template_directory_uri() . '/inc/customizer/upgrade-to-pro/upgrade.js', array( 'jquery' ), CREAM_MAGAZINE_VERSION, true );
 
+			wp_enqueue_script( 'cream-magazine-customizer-dependency', get_template_directory_uri() . '/admin/js/customizer-dependency.js', array( 'jquery' ), CREAM_MAGAZINE_VERSION, true );
+
 			wp_enqueue_script( 'cream-magazine-customizer-script', get_template_directory_uri() . '/admin/js/customizer-script.js', array( 'jquery' ), CREAM_MAGAZINE_VERSION, true );
 		}
 	}
