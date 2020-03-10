@@ -126,9 +126,9 @@ class Cream_Magazine_News_Widget_Nine extends WP_Widget {
                                         $post_query->the_post();
                                         if( $count > 0 ) {
                                             ?>
-                                            <div class="box clearfix">
+                                            <div class="box">
                                                 <div class="cm-col-md-12">
-                                                    <div class="row clearfix">
+                                                    <div class="row">
                                                         <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
                                                             <div class="<?php cream_magazine_thumbnail_class(); ?>">
                                                                 <?php
