@@ -154,7 +154,7 @@ if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
 
         $defaults['cream_magazine_primary_theme_color'] = '#FF3D00';
 
-        $defaults['cream_magazine_enable_common_cat_color'] = false;
+        $defaults['cream_magazine_enable_common_cat_color'] = true;
         $defaults['cream_magazine_common_cat_bg_color'] = '#FF3D00';
 
         $defaults['cream_magazine_cat_bg_color_1'] = '#FF3D00';

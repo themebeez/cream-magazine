@@ -10239,10 +10239,11 @@ body.single .content-entry article.post-detail .post_tags {
   color: #fff;
   font-size: 14px;
   background-color: #FF3D00;
-  padding: 2px 15px;
+  padding: 5px 10px;
   border-radius: 30px;
   -webkit-border-radius: 30px;
-  -moz-border-radius: 30px; }
+  -moz-border-radius: 30px;
+  line-height: 1; }
 
 .entry_cats ul.post-categories li a:hover {
   color: #fff;
@@ -10435,20 +10436,6 @@ ul.post_meta li.comments a::before {
 .widget_search {
   display: block; }
 
-.widget_search form {
-  display: block;
-  position: relative;
-  z-index: 5;
-  left: auto;
-  top: auto;
-  right: auto;
-  box-shadow: none;
-  padding: 0;
-  border-top: none;
-  -webkit-animation: none;
-          animation: none;
-  margin: 0; }
-
 .widget_search form button.cm-submit-btn {
   width: 50px;
   text-align: center;
@@ -10466,7 +10453,8 @@ ul.post_meta li.comments a::before {
   text-align: center;
   padding: 5px 0;
   font-weight: 500;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  border: 1px solid #2b2b2b; }
 
 .calendar_wrap table {
   border-collapse: collapse;
@@ -10539,12 +10527,12 @@ ul.post_meta li.comments a::before {
   padding: 5px 15px;
   margin: 2px;
   color: #fff;
-  background: #FF3D00;
-  font-weight: 400; }
+  font-weight: 400;
+  border: 1px solid #2b2b2b; }
 
 .widget_tag_cloud .tagcloud a:hover {
   color: #fff;
-  background: #FF3D00; }
+  border-color: #FF3D00; }
 
 /* Author Widget */
 .cm_author_widget .author_thumb img {
@@ -10881,7 +10869,8 @@ header .advertisement-area .widget_text .textwidget img {
   margin: 0; }
 
 header.general-header #sticky-wrapper nav.main-navigation {
-  z-index: 2 !important; }
+  z-index: 3 !important;
+  position: relative; }
 
 .primary-navigation ul li a {
   position: relative; }
@@ -11186,11 +11175,7 @@ footer .footer_inner {
   border-color: #2b2b2b; }
 
 .footer-widget-container .widget_tag_cloud .tagcloud a {
-  background-color: #FF3D00;
-  color: #f1f1f1; }
-
-.footer-widget-container .calendar_wrap caption {
-  background-color: #FF3D00; }
+  color: white; }
 
 .footer-widget-container .widget_categories select,
 .footer-widget-container .widget_archive select,
@@ -11213,7 +11198,7 @@ footer .footer_inner {
 /* Scroll Top Button */
 #toTop {
   position: fixed;
-  z-index: 9999999;
+  z-index: 2;
   bottom: 10px;
   right: 10px;
   cursor: pointer;
@@ -11221,7 +11206,7 @@ footer .footer_inner {
   background: #FF3D00;
   color: #fff;
   border: none;
-  padding: 10px 15px;
+  padding: 7px 15px;
   border-radius: 2px;
   transition: all 0.7s ease; }
 

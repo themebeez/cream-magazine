@@ -133,13 +133,7 @@ footer .footer_inner {
 
 .footer-widget-container .widget_tag_cloud .tagcloud a {
     
-    background-color: $secondary_color;
-    color: $footer_section_links_color;
-}
-
-.footer-widget-container .calendar_wrap caption {
-    
-    background-color: $secondary_color;
+    color: white;
 }
 
 .footer-widget-container .widget_categories select, 
@@ -174,7 +168,7 @@ footer .footer_inner {
 #toTop {
 
     position: fixed;
-    z-index: 9999999;
+    z-index: 2;
     bottom: 10px;
     right: 10px;
     cursor: pointer;
@@ -182,7 +176,7 @@ footer .footer_inner {
     background: $secondary_color;
     color: $white;
     border: none;
-    padding: 10px 15px;
+    padding: 7px 15px;
     border-radius: 2px;
     @include transation_delay(); 
 }

@@ -66,7 +66,7 @@ if( $related_posts->have_posts() && $enable_related_posts == true ) {
         		<?php
         	}
         	?>
-            <div class="row clearfix">
+            <div class="row">
             	<?php
             	$sidebar_position = cream_magazine_sidebar_position();
 				$container_class = '';

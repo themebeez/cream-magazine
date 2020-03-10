@@ -89,7 +89,8 @@ header .advertisement-area .widget_text .textwidget img {
 
 header.general-header #sticky-wrapper nav.main-navigation {
     
-    z-index: 2 !important;
+    z-index: 3 !important;
+    position: relative;
 }
 
 .primary-navigation ul li a {

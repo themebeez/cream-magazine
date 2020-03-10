@@ -73,7 +73,7 @@ class Cream_Magazine_News_Widget_Six extends WP_Widget {
                         <?php
                     } 
                     ?> 
-                    <div class="row clearfix">
+                    <div class="row">
                         <?php
                         $count = 0;
                         while( $post_query->have_posts() ) {
@@ -113,7 +113,7 @@ class Cream_Magazine_News_Widget_Six extends WP_Widget {
                         wp_reset_postdata();
                         ?>
                     </div><!-- .row.clearfix --> 
-                    <div class="row clearfix">
+                    <div class="row">
                         <?php
                         $count = 0;
                         while( $post_query->have_posts() ) {
@@ -122,8 +122,8 @@ class Cream_Magazine_News_Widget_Six extends WP_Widget {
                                 ?>
                                 <div class="cm-col-lg-6 cm-col-md-6 cm-col-12">
                                     <article class="card card_layout_one">
-                                        <div class="boxes_holder clearfix">
-                                            <div class="row clearfix">
+                                        <div class="boxes_holder">
+                                            <div class="row">
                                                 <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
                                                     <div class="<?php cream_magazine_thumbnail_class(); ?>">
                                                         <?php

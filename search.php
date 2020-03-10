@@ -47,24 +47,6 @@ get_header();
 				                                            	/* Start the Loop */
 																while ( have_posts() ) {
 																	the_post();
-																	if( $sidebar_position != 'none' ) {
-																		if( $break%2 == 0 && $break > 0 ) {
-																			?>
-																			<div class="row clearfix visible-sm visible-md visible-lg"></div>
-																			<?php
-																		}
-																	} else {
-																		if( $break%3 == 0 && $break > 0 ) {
-																			?>
-																			<div class="row clearfix visible-md visible-lg"></div>
-																			<?php
-																		}
-																		if( $break%2 == 0 && $break > 0 ) {
-																			?>
-																			<div class="row clearfix visible-sm"></div>
-																			<?php
-																		}
-																	}
 
 																	/*
 																	 * Include the Post-Type-specific template for the content.
@@ -72,8 +54,6 @@ get_header();
 																	 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 																	 */
 																	get_template_part( 'template-parts/layout/layout', 'grid' );
-
-																	$break++;
 																}
 																?>
 	                                                        </div><!-- .row -->

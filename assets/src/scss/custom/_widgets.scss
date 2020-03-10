@@ -191,21 +191,6 @@
     display:block;
 }
 
-.widget_search form {
-    
-    display: block;
-    position: relative;
-    z-index: 5;
-    left: auto;
-    top: auto;
-    right: auto;
-    box-shadow: none;
-    padding: 0;
-    border-top: none;
-    animation: none;
-    margin: 0;
-}
-
 .widget_search form button.cm-submit-btn {
 
     width: 50px;
@@ -232,6 +217,7 @@
     padding: 5px 0;
     font-weight: 500;
     text-transform: capitalize;
+    border: 1px solid #2b2b2b;
 }
 
 .calendar_wrap table {
@@ -337,12 +323,12 @@
     padding: 5px 15px;
     margin: 2px;
     color: $white;
-    background: $secondary_color;
     font-weight: 400;
+    border: 1px solid $footer_lines_color;
 }
 
 .widget_tag_cloud .tagcloud a:hover {
 	
 	color: $white;
-    background: $secondary_color;
+    border-color: $secondary_color;
 }

@@ -75,7 +75,7 @@ class Cream_Magazine_News_Widget_One extends WP_Widget {
                         <?php
                     } 
                     ?>      
-                    <div class="row clearfix">
+                    <div class="row">
                         <?php
                         $count = 0;
                         while( $post_query->have_posts() ) {
@@ -116,7 +116,7 @@ class Cream_Magazine_News_Widget_One extends WP_Widget {
                         wp_reset_postdata();
                         ?>
                     </div><!-- .row.clearfix -->
-                    <div class="row clearfix">
+                    <div class="row">
                         <?php
                         $count = 0;
                         while( $post_query->have_posts() ) {

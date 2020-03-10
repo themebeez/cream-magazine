@@ -49,7 +49,7 @@ if( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 				#toTop,
 				.section-title h2::after,
 				.sidebar-widget-area .widget .widget-title h2::after,
-				footer .widget .widget-title h2::after,
+				.footer-widget-container .widget .widget-title h2::after,
 				#comments div#respond h3#reply-title::after,
 				#comments h2.comments-title:after,
 				.post_tags a,
@@ -59,14 +59,11 @@ if( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 				.error_foot form input[type="submit"], 
 				.widget_search form input[type="submit"],
 				.header-search-container input[type="submit"],
-				.widget_tag_cloud .tagcloud a:hover,
 				.trending_widget_carousel .owl-dots button.owl-dot,
-				footer .widget_calendar .calendar_wrap caption,
 				.pagination .page-numbers.current,
 				.post-navigation .nav-links .nav-previous a, 
 				.post-navigation .nav-links .nav-next a,
 				#comments form input[type="submit"],
-				footer .widget_tag_cloud .tagcloud a,
 				footer .widget.widget_search form input[type="submit"]:hover,
 				.widget_product_search .woocommerce-product-search button[type="submit"],
 				.woocommerce ul.products li.product .button,
@@ -114,10 +111,6 @@ if( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 				.news_ticker_wrap .ticker_items .item a:focus,
 				.cm_banner .post_title h2 a:hover,
 				.cm_banner .post_meta li a:hover,
-				.cm-post-widget-two .big-card .post-holder a:hover, 
-				.cm-post-widget-two .big-card .post-holder a:focus,
-				.cm-post-widget-two .small-card .post-holder a:hover, 
-				.cm-post-widget-two .small-card .post-holder a:focus,
 				.cm_middle_post_widget_one .post_title h2 a:hover, 
 				.cm_middle_post_widget_one .post_meta li a:hover,
 				.cm_middle_post_widget_three .post_thumb .post-holder a:hover,
@@ -143,7 +136,16 @@ if( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 				.woocommerce div.product p.price, 
 				.woocommerce div.product span.price,
 				.video_section .video_details .post_title h2 a:hover,
-				.primary-navigation.dark li a:hover {
+				.primary-navigation.dark li a:hover,
+				footer .footer_inner a:hover,
+				.footer-widget-container ul.post_meta li:hover span, 
+				.footer-widget-container ul.post_meta li:hover a,
+				ul.post_meta li a:hover,
+				.cm-post-widget-two .big-card .post-holder .post_title h2 a:hover,
+				.cm-post-widget-two .big-card .post_meta li a:hover,
+				.copyright_section .copyrights a,
+				.breadcrumb ul li a:hover, 
+				.breadcrumb ul li a:hover span {
 
 					color: <?php echo esc_attr( $primary_theme_color ); ?>;
 				}
@@ -164,7 +166,8 @@ if( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 				.ticker_carousel .owl-nav button.owl-next:hover,
 				footer .widget.widget_search form input[type="submit"]:hover,
 				.trending_widget_carousel .owl-dots button.owl-dot,
-				.the_content blockquote {
+				.the_content blockquote,
+				.widget_tag_cloud .tagcloud a:hover {
 
 					border-color: <?php echo esc_attr( $primary_theme_color ); ?>;
 				}
