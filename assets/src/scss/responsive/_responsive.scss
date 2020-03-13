@@ -373,10 +373,16 @@
 		font-size: $typo_medium;
 	}
 
-	// Comment Form 
-	#comments div#respond h3#reply-title {
+	// Comment Form
 
-		margin-bottom: 15px;
+	.comments-area .comment-list .comment-body {
+
+		padding:20px;
+	}
+
+	.comments-area .comment-list .children {
+
+		margin-left: 10px;
 	}
 
 	// Footer 
