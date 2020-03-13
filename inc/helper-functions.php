@@ -177,8 +177,8 @@ if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
 
         $defaults['cream_magazine_save_value_as'] = 'slug';
 
-        $defaults['cream_magazine_body_font_family'] = 'Muli:400,400i,600,600i,700,700i,800,800i';
-        $defaults['cream_magazine_headings_font_family'] = 'Roboto:400,400i,500,500i,700,700i';
+        $defaults['cream_magazine_body_font_family'] = 'Muli:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700';
+        $defaults['cream_magazine_headings_font_family'] = 'Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700';
 
         $defaults['cream_magazine_display_top_widget_area'] = true;
         $defaults['cream_magazine_display_middle_widget_area'] = true;

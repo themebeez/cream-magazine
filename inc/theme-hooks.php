@@ -597,10 +597,10 @@ if( ! function_exists( 'cream_magazine_copyright_action' ) ) :
             		<?php
                     if( !empty( $copyright_text ) ) {
                         /* translators: 1: Copyright Text 2: Theme name, 3: Theme author. */
-                        printf( __( '<span class="copyright-text">%1$s</span> %2$s by %3$s.','cream-magazine' ), esc_html( $copyright_text ), 'Cream Magazine', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-magazine' ) . '</a>' );
+                        printf( __( '<span class="copyright-text">%1$s</span> %2$s by %3$s','cream-magazine' ), esc_html( $copyright_text ), 'Cream Magazine', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-magazine' ) . '</a>' );
                     } else {
                         /* translators: 1: Theme name, 2: Theme author. */
-                        printf( esc_html__( '%1$s by %2$s.', 'cream-magazine' ), 'Cream Magazine', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-magazine' ) . '</a>' );
+                        printf( esc_html__( '%1$s by %2$s', 'cream-magazine' ), 'Cream Magazine', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-magazine' ) . '</a>' );
                     }
                     ?>
             	</p>

@@ -1,3 +1,31 @@
+
+/* Scroll Top Button */
+
+#toTop {
+
+    position: fixed;
+    z-index: 2;
+    bottom: 10px;
+    right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+    background: $secondary_color;
+    color: $white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 2px;
+    @include transation_delay(); 
+}
+
+#toTop:hover {
+
+    background: $primary_color;
+}
+
+
+// footer 
+
 footer {
     
     position: relative;
@@ -105,7 +133,6 @@ footer .footer_inner {
     position: relative;
     width: 100%;
     overflow: hidden;
-    text-transform: uppercase;
 }
 
 .footer-widget-container .widget .widget-title h2::after {
@@ -162,32 +189,3 @@ footer .footer_inner {
     color: $secondary_color;
 }
 
-
-/* Scroll Top Button */
-
-#toTop {
-
-    position: fixed;
-    z-index: 2;
-    bottom: 10px;
-    right: 10px;
-    cursor: pointer;
-    display: none;
-    background: $secondary_color;
-    color: $white;
-    border: none;
-    padding: 7px 15px;
-    border-radius: 2px;
-    @include transation_delay(); 
-}
-
-#toTop:hover {
-
-    background: $primary_color;
-}
-
-body.rtl #toTop {
-
-    left:auto;
-    right:10px;
-}

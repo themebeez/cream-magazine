@@ -1,7 +1,16 @@
-.pagination .page-numbers {
+
+.page-links .post-page-numbers,
+body.single .the_content .page-links .post-page-numbers {
+
+    color:$primary_color;
+    text-decoration: none;
+}
+
+.pagination .page-numbers,
+.page-links .post-page-numbers {
 
     display: inline-block;
-    font-size:16px;
+    font-size:15px;
     margin-right: 10px;
     border-radius:0;
     text-align: center;
@@ -12,24 +21,29 @@
     margin-bottom: 10px;
 }
 
-.pagination .page-numbers:hover {
+.pagination .page-numbers:hover,
+.page-links .post-page-numbers:hover {
 
     border:1px solid $secondary_color;
 }
 
-.pagination .page-numbers:last-child {
+.pagination .page-numbers:last-child,
+.page-links .post-page-numbers:last-child {
 
     margin-right:0;
 }
 
-.pagination .page-numbers.current {
+.pagination .page-numbers.current,
+.page-links .post-page-numbers.current,
+body.single .the_content .page-links .post-page-numbers.current {
 
     background: $secondary_color;
     color: $white;
     border: none;
 }
 
-.pagination .page-numbers.current:hover {
+.pagination .page-numbers.current:hover,
+.page-links .post-page-numbers.current:hover {
     
     color: $white;
 }
@@ -39,5 +53,4 @@
 
     width: auto;
     padding: 0 15px;
-    text-transform:uppercase;
 }

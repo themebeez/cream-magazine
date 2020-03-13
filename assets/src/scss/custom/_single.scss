@@ -46,7 +46,6 @@ body.page  .content-entry article .post_thumb figure figcaption {
 
 body.single .content-entry article.post-detail .post_tags {
 	
-	text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -152,6 +151,7 @@ body.single .content-entry article.post-detail .post_tags {
     
     display:block;
     position:relative;
+    font-size: 15px;
     padding: 10px 20px;
     color: #fff;
     background-color: $secondary_color;
@@ -159,18 +159,17 @@ body.single .content-entry article.post-detail .post_tags {
 
 .post-navigation .nav-links .nav-previous a::before {
 
-    content:"\f177";
+    content:"\f104";
     font-family:'FontAwesome';
     margin-right: 15px;
 }
 
 .post-navigation .nav-links .nav-next a::after {
     
-    content:"\f178";
+    content:"\f105";
     font-family:'FontAwesome';
     margin-left: 15px;
 }
-
 
 
 /* Comments */

@@ -23,12 +23,12 @@
 	
 	display: inline-block;
     color: $white;
-    font-size: 14px;
+    font-size: 13px;
     background-color: $secondary_color;
-    padding: 5px 10px;
-    border-radius: 30px; 
-    -webkit-border-radius: 30px; 
-    -moz-border-radius: 30px;
+    padding: 4px 10px;
+    border-radius: 2px; 
+    -webkit-border-radius: 2px; 
+    -moz-border-radius: 2px;
     line-height: 1;
 }
 
@@ -37,8 +37,6 @@
 	color: $white;
     background-color: $primary_color;
 }
-
-
 
 
 /** Author, Date, and Comments Meta **/
@@ -65,6 +63,7 @@ ul.post_meta li {
 ul.post_meta li a {
 	
 	color: $auth_date_cmnt_color;
+	font-size: 14px;
 	@include transation_delay();
 }
 
@@ -109,6 +108,7 @@ ul.post_meta li.comments a::before {
 .post_tags a {
 
     display:inline-block;
+    font-size: 14px;
     background-color: $secondary_color;
     padding: 4px 15px;
     margin-right: 10px;

@@ -92,8 +92,7 @@ if( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 				.widget_product_tag_cloud .tagcloud a:hover, 
 				.widget_product_tag_cloud .tagcloud a:focus,
 				.woocommerce .widget_price_filter .price_slider_wrapper .ui-slider .ui-slider-handle,
-				.error_page_top_portion,
-				.header-search-container button.cm-submit-btn {
+				.error_page_top_portion {
 
 					background-color: <?php echo esc_attr( $primary_theme_color ); ?>;
 				}
@@ -157,7 +156,7 @@ if( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 				.pagination .page-numbers:hover,
 				#comments form input[type="submit"],
 				.social-share ul li a:hover,
-				.header-search-container form,
+				.header-search-container .search-form-entry,
 				.widget_product_search .woocommerce-product-search button[type="submit"],
 				.woocommerce .woocommerce-pagination ul.page-numbers li span.current,
 				.woocommerce .woocommerce-pagination ul.page-numbers li a.page-numbers:hover,
@@ -371,8 +370,9 @@ if( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 
 			if( cream_magazine_get_option( 'cream_magazine_content_link_color' ) ) {
 				?>
-				body.single .content-entry article.post-detail .the_content a,
-				body.page .content-entry article.page .the_content a {
+
+				body.single .the_content a,
+				body.page .the_content a {
 
 					color: <?php echo esc_attr( cream_magazine_get_option( 'cream_magazine_content_link_color' ) ); ?>;
 				}
@@ -381,8 +381,8 @@ if( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 
 			if( cream_magazine_get_option( 'cream_magazine_content_link_hover_color' ) ) {
 				?>
-				body.single .content-entry article.post-detail .the_content a:hover,
-				body.page .content-entry article.page .the_content a:hover {
+				body.single .the_content a:hover,
+				body.page .the_content a:hover {
 
 					color: <?php echo esc_attr( cream_magazine_get_option( 'cream_magazine_content_link_hover_color' ) ); ?>;
 				}

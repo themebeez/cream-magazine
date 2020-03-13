@@ -96,19 +96,27 @@ if( ! function_exists( 'cream_magazine_google_font_family_choices' ) ) {
 	function cream_magazine_google_font_family_choices() {
 
 		return array(
-		    'Roboto:400,400i,500,500i,700,700i' => 'Roboto',
-		    'Muli:400,400i,600,600i,700,700i,800,800i' => 'Muli',
-		    'Open+Sans:400,400i,600,600i,700,700i,800,800i' => 'Open Sans',
+
+		    'Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700' => 'Roboto',
+		    'Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700' => 'Nunito',
+		    'DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700' => 'DM Sans',
+		    'Muli:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700' => 'Muli',
+		    'Open+Sans:400,400i,600,600i,700,700i' => 'Open Sans',
 		    'Lato:400,400i,700,700i' => 'Lato',
-		    'Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i' => 'Montserrat',
+		    'IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700' => 'IBM Plex Serif',
+		    'Noto+Sans:ital,wght@0,400;0,700;1,400;1,700'=>'Noto Sans',
+		    'Noto+Sans+JP:wght@400;500;700' => 'Noto Sans JP',
+		    'Noto+Sans+KR:wght@400;500;700' => 'Noto Sans KR',
 		    'Source+Sans+Pro:400,400i,600,600i,700,700i' => 'Source Sans Pro',
-		    'Oswald:400,500,600,700' => 'Oswald',
-		    'Raleway:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i' => 'Raleway',
-		    'Noto+Sans:400,400i,700,700i' => 'Noto Sans',
-		    'Merriweather:400,400i,700,700i' => 'Merriweather',
+		    'Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i' => 'Montserrat',
 		    'Ubuntu:400,400i,500,500i,700,700i' => 'Ubuntu',
-		    'Playfair+Display:400,400i,700,700i' => 'Playfair Display',		    
-		    'Lora:400,400i,700,700i' => 'Lora'   
+		    'Cairo:wght@400;600;700' =>'Cairo',
+		    'Heebo:wght@400;500;700' => 'Heebo',
+		    'Karma:wght@400;500;600;700' => 'Karma',
+		    'Mukta:wght@400;500;600;700' => 'Mukta',
+		    'Baloo+Tamma+2:wght@400;500;600;700' => 'Baloo Tamma 2',
+		    'Baloo+Chettan+2:wght@400;500;600;700' => 'Baloo Chettan 2',
+		    'Kanit:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700' => 'Kanit',
 		);
 	}
 }

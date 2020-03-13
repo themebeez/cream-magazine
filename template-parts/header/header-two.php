@@ -44,9 +44,11 @@
                     do_action( 'cream_magazine_main_menu' );
                     ?>
                 </div><!-- #main-nav.primary-navigation -->
-                <div class="header-search-container">
+               <div class="header-search-container">
+                <div class="search-form-entry">
                     <?php get_search_form(); ?>
-                </div><!-- .search-container -->
+                </div><!-- // search-form-entry -->
+            </div><!-- .search-container -->
             </nav><!-- .main-navigation -->
         </div><!-- .cm-container -->
     </div><!-- .navigation-container -->

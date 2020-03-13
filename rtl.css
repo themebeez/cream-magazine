@@ -35,8 +35,9 @@ body.rtl {
 
 body.rtl #toTop {
 
-	left: 10px;
-	right: auto;
+	left: auto;
+	bottom: 10px;
+    right: 10px;
 }
 
 .owl-carousel.owl-rtl {

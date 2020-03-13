@@ -45,32 +45,3 @@
 
     color:$white;
 }
-
-.error_foot form input {
-
-    display: inline-block;
-    height: 53px;
-    border: 1px solid $border_color;
-    border-right: none;
-}
-
-.error_foot form input[type="search"],
-.error_foot form input[type="text"] {
-
-    width: calc( 100% - 50px);
-    padding-left: 10px;
-}
-
-.error_foot form button.cm-submit-btn {
-        
-    color: $white;
-    text-align: center;
-    width: 50px;
-    height: 53px;
-    line-height: 53px;
-    font-weight: 500;
-    background: $secondary_color;
-    border:1px solid $secondary_color;
-    @include transation_delay();
-    padding: 0px;
-}
