@@ -9,6 +9,7 @@
 /* all nav */
 
 .primary-navigation {
+
     position: relative;
     width: 100%;
     z-index: 9900;
@@ -16,12 +17,14 @@
 }
 
 .primary-navigation ul {
+
     margin: 0;
     padding: 0;
     text-align: left;
 }
 
 .primary-navigation li {
+
     list-style: none;
     display: block;
     margin: 0;
@@ -43,6 +46,12 @@
     transition: all .3s ease-out;
 }
 
+.primary-navigation li.home-btn a {
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .primary-navigation.dark li a:hover {
 
     color:$secondary_color;
@@ -59,7 +68,7 @@
 .primary-navigation>ul>li>a {
 
     font-size: 1rem;
-    padding: 15px 15px;
+    padding: 15px 10px;
     font-weight: 400;
 }
 
@@ -196,18 +205,21 @@ body.primary-navigation-noscroll-x {
 /* general styling */
 
 .primary-navigation li.has-sub>a:after {
+
     content: '\f0d7';
     font-family: 'FontAwesome';
     margin-left: 5px;
 }
 
 .primary-navigation li li.has-sub>a:after {
+
     content: '\f0da';
     font-family: 'FontAwesome';
     margin-left: 5px;
 }
 
 .primary-navigation li.drop-left li.has-sub>a:after {
+    
     float: left;
     content: '\f0d9';
     font-family: 'FontAwesome';
@@ -587,11 +599,6 @@ body.primary-navigation-noscroll-x {
     border-radius: 2px;
 }
 
-
-
-/* left and right positions */
-
-
 /* Fallback for slow javascript load */
 
 @media only screen and (max-width: 768px) {
@@ -610,6 +617,7 @@ body.primary-navigation-noscroll-x {
 /* mobile nav */
 
 @media only screen and (max-width: 420px) {
+
     .primary-navigation.mobile .call-btn-mobile.third span,
     .primary-navigation.mobile .location-btn-mobile.third span {
         display: none;

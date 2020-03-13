@@ -136,6 +136,11 @@ body.rtl .post-navigation .nav-links .nav-previous a:before {
 	margin-right:15px;
 }
 
+body.rtl .comments-area .comment-author .says {
+	
+	margin-right:0;
+	margin-left: 5px;
+}
 
 /*
 =================================
@@ -187,6 +192,14 @@ body.rtl .post-navigation .nav-links .nav-previous a:before {
 
 }
 
+@media ( max-width: 768px ) {
+
+	.comments-area .comment-list .children {
+
+		margin-right:0;
+		margin-left:5px;
+	}
+}
 
 @media ( max-width: 576px ) { 
 
