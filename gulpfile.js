@@ -9,7 +9,7 @@ var rtlcss = require('gulp-rtlcss');
 // Task defined for java scripts bundling and minifying
 gulp.task('scripts', function() {
     return gulp.src([
-            
+            'assets/src/js/vendor/*.js',
             'assets/src/js/plugins/*.js',
             'assets/src/js/custom/*.js',
         ])
@@ -19,11 +19,20 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('assets/dist/js/'));
 });
 
+// task to convert LTR css to RTL
+gulp.task('dortl', function() {
+    return gulp.src(['assets/dist/css/main.css'])
+        .pipe(rtlcss()) // Convert to RTL.
+        .pipe(rename({ suffix: '-rtl' })) // Append "-rtl" to the filename.
+        .pipe(gulp.dest('assets/dist/css/')); // Output RTL stylesheets.
+});
+
 // declaring final task and command tasker
 // just hit the command "gulp" it will run the following tasks...
-gulp.task('default', gulp.series('scripts', (done) => {
+gulp.task('default', gulp.series('scripts', 'dortl', (done) => {
 
     gulp.watch('assets/src/js/**/**.js', gulp.series('scripts'));
+    gulp.watch('assets/dist/css/main.css', gulp.series('dortl'));
 
     done();
 }));
