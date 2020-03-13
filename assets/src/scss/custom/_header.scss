@@ -1,4 +1,5 @@
 /* Header Common */
+
 header.cm-header-style-one {
     
     background-size: cover;
@@ -48,6 +49,7 @@ header .widget img {
    
    display:inline-block;
    line-height:30px;
+   font-size: 15px;
 }
 
 .top-header-left ul li a span.menu-item-description {
@@ -119,13 +121,12 @@ header.general-header #sticky-wrapper nav.main-navigation {
 
 .header-search-container {
 
-   position: relative;
-   display: none;
-
+   position:relative;
+   display:none;
 }
 
-.header-search-container form {
-   
+.header-search-container .search-form-entry {
+
    position:absolute;
    top:0;
    right:0;
@@ -137,43 +138,8 @@ header.general-header #sticky-wrapper nav.main-navigation {
    border-top: 3px solid $secondary_color;
    overflow: auto;
    animation: 0.3s 0s fadeInUp both;
-   @include drop_shadow(); 
+   @include drop_shadow();
 }
-
-.header-search-container input[type="search"], 
-.header-search-container button.cm-submit-btn {
-    
-    position: relative;
-    height: 38px;
-    font-weight: 400;
-    font-size: 14px;
-    color: #333;
-    padding-left: 15px;
-    border: none;
-    border-radius: 0;
-}
-
-.header-search-container input[type="search"] {
-        
-    float: left;
-    width: calc(100% - 50px);
-    border-top: 1px solid $border_color;
-    border-bottom: 1px solid $border_color;
-    border-left: 1px solid $border_color;   
-}
-
-.header-search-container button.cm-submit-btn {
-
-    float: right;
-    background: $secondary_color;
-    color: $white;
-    width: 50px;
-    font-weight: 400;
-    line-height: inherit;
-    padding: 0 15px;
-    border-radius: 0;
-}
-
 
 
 /* Second Header */
@@ -196,8 +162,6 @@ header.general-header #sticky-wrapper nav.main-navigation {
     padding: 70px 0;
     margin-bottom: 30px;
 }
-
-
 
 
 /* Header Social icons */

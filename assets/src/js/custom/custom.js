@@ -8,17 +8,17 @@
 
         var lazyImg = false;
 
-        if(  jQuery('body').hasClass('rtl') ) {
+        if (jQuery('body').hasClass('rtl')) {
 
             rtlCarousel = true;
         }
 
-        if( cream_magazine_script_obj.enable_image_lazy_load == '1' ) {
+        if (cream_magazine_script_obj.enable_image_lazy_load == '1') {
 
             lazyImg = true;
         }
 
-        if( cream_magazine_script_obj.enable_sticky_menu_section == '1' ) {
+        if (cream_magazine_script_obj.enable_sticky_menu_section == '1') {
 
             $("nav.main-navigation").sticky();
         }
@@ -26,14 +26,14 @@
 
         /* Initialize Image Lazyload */
 
-        if( cream_magazine_script_obj.enable_image_lazy_load == '1' ) {
+        if (cream_magazine_script_obj.enable_image_lazy_load == '1') {
 
             $('.lazy-image').lazy({
                 effect: "fadeIn",
                 afterLoad: function(element) {
                     // called after an element was successfully handled
-                    element.addClass( 'image-loaded' );
-                    element.removeClass( 'lazy-image' );
+                    element.addClass('image-loaded');
+                    element.removeClass('lazy-image');
                 }
             });
         }
@@ -45,6 +45,7 @@
         */
 
         jQuery('.primary-navigation').stellarNav({
+
             theme: 'dark',
             breakpoint: 991,
             closeBtn: false,
@@ -52,7 +53,7 @@
             sticky: false,
         });
 
-        if( cream_magazine_script_obj.show_search_icon == '1' ) {
+        if (cream_magazine_script_obj.show_search_icon == '1') {
 
             jQuery(".primary-navigation > ul").append('<li class="primarynav_search_icon"><a class="search_box" href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></li>');
 
@@ -64,12 +65,17 @@
             });
         }
 
+        jQuery(".menu-toggle").click(function(event) {
+
+            event.preventDefault();
+        });
+
         /*
         =============================================
         = Init Sticky sidebar
         =============================================
         */
-        if( cream_magazine_script_obj.enable_sticky_sidebar == '1' ) {
+        if (cream_magazine_script_obj.enable_sticky_sidebar == '1') {
 
             jQuery('.sticky_portion').theiaStickySidebar({
 
@@ -92,10 +98,10 @@
         = Append back to top button
         =============================================
         */
-        if( cream_magazine_script_obj.show_to_top_btn == '1' ) {
+        if (cream_magazine_script_obj.show_to_top_btn == '1') {
 
-            jQuery('body').append('<div id="toTop" class="btn btn-info"><i class="fa fa-angle-up" aria-hidden="true"></i></div>');
-            
+            jQuery('body').append('<div class="backtoptop"><button id="toTop"><i class="fa fa-angle-up" aria-hidden="true"></i></button></div>');
+
             jQuery(window).scroll(function() {
 
                 if (jQuery(this).scrollTop() != 0) {
@@ -115,7 +121,7 @@
             });
         }
 
-        if( cream_magazine_script_obj.show_news_ticker == '1' ) {
+        if (cream_magazine_script_obj.show_news_ticker == '1') {
 
             jQuery('.ticker_carousel').owlCarousel({
 
@@ -137,7 +143,7 @@
             });
         }
 
-        if( cream_magazine_script_obj.show_banner_slider == '1' ) {
+        if (cream_magazine_script_obj.show_banner_slider == '1') {
 
             jQuery('.cm_banner-carousel-five').owlCarousel({
 
@@ -154,7 +160,7 @@
                 autoplayHoverPause: true,
                 navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
             });
-        }        
+        }
 
         jQuery('.middle_widget_six_carousel').owlCarousel({
 

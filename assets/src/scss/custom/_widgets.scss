@@ -191,20 +191,50 @@
     display:block;
 }
 
-.widget_search form button.cm-submit-btn {
+.cm-search-form {
 
-    width: 50px;
-    text-align: center;
-    padding: 0px;
-    height: 43px;
-    line-height: 43px;
+    position:relative;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-items: center;
 }
 
-.widget_search form input[type="search"] {
+.cm-search-form input[type="search"] {
 
-    width: calc( 100% - 50px);
+    width: 100%;
+    padding:0 40px 0 15px;
 }
 
+.cm-search-form .cm-submit-btn {
+    
+    padding:0;
+    margin:0;
+    border:none;
+    border-left: 1px solid $border_color;
+    color:$primary_color;
+    background-color:transparent;
+    font-size: 16px;
+    width: 35px;
+    height: 22px;
+    line-height: 22px;
+    position: absolute;
+    right: 4px;
+    top: auto;
+    z-index: 1;
+}
+
+.cm-search-form .cm-submit-btn:hover {
+    
+    border:none;
+    border-left: 1px solid $border_color;
+    background-color:transparent;
+}
+
+.cm-search-form .cm-submit-btn:focus {
+
+    outline:0;
+}
 
 
 /* Calendar Widget */
@@ -322,13 +352,13 @@
     text-align: center;
     padding: 5px 15px;
     margin: 2px;
-    color: $white;
+    color: $primary_color;
     font-weight: 400;
     border: 1px solid $footer_lines_color;
 }
 
 .widget_tag_cloud .tagcloud a:hover {
 	
-	color: $white;
-    border-color: $secondary_color;
+	color: $third_color;
+    border-color: $third_color;
 }

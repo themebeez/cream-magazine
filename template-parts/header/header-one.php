@@ -76,7 +76,9 @@ $show_top_header = cream_magazine_get_option( 'cream_magazine_enable_top_header'
                 ?>
             </div><!-- .primary-navigation -->
             <div class="header-search-container">
-                <?php get_search_form(); ?>
+                <div class="search-form-entry">
+                    <?php get_search_form(); ?>
+                </div><!-- // search-form-entry -->
             </div><!-- .search-container -->
         </nav><!-- .main-navigation -->
     </div><!-- .cm-container -->
