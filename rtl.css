@@ -27,11 +27,16 @@ body.rtl {
 /*
 ====================================
 =
-= Small styles
+= Common styles
 =
 ==========================
 */
 
+body.rtl ul.post_meta li a:before {
+
+	margin-left:0;
+	margin-right:5px;
+}
 
 body.rtl #toTop {
 
@@ -50,6 +55,14 @@ body.rtl #toTop {
     float: right; 
 }
 
+.cm_banner-carousel-five .owl-nav,
+.cm_middle_post_widget_six .middle_widget_six_carousel .owl-nav {
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+}
+
 /*
 ====================================
 =
@@ -62,6 +75,18 @@ body.rtl #toTop {
 body.rtl .header-search-container form {
 
 	right: auto;
+}
+
+body.rtl .primary-navigation ul li a span.menu-item-description {
+
+	margin-right:0;
+	margin-left: 7px;
+}
+
+body.rtl .primary-navigation li.has-sub>a:after {
+
+	margin-right: 0;
+    margin-left: 3px;
 }
 
 
@@ -87,6 +112,28 @@ body.rtl .header-search-container form {
 .cm_banner-five .gutter-right {
 
 	padding-left: 15px;
+}
+
+
+/*
+====================================
+=
+= Single
+=
+==========================
+*/
+
+
+body.rtl .post-navigation .nav-links .nav-next a:after {
+
+	margin-right: 0;
+    margin-left: 15px;
+}
+
+body.rtl .post-navigation .nav-links .nav-previous a:before {
+
+	margin-left: 0;
+	margin-right:15px;
 }
 
 

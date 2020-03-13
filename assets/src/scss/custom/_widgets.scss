@@ -12,6 +12,7 @@
 .widget ul {
     
     margin: 0px;
+    padding:0;
     list-style: none;
 }
 
@@ -31,7 +32,9 @@
 
 	position: relative;
     border-bottom: 1px solid $border_color;
-    padding: 13px 0;
+    padding: 10px 0;
+    -webkit-transition-duration: 0.6s;
+    -moz-transition-duration: 0.6s;
     transition-duration: 0.6s;
 }
 
@@ -92,8 +95,7 @@
 }
 
 
-
-/* Nav Widget */
+// nav widget 
 
 .widget_nav_menu ul.menu {
 	
@@ -130,9 +132,7 @@
 	padding-top: 0px;	
 }
 
-
-
-/* Category, Archive Widget */
+// category, archive widget 
 
 .widget_categories select,
 .widget_archive select {
@@ -154,7 +154,7 @@
 
 
 
-/* Recent Posts Widget */
+// recent posts widget 
 
 .widget_recent_entries .post-date {
 
@@ -165,7 +165,7 @@
 }
 
 
-/* RSS Widget */
+// RSS widget 
 
 .widget_rss .widget-title h3 a:hover {
 	
@@ -184,7 +184,7 @@
 }
 
 
-/* Search Widget */
+// Search Widget
 
 .widget_search {
 
@@ -237,7 +237,7 @@
 }
 
 
-/* Calendar Widget */
+// Calendar Widget
 
 .calendar_wrap caption {
 
@@ -287,45 +287,7 @@
 }
 
 
-/* Text Widget */
-
-.widget_text .textwidget pre,
-.widget_text .textwidget code,
-.widget_text .textwidget h1,
-.widget_text .textwidget h2,
-.widget_text .textwidget h3,
-.widget_text .textwidget h4,
-.widget_text .textwidget h5,
-.widget_text .textwidget h6,
-.widget_text .textwidget p {
-	
-	display: block;
-    margin-bottom: 10px;
-}
-
-.widget_text .textwidget p img {
-    
-    margin-top: 10px;
-    marign-bottom: 10px;
-}
-
-.widget_text .textwidget form {
-	
-    width: 100%;
-}
-
-.widget_text .textwidget form select {
-    
-    height: 45px;
-    width: 100%;
-    border-color: $border-color;
-    border-radius: 0px;
-    background-color: #ffffff;
-    padding-left: 5px;
-}
-
-
-/* Tag Cloud Widget */
+// Tag Cloud Widget
 
 .widget_tag_cloud .tagcloud {
 
@@ -351,7 +313,7 @@
     font-size: 15px !important;
     text-align: center;
     padding: 5px 15px;
-    margin: 2px;
+    margin: 5px;
     color: $primary_color;
     font-weight: 400;
     border: 1px solid $footer_lines_color;
