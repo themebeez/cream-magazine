@@ -53,8 +53,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
+    vertical-align: baseline;
     @include transation_delay();
-    vertical-align: middle;
 }
 
 article,
@@ -231,11 +231,6 @@ b,
 strong {
 
     font-weight: bold;
-}
-
-i {
-
-    font-style: italic;
 }
 
 big {
@@ -451,9 +446,9 @@ input[type="color"] {
     font-family: $system_font;
     font-size: 15px;
     margin: 0;
-    padding: 0 15px;
+    padding: 12px 15px;
     border: 1px solid $border_color;
-    height: 43px;
+    height: auto;
     width: 100%;
     max-width: 100%;
     @include border-radius(0);
@@ -576,8 +571,7 @@ select {
     font-family: $system_font;
     position:relative;
     font-size: 15px;
-    height: 43px;
-    padding: 0 15px;
+    padding: 12px 15px;
     margin: 0;
     width: 100%;
     max-width: 100%;
@@ -594,7 +588,7 @@ textarea {
     max-width: 100%;
     margin: 0;
     padding: 20px;
-    min-height: 150px;
+    height: 150px;
     vertical-align: middle;
     line-height: 1.8;
     resize: vertical;
@@ -760,11 +754,10 @@ br {
     line-height: 1;
 }
 
+i,
 em {
 
-    font-family: cursive;
     font-style: italic;
-    font-weight: normal;
 }
 
 ins,
