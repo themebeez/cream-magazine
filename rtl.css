@@ -32,12 +32,6 @@ body.rtl {
 ==========================
 */
 
-body.rtl ul.post_meta li a:before {
-
-	margin-left:0;
-	margin-right:5px;
-}
-
 body.rtl #toTop {
 
 	left: auto;
@@ -123,18 +117,6 @@ body.rtl .primary-navigation li.has-sub>a:after {
 ==========================
 */
 
-
-body.rtl .post-navigation .nav-links .nav-next a:after {
-
-	margin-right: 0;
-    margin-left: 15px;
-}
-
-body.rtl .post-navigation .nav-links .nav-previous a:before {
-
-	margin-left: 0;
-	margin-right:15px;
-}
 
 body.rtl .comments-area .comment-author .says {
 	
