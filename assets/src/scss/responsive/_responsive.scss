@@ -130,6 +130,20 @@
 	}
 }
 
+@media ( max-width: 991px ) {
+
+	.cm_banner-five .gutter-left {
+
+		padding-right: 15px;
+	}
+
+	.cm_banner-five .gutter-right {
+
+		padding-left: 15px;
+		margin-top: 10px;
+	}
+}
+
 
 @media ( max-width: 768px ) {
 
@@ -231,14 +245,14 @@
 		font-size: $typo_medium;
 	}
 
-	.cm_banner-five .gutter-left .card {
-
-		margin-right: 10px;
-	}
-
 	.cm_banner-five .gutter-left .post_thumb {
 
 		margin-right: 0px;
+	}
+
+	.cm_banner-five .gutter-right {
+
+		margin-top: 0;
 	}
 
 	.cm_banner-five .gutter-right .right-content-holder .custom_row .col {
@@ -501,6 +515,11 @@
 	.cm_banner-five .gutter-right .right-content-holder .custom_row .col:first-child {
 
 		margin-top: 0px;
+	}
+
+	.cm_banner-five .gutter-right .post_thumb {
+
+		height:250px;
 	}
 
 
