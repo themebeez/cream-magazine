@@ -72,7 +72,7 @@ if( ! class_exists( 'Cream_Magazine_Middle_News_Area_Customize' ) ) {
 			// Separator 1
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_1',
+				'cream_magazine_middle_news_separator_1',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -82,7 +82,7 @@ if( ! class_exists( 'Cream_Magazine_Middle_News_Area_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_1',
+					'cream_magazine_middle_news_separator_1',
 					array(
 						'section' => 'cream_magazine_middle_news_area_options',
 					)

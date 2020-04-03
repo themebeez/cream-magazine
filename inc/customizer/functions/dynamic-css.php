@@ -371,8 +371,8 @@ if( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 			if( cream_magazine_get_option( 'cream_magazine_content_link_color' ) ) {
 				?>
 
-				body.single .the_content a,
-				body.page .the_content a {
+				.the_content p a,
+				.the_content p a {
 
 					color: <?php echo esc_attr( cream_magazine_get_option( 'cream_magazine_content_link_color' ) ); ?>;
 				}
@@ -381,8 +381,8 @@ if( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 
 			if( cream_magazine_get_option( 'cream_magazine_content_link_hover_color' ) ) {
 				?>
-				body.single .the_content a:hover,
-				body.page .the_content a:hover {
+				.the_content p a:hover,
+				.the_content p a:hover {
 
 					color: <?php echo esc_attr( cream_magazine_get_option( 'cream_magazine_content_link_hover_color' ) ); ?>;
 				}

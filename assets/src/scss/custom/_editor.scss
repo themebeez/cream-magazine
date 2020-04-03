@@ -39,13 +39,13 @@
 
 // links
 
-.the_content a {
+.the_content p a {
     
     color: #0061FF;
     text-decoration: underline;
 }
 
-.the_content a:hover {
+.the_content p a:hover {
     
     color: $secondary_color;
     text-decoration: underline;

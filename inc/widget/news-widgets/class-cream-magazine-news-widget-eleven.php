@@ -76,8 +76,6 @@ class Cream_Magazine_News_Widget_Eleven extends WP_Widget {
                     ?>                
                     <div class="owl-carousel middle_widget_six_carousel">
                         <?php
-                        $enable_lazy_load = cream_magazine_get_option( 'cream_magazine_enable_lazy_load' );
-
                         while( $post_query->have_posts() ) {
                             
                             $post_query->the_post();
@@ -92,19 +90,9 @@ class Cream_Magazine_News_Widget_Eleven extends WP_Widget {
                             <div class="item">
                                 <?php 
                                 if( !empty( $thumbnail_url ) ) { 
-
-                                    if( $enable_lazy_load ) {
-                                        ?>
-                                        <div class="card post_thumb owl-lazy" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk4AcAABUAET9MVpIAAAAASUVORK5CYII=);" data-src="<?php echo esc_url( $thumbnail_url ); ?>">
-                                        <noscript>
-                                            <div class="card post_thumb" style="background-image: url( <?php echo esc_url( $thumbnail_url ); ?> )" >
-                                        </noscript>
-                                        <?php
-                                    } else {
-                                        ?>
-                                        <div class="card post_thumb" style="background-image: url( <?php echo esc_url( $thumbnail_url ); ?> )" >
-                                        <?php
-                                    }
+                                    ?>
+                                    <div class="card post_thumb" style="background-image: url( <?php echo esc_url( $thumbnail_url ); ?> )" >
+                                    <?php
                                 } else { 
                                     ?>
                                     <div class="card">

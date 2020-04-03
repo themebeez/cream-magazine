@@ -185,6 +185,46 @@ if( ! class_exists( 'Cream_Magazine_Social_Links_Customize' ) ) {
 					'type' => 'url',
 				) 
 			);
+
+
+			// Separator
+
+			$wp_customize->add_setting(
+				'cream_magazine_social_links_separator_1',
+				array(
+					'sanitize_callback' => 'esc_html',
+					'default' => '',
+				)
+			);
+
+			$wp_customize->add_control(
+				new Cream_Magazine_Separator_Control(
+					$wp_customize,
+					'cream_magazine_social_links_separator_1',
+					array(
+						'section' => 'cream_magazine_social_links_options',
+					)
+				)
+			);
+
+			// Setting : Open Social Pages On New Tab
+
+			$wp_customize->add_setting( 
+				'cream_magazine_show_social_links_in_new_tab', 
+				array(
+					'sanitize_callback'	=> 'wp_validate_boolean',
+					'default'			=> $defaults['cream_magazine_show_social_links_in_new_tab'],
+				) 
+			);
+
+			$wp_customize->add_control( new Cream_Magazine_Toggle_Switch_Control( $wp_customize,
+				'cream_magazine_show_social_links_in_new_tab', 
+				array(
+					'label'				=> esc_html__( 'Show Pages On New Tab', 'cream-magazine' ),
+					'section'			=> 'cream_magazine_social_links_options',
+					'type'				=> 'checkbox',
+				) 
+			) );
 		}
 	}
 }

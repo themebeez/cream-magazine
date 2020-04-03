@@ -9,7 +9,7 @@
 
 $cream_magazine_sidebar_position = cream_magazine_sidebar_position();
 
-if ( ! is_active_sidebar( 'sidebar' ) && $cream_magazine_sidebar_position == 'none'  ) {
+if ( ! is_active_sidebar( 'sidebar' ) || $cream_magazine_sidebar_position == 'none'  ) {
 	return;
 }
 
