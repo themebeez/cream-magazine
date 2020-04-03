@@ -83,8 +83,10 @@ header .site-description {
 header .advertisement-area {
 
      text-align:right;
-     line-height:90px;
-     height:90px;
+     display:flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     justify-content: flex-end;
 }
 
 header .advertisement-area .widget_text .textwidget img {

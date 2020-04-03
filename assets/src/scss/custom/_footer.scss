@@ -127,7 +127,7 @@ footer .footer_inner {
 
 .footer-widget-container .widget .widget-title h2 {
     
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     position: relative;
     width: 100%;
@@ -186,5 +186,10 @@ footer .footer_inner {
 .footer-widget-container ul.post_meta li:hover a {
     
     color: $secondary_color;
+}
+
+.footer .widget_tag_cloud .tagcloud a {
+
+    border: 1px solid $footer_lines_color;
 }
 

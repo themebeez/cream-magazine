@@ -52,6 +52,7 @@
     transition-duration: 0.6s;
 }
 
+.widget_nav_menu li:first-child,
 .widget_archive ul li:first-child,
 .widget_categories ul li:first-child,
 .widget_pages ul li:first-child,
@@ -61,6 +62,19 @@
 .widget_recent_comments li:first-child {
 
     padding-top: 0;
+}
+
+.widget_nav_menu li:last-child,
+.widget_archive ul li:last-child,
+.widget_categories ul li:last-child,
+.widget_pages ul li:last-child,
+.widget_meta ul li:last-child,
+.widget_rss li:last-child,
+.widget_recent_entries li:last-child,
+.widget_recent_comments li:last-child {
+
+    padding-bottom: 0;
+    border-bottom:none;
 }
 
 .widget_archive a,
@@ -116,7 +130,7 @@
 	
 	display: block;
     padding-bottom: 15px;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid $border_color;
 }
 
 .widget_nav_menu ul.menu li.menu-item-has-children > a ul.sub-menu {
@@ -294,7 +308,7 @@
     margin: 5px;
     color: $primary_color;
     font-weight: 400;
-    border: 1px solid $footer_lines_color;
+    border: 1px solid #e2e2e2; //$footer_lines_color
 }
 
 .widget_tag_cloud .tagcloud a:hover {
