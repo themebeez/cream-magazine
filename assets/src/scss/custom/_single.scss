@@ -32,6 +32,12 @@ body.single  .content-entry article.post-detail .cm-post-meta {
 
 /* Featured Image */
 
+body.single  .content-entry article .post_thumb,
+body.page  .content-entry article .post_thumb {
+
+    margin-bottom:30px;
+}
+
 body.single  .content-entry article .post_thumb figure figcaption,
 body.page  .content-entry article .post_thumb figure figcaption {
     
