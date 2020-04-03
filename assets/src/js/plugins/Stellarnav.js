@@ -47,7 +47,7 @@
             }
 
             // adds the toggle button to open and close nav 
-            nav.prepend('<a href="#" class="menu-toggle ' + cssClass + '"><i class="fa fa-bars"></i> Menu</a>');
+            nav.prepend('<a href="#" class="menu-toggle ' + cssClass + '"><i class="fa fa-bars"></i></a>');
 
             // adds a click-to-call link
             if (settings.phoneBtn && !(settings.position == 'right' || settings.position == 'left')) {
@@ -123,7 +123,8 @@
 
             // opens and closes menu            
             $('.menu-toggle').on('click', function(e) {
-                e.stopPropagation();
+
+                e.preventDefault();
 
                 // if nav position is left or right, uses fadeToggle instead of slideToggle
                 if (settings.position == 'left' || settings.position == 'right') {
@@ -166,7 +167,10 @@
             // adds toggle button to li items that have children
             nav.find('li a').each(function() {
                 if ($(this).next().length > 0) {
-                    $(this).parent('li').addClass('has-sub').append('<a class="dd-toggle" href="#"><i class="fa fa-plus"></i></a>');
+                    var subMenuToggle = '<a class="dd-toggle" href="#"><i class="fa fa-plus"></i></a>';
+                    $(this).parent('li').addClass('has-sub');
+                    var subMenu = $(this).parent('li').children('ul');
+                    $(subMenuToggle).insertBefore(subMenu);
                 }
             });
 

@@ -70,7 +70,7 @@ if( ! class_exists( 'Cream_Magazine_Sidebar_Customize' ) ) {
 			// Separator 20
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_20',
+				'cream_magazine_sidebar_separator_1',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -80,7 +80,7 @@ if( ! class_exists( 'Cream_Magazine_Sidebar_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_20',
+					'cream_magazine_sidebar_separator_1',
 					array(
 						'section' => 'cream_magazine_sidebar_options',
 					)

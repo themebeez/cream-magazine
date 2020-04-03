@@ -54,7 +54,6 @@ if( ! class_exists( 'Cream_Magazine_Search_Page_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_search_author_meta'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 
@@ -75,7 +74,6 @@ if( ! class_exists( 'Cream_Magazine_Search_Page_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_search_date_meta'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 
@@ -96,7 +94,6 @@ if( ! class_exists( 'Cream_Magazine_Search_Page_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_search_cmnts_no_meta'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 
@@ -117,7 +114,6 @@ if( ! class_exists( 'Cream_Magazine_Search_Page_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_search_categories_meta'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 
@@ -135,7 +131,7 @@ if( ! class_exists( 'Cream_Magazine_Search_Page_Customize' ) ) {
 			// Separator 14
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_14',
+				'cream_magazine_search_page_separator_1',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -145,7 +141,7 @@ if( ! class_exists( 'Cream_Magazine_Search_Page_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_14',
+					'cream_magazine_search_page_separator_1',
 					array(
 						'section' => 'cream_magazine_search_page_options',
 					)
@@ -176,7 +172,7 @@ if( ! class_exists( 'Cream_Magazine_Search_Page_Customize' ) ) {
 			// Separator 15
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_21',
+				'cream_magazine_search_page_separator_2',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -186,7 +182,7 @@ if( ! class_exists( 'Cream_Magazine_Search_Page_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_21',
+					'cream_magazine_search_page_separator_2',
 					array(
 						'section' => 'cream_magazine_search_page_options',
 					)

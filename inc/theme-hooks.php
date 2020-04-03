@@ -177,50 +177,53 @@ add_action( 'cream_magazine_site_identity', 'cream_magazine_site_identity_action
  * @since 1.0.0
  */
 if( ! function_exists( 'cream_magazine_social_links_action' ) ) :
+
  	function cream_magazine_social_links_action() {
+
+        $show_on_new_tab = cream_magazine_get_option( 'cream_magazine_show_social_links_in_new_tab' );
  		?>
  		<ul class="social-icons">
  			<?php
  			$facebook_link = cream_magazine_get_option( 'cream_magazine_facebook_link' );
  			if( !empty( $facebook_link ) ) {
  				?>
- 				<li><a href="<?php echo esc_url( $facebook_link); ?>"><?php echo esc_html__( 'Facebook', 'cream-magazine' ); ?></a></li>
+ 				<li><a href="<?php echo esc_url( $facebook_link); ?>" <?php if( $show_on_new_tab ) {?>target="_blank"<?php } ?>><?php echo esc_html__( 'Facebook', 'cream-magazine' ); ?></a></li>
  				<?php
  			}
  			$twitter_link = cream_magazine_get_option( 'cream_magazine_twitter_link' );
  			if( !empty( $twitter_link ) ) {
  				?>            
-            	<li><a href="<?php echo esc_url( $twitter_link ); ?>"><?php echo esc_html__( 'Twitter', 'cream-magazine' ); ?></a></li>
+            	<li><a href="<?php echo esc_url( $twitter_link ); ?>" <?php if( $show_on_new_tab ) {?>target="_blank"<?php } ?>><?php echo esc_html__( 'Twitter', 'cream-magazine' ); ?></a></li>
             	<?php
  			}
  			$instagram_link = cream_magazine_get_option( 'cream_magazine_instagram_link' );
  			if( !empty( $instagram_link ) ) {
  				?>       
-            	<li><a href="<?php echo esc_url( $instagram_link ); ?>"><?php echo esc_html__( 'Instagram', 'cream-magazine' ); ?></a></li>
+            	<li><a href="<?php echo esc_url( $instagram_link ); ?>" <?php if( $show_on_new_tab ) {?>target="_blank"<?php } ?>><?php echo esc_html__( 'Instagram', 'cream-magazine' ); ?></a></li>
             	<?php
  			}
  			$youtube_link = cream_magazine_get_option( 'cream_magazine_youtube_link' );
  			if( !empty( $youtube_link ) ) {
  				?>       
-            	<li><a href="<?php echo esc_url( $youtube_link ); ?>"><?php echo esc_html__( 'Youtube', 'cream-magazine' ); ?></a></li>
+            	<li><a href="<?php echo esc_url( $youtube_link ); ?>" <?php if( $show_on_new_tab ) {?>target="_blank"<?php } ?>><?php echo esc_html__( 'Youtube', 'cream-magazine' ); ?></a></li>
             	<?php
  			}
  			$vk_link = cream_magazine_get_option( 'cream_magazine_vk_link' );
  			if( !empty( $vk_link ) ) {
  				?>       
-            	<li><a href="<?php echo esc_url( $vk_link ); ?>"><?php echo esc_html__( 'VK', 'cream-magazine' ); ?></a></li>
+            	<li><a href="<?php echo esc_url( $vk_link ); ?>" <?php if( $show_on_new_tab ) {?>target="_blank"<?php } ?>><?php echo esc_html__( 'VK', 'cream-magazine' ); ?></a></li>
             	<?php
  			}
  			$linkedin_link = cream_magazine_get_option( 'cream_magazine_linkedin_link' );
  			if( !empty( $linkedin_link ) ) {
  				?>       
-            	<li><a href="<?php echo esc_url( $linkedin_link ); ?>"><?php echo esc_html__( 'Linkedin', 'cream-magazine' ); ?></a></li>
+            	<li><a href="<?php echo esc_url( $linkedin_link ); ?>" <?php if( $show_on_new_tab ) {?>target="_blank"<?php } ?>><?php echo esc_html__( 'Linkedin', 'cream-magazine' ); ?></a></li>
             	<?php
  			}
  			$vimeo_link = cream_magazine_get_option( 'cream_magazine_vimeo_link' );
  			if( !empty( $vimeo_link ) ) {
  				?>       
-            	<li><a href="<?php echo esc_url( $vimeo_link ); ?>"><?php echo esc_html__( 'Vimeo', 'cream-magazine' ); ?></a></li>
+            	<li><a href="<?php echo esc_url( $vimeo_link ); ?>" <?php if( $show_on_new_tab ) {?>target="_blank"<?php } ?>><?php echo esc_html__( 'Vimeo', 'cream-magazine' ); ?></a></li>
             	<?php
  			}
  			?>       
@@ -696,3 +699,27 @@ if( ! function_exists( 'cream_magazine_footer_action' ) ) :
     }
 endif;
 add_action( 'cream_magazine_footer', 'cream_magazine_footer_action', 10 );
+
+
+
+/**
+ * Scroll Top Button 
+ *
+ * @since 2.0.0
+ */
+if( ! function_exists( 'cream_magazine_scroll_top_button_template' ) ) {
+
+    function cream_magazine_scroll_top_button_template() {
+
+        if( cream_magazine_pro_get_option( 'cream_magazine_enable_scroll_top_button' ) == false ) {
+
+            return;
+        }
+        ?>
+        <div id="toTop" class="btn btn-info">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </div>
+        <?php
+    }
+}  
+add_action( 'cream_magazine_pro_scroll_top_button', 'cream_magazine_scroll_top_button_template', 10 );

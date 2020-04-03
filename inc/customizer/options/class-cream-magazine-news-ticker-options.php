@@ -72,7 +72,7 @@ if( ! class_exists( 'Cream_Magazine_News_Ticker_Customize' ) ) {
 			// Separator 5
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_5',
+				'cream_magazine_news_ticker_separator_1',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -82,7 +82,7 @@ if( ! class_exists( 'Cream_Magazine_News_Ticker_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_5',
+					'cream_magazine_news_ticker_separator_1',
 					array(
 						'section' => 'cream_magazine_ticker_news_options',
 						'active_callback' => 'cream_magaine_is_ticker_news_enabled',
@@ -117,7 +117,7 @@ if( ! class_exists( 'Cream_Magazine_News_Ticker_Customize' ) ) {
 			// Separator 6
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_6',
+				'cream_magazine_news_ticker_separator_2',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -127,7 +127,7 @@ if( ! class_exists( 'Cream_Magazine_News_Ticker_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_6',
+					'cream_magazine_news_ticker_separator_2',
 					array(
 						'section' => 'cream_magazine_ticker_news_options',
 						'active_callback' => 'cream_magaine_is_ticker_news_enabled',

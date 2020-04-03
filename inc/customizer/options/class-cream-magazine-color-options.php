@@ -139,7 +139,7 @@ if( ! class_exists( 'Cream_Magazine_Colors_Customize' ) ) {
 			// Separator 22
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_22',
+				'cream_magazine_color_separator_1',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -149,7 +149,7 @@ if( ! class_exists( 'Cream_Magazine_Colors_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_22',
+					'cream_magazine_color_separator_1',
 					array(
 						'section' => 'cream_magazine_category_color_options',
 					)
@@ -400,7 +400,7 @@ if( ! class_exists( 'Cream_Magazine_Colors_Customize' ) ) {
 			// Separator 23
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_23',
+				'cream_magazine_color_separator_2',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -410,7 +410,7 @@ if( ! class_exists( 'Cream_Magazine_Colors_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_23',
+					'cream_magazine_color_separator_2',
 					array(
 						'section' => 'cream_magazine_category_color_options',
 					)
@@ -444,7 +444,7 @@ if( ! class_exists( 'Cream_Magazine_Colors_Customize' ) ) {
 			// Separator 24
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_24',
+				'cream_magazine_color_separator_3',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -454,7 +454,7 @@ if( ! class_exists( 'Cream_Magazine_Colors_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_24',
+					'cream_magazine_color_separator_3',
 					array(
 						'section' => 'cream_magazine_category_color_options',
 					)
@@ -488,7 +488,7 @@ if( ! class_exists( 'Cream_Magazine_Colors_Customize' ) ) {
 			// Separator 25
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_25',
+				'cream_magazine_color_separator_4',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -498,7 +498,7 @@ if( ! class_exists( 'Cream_Magazine_Colors_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_25',
+					'cream_magazine_color_separator_4',
 					array(
 						'section' => 'cream_magazine_category_color_options',
 					)
@@ -532,7 +532,7 @@ if( ! class_exists( 'Cream_Magazine_Colors_Customize' ) ) {
 			// Separator 26
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_26',
+				'cream_magazine_color_separator_5',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -542,7 +542,7 @@ if( ! class_exists( 'Cream_Magazine_Colors_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_26',
+					'cream_magazine_color_separator_5',
 					array(
 						'section' => 'cream_magazine_category_color_options',
 					)

@@ -143,6 +143,7 @@ if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
         $defaults['cream_magazine_vk_link'] = '';
         $defaults['cream_magazine_linkedin_link'] = '';
         $defaults['cream_magazine_vimeo_link'] = '';
+        $defaults['cream_magazine_show_social_links_in_new_tab'] = true;
 
         $defaults['cream_magazine_enable_breadcrumb'] = true;
         
@@ -229,18 +230,9 @@ if ( !function_exists( 'cream_magazine_fonts_url' ) ) :
             $fonts = array_unique( $fonts );
         } else {
 
-            /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-            if ('off' !== _x('on', 'Roboto font: on or off', 'cream-magazine')) {
+            $fonts[] = 'Roboto:400,400i,500,500i,700,700i';
 
-                $fonts[] = 'Roboto:400,400i,500,500i,700,700i';
-            }
-
-            /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-            
-            if ('off' !== _x('on', 'Muli font: on or off', 'cream-magazine')) {
-
-                $fonts[] = 'Muli:400,400i,600,600i,700,700i';
-            }
+            $fonts[] = 'Muli:400,400i,600,600i,700,700i';
         }        
 
         $fonts = array_unique( $fonts );

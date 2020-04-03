@@ -102,6 +102,14 @@
 
 
 	/**
+	* Hook - cream_magazine_scroll_top_button.
+	*
+	* @hooked cream_magazine_scroll_top_button_template - 10
+	*/
+	do_action( 'cream_magazine_scroll_top_button' );
+
+
+	/**
 	* Hook - cream_magazine_footer.
 	*
 	* @hooked cream_magazine_footer_action - 10

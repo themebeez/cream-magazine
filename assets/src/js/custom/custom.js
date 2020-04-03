@@ -6,16 +6,9 @@
 
         var rtlCarousel = false;
 
-        var lazyImg = false;
-
         if (jQuery('body').hasClass('rtl')) {
 
             rtlCarousel = true;
-        }
-
-        if (cream_magazine_script_obj.enable_image_lazy_load == '1') {
-
-            lazyImg = true;
         }
 
         if (cream_magazine_script_obj.enable_sticky_menu_section == '1') {
@@ -99,9 +92,7 @@
         =============================================
         */
         if (cream_magazine_script_obj.show_to_top_btn == '1') {
-
-            jQuery('body').append('<div class="backtoptop"><button id="toTop"><i class="fa fa-angle-up" aria-hidden="true"></i></button></div>');
-
+            
             jQuery(window).scroll(function() {
 
                 if (jQuery(this).scrollTop() != 0) {
@@ -150,7 +141,6 @@
                 rtl: rtlCarousel,
                 items: 1,
                 loop: true,
-                lazyLoad: lazyImg,
                 margin: 0,
                 smartSpeed: 800,
                 nav: true,
@@ -168,7 +158,6 @@
             items: 2,
             loop: true,
             margin: 30,
-            lazyLoad: lazyImg,
             smartSpeed: 800,
             nav: true,
             dots: false,

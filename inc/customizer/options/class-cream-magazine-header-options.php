@@ -71,7 +71,7 @@ if( ! class_exists( 'Cream_Magazine_Header_Customize' ) ) {
 			// Separator 7
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_7',
+				'cream_magazine_header_separator_1',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -81,7 +81,7 @@ if( ! class_exists( 'Cream_Magazine_Header_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_7',
+					'cream_magazine_header_separator_1',
 					array(
 						'section' => 'cream_magazine_header_options',
 						'active_callback'	=> 'cream_magaine_is_header_one_active',
@@ -97,7 +97,6 @@ if( ! class_exists( 'Cream_Magazine_Header_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_home_button'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 
@@ -118,7 +117,6 @@ if( ! class_exists( 'Cream_Magazine_Header_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_search_button'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 
@@ -156,7 +154,7 @@ if( ! class_exists( 'Cream_Magazine_Header_Customize' ) ) {
 			// Separator 8
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_8',
+				'cream_magazine_header_separator_2',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -166,7 +164,7 @@ if( ! class_exists( 'Cream_Magazine_Header_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_8',
+					'cream_magazine_header_separator_2',
 					array(
 						'section' => 'cream_magazine_header_options',
 					)
@@ -197,7 +195,7 @@ if( ! class_exists( 'Cream_Magazine_Header_Customize' ) ) {
 			// Separator 9
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_9',
+				'cream_magazine_header_separator_3',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -207,7 +205,7 @@ if( ! class_exists( 'Cream_Magazine_Header_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_9',
+					'cream_magazine_header_separator_3',
 					array(
 						'section' => 'cream_magazine_header_options',
 					)

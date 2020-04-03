@@ -54,7 +54,6 @@ if( ! class_exists( 'Cream_Magazine_Archive_Page_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_archive_author_meta'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 
@@ -75,7 +74,6 @@ if( ! class_exists( 'Cream_Magazine_Archive_Page_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_archive_date_meta'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 
@@ -96,7 +94,6 @@ if( ! class_exists( 'Cream_Magazine_Archive_Page_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_archive_cmnts_no_meta'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 
@@ -117,7 +114,6 @@ if( ! class_exists( 'Cream_Magazine_Archive_Page_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_archive_categories_meta'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 
@@ -134,7 +130,7 @@ if( ! class_exists( 'Cream_Magazine_Archive_Page_Customize' ) ) {
 			// Separator 13
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_13',
+				'cream_magazine_archive_page_separator_1',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -144,7 +140,7 @@ if( ! class_exists( 'Cream_Magazine_Archive_Page_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_13',
+					'cream_magazine_archive_page_separator_1',
 					array(
 						'section' => 'cream_magazine_archive_page_options',
 					)

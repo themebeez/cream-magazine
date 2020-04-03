@@ -70,7 +70,7 @@ if( ! class_exists( 'Cream_Magazine_Banner_Customize' ) ) {
 			// Separator 2
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_2',
+				'cream_magazine_banner_separator_1',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -80,7 +80,7 @@ if( ! class_exists( 'Cream_Magazine_Banner_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_2',
+					'cream_magazine_banner_separator_1',
 					array(
 						'section' => 'cream_magazine_banner_options',
 						'active_callback' => 'cream_magaine_is_banner_active',
@@ -130,7 +130,7 @@ if( ! class_exists( 'Cream_Magazine_Banner_Customize' ) ) {
 			// Separator 3
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_3',
+				'cream_magazine_banner_separator_2',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -140,7 +140,7 @@ if( ! class_exists( 'Cream_Magazine_Banner_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_3',
+					'cream_magazine_banner_separator_2',
 					array(
 						'section' => 'cream_magazine_banner_options',
 						'active_callback' => 'cream_magaine_is_banner_active',
@@ -174,7 +174,7 @@ if( ! class_exists( 'Cream_Magazine_Banner_Customize' ) ) {
 			// Separator 4
 
 			$wp_customize->add_setting(
-				'cream_magazine_separator_4',
+				'cream_magazine_banner_separator_3',
 				array(
 					'sanitize_callback' => 'esc_html',
 					'default' => '',
@@ -184,7 +184,7 @@ if( ! class_exists( 'Cream_Magazine_Banner_Customize' ) ) {
 			$wp_customize->add_control(
 				new Cream_Magazine_Separator_Control(
 					$wp_customize,
-					'cream_magazine_separator_4',
+					'cream_magazine_banner_separator_3',
 					array(
 						'section' => 'cream_magazine_banner_options',
 						'active_callback' => 'cream_magaine_is_banner_active',
@@ -200,7 +200,6 @@ if( ! class_exists( 'Cream_Magazine_Banner_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_banner_author_meta'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 
@@ -222,7 +221,6 @@ if( ! class_exists( 'Cream_Magazine_Banner_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_banner_date_meta'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 
@@ -244,7 +242,6 @@ if( ! class_exists( 'Cream_Magazine_Banner_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_banner_cmnts_no_meta'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 
@@ -266,7 +263,6 @@ if( ! class_exists( 'Cream_Magazine_Banner_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_banner_categories_meta'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 
