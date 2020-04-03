@@ -210,7 +210,13 @@ if( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 
 			if( $headings_font_family ) {
 				?>
-				h1, h2, h3, h4, h5, h6 {
+				h1, 
+				h2, 
+				h3, 
+				h4, 
+				h5, 
+				h6, 
+				.site-title {
 
 					font-family: <?php echo esc_attr( $google_fonts[ $headings_font_family ] ); ?>;
 				}

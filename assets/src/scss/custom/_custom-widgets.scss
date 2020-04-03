@@ -68,9 +68,9 @@ footer .widget .cm_author_widget .author-detail-link a:hover {
 	margin-bottom: 20px;
 }
 
-.cm_recent_posts_widget .row:last-child .box {
-	
-	margin-bottom: 0px;
+.cm_recent_posts_widget .box:last-child {
+
+    margin-bottom: 0;
 }
 
 .cm_recent_posts_widget .post_title h2 {

@@ -236,12 +236,14 @@ body.primary-navigation-noscroll-x {
 .primary-navigation .close-menu,
 .primary-navigation .call-btn-mobile,
 .primary-navigation .location-btn-mobile {
+
     display: none;
     text-transform: uppercase;
     text-decoration: none;
 }
 
 .primary-navigation .dd-toggle {
+
     display: none;
     position: absolute;
     top: 0;
@@ -255,6 +257,7 @@ body.primary-navigation-noscroll-x {
 }
 
 .primary-navigation .dd-toggle i {
+
     position: absolute;
     margin: auto;
     top: 33%;
@@ -290,8 +293,10 @@ body.primary-navigation-noscroll-x {
 .primary-navigation .call-btn-mobile,
 .primary-navigation .location-btn-mobile,
 .primary-navigation .close-menu {
+
+    font-size:24px;
     color: #777;
-    padding: 15px;
+    padding: 10px 15px;
     box-sizing: border-box;
 }
 
