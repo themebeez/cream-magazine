@@ -132,6 +132,13 @@
 
 @media ( max-width: 991px ) {
 
+	.header-search-container .search-form-entry {
+
+		left:0;
+		right:auto;
+		width:100%;
+	}
+
 	.cm_banner-five .gutter-left {
 
 		padding-right: 15px;
