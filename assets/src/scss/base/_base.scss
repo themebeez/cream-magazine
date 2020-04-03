@@ -108,6 +108,11 @@ p {
     margin: 0 0 20px 0;
 }
 
+p:empty {
+
+    display:none;
+}
+
 a {
 
     color: $primary_color;
@@ -521,6 +526,7 @@ input[type="submit"] {
     font-size: 16px;
     font-weight: normal;
     padding: 13px 30px;
+    height:auto;
     text-align: center;
     border: none;
     opacity: 1;
@@ -572,6 +578,7 @@ select {
     position:relative;
     font-size: 15px;
     padding: 12px 15px;
+    height:auto;
     margin: 0;
     width: 100%;
     max-width: 100%;

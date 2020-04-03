@@ -69,9 +69,15 @@ header .widget img {
 
 header .site-title {
     
-    font-size: 36px;
+    font-size: 28px;
     font-weight:bold;
     line-height:1.2;
+    margin-bottom:0;
+}
+
+header .site-description {
+
+  font-size: 14px;
 }
 
 header .advertisement-area {
