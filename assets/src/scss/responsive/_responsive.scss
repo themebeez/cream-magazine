@@ -665,6 +665,12 @@
 
 	// Post Page
 
+	body.single .content-entry article .post_thumb, 
+	body.page .content-entry article .post_thumb {
+
+		margin-bottom:20px;
+	}
+
 	.author_box .author_name h3 {
 
 		font-size: 20px;

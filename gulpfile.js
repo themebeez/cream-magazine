@@ -1,43 +1,15 @@
 'use strict';
-
-
 // include all necessary plugins in gulp file
-
 var gulp = require('gulp');
-
 var concat = require('gulp-concat');
-
 var uglify = require('gulp-uglify');
-
 var rename = require('gulp-rename');
-
-// var cache = require('gulp-cache');
-
-var wpPot = require( 'gulp-wp-pot' );
-
-
-// SCSS Compiler
-
-var sass = require('gulp-sass');
-
-sass.compiler = require('node-sass');
-
-
-// CSS properties auto vendor prefixer
-
-var autoprefixer = require( 'gulp-autoprefixer' );
-
-
-// Constanly watch changes
-
-var watch = require('gulp-watch');
-
-
+var rtlcss = require('gulp-rtlcss');
+//var cache = require('gulp-cache');
 // Task defined for java scripts bundling and minifying
-
-gulp.task( 'scripts', function() {
-
+gulp.task('scripts', function() {
     return gulp.src([
+    
             'assets/src/js/plugins/*.js',
             'assets/src/js/custom/*.js',
         ])
@@ -45,49 +17,22 @@ gulp.task( 'scripts', function() {
         .pipe(rename({ suffix: '.min' }))
         .pipe(uglify())
         .pipe(gulp.dest('assets/dist/js/'));
-} );
-
-// gulp.task( 'stream', function () {
-
-//   	gulp.watch( 'assets/src/js/**/*.js', gulp.series('scripts') );
-
-// });
-
-
-
-// gulp.task( 'makepot', function () {
-
-//     return gulp.src( ['**/*.php', '!node_modules/**', '!third-party/class-tgm-plugin-activation.php', '!inc/plugin-recommendation.php'] )
-//         .pipe( wpPot( {
-//             domain: 'orchid-store',
-//             package: 'Orchid Store'
-//         } ))
-//         .pipe( gulp.dest( 'languages/orchid-store.pot' ) );
-// } );
-
-// gulp.task( 'default', gulp.series( 'makepot' ) );
-
-
-
-gulp.task( 'sass', function () {
-
-  	return gulp.src( 'assets/src/scss/main.scss' )
-  		.pipe( sass().on( 'error', sass.logError ) )
-  		.pipe( autoprefixer() )
-  		.pipe( gulp.dest( 'assets/dist/css/' ) );
 });
 
-gulp.task( 'stream', function () {
-
-  	gulp.watch( 'assets/src/scss/**/*.scss', gulp.series('sass') );
+// task to convert LTR css to RTL
+gulp.task('dortl', function() {
+    return gulp.src(['assets/dist/css/main.css'])
+        .pipe(rtlcss()) // Convert to RTL.
+        .pipe(rename({ suffix: '-rtl' })) // Append "-rtl" to the filename.
+        .pipe(gulp.dest('assets/dist/css/')); // Output RTL stylesheets.
 });
-
 
 // declaring final task and command tasker
-
 // just hit the command "gulp" it will run the following tasks...
+gulp.task('default', gulp.series('scripts', 'dortl', (done) => {
 
+    gulp.watch('assets/src/js/**/**.js', gulp.series('scripts'));
+    gulp.watch('assets/dist/css/main.css', gulp.series('dortl'));
 
-// gulp.task( 'default', gulp.series( 'makepot' ) );
-
-// gulp.task( 'default', gulp.series( 'stream' ) );
+    done();
+}));
