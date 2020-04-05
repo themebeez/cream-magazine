@@ -151,11 +151,19 @@ if( ! function_exists( 'cream_magazine_site_identity_action' ) ) :
  		<div class="logo">
  			<?php 
 			if( has_custom_logo() ) { 
+
 				the_custom_logo(); 
 			} else {
-				?>
-				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-				<?php 
+                if( ( is_front_page() && cream_magazine_get_option( 'cream_magazine_enable_home_content' ) == true ) || is_home() ) {
+                    ?>
+                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                    <?php
+                } else {
+                    ?>
+                    <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
+                    <?php
+                }
+				 
                 $site_description = get_bloginfo( 'description', 'display' );
                 if ( $site_description || is_customize_preview() ) {
 	                ?>
