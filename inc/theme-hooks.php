@@ -724,9 +724,11 @@ if( ! function_exists( 'cream_magazine_scroll_top_button_template' ) ) {
             return;
         }
         ?>
-        <div id="toTop" class="btn btn-info">
-            <i class="fa fa-angle-up" aria-hidden="true"></i>
-        </div>
+        <div class="backtoptop">
+            <button id="toTop" class="btn btn-info">
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+            </button>
+        </div><!-- ./ backtoptop -->
         <?php
     }
 }  
