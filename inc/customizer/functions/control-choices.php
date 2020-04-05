@@ -103,6 +103,8 @@ if( ! function_exists( 'cream_magazine_google_font_family_choices' ) ) {
 		    'Muli:400,400i,600,600i,700,700i,800,800i' => 'Muli',
 		    'Open+Sans:400,400i,600,600i,700,700i' => 'Open Sans',
 		    'Lato:400,400i,700,700i' => 'Lato',
+		    'Poppins:400,400i,500,500i,600,600i,700,700i' => 'Poppins',
+		    'Lora:400,400i,500,500i,600,600i,700,700i' => 'Lora',
 		    'IBM+Plex+Sans:400,400i,500,500i,600,600i,700,700i' => 'IBM Plex Serif',
 		    'Noto+Sans:400,400i,700,700i'=>'Noto Sans',
 		    'Noto+Sans+JP:400,500,700' => 'Noto Sans JP',
@@ -114,9 +116,8 @@ if( ! function_exists( 'cream_magazine_google_font_family_choices' ) ) {
 		    'Heebo:400,500,700,800' => 'Heebo',
 		    'Karma:400,500,600,700' => 'Karma',
 		    'Mukta:400,500,600,700,800' => 'Mukta',
-		    'Baloo+Tamma+2:400,500,600,700' => 'Baloo Tamma 2',
-		    'Baloo+Chettan+2:400,500,600,700' => 'Baloo Chettan 2',
 		    'Kanit:400,400i,500,500i,600,600i,700,700i' => 'Kanit',
+		    'Merriweather:400,400i,700,700i' => 'Merriweather',
 		);
 	}
 }
