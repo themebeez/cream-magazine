@@ -67,6 +67,48 @@ if( ! class_exists( 'Cream_Magazine_Top_News_Area_Customize' ) ) {
 					'type' => 'checkbox',
 				) 
 			) );
+
+
+			// Separator
+
+			$wp_customize->add_setting(
+				'cream_magazine_homepage_separator_1',
+				array(
+					'sanitize_callback' => 'esc_html',
+					'default' => '',
+				)
+			);
+
+			$wp_customize->add_control(
+				new Cream_Magazine_Separator_Control(
+					$wp_customize,
+					'cream_magazine_homepage_separator_1',
+					array(
+						'section' => 'static_front_page',
+					)
+				)
+			);
+
+
+			// Setting : Enable Homepage Content
+
+			$wp_customize->add_setting( 
+				'cream_magazine_enable_home_content', 
+				array(
+					'sanitize_callback'	=> 'wp_validate_boolean',
+					'default'			=> $defaults['cream_magazine_enable_home_content'],
+				) 
+			);
+
+			$wp_customize->add_control( new Cream_Magazine_Toggle_Switch_Control( $wp_customize,
+				'cream_magazine_enable_home_content', 
+				array(
+					'label'			=> esc_html__( 'Enable Homepage Content', 'cream-magazine' ),
+					'section'		=> 'static_front_page',
+					'type'			=> 'checkbox',
+					'active_callback' => 'cream_magazine_is_static_home_page_set',
+				) 
+			) );
 		}
 	}
 }

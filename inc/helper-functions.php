@@ -57,6 +57,8 @@ if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
 
     	$defaults = array();
 
+        $defaults['cream_magazine_enable_home_content'] = false;
+
         $defaults['cream_magazine_select_site_layout'] = 'fullwidth';
 
     	$defaults['cream_magazine_enable_ticker_news'] = false;
