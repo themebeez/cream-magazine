@@ -177,3 +177,21 @@ if( ! function_exists( 'cream_magazine_is_sidebar_on_mobile_active' ) ) {
 		}
 	}
 }
+
+
+/*
+ *	Active Callback for when static front page is set
+ */
+if( ! function_exists( 'cream_magazine_is_static_home_page_set' ) ) {
+
+	function cream_magazine_is_static_home_page_set( $control ) {
+		
+		if ( $control->manager->get_setting( 'show_on_front' )->value() == 'page' ) {
+
+			return true;
+		} else {
+			
+			return false;
+		}
+	}
+}

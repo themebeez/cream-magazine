@@ -13,6 +13,11 @@
  */
 
 get_header();
+
+if( cream_magazine_get_option( 'cream_magazine_enable_home_content' ) == true && is_front_page() && ! is_home() ) {
+    
+    get_template_part('template-parts/content', 'front-page' );
+} else {
     ?>
     <div class="cm-container">
         <div class="inner-page-wrapper">
@@ -68,4 +73,5 @@ get_header();
         </div><!-- .inner-page-wrapper -->
     </div><!-- .cm-container -->
     <?php
+}
 get_footer();
