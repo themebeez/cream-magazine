@@ -117,6 +117,7 @@ if( ! function_exists( 'cream_magazine_google_font_family_choices' ) ) {
 		    'Karma:400,500,600,700' => 'Karma',
 		    'Mukta:400,500,600,700,800' => 'Mukta',
 		    'Kanit:400,400i,500,500i,600,600i,700,700i' => 'Kanit',
+		    'Merriweather:400,400i,700,700i' => 'Merriweather',
 		);
 	}
 }
