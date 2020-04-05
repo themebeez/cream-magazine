@@ -1,3 +1,8 @@
+body.home .breadcrumb {
+
+    display:none; // hide breadcrumb if static front page is set as homepage
+}
+
 .breadcrumb {
     
     position:relative;
