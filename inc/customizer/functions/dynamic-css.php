@@ -92,7 +92,8 @@ if( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 				.widget_product_tag_cloud .tagcloud a:hover, 
 				.widget_product_tag_cloud .tagcloud a:focus,
 				.woocommerce .widget_price_filter .price_slider_wrapper .ui-slider .ui-slider-handle,
-				.error_page_top_portion {
+				.error_page_top_portion,
+				.primary-navigation ul li a span.menu-item-description {
 
 					background-color: <?php echo esc_attr( $primary_theme_color ); ?>;
 				}

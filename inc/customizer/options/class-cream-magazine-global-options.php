@@ -87,14 +87,14 @@ if( ! class_exists( 'Cream_Magazine_Global_Customize' ) ) {
 				) 
 			);
 
-			$wp_customize->add_control( 
+			$wp_customize->add_control( new Cream_Magazine_Toggle_Switch_Control( $wp_customize,
 				'cream_magazine_disable_link_focus_outline', 
 				array(
 					'label'				=> esc_html__( 'Disable Outline On Link Focus', 'cream-magazine' ),
 					'section'			=> 'cream_magazine_link_options',
 					'type'				=> 'checkbox',
 				) 
-			);
+			) );
 
 
 			// Enable Link Decoration On Hover
@@ -107,14 +107,14 @@ if( ! class_exists( 'Cream_Magazine_Global_Customize' ) ) {
 				) 
 			);
 
-			$wp_customize->add_control( 
+			$wp_customize->add_control( new Cream_Magazine_Toggle_Switch_Control( $wp_customize,
 				'cream_magazine_disable_link_decoration_on_hover', 
 				array(
 					'label'				=> esc_html__( 'Disable Underline Link On Hover', 'cream-magazine' ),
 					'section'			=> 'cream_magazine_link_options',
 					'type'				=> 'checkbox',
 				) 
-			);
+			) );
 		}
 	}
 }
