@@ -95,12 +95,12 @@
             
             jQuery(window).scroll(function() {
 
-                if (jQuery(this).scrollTop() != 0) {
+                if (jQuery(this).parent('.backtoptop')scrollTop() != 0) {
 
-                    jQuery('#toTop').fadeIn();
+                    jQuery('#toTop').parent('.backtoptop').fadeIn();
                 } else {
 
-                    jQuery('#toTop').fadeOut();
+                    jQuery('#toTop').parent('.backtoptop').fadeOut();
                 }
             });
 
