@@ -3,7 +3,7 @@
 Contributors: themebeez
 Requires at least: 4.8.0
 Requires PHP: 5.6
-Tested up to: 5.2.3
+Tested up to: 5.4
 Stable tag: 2.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,7 +17,7 @@ Cream Magazine is a news & magazine WordPress theme with a clean & modern design
 
 == License ==
 
-Cream Magazine WordPress Theme, Copyright (C) 2019, themebeez.
+Cream Magazine WordPress Theme, Copyright (C) 2020, themebeez.
 Cream Magazine is distributed under the terms of the GNU GPL
 
 
@@ -33,13 +33,15 @@ Cream Magazine is distributed under the terms of the GNU GPL
 
 * Bootstrap https://github.com/twbs/bootstrap/blob/master/LICENSE, Copyright (c) 2011-2018 Twitter, Inc., [MIT](http://opensource.org/licenses/MIT)
 
-* Lazysizes https://github.com/aFarkas/lazysizes, Copyright (c) 2015 Alexander Farkas, [MIT](http://opensource.org/licenses/MIT)
+* Separator Customizer Control https://github.com/dingo-d/wordpress-theme-customizer-extra-custom-controls, Denis Žoljom (dingo-d), [GPLv3](https://www.gnu.org/licenses/gpl-3.0.txt)
 
-* Match Height https://github.com/liabru/jquery-match-height, Copyright (c) 2015 Liam Brummitt, [MIT](http://opensource.org/licenses/MIT)
+* WPTRT color-alpha Control https://github.com/WPTRT/control-color-alpha, 2019 WPTRT, [GPLv2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
 * Owl Carousel https://github.com/OwlCarousel2/OwlCarousel2/, Copyright (c) 2014 Owl, [MIT](http://opensource.org/licenses/MIT)
 
-* Retina https://github.com/strues/retinajs, Copyright (c) 2013-2017 Steven Truesdell, John Newman, Ben Atkin, and other contributors, [MIT](http://opensource.org/licenses/MIT)
+* Zepto Lazy https://github.com/eisbehr-/jquery.lazy, Copyright 2012 - 2018, Daniel 'Eisbehr' Kern, [MIT, GPLv2](http://opensource.org/licenses/MIT, http://www.gnu.org/licenses/gpl-2.0.html)
+
+* Sticky https://github.com/garand/sticky, Copyright 2014-2016 Anthony Garand, [MIT](http://opensource.org/licenses/MIT)
 
 * Selectric https://github.com/lcdsantos/jQuery-Selectric, Copyright (c) 2016 Leonardo Santos, [MIT](http://opensource.org/licenses/MIT)
 
@@ -101,99 +103,3 @@ License: GPLv2 (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 = Does this theme support any plugins? =
 
 Cream Magazine includes support for Contact Form 7 and Woocommerce.
-
-
-== Changelog ==
-
-
-= Version 2.0.0 - =
-
-- 
-
-= Version 1.1.2 - 13 October, 2019 =
-
-- Fix: Breadcrumb issue (The value provided for id must be a valid URL)
-- Fix: Footer menu issue
-
-
-= Version 1.1.1 - 22 August, 2019 =
-
-- wp_body_open() function added
-- Support for skip links
-- Options added for sidebar position for page and posts in customizer
-- Option added for featured image for page
-
-
-= Version 1.1.0 - 15 May, 2019 =
-
-- Fix: Responsive scrollbar at mobile device
-- Fix: General styling
-- Changed: Font family for headings
-- Added: UGAAM plugin recommedation
-
-
-= Version 1.0.9 - 15 May, 2019 =
-
-- Added italian language .mo & .po file
-
-
-= Version 1.0.8 - 28 April, 2019 =
-
-- Google plus social link removed
-- Thumbnails added for widget description
-- Overlay option added for header two in customizer
-- Added RTL Language Support
-
-
-= Version 1.0.7 - 7 April, 2019 =
-
-- Tweak: Category meta spacing
-- Changed: Search widget placeholder text
-- Fix: Comment box checkbox aligment
-
-
-= Version 1.0.6 - 28 March, 2019 =
-
-- Fix: header search form z-index
-- Fix: Main menu home icon hover color
-
-
-= Version 1.0.5 - 21 March, 2019 =
-
-- Fix: editor styles
-- Fix: editor spacing
-- Added: Gutenberg support [ Except Full & wide block ]
-- Added: Hover colour for Menu items
-- Changed: Upsell button text & link
-
-
-= Version 1.0.4 - 19 March, 2019 =
-
-- Upsell added
-- Theme support, html5, for search form removed
-
-
-= Version 1.0.3 - 07 March, 2019 =
-
-- Added missing assets/src/js files
-- Updated langauge pot file
-
-
-= Version 1.0.2 - 07 March, 2019 =
-
-- readme.txt updated
-- screenshot.png has been changed
-- Added customizer option fields
-- Theme fonts changed
-- Minor CSS fixes
-
-= Version 1.0.1 - 10 January, 2019 =
-
-- Post meta options added for widgets.
-- Post meta options added for banner in customizer.
-- Post meta options added for blog, archive and search in customizer.
-- Post meta options added for related posts in customizer.
-
-= Version 1.0.0 - 5 December, 2018 =
-
-- Initial Release 

@@ -494,33 +494,3 @@ if( ! function_exists( 'cream_magazine_main_query_filter' ) ) :
     }
 endif;
 add_filter( 'pre_get_posts', 'cream_magazine_main_query_filter' );
-
-
-/*
- * Hook - Plugin Recommendation
- */
-if ( ! function_exists( 'cream_magazine_recommended_plugins' ) ) :
-    /**
-     * Recommend plugins.
-     *
-     * @since 1.0.0
-     */
-    function cream_magazine_recommended_plugins() {
-
-        $plugins = array(
-            array(
-                'name'     => esc_html__( 'Themebeez Toolkit', 'cream-magazine' ),
-                'slug'     => 'themebeez-toolkit',
-                'required' => false,
-            ),
-            array(
-                'name'     => esc_html__( 'Universal Google AdSense And Ads Manager', 'cream-magazine' ),
-                'slug'     => 'universal-google-adsense-and-ads-manager',
-                'required' => false,
-            ),
-        );
-
-        tgmpa( $plugins );
-    }
-endif;
-add_action( 'tgmpa_register', 'cream_magazine_recommended_plugins' );
