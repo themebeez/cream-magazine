@@ -27,15 +27,16 @@ Cream Magazine is distributed under the terms of the GNU GPL
 
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
 
-* TGM Plugin Activation http://tgmpluginactivation.com/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+* TGM Plugin Activation http://tgmpluginactivation.com/, Copyright (C) 1989, 1991 Free Software Foundation, Inc., [GPLv2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
 * Breadcrumbs Trail https://themehybrid.com/plugins/breadcrumb-trail, Copyright (c) 2008 - 2017 Justin Tadlock, [GPLv2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
-
-* Bootstrap https://github.com/twbs/bootstrap/blob/master/LICENSE, Copyright (c) 2011-2018 Twitter, Inc., [MIT](http://opensource.org/licenses/MIT)
 
 * Separator Customizer Control https://github.com/dingo-d/wordpress-theme-customizer-extra-custom-controls, Denis Žoljom (dingo-d), [GPLv3](https://www.gnu.org/licenses/gpl-3.0.txt)
 
 * WPTRT color-alpha Control https://github.com/WPTRT/control-color-alpha, 2019 WPTRT, [GPLv2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+* Bootstrap https://github.com/twbs/bootstrap, Copyright (c) 2011-2020 Twitter, Inc.,
+Copyright (c) 2011-2020 The Bootstrap Authors, Inc., [MIT](http://opensource.org/licenses/MIT)
 
 * Owl Carousel https://github.com/OwlCarousel2/OwlCarousel2/, Copyright (c) 2014 Owl, [MIT](http://opensource.org/licenses/MIT)
 
