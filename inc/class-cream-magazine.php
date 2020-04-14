@@ -161,7 +161,7 @@ class Cream_Magazine {
 				array(
 					'name'      => __( 'Larger', 'cream-magazine' ),
 					'shortName' => __( 'XL', 'cream-magazine' ),
-					'size'      => 40,
+					'size'      => 38,
 					'slug'      => 'larger',
 				),
 			)
@@ -392,6 +392,8 @@ class Cream_Magazine {
 		require get_template_directory() . '/inc/theme-hooks.php';
 		// Load helper functions
 		require get_template_directory() . '/inc/helper-functions.php';
+		// Load recommeded plugins
+		require get_template_directory() . '/inc/plugin-recommendation.php';
 		// Load customizer options' choices
 		require get_template_directory() . '/inc/customizer/functions/control-choices.php';
 		// Load active callback for customizer options

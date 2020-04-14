@@ -69,7 +69,7 @@ if( ! class_exists( 'Cream_Magazine_Global_Customize' ) ) {
 				'cream_magazine_save_value_as', 
 				array(
 					'label'				=> esc_html__( 'Save Option&rsquo;s Value As', 'cream-magazine' ),
-					'description'		=> esc_html__( 'This option lets you save value of category, page, post, etc. dropdown as either slug or id.', 'cream-magazine' ),
+					'description'		=> esc_html__( 'Use this option if your site language is other than English. This option lets you save value of category, page, post, etc. either as slug or id.', 'cream-magazine' ),
 					'section'			=> 'cream_magazine_value_options',
 					'type'				=> 'select',
 					'choices'			=> cream_magazine_save_value_as(), 
