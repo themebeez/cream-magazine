@@ -327,7 +327,7 @@ msgid "Save Option&rsquo;s Value As"
 msgstr ""
 
 #: inc/customizer/options/class-cream-magazine-global-options.php:72
-msgid "Use this option if your site language is other than English. This option lets you save value of category, page, post, etc. either as slug or id."
+msgid "This option lets you save value of category, page, post, etc. either as slug or id. Select ID if your site language is other than English."
 msgstr ""
 
 #: inc/customizer/options/class-cream-magazine-global-options.php:93
