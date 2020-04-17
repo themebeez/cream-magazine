@@ -43,7 +43,7 @@ class Cream_Magazine_News_Widget_One extends WP_Widget {
             'ignore_sticky_posts' => true,
 		);
 
-        if( $post_cat ) {
+        if( $post_cat != 'none' ) {
 
             if( cream_magazine_get_option( 'cream_magazine_save_value_as' ) == 'slug' ) {
 

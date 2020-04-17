@@ -44,8 +44,6 @@ Copyright (c) 2011-2020 The Bootstrap Authors, Inc., [MIT](http://opensource.org
 
 * Sticky https://github.com/garand/sticky, Copyright 2014-2016 Anthony Garand, [MIT](http://opensource.org/licenses/MIT)
 
-* Selectric https://github.com/lcdsantos/jQuery-Selectric, Copyright (c) 2016 Leonardo Santos, [MIT](http://opensource.org/licenses/MIT)
-
 * Stellarnav https://github.com/vinnymoreira/stellarnav, Copyright (c) 2016 Vinny Moreira, [MIT](http://opensource.org/licenses/MIT)
 
 * Theia Sticky Sidebar https://github.com/WeCodePixels/theia-sticky-sidebar, Copyright (c) 2014 Liviu Cristian Mirea Ghiban, [MIT](http://opensource.org/licenses/MIT)

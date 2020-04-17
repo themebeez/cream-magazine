@@ -52,13 +52,13 @@
 
             /* Toggle header search container on click of search icon */
 
-            jQuery(".search_box").click(function() {
+            jQuery("body").on( 'click', '.search_box', function() {
 
                 jQuery(".header-search-container").toggle();
             });
         }
 
-        jQuery(".menu-toggle").click(function(event) {
+        jQuery("body").on( 'click', '.menu-toggle', function(event) {
 
             event.preventDefault();
         });
@@ -76,16 +76,6 @@
             });
         }
 
-
-        /*
-        ================================================
-        = Init selectric for drop downs ( select )
-        ================================================
-        */
-
-
-        $('.orderby').selectric();
-
         /*
         =============================================
         = Append back to top button
@@ -93,18 +83,18 @@
         */
         if (cream_magazine_script_obj.show_to_top_btn == '1') {
             
-            jQuery(window).scroll(function() {
+            jQuery(window).on( 'scroll', function() {
 
-                if (jQuery(this).parent('.backtoptop')scrollTop() != 0) {
+                if (jQuery(this).scrollTop() != 0) {
 
-                    jQuery('#toTop').parent('.backtoptop').fadeIn();
+                    jQuery('#toTop').fadeIn();
                 } else {
 
-                    jQuery('#toTop').parent('.backtoptop').fadeOut();
+                    jQuery('#toTop').fadeOut();
                 }
             });
 
-            jQuery('#toTop').click(function() {
+            jQuery('body').on( 'click', '#toTop', function() {
 
                 jQuery("html, body").animate({ scrollTop: 0 }, 800);
 

@@ -167,6 +167,11 @@ if( ! function_exists( 'cream_magazine_post_categories_meta' ) ) {
 
 	function cream_magazine_post_categories_meta( $show_categories ) {
 
+		if( cream_magazine_get_option( 'cream_magazine_enable_category_meta' ) == false ) {
+
+			return;
+		}
+
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 
@@ -193,6 +198,11 @@ if( ! function_exists( 'cream_magazine_post_categories_meta' ) ) {
 if( ! function_exists( 'cream_magazine_post_tags_meta' ) ) {
 
 	function cream_magazine_post_tags_meta( $show_tags ) {
+
+		if( ! $show_tags ) {
+
+			return;
+		}
 
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {

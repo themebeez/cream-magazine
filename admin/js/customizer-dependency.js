@@ -56,11 +56,11 @@
 		}
 
 		var bannerDependentControls = [ 
-			'cream_magazine_separator_2', 
+			'cream_magazine_banner_separator_1', 
 			'cream_magazine_banner_categories', 
-			'cream_magazine_separator_3', 
+			'cream_magazine_banner_separator_2', 
 			'cream_magazine_banner_posts_no',
-			'cream_magazine_separator_4',
+			'cream_magazine_banner_separator_3',
 			'cream_magazine_enable_banner_author_meta',
 			'cream_magazine_enable_banner_date_meta',
 			'cream_magazine_enable_banner_cmnts_no_meta',
@@ -74,9 +74,9 @@
 
 
 		var tickerDependentControls = [
-			'cream_magazine_separator_5',
+			'cream_magazine_news_ticker_separator_1',
 			'cream_magazine_show_ticker_news',
-			'cream_magazine_separator_6',
+			'cream_magazine_news_ticker_separator_2',
 			'cream_magazine_ticker_news_title',
 			'cream_magazine_ticker_news_categories',
 			'cream_magazine_ticker_news_posts_no'

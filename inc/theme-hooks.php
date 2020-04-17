@@ -169,7 +169,7 @@ if( ! function_exists( 'cream_magazine_site_identity_action' ) ) :
 
 				the_custom_logo(); 
 			} else {
-                if( ( is_front_page() && cream_magazine_get_option( 'cream_magazine_enable_home_content' ) == true ) || is_home() ) {
+                if( ( is_front_page() && ( cream_magazine_get_option( 'cream_magazine_enable_home_content' ) == true || is_page_template( 'template-home.php' ) ) ) || is_home() ) {
                     ?>
                     <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                     <?php

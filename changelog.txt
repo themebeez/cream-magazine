@@ -1,6 +1,6 @@
 = Version 2.0.0 - 17 April, 2020 =
 
-- Removed: retina, lazysizes, and matchheight js libraries.
+- Removed: retina, lazysizes, selectric, and matchheight js libraries.
 - Added: Zepto lazy, and sticky js libraries.
 - Added: Separator and alpha color customizer controls.
 - Fix: CSS issues.

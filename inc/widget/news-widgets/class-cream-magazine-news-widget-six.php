@@ -43,7 +43,7 @@ class Cream_Magazine_News_Widget_Six extends WP_Widget {
             'ignore_sticky_posts' => true,
 		);
 
-        if( $post_cat ) {
+        if( $post_cat != 'none' ) {
 
             if( cream_magazine_get_option( 'cream_magazine_save_value_as' ) == 'slug' ) {
 
@@ -208,7 +208,7 @@ class Cream_Magazine_News_Widget_Six extends WP_Widget {
             );
             ?>
             <select class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'post_cat' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'post_cat' ) ); ?>">
-                <option value="<?php esc_attr_e( 'none', 'cream-magazine' ); ?>" <?php selected( $instance['post_cat'], 'none' ); ?>><?php esc_html_e( 'Select Categories', 'cream-magazine' ); ?></option>
+                <option value="none" <?php selected( $instance['post_cat'], 'none' ); ?>><?php esc_html_e( 'Select Categories', 'cream-magazine' ); ?></option>
                 <?php
                 if( !empty( $categories ) ) {
                     foreach( $categories as $cat ) {
