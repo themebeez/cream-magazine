@@ -9886,6 +9886,23 @@ body.single .the_content .page-links .post-page-numbers.current {
   .block-editor-block-list__block[data-type="core/embed"][data-align=right] .block-editor-block-list__block-edit {
     max-width: 100%; } }
 
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption-text {
+  text-align: center; }
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+  word-wrap: break-word; }
+
+.bypostauthor {
+  display: block; }
+
 /*
 ***************************************************************
 *
