@@ -1,3 +1,8 @@
+= Version 2.0.1 - 17 April, 2020 =
+
+- Bumped the version due to error on uploading 
+
+
 = Version 2.0.0 - 17 April, 2020 =
 
 - Removed: retina, lazysizes, selectric, and matchheight js libraries.
