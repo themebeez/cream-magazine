@@ -116,7 +116,6 @@ if( ! class_exists( 'Cream_Magazine_Footer_Customize' ) ) {
 				array(
 					'sanitize_callback'	=> 'wp_validate_boolean',
 					'default'			=> $defaults['cream_magazine_enable_scroll_top_button'],
-					'transport'			=> 'postMessage',
 				) 
 			);
 

@@ -106,7 +106,7 @@ if( ! class_exists( 'Cream_Magazine_News_Ticker_Customize' ) ) {
 				array(
 					'label'				=> esc_html__( 'Display Ticker News On', 'cream-magazine' ),
 					'section'			=> 'cream_magazine_ticker_news_options',
-					'type'				=> 'select',
+					'type'				=> 'radio',
 					'choices'			=> cream_magazine_ticker_news_on_pages(),
 					'active_callback'	=> 'cream_magaine_is_ticker_news_enabled',
 				) 

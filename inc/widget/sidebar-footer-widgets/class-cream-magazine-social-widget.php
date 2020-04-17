@@ -38,42 +38,42 @@ class Cream_Magazine_Social_Widget extends WP_Widget {
                 if( !empty( $facebook ) ) {
                     ?>
                     <li class="fb">
-                        <a href="<?php echo esc_url( $facebook ); ?>"><i class="fa fa-facebook-f"></i><span><?php esc_html_e( 'Like', 'cream-magazine' ); ?></span></a>
+                        <a href="<?php echo esc_url( $facebook ); ?>" target="_blank"><i class="fa fa-facebook-f"></i><span><?php esc_html_e( 'Like', 'cream-magazine' ); ?></span></a>
                     </li>
                     <?php
                 }
                 if( !empty( $twitter ) ) {
                     ?>
                     <li class="tw">
-                        <a href="<?php echo esc_url( $twitter ); ?>"><i class="fa fa-twitter"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
+                        <a href="<?php echo esc_url( $twitter ); ?>" target="_blank"><i class="fa fa-twitter"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
                     </li>
                     <?php
                 }
                 if( !empty( $instagram ) ) {
                     ?>
                     <li class="insta">
-                        <a href="<?php echo esc_url( $instagram ); ?>"><i class="fa fa-instagram"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
+                        <a href="<?php echo esc_url( $instagram ); ?>" target="_blank"><i class="fa fa-instagram"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
                     </li>
                     <?php
                 }
                 if( !empty( $linkedin ) ) {
                     ?>
                     <li class="linken">
-                        <a href="<?php echo esc_url( $linkedin ); ?>"><i class="fa fa-linkedin"></i><span><?php esc_html_e( 'Connect', 'cream-magazine' ); ?></span></a>
+                        <a href="<?php echo esc_url( $linkedin ); ?>" target="_blank"><i class="fa fa-linkedin"></i><span><?php esc_html_e( 'Connect', 'cream-magazine' ); ?></span></a>
                     </li>
                     <?php
                 }
                 if( !empty( $pinterest ) ) {
                     ?>
                     <li class="pin">
-                        <a href="<?php echo esc_url( $pinterest ); ?>"><i class="fa fa-pinterest"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
+                        <a href="<?php echo esc_url( $pinterest ); ?>" target="_blank"><i class="fa fa-pinterest"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
                     </li>
                     <?php
                 }
                 if( !empty( $youtube ) ) {
                     ?>
                     <li class="yt">
-                        <a href="<?php echo esc_url( $youtube ); ?>"><i class="fa fa-youtube-play"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
+                        <a href="<?php echo esc_url( $youtube ); ?>" target="_blank"><i class="fa fa-youtube-play"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
                     </li>
                     <?php
                 }

@@ -306,11 +306,11 @@ msgstr ""
 msgid "Display Footer Widget Area On Mobile &amp; Tablet Devices"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-footer-options.php:126
+#: inc/customizer/options/class-cream-magazine-footer-options.php:125
 msgid "Enable Scroll Top Button"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-footer-options.php:167
+#: inc/customizer/options/class-cream-magazine-footer-options.php:166
 msgid "Copyright Text"
 msgstr ""
 
@@ -712,10 +712,6 @@ msgstr ""
 msgid "Select Category"
 msgstr ""
 
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:166, inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:218, inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:210, inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:211, inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:166, inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:162
-msgid "none"
-msgstr ""
-
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:183, inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:235, inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:227, inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:228, inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:183, inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:179
 msgid "If no category is selected, then recent posts will be displayed."
 msgstr ""
@@ -750,6 +746,10 @@ msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:200, inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:201, inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:156, inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:152
 msgid "Select Category: "
+msgstr ""
+
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:210
+msgid "none"
 msgstr ""
 
 #: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:9
