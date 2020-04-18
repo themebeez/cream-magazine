@@ -1,6 +1,10 @@
+= Version 2.0.2 - 18 April, 2020 =
+
+- Tweak: Added CREAM_MAGAZINE_VERSION in enqueue styles/script (Cache busting)
+
 = Version 2.0.1 - 17 April, 2020 =
 
-- Bumped the version due to error on uploading 
+- Bumped: version due to error on uploading 
 
 
 = Version 2.0.0 - 17 April, 2020 =
