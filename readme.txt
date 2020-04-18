@@ -35,6 +35,8 @@ Cream Magazine is distributed under the terms of the GNU GPL
 
 * WPTRT color-alpha Control https://github.com/WPTRT/control-color-alpha, 2019 WPTRT, [GPLv2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
+* WPTRT Admin-Notices, https://github.com/WPTRT/admin-notices, [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
+
 * Bootstrap https://github.com/twbs/bootstrap, Copyright (c) 2011-2020 Twitter, Inc.,
 Copyright (c) 2011-2020 The Bootstrap Authors, Inc., [MIT](http://opensource.org/licenses/MIT)
 

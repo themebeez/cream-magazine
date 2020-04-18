@@ -96,7 +96,6 @@ if( ! function_exists( 'cream_magazine_google_font_family_choices' ) ) {
 	function cream_magazine_google_font_family_choices() {
 
 		return array(
-
 		    'Roboto:400,400i,500,500i,700,700i' => 'Roboto',
 		    'Nunito:400,400i,600,600i,700,700i,800,800i' => 'Nunito',
 		    'DM+Sans:400,400i,500,500i,700,700i' => 'DM Sans',
@@ -117,7 +116,7 @@ if( ! function_exists( 'cream_magazine_google_font_family_choices' ) ) {
 		    'Karma:400,500,600,700' => 'Karma',
 		    'Mukta:400,500,600,700,800' => 'Mukta',
 		    'Kanit:400,400i,500,500i,600,600i,700,700i' => 'Kanit',
-		    'Merriweather:400,400i,700,700i' => 'Merriweather',
+		    'Merriweather:400,400i,700,700i' => 'Merriweather'
 		);
 	}
 }

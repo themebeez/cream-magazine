@@ -1,6 +1,8 @@
 = Version 2.0.2 - 18 April, 2020 =
 
 - Tweak: Added CREAM_MAGAZINE_VERSION in enqueue styles/script (Cache busting)
+- Added: WPTRT Admin Notices library
+- Fixed: Google fonts issues
 
 = Version 2.0.1 - 17 April, 2020 =
 
