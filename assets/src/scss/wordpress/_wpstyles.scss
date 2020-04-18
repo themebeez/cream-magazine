@@ -3,6 +3,7 @@
 }
 
 .wp-caption img[class*="wp-image-"] {
+
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -13,6 +14,7 @@
 }
 
 .wp-caption-text {
+
     text-align: center;
 }
 
@@ -22,10 +24,12 @@
 --------------------------------------------------------------*/
 
 .comment-content a {
+
     word-wrap: break-word;
 }
 
 .bypostauthor {
+    
     display: block;
 }
 
