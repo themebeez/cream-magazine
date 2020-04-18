@@ -221,11 +221,11 @@ if ( !function_exists( 'cream_magazine_fonts_url' ) ) :
         $fonts     = array();
         $subsets   = 'latin,latin-ext';
 
-        // Body Font Family
-        $fonts[] = cream_magazine_get_option( 'cream_magazine_body_font_family' );
-
         // Headings Font Family
         $fonts[] = cream_magazine_get_option( 'cream_magazine_headings_font_family' );
+
+        // Body Font Family
+        $fonts[] = cream_magazine_get_option( 'cream_magazine_body_font_family' );
 
         if( ! empty( $fonts ) ) {
 
@@ -235,18 +235,16 @@ if ( !function_exists( 'cream_magazine_fonts_url' ) ) :
             $fonts[] = 'Roboto:400,400i,500,500i,700,700i';
 
             $fonts[] = 'Muli:400,400i,600,600i,700,700i';
-        }        
-
-        $fonts = array_unique( $fonts );
-
-        if ( $fonts ) {
-            $fonts_url = add_query_arg( array(
-                'family' => urlencode( implode( '|', $fonts ) ),
-                'subset' => urlencode( $subsets ),
-            ), '//fonts.googleapis.com/css' );
         }
 
-        return $fonts_url;
+        $query_args = array(
+            'family' => implode( '|', $fonts ),
+            'subset' => 'latin,latin-ext',
+        );
+
+        $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+
+        return esc_url_raw( $fonts_url );
     }
 endif;
 

@@ -30,6 +30,8 @@
 	*/
 	do_action( 'cream_magazine_body_before' );
 
+	cream_magazine_fonts_url();
+
 	/**
 	* Hook - cream_magazine_page_wrapper_start.
 	*
