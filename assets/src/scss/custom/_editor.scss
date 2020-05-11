@@ -4,7 +4,7 @@
 .the_content {
 
     font-family:$system_font;
-    font-size: 1.0625rem;
+    font-size: 1rem;
 }
 
 .the_content p {
@@ -39,13 +39,13 @@
 
 // links
 
-.the_content p a {
+.the_content a {
     
     color: #0061FF;
     text-decoration: underline;
 }
 
-.the_content p a:hover {
+.the_content a:hover {
     
     color: $secondary_color;
     text-decoration: underline;
@@ -80,6 +80,13 @@
 .the_content table {
 
     margin-bottom:0;
+}
+
+// media 
+
+.the_content figure {
+
+    max-width:100%;
 }
 
 // embed 

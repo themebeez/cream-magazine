@@ -79,6 +79,15 @@
     max-width:50%;
 }
 
+// table 
+
+.wp-block-table td, 
+.wp-block-table th {
+
+    border-color:#eeeeee;
+    border-width: 0 1px 1px 0;
+}
+
 // image & gallery
 
 .wp-block-image figcaption {
