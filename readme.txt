@@ -4,7 +4,7 @@ Contributors: themebeez
 Requires at least: 4.8.0
 Requires PHP: 5.6
 Tested up to: 5.4
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, news, right-sidebar, theme-options, footer-widgets, left-sidebar, grid-layout, rtl-language-support
@@ -104,3 +104,131 @@ License: GPLv2 (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 = Does this theme support any plugins? =
 
 Cream Magazine includes support for Contact Form 7 and Woocommerce.
+
+
+== Changelog ==
+
+
+= Version 2.0.3 - 11 May, 2020 =
+
+- Fix: Responsive image width issue on mobile device when size is defined with inline CSS (Github #70)
+
+
+= Version 2.0.2 - 18 April, 2020 =
+
+- Tweak: Added CREAM_MAGAZINE_VERSION in enqueue styles/script (Cache busting)
+- Added: WPTRT Admin Notices library
+- Fixed: Google fonts issues
+
+= Version 2.0.1 - 17 April, 2020 =
+
+- Bumped: version due to error on uploading 
+
+
+= Version 2.0.0 - 17 April, 2020 =
+
+- Removed: retina, lazysizes, selectric, and matchheight js libraries.
+- Added: Zepto lazy, and sticky js libraries.
+- Added: Separator and alpha color customizer controls.
+- Fix: CSS issues.
+- Fix: JS issues.
+- Removed: Unwanted and unused codes.
+- Added: Keyboard navigation functionality.
+- Added: New customizer settings.
+- Fix: Ticker news not displaying on default blog page issue.
+- Changes: Fast and optimized customizer live preview.
+- Changes: Code optimizations.
+- Changes: Header image support for header layout one.
+- Changes: Customizer setting added to save value of categories, pages, posts, etc. as IDs.
+- Updated: Bootstrap library from v3 to v4
+- Fix: RTL issues.
+- Added: Gutenberg compatibility.
+
+
+= Version 1.1.2 - 13 October, 2019 =
+
+- Fix: Breadcrumb issue (The value provided for id must be a valid URL)
+- Fix: Footer menu issue
+
+
+= Version 1.1.1 - 22 August, 2019 =
+
+- wp_body_open() function added
+- Support for skip links
+- Options added for sidebar position for page and posts in customizer
+- Option added for featured image for page
+
+
+= Version 1.1.0 - 15 May, 2019 =
+
+- Fix: Responsive scrollbar at mobile device
+- Fix: General styling
+- Changed: Font family for headings
+- Added: UGAAM plugin recommedation
+
+
+= Version 1.0.9 - 15 May, 2019 =
+
+- Added italian language .mo & .po file
+
+
+= Version 1.0.8 - 28 April, 2019 =
+
+- Google plus social link removed
+- Thumbnails added for widget description
+- Overlay option added for header two in customizer
+- Added RTL Language Support
+
+
+= Version 1.0.7 - 7 April, 2019 =
+
+- Tweak: Category meta spacing
+- Changed: Search widget placeholder text
+- Fix: Comment box checkbox aligment
+
+
+= Version 1.0.6 - 28 March, 2019 =
+
+- Fix: header search form z-index
+- Fix: Main menu home icon hover color
+
+
+= Version 1.0.5 - 21 March, 2019 =
+
+- Fix: editor styles
+- Fix: editor spacing
+- Added: Gutenberg support [ Except Full & wide block ]
+- Added: Hover colour for Menu items
+- Changed: Upsell button text & link
+
+
+= Version 1.0.4 - 19 March, 2019 =
+
+- Upsell added
+- Theme support, html5, for search form removed
+
+
+= Version 1.0.3 - 07 March, 2019 =
+
+- Added missing assets/src/js files
+- Updated langauge pot file
+
+
+= Version 1.0.2 - 07 March, 2019 =
+
+- readme.txt updated
+- screenshot.png has been changed
+- Added customizer option fields
+- Theme fonts changed
+- Minor CSS fixes
+
+= Version 1.0.1 - 10 January, 2019 =
+
+- Post meta options added for widgets.
+- Post meta options added for banner in customizer.
+- Post meta options added for blog, archive and search in customizer.
+- Post meta options added for related posts in customizer.
+
+= Version 1.0.0 - 5 December, 2018 =
+
+- Initial Release 
