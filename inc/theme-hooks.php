@@ -166,8 +166,17 @@ if( ! function_exists( 'cream_magazine_site_identity_action' ) ) :
  		<div class="logo">
  			<?php 
 			if( has_custom_logo() ) { 
-
+                if( ( is_front_page() && ( cream_magazine_get_option( 'cream_magazine_enable_home_content' ) == true || is_page_template( 'template-home.php' ) ) ) || is_home() ) {
+                    ?>
+                    <h1 class="site-logo">
+                    <?php
+                }
 				the_custom_logo(); 
+                if( ( is_front_page() && ( cream_magazine_get_option( 'cream_magazine_enable_home_content' ) == true || is_page_template( 'template-home.php' ) ) ) || is_home() ) {
+                    ?>
+                    </h1>
+                    <?php
+                }
 			} else {
                 if( ( is_front_page() && ( cream_magazine_get_option( 'cream_magazine_enable_home_content' ) == true || is_page_template( 'template-home.php' ) ) ) || is_home() ) {
                     ?>
