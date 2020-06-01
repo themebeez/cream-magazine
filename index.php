@@ -58,25 +58,8 @@ get_header();
 	                                                            $break = 0;
 				                                            	/* Start the Loop */
 																while ( have_posts() ) {
+																	
 																	the_post();
-																	if( $sidebar_position != 'none' ) {
-																		if( $break%2 == 0 && $break > 0 ) {
-																			?>
-																			<div class="row clearfix visible-sm visible-md visible-lg"></div>
-																			<?php
-																		}
-																	} else {
-																		if( $break%3 == 0 && $break > 0 ) {
-																			?>
-																			<div class="row clearfix visible-md visible-lg"></div>
-																			<?php
-																		}
-																		if( $break%2 == 0 && $break > 0 ) {
-																			?>
-																			<div class="row clearfix visible-sm"></div>
-																			<?php
-																		}
-																	}
 
 																	/*
 																	 * Include the Post-Type-specific template for the content.
