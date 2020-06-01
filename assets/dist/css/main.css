@@ -9905,9 +9905,7 @@ body.single .the_content .page-links .post-page-numbers.current {
 .wp-caption-text {
   text-align: center; }
 
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
+/* Comments */
 .comment-content a {
   word-wrap: break-word; }
 
