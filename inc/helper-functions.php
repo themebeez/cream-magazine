@@ -17,7 +17,7 @@ if ( ! function_exists( 'cream_magazine_get_option' ) ) {
 	 */
 	function cream_magazine_get_option( $key ) {
 
-	       if ( empty( $key ) ) {
+	    if ( empty( $key ) ) {
 			return;
 		}
 
@@ -192,7 +192,7 @@ if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
         $defaults['cream_magazine_disable_link_focus_outline'] = false;
         $defaults['cream_magazine_disable_link_decoration_on_hover'] = true;
 
-        if( class_exists( 'Woocommerce' ) ) {
+        if( class_exists( 'WooCommerce' ) ) {
 
             $defaults['cream_magazine_select_woocommerce_sidebar_position'] = 'right';
         }  
@@ -379,13 +379,15 @@ endif;
 
 
 /**
- * Function To Get Woocommerce Sidebar
+ * Function To Get WooCommerce Sidebar
  */
 if( ! function_exists( 'cream_magazine_woocommerce_sidebar' ) ) {
 
     function cream_magazine_woocommerce_sidebar() {
 
-        if( ! is_active_sidebar( 'woocommerce-sidebar' ) ) {
+        $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_woocommerce_sidebar_position' );
+
+        if( ! is_active_sidebar( 'woocommerce-sidebar' ) || $sidebar_position == 'none' ) {
 
             return;
         }

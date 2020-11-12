@@ -125,7 +125,7 @@ class Cream_Magazine_Widget_Init {
 			'after_title'   => '</h2></div>',
 		) );
 
-		if( class_exists( 'Woocommerce' ) ) {
+		if( class_exists( 'WooCommerce' ) ) {
 			register_sidebar( array(
 				'name'          => esc_html__( 'Woocommerce Sidebar', 'cream-magazine' ),
 				'id'            => 'woocommerce-sidebar',

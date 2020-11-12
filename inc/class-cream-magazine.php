@@ -24,7 +24,6 @@ class Cream_Magazine {
 		$this->post_meta_init();
 		$this->widget_init();
 		$this->woocommerce_init();
-		$this->admin_notice();
 	}
 
 	/**
@@ -297,9 +296,12 @@ class Cream_Magazine {
 	/**
 	 * Enqueue scripts and styles for backend
 	 */
-	public function enqueue_admin_scripts() {
+	public function enqueue_admin_scripts( $hook ) {
 
-		wp_enqueue_style( 'cream-magazine-admin-styles', get_template_directory_uri() . '/admin/css/admin-styles.css' );
+		if ( 'widgets.php' == $hook ) {
+
+	        wp_enqueue_style( 'cream-magazine-admin-styles', get_template_directory_uri() . '/admin/css/admin-styles.css' );
+	    }		
 	}
 
 	/**
@@ -459,9 +461,9 @@ class Cream_Magazine {
 	 */
 	public function woocommerce_init() {
 
-		if( class_exists( 'Woocommerce' ) ) {
+		if( class_exists( 'WooCommerce' ) ) {
 
-			$cream_magazine_woocommerce = new Cream_Magazine_Woocommerce();
+			$cream_magazine_woocommerce = new Cream_Magazine_WooCommerce();
 		}
 	}
 
@@ -475,30 +477,5 @@ class Cream_Magazine {
 		$form = '<form role="search" class="cm-search-form" method="get" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Type Here', 'cream-magazine' ) . '" value"' . get_search_query() . '" ><button type="submit" class="cm-submit-btn"><i class="feather icon-search"></i></button></form>';
 
         return $form;
-	}
-
-
-	/**
-	 * Admin Notice
-	 *
-	 * @since 2.0.2
-	 */
-	public function admin_notice() {
-
-		$theme_notice = new \WPTRT\AdminNotices\Notices();
-
-		// Add a notice.
-		$notice_content = sprintf( 
-			/* translators: 1: link */
-			__( 'Are you having problem with the recent theme update? For the solution, please have a look at our support forum post. %1$s', 'cream-magazine' ), '<a href="https://themebeez.com/support-forum/news-announcements/cream-magazine-version-2-update/">' . __( 'Click Here', 'cream-magazine' ) . '</a>'
-		);
-
-		$theme_notice->add( 'cream-magazine-theme-notice', 
-			'', 
-			$notice_content, 
-			[ 'type' => 'warning' ]
-		);
-
-		$theme_notice->boot();
 	}
 }

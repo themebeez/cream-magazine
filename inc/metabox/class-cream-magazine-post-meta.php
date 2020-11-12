@@ -68,11 +68,11 @@ if( ! class_exists( 'Cream_Magazine_Post_Meta' ) ) {
 		    <table width="100%" border="0" class="options" cellspacing="5" cellpadding="5">
 		        <tr>
 		        	<td>
-		        		<select class="widefat" name="sidebar_position" id="sidebar_position">
+		        		<select class="" name="sidebar_position" id="sidebar_position">
 		        			<?php
 		        			foreach( $sidebar_positions as $key => $option ) {
 		        				?>
-		        				<option value="<?php echo esc_attr( $key ); ?>" <?php if( $sidebar == $key ) { echo esc_attr__( 'selected', 'cream-magazine' ); } ?>><?php echo esc_html( $option ); ?></option>
+		        				<option value="<?php echo esc_attr( $key ); ?>" <?php selected( $sidebar, $key ); ?>><?php echo esc_html( $option ); ?></option>
 		        				<?php
 		        			}
 		        			?>
