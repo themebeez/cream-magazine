@@ -463,6 +463,11 @@ if( ! function_exists( 'cream_magazine_front_page_middle_area_class' ) ) {
 
                 $container_class = 'cm-col-lg-8 cm-col-12';
             }
+
+            if( $sidebar_position == 'left' ) {
+
+                $container_class .= ' order-2';
+            }
         } else {
 
             $container_class = 'cm-col-lg-12 cm-col-12';
