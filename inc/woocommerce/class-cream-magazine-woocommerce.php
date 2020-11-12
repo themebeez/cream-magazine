@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Cream Magazine Woocommerce Class
+ * Cream Magazine WooCommerce Class
  */
-class Cream_Magazine_Woocommerce {
+class Cream_Magazine_WooCommerce {
 
 	/**
 	 * Setup class.

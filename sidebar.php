@@ -7,7 +7,27 @@
  * @package Cream_Magazine
  */
 
-$cream_magazine_sidebar_position = cream_magazine_sidebar_position();
+$cream_magazine_sidebar_position = '';
+
+if ( is_front_page() ) {
+
+	if ( is_page_template( 'template-home.php' )  ) {
+
+		$cream_magazine_sidebar_position = cream_magazine_get_option( 'cream_magazine_homepage_sidebar' );
+	} else {
+
+		if ( cream_magazine_get_option( 'cream_magazine_enable_home_content' ) == true ) {
+
+			$cream_magazine_sidebar_position = cream_magazine_get_option( 'cream_magazine_homepage_sidebar' );
+		} else {
+
+			$cream_magazine_sidebar_position = cream_magazine_sidebar_position();
+		}
+	}
+} else {
+
+	$cream_magazine_sidebar_position = cream_magazine_sidebar_position();
+}
 
 if ( ! is_active_sidebar( 'sidebar' ) || $cream_magazine_sidebar_position == 'none'  ) {
 	return;

@@ -118,8 +118,8 @@ if ( ! function_exists( 'cream_magazine_woocommerce_wrapper_before' ) ) {
 							*/
 							do_action( 'cream_magazine_breadcrumb' );
 		                    ?>
-		                    <div class="row">
-		                    	<div class="woocommerce-container clearfix">
+		                    <div class="woocommerce-container clearfix">
+		                    	<div class="row">		                    	
 			                    	<?php
 			                    	$sidebar_position = cream_magazine_sidebar_position(); 
 

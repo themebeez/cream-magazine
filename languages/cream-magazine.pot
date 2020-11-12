@@ -42,61 +42,52 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: inc/class-cream-magazine.php:73
+#: inc/class-cream-magazine.php:72
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/class-cream-magazine.php:74
+#: inc/class-cream-magazine.php:73
 msgid "Top Header Menu"
 msgstr ""
 
-#: inc/class-cream-magazine.php:75
+#: inc/class-cream-magazine.php:74
 msgid "Bottom Footer Menu"
 msgstr ""
 
-#: inc/class-cream-magazine.php:145
+#: inc/class-cream-magazine.php:144
 msgid "Small"
 msgstr ""
 
-#: inc/class-cream-magazine.php:146
+#: inc/class-cream-magazine.php:145
 msgid "S"
 msgstr ""
 
-#: inc/class-cream-magazine.php:151
+#: inc/class-cream-magazine.php:150
 msgid "Medium"
 msgstr ""
 
-#: inc/class-cream-magazine.php:152
+#: inc/class-cream-magazine.php:151
 msgid "M"
 msgstr ""
 
-#: inc/class-cream-magazine.php:157
+#: inc/class-cream-magazine.php:156
 msgid "Large"
 msgstr ""
 
-#: inc/class-cream-magazine.php:158
+#: inc/class-cream-magazine.php:157
 msgid "L"
 msgstr ""
 
-#: inc/class-cream-magazine.php:163
+#: inc/class-cream-magazine.php:162
 msgid "Larger"
 msgstr ""
 
-#: inc/class-cream-magazine.php:164
+#: inc/class-cream-magazine.php:163
 msgid "XL"
 msgstr ""
 
-#: inc/class-cream-magazine.php:475
+#: inc/class-cream-magazine.php:477
 msgid "Type Here"
-msgstr ""
-
-#. translators: 1: link
-#: inc/class-cream-magazine.php:493
-msgid "Are you having problem with the recent theme update? For the solution, please have a look at our support forum post. %1$s"
-msgstr ""
-
-#: inc/class-cream-magazine.php:493
-msgid "Click Here"
 msgstr ""
 
 #: inc/customizer/class-cream-magazine-customize.php:92
@@ -597,10 +588,6 @@ msgstr ""
 
 #: inc/metabox/class-cream-magazine-post-meta.php:63
 msgid "None"
-msgstr ""
-
-#: inc/metabox/class-cream-magazine-post-meta.php:75
-msgid "selected"
 msgstr ""
 
 #: inc/theme-hooks.php:63
