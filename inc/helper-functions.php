@@ -111,6 +111,7 @@ if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
         $defaults['cream_magazine_enable_post_single_tags_meta'] = true;
         $defaults['cream_magazine_enable_post_single_author_meta'] = true;
         $defaults['cream_magazine_enable_post_single_date_meta'] = true;
+        $defaults['cream_magazine_enable_post_single_categories_meta'] = true;
         $defaults['cream_magazine_enable_post_single_featured_image'] = true;
         $defaults['cream_magazine_enable_post_single_featured_image_caption'] = false;
         $defaults['cream_magazine_enable_post_single_cmnts_no_meta'] = true;

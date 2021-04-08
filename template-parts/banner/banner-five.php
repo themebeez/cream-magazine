@@ -39,7 +39,7 @@ if( $banner_query->have_posts() ) {
                                                     <div class="post_title">
                                                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                                     </div><!-- .post_title -->
-                                                    <?php cream_magazine_post_meta( $show_date_meta, $show_author_meta, $show_cmnt_no_meta ); ?>
+                                                    <?php cream_magazine_post_meta( $show_date_meta, $show_author_meta, $show_cmnt_no_meta, false ); ?>
                                                 </div><!-- .post-holder -->
                                             </div>
                                             <!-- // post_thumb -->
@@ -83,7 +83,7 @@ if( $banner_query->have_posts() ) {
                                                         <div class="post_title">
                                                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                                         </div><!-- .post_title -->
-                                                        <?php cream_magazine_post_meta( $show_date_meta, $show_author_meta, $show_cmnt_no_meta ); ?>
+                                                        <?php cream_magazine_post_meta( $show_date_meta, $show_author_meta, $show_cmnt_no_meta, false ); ?>
                                                     </div><!-- .post-holder -->
                                                 </div><!-- .post_thumb -->
                                             </div><!-- .card -->

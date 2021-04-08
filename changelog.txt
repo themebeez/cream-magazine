@@ -1,3 +1,9 @@
+= Version 2.0.7 - 8 April, 2021 =
+
+- Fix: Mobile menu issue when expanded
+- Tweak: Post category or categories are listed in post single
+- Fix: Other minor fixes 
+
 = Version 2.0.6 - 12 Nov, 2020 =
 
 - Fix: Sidebar issues

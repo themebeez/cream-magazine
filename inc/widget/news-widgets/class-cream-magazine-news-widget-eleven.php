@@ -104,7 +104,7 @@ class Cream_Magazine_News_Widget_Eleven extends WP_Widget {
                                         <div class="post_title">
                                             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                         </div>
-                                        <?php cream_magazine_post_meta( $show_date_meta, $show_author_meta, $show_cmnt_no_meta ); ?>
+                                        <?php cream_magazine_post_meta( $show_date_meta, $show_author_meta, $show_cmnt_no_meta, false ); ?>
                                     </div><!-- .card_contents -->
                                 </div><!-- .card -->
                             </div><!-- .item -->
