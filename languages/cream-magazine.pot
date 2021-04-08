@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Cream Magazine
+# Copyright (C) 2021 Cream Magazine
 # This file is distributed under the same license as the Cream Magazine package.
 msgid ""
 msgstr ""
@@ -142,23 +142,23 @@ msgstr ""
 msgid "Archive Page"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-archive-page-options.php:63, inc/customizer/options/class-cream-magazine-banner-options.php:209, inc/customizer/options/class-cream-magazine-blog-page-options.php:64, inc/customizer/options/class-cream-magazine-post-meta-options.php:63, inc/customizer/options/class-cream-magazine-post-single-options.php:63, inc/customizer/options/class-cream-magazine-post-single-options.php:330, inc/customizer/options/class-cream-magazine-search-page-options.php:63
+#: inc/customizer/options/class-cream-magazine-archive-page-options.php:63, inc/customizer/options/class-cream-magazine-banner-options.php:209, inc/customizer/options/class-cream-magazine-blog-page-options.php:64, inc/customizer/options/class-cream-magazine-post-meta-options.php:63, inc/customizer/options/class-cream-magazine-post-single-options.php:63, inc/customizer/options/class-cream-magazine-post-single-options.php:349, inc/customizer/options/class-cream-magazine-search-page-options.php:63
 msgid "Enable Post Author Meta"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-archive-page-options.php:83, inc/customizer/options/class-cream-magazine-banner-options.php:230, inc/customizer/options/class-cream-magazine-blog-page-options.php:84, inc/customizer/options/class-cream-magazine-post-meta-options.php:83, inc/customizer/options/class-cream-magazine-post-single-options.php:83, inc/customizer/options/class-cream-magazine-post-single-options.php:351, inc/customizer/options/class-cream-magazine-search-page-options.php:83
+#: inc/customizer/options/class-cream-magazine-archive-page-options.php:83, inc/customizer/options/class-cream-magazine-banner-options.php:230, inc/customizer/options/class-cream-magazine-blog-page-options.php:84, inc/customizer/options/class-cream-magazine-post-meta-options.php:83, inc/customizer/options/class-cream-magazine-post-single-options.php:83, inc/customizer/options/class-cream-magazine-post-single-options.php:370, inc/customizer/options/class-cream-magazine-search-page-options.php:83
 msgid "Enable Posted Date Meta"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-archive-page-options.php:103, inc/customizer/options/class-cream-magazine-banner-options.php:251, inc/customizer/options/class-cream-magazine-blog-page-options.php:104, inc/customizer/options/class-cream-magazine-post-meta-options.php:103, inc/customizer/options/class-cream-magazine-post-single-options.php:103, inc/customizer/options/class-cream-magazine-post-single-options.php:372, inc/customizer/options/class-cream-magazine-search-page-options.php:103
+#: inc/customizer/options/class-cream-magazine-archive-page-options.php:103, inc/customizer/options/class-cream-magazine-banner-options.php:251, inc/customizer/options/class-cream-magazine-blog-page-options.php:104, inc/customizer/options/class-cream-magazine-post-meta-options.php:103, inc/customizer/options/class-cream-magazine-post-single-options.php:103, inc/customizer/options/class-cream-magazine-post-single-options.php:391, inc/customizer/options/class-cream-magazine-search-page-options.php:103
 msgid "Enable Post Comments Number Meta"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-archive-page-options.php:123, inc/customizer/options/class-cream-magazine-banner-options.php:272, inc/customizer/options/class-cream-magazine-blog-page-options.php:124, inc/customizer/options/class-cream-magazine-post-meta-options.php:123, inc/customizer/options/class-cream-magazine-post-single-options.php:393, inc/customizer/options/class-cream-magazine-search-page-options.php:123
+#: inc/customizer/options/class-cream-magazine-archive-page-options.php:123, inc/customizer/options/class-cream-magazine-banner-options.php:272, inc/customizer/options/class-cream-magazine-blog-page-options.php:124, inc/customizer/options/class-cream-magazine-post-meta-options.php:123, inc/customizer/options/class-cream-magazine-post-single-options.php:122, inc/customizer/options/class-cream-magazine-post-single-options.php:412, inc/customizer/options/class-cream-magazine-search-page-options.php:123
 msgid "Enable Post Categories Meta"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-archive-page-options.php:166, inc/customizer/options/class-cream-magazine-blog-page-options.php:167, inc/customizer/options/class-cream-magazine-page-single-options.php:144, inc/customizer/options/class-cream-magazine-post-single-options.php:458, inc/customizer/options/class-cream-magazine-search-page-options.php:208
+#: inc/customizer/options/class-cream-magazine-archive-page-options.php:166, inc/customizer/options/class-cream-magazine-blog-page-options.php:167, inc/customizer/options/class-cream-magazine-page-single-options.php:144, inc/customizer/options/class-cream-magazine-post-single-options.php:477, inc/customizer/options/class-cream-magazine-search-page-options.php:208
 msgid "Select Sidebar Position"
 msgstr ""
 
@@ -414,15 +414,15 @@ msgstr ""
 msgid "Single Page"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-page-single-options.php:63, inc/customizer/options/class-cream-magazine-post-single-options.php:164
+#: inc/customizer/options/class-cream-magazine-page-single-options.php:63, inc/customizer/options/class-cream-magazine-post-single-options.php:183
 msgid "Enable Featured Image"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-page-single-options.php:82, inc/customizer/options/class-cream-magazine-post-single-options.php:183
+#: inc/customizer/options/class-cream-magazine-page-single-options.php:82, inc/customizer/options/class-cream-magazine-post-single-options.php:202
 msgid "Show Featured Image&rsquo;s Caption"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-page-single-options.php:122, inc/customizer/options/class-cream-magazine-post-single-options.php:436
+#: inc/customizer/options/class-cream-magazine-page-single-options.php:122, inc/customizer/options/class-cream-magazine-post-single-options.php:455
 msgid "Enable Common Sidebar Position"
 msgstr ""
 
@@ -430,7 +430,7 @@ msgstr ""
 msgid "Global Post Meta"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-post-meta-options.php:143, inc/customizer/options/class-cream-magazine-post-single-options.php:123
+#: inc/customizer/options/class-cream-magazine-post-meta-options.php:143, inc/customizer/options/class-cream-magazine-post-single-options.php:142
 msgid "Enable Post Tags Meta"
 msgstr ""
 
@@ -438,19 +438,19 @@ msgstr ""
 msgid "Single Post"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-post-single-options.php:224
+#: inc/customizer/options/class-cream-magazine-post-single-options.php:243
 msgid "Enable Author Section"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-post-single-options.php:266
+#: inc/customizer/options/class-cream-magazine-post-single-options.php:285
 msgid "Enable Related Posts Section"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-post-single-options.php:287
+#: inc/customizer/options/class-cream-magazine-post-single-options.php:306
 msgid "Related Posts Section Title"
 msgstr ""
 
-#: inc/customizer/options/class-cream-magazine-post-single-options.php:308
+#: inc/customizer/options/class-cream-magazine-post-single-options.php:327
 msgid "Related Section Posts Number"
 msgstr ""
 
@@ -893,7 +893,7 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:29, template-parts/content-single.php:32
+#: template-parts/content-page.php:29, template-parts/content-single.php:33
 msgid "Pages:"
 msgstr ""
 

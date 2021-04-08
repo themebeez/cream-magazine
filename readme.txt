@@ -3,8 +3,8 @@
 Contributors: themebeez
 Requires at least: 5.0.0
 Requires PHP: 5.6
-Tested up to: 5.5.3
-Stable tag: 2.0.6
+Tested up to: 5.7
+Stable tag: 2.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, news, right-sidebar, theme-options, footer-widgets, left-sidebar, grid-layout, rtl-language-support
@@ -17,7 +17,7 @@ Cream Magazine is a news & magazine WordPress theme with a clean & modern design
 
 == License ==
 
-Cream Magazine WordPress Theme, Copyright (C) 2020, themebeez.
+Cream Magazine WordPress Theme, Copyright (C) 2021, themebeez.
 Cream Magazine is distributed under the terms of the GNU GPL
 
 
@@ -107,6 +107,12 @@ Cream Magazine includes support for Contact Form 7 and Woocommerce.
 
 
 == Changelog ==
+
+= Version 2.0.7 - 8 April, 2021 =
+
+- Fix: Mobile menu issue when expanded
+- Tweak: Post category or categories are listed in post single
+- Fix: Other minor fixes 
 
 = Version 2.0.6 - 12 Nov, 2020 =
 

@@ -97,7 +97,7 @@ if( ! function_exists( 'cream_magazine_banner_query' ) ) {
  */
 if( ! function_exists( 'cream_magazine_post_meta' ) ) {
 
-	function cream_magazine_post_meta( $show_date, $show_author, $show_comments_no ) {
+	function cream_magazine_post_meta( $show_date, $show_author, $show_comments_no, $show_categories ) {
 
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
@@ -115,6 +115,8 @@ if( ! function_exists( 'cream_magazine_post_meta' ) ) {
 		$enable_author = cream_magazine_get_option( 'cream_magazine_enable_author_meta' );
 
 		$enable_comments_no = cream_magazine_get_option( 'cream_magazine_enable_comment_meta' );
+
+		$enable_categories = cream_magazine_get_option( 'cream_magazine_enable_category_meta' );
 
 		if( get_post_type() == 'post' ) {
 			?>
@@ -152,6 +154,21 @@ if( ! function_exists( 'cream_magazine_post_meta' ) ) {
 					        }
 				        }
 				    }
+
+				    if ( $enable_categories == true ) {
+					    if( $show_categories == true ) {
+							/* translators: used between list items, there is a space after the comma */
+							$categories_list = get_the_category_list( ', ' );
+
+							if ( $categories_list ) {
+								?>
+								<li class="entry_cats">
+									<?php echo wp_kses_post( $categories_list ); // WPCS: XSS OK. ?>
+								</li><!-- .entry_cats -->
+								<?php
+							}
+						}
+					}
 			        ?>
 		        </ul><!-- .post_meta -->
 		    </div><!-- .meta -->

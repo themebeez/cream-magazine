@@ -106,6 +106,25 @@ if( ! class_exists( 'Cream_Magazine_Post_Single_Customize' ) ) {
 				) 
 			) );
 
+			// Display Post Categories
+
+			$wp_customize->add_setting( 
+				'cream_magazine_enable_post_single_categories_meta', 
+				array(
+					'sanitize_callback'	=> 'wp_validate_boolean',
+					'default'			=> $defaults['cream_magazine_enable_post_single_categories_meta'],
+				) 
+			);
+
+			$wp_customize->add_control( new Cream_Magazine_Toggle_Switch_Control( $wp_customize,
+				'cream_magazine_enable_post_single_categories_meta', 
+				array(
+					'label'				=> esc_html__( 'Enable Post Categories Meta', 'cream-magazine' ),
+					'section'			=> 'cream_magazine_single_post_options',
+					'type'				=> 'checkbox' 
+				) 
+			) );
+
 
 			// Display Post Tag(s)
 

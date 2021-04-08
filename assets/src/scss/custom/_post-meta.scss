@@ -100,6 +100,16 @@ ul.post_meta li.comments a::before {
 	content: '\e891';
 }
 
+ul.post_meta li.entry_cats {
+	color: $auth_date_cmnt_color;
+}
+
+ul.post_meta li.entry_cats::before {
+	font-family: 'feather';
+	font-size: 14px;
+	margin-right: 5px;
+	content: '\e90d';
+}
 
 
 

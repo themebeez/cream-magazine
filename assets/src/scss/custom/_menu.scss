@@ -606,10 +606,20 @@ body.primary-navigation-noscroll-x {
 
 /* Fallback for slow javascript load */
 
+@media(max-width: 991px) {
+    .general-header .sticky-wrapper .primary-navigation.mobile > ul {
+        height: 400px;
+        overflow: auto;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .primary-navigation {
         overflow: hidden;
         display: block;
+    }
+    .general-header .sticky-wrapper .primary-navigation.mobile > ul {
+        height: 300px;
     }
     .primary-navigation ul {
         position: relative;
