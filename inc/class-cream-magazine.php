@@ -166,6 +166,13 @@ class Cream_Magazine {
 				),
 			)
 		);
+
+		/**
+		 * Remove block widget support in WordPress version 5.8 & later 
+		 *
+		 * @link https://make.wordpress.org/core/2021/06/29/block-based-widgets-editor-in-wordpress-5-8/
+		 */
+		remove_theme_support( 'widgets-block-editor' );
 	}
 
 	/**

@@ -86,7 +86,7 @@ msgstr ""
 msgid "XL"
 msgstr ""
 
-#: inc/class-cream-magazine.php:477
+#: inc/class-cream-magazine.php:484
 msgid "Type Here"
 msgstr ""
 
