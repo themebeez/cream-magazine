@@ -342,20 +342,57 @@ if( ! function_exists( 'cream_magazine_breadcrumb_action' ) ) :
 
  	function cream_magazine_breadcrumb_action() {
 
- 		$enable_breadcrumb = cream_magazine_get_option( 'cream_magazine_enable_breadcrumb' ); 
+        if( is_front_page() ) {
 
- 		if( $enable_breadcrumb == true ) {
-			?>
- 			<div class="breadcrumb">
-	            <?php
-	                $breadcrumb_args = array(
-	                    'show_browse' => false,
-	                );
-	                cream_magazine_breadcrumb_trail( $breadcrumb_args );
-	            ?>
-	        </div><!-- .breadcrumb -->
- 			<?php
- 		}  		
+            return;
+        }
+
+        $enable_breadcrumb = cream_magazine_get_option( 'cream_magazine_enable_breadcrumb' ); ; 
+
+        $breadcrumb_class = '';
+
+        if( $enable_breadcrumb == true ) {
+
+            $breadcrumb_source = cream_magazine_get_option( 'cream_magazine_breadcrumb_sources' );
+
+            switch ( $breadcrumb_source ) {
+                case 'yoast' :
+                    $breadcrumb_class .= ' yoast-breadcrumb';
+                    break;
+                case 'rank_math' :
+                    $breadcrumb_class .= ' rank_math-breadcrumb';
+                    break;
+                case 'bcn' :
+                    $breadcrumb_class .= ' navxt-breadcrumb';
+                    break;
+                default :
+                    $breadcrumb_class .= ' default-breadcrumb';
+            }
+            ?>
+            <div class="breadcrumb <?php echo ( $breadcrumb_class ) ? esc_attr( $breadcrumb_class ) : ''; ?>">
+                <?php
+            
+                switch ( $breadcrumb_source ) {
+
+                    case 'yoast' :
+                        yoast_breadcrumb();
+                        break;
+                    case 'rank_math' :
+                        rank_math_the_breadcrumbs();
+                        break;
+                    case 'bcn' :
+                        bcn_display();
+                        break;
+                    default :                   
+                        $breadcrumb_args = array(
+                            'show_browse' => false,
+                        );
+                        cream_magazine_breadcrumb_trail( $breadcrumb_args );
+                }
+                ?>
+            </div>
+            <?php
+        }  		
  	}
 endif;
 add_action( 'cream_magazine_breadcrumb', 'cream_magazine_breadcrumb_action', 10 );

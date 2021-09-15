@@ -395,7 +395,19 @@ if( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 				}
 				<?php
 			}
+
+
+			if ( function_exists( 'rank_math' ) && rank_math()->settings->get( 'general.breadcrumbs' ) ) {
+				?>
+				.rank-math-breadcrumb > p {
+					margin-bottom: 0;
+				}
+				<?php
+			}
 			?>
+			.post-display-grid .card_content .cm-post-excerpt {
+				margin-top: 15px;
+			}
 		</style>
 		<?php
 	}

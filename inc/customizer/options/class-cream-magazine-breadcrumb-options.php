@@ -66,6 +66,51 @@ if( ! class_exists( 'Cream_Magazine_Breadcrumbs_Customize' ) ) {
 					'type'				=> 'checkbox' 
 				) 
 			) );
+
+
+			// Separator 2
+
+			$wp_customize->add_setting(
+				'cream_magazine_breadcrumb_separator_1',
+				array(
+					'sanitize_callback' => 'esc_html',
+					'default' => '',
+				)
+			);
+
+			$wp_customize->add_control(
+				new Cream_Magazine_Separator_Control(
+					$wp_customize,
+					'cream_magazine_breadcrumb_separator_1',
+					array(
+						'section' => 'cream_magazine_breadcrumb_options',
+						'active_callback' => 'cream_magaine_is_breadcrumbs_active',
+					)
+				)
+			);
+
+
+			// Select Breadcrumb Source
+
+			$wp_customize->add_setting( 
+				'cream_magazine_breadcrumb_sources', 
+				array(
+					'sanitize_callback'	=> 'cream_magazine_sanitize_select',
+					'default'			=> $defaults['cream_magazine_breadcrumb_sources'],
+				) 
+			);
+
+			$wp_customize->add_control( 
+				'cream_magazine_breadcrumb_sources', 
+				array(
+					'label'				=> esc_html__( 'Breadcrumb Source', 'cream-magazine' ),
+					'description'		=> sprintf( __( 'You can use theme&rsquo;s default breadcrumb or use any one of the plugin for breadcrumb, %sBreadcrumb NavXT%s or %sYoast SEO%s or %sRank Math%s', 'cream-magazine' ), '<a href="https://wordpress.org/plugins/breadcrumb-navxt/" target="_blank">', '</a>', '<a href="https://wordpress.org/plugins/wordpress-seo/" target="_blank">', '</a>', '<a href="https://wordpress.org/plugins/seo-by-rank-math/" target="_blank">', '</a>' ),
+					'section'			=> 'cream_magazine_breadcrumb_options',
+					'type'				=> 'select', 
+					'choices'			=> cream_magazine_breadcrumb_sources(),
+					'active_callback' => 'cream_magazine_is_breadcrumbs_active',
+				) 
+			);
 		}
 	}
 }
