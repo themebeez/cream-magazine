@@ -92,18 +92,21 @@ if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
         $defaults['cream_magazine_enable_blog_author_meta'] = true;
         $defaults['cream_magazine_enable_blog_date_meta'] = true;
         $defaults['cream_magazine_enable_blog_cmnts_no_meta'] = true;
+        $defaults['cream_magazine_show_blog_post_excerpt'] = false;
     	$defaults['cream_magazine_select_blog_sidebar_position'] = 'right';
 
         $defaults['cream_magazine_enable_archive_categories_meta'] = true;
         $defaults['cream_magazine_enable_archive_author_meta'] = true;
         $defaults['cream_magazine_enable_archive_date_meta'] = true;
         $defaults['cream_magazine_enable_archive_cmnts_no_meta'] = true;
+        $defaults['cream_magazine_show_archive_post_excerpt'] = false;
     	$defaults['cream_magazine_select_archive_sidebar_position'] = 'right';
 
         $defaults['cream_magazine_enable_search_categories_meta'] = true;
         $defaults['cream_magazine_enable_search_author_meta'] = true;
         $defaults['cream_magazine_enable_search_date_meta'] = true;
         $defaults['cream_magazine_enable_search_cmnts_no_meta'] = true;
+        $defaults['cream_magazine_show_search_post_excerpt'] = false;
         $defaults['cream_magazine_show_pages_on_search_results'] = true;
     	$defaults['cream_magazine_select_search_sidebar_position'] = 'right';
         $defaults['cream_magazine_hide_pages_on_search_results'] = false;
@@ -149,6 +152,7 @@ if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
         $defaults['cream_magazine_show_social_links_in_new_tab'] = true;
 
         $defaults['cream_magazine_enable_breadcrumb'] = true;
+        $defaults['cream_magazine_breadcrumb_sources'] = 'default';
         
         $defaults['cream_magazine_enable_sticky_sidebar'] = true;
         $defaults['cream_magazine_show_sidebar_on_mobile_n_tablet'] = true;

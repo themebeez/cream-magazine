@@ -149,6 +149,26 @@ if( ! class_exists( 'Cream_Magazine_Search_Page_Customize' ) ) {
 			);
 
 
+			// Show Post Excerpt
+
+			$wp_customize->add_setting( 
+				'cream_magazine_show_search_post_excerpt', 
+				array(
+					'sanitize_callback'	=> 'wp_validate_boolean',
+					'default'			=> $defaults['cream_magazine_show_search_post_excerpt'],
+				) 
+			);
+
+			$wp_customize->add_control( new Cream_Magazine_Toggle_Switch_Control( $wp_customize,
+				'cream_magazine_show_search_post_excerpt', 
+				array(
+					'label'				=> esc_html__( 'Display Post Excerpt', 'cream-magazine' ),
+					'section'			=> 'cream_magazine_search_page_options',
+					'type'				=> 'checkbox' 
+				) 
+			) );
+
+
 			// Hide Pages In Search Result
 
 			$wp_customize->add_setting( 

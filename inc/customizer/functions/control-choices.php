@@ -91,6 +91,31 @@ if( ! function_exists( 'cream_magazine_sidebar_positions' ) ) {
 }
 
 
+if ( ! function_exists( 'cream_magazine_breadcrumb_sources' ) ) {
+
+	function cream_magazine_breadcrumb_sources() {
+
+		$sources = array(
+			'default' => __( 'Default', 'cream-magazine' ),
+		);
+
+		if ( function_exists( 'yoast_breadcrumb' ) ) {
+			$sources['yoast'] = __( 'Yoast SEO', 'cream-magazine' );
+		}
+
+		if ( function_exists( 'rank_math' ) && rank_math()->settings->get( 'general.breadcrumbs' ) ) {
+			$sources['rank_math'] = __( 'Rank Math', 'cream-magazine' );
+		}
+
+		if ( function_exists( 'bcn_display' ) ) {
+			$sources['bcn'] = __( 'Breadcrumb NavXT', 'cream-magazine' );
+		}
+
+		return apply_filters( 'cream_magazine_breadcrumb_sources', $sources );
+	}
+}
+
+
 if( ! function_exists( 'cream_magazine_google_font_family_choices' ) ) {
 
 	function cream_magazine_google_font_family_choices() {

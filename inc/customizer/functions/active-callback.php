@@ -195,3 +195,20 @@ if( ! function_exists( 'cream_magazine_is_static_home_page_set' ) ) {
 		}
 	}
 }
+
+
+if( ! function_exists( 'cream_magazine_is_breadcrumbs_active' ) ) {
+
+	function cream_magazine_is_breadcrumbs_active( $control ) {
+
+		$enabled = $control->manager->get_setting( 'cream_magazine_enable_breadcrumb' )->value();
+
+		if( $enabled == true ) {
+
+			return true;
+		} else {
+
+			return false;
+		}
+	}
+}
