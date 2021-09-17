@@ -84,7 +84,7 @@ if( ! class_exists( 'Cream_Magazine_Breadcrumbs_Customize' ) ) {
 					'cream_magazine_breadcrumb_separator_1',
 					array(
 						'section' => 'cream_magazine_breadcrumb_options',
-						'active_callback' => 'cream_magaine_is_breadcrumbs_active',
+						'active_callback' => 'cream_magazine_is_breadcrumbs_active',
 					)
 				)
 			);
