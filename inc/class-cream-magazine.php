@@ -421,6 +421,8 @@ class Cream_Magazine {
 		require get_template_directory() . '/third-party/breadcrumbs.php';
 		// Load class for plugin recommendation
 		require get_template_directory() . '/third-party/class-tgm-plugin-activation.php';
+		// Load class for Everest Backup plugin recommendation notice.
+		require get_template_directory() . '/inc/ebwp-notice.php';
 		// Load theme dependecies
 		require get_template_directory() . '/vendor/autoload.php';
 		// Load woocommerce
