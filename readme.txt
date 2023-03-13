@@ -108,7 +108,7 @@ Cream Magazine includes support for Contact Form 7 and Woocommerce.
 
 == Changelog ==
 
-= Version 2.1.1 - 12 March, 2023 =
+= Version 2.1.1 - 13 March, 2023 =
 
 - Added: UDP agent. #89
 
