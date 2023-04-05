@@ -63,7 +63,7 @@ class Cream_Magazine_News_Widget_Three extends WP_Widget {
 		$this->widget_setting_defaults = array(
 			'title'                => '',
 			'post_cat'             => ( 'slug' === $this->key ) ? 'none' : 0,
-			'post_no'              => 4,
+			'post_no'              => 3,
 			'show_categories_meta' => true,
 			'show_author_meta'     => true,
 			'show_date_meta'       => true,

@@ -78,7 +78,7 @@ $show_top_header = cream_magazine_get_option( 'cream_magazine_enable_top_header'
 			<div class="header-search-container">
 				<div class="search-form-entry">
 					<?php get_search_form(); ?>
-				</div><!-- // search-form-entry -->
+				</div><!-- .search-form-entry -->
 			</div><!-- .search-container -->
 		</nav><!-- .main-navigation -->
 	</div><!-- .cm-container -->

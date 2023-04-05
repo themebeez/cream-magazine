@@ -43,7 +43,9 @@ if ( ! function_exists( 'cream_magazine_render_widget_setting_field' ) ) {
 				}
 				$field .= '</select>';
 				break;
-			case 'page':
+			case 'textarea':
+				$field .= '<label id="' . esc_attr( $args['id'] ) . '"><strong>' . $args['label'] . '</strong></label>';
+				$field .= '<textarea type="number" class="widefat" id="' . esc_attr( $args['id'] ) . '" name="' . esc_attr( $args['name'] ) . '">' . esc_attr( $args['value'] ) . '</textarea>';
 				break;
 			default:
 				$field .= '<label id="' . esc_attr( $args['id'] ) . '"><strong>' . $args['label'] . '</strong></label>';
@@ -104,6 +106,9 @@ if ( ! function_exists( 'cream_magazine_sanitize_widget_setting_fields' ) ) {
 					break;
 				case 'text':
 					$instance[ $setting_field_id ] = isset( $new_instance[ $setting_field_id ] ) ? sanitize_text_field( $new_instance[ $setting_field_id ] ) : $widget_setting_defaults[ $setting_field_id ];
+					break;
+				case 'textarea':
+					$instance[ $setting_field_id ] = isset( $new_instance[ $setting_field_id ] ) ? sanitize_textarea_field( $new_instance[ $setting_field_id ] ) : $widget_setting_defaults[ $setting_field_id ];
 					break;
 				case 'url':
 					$instance[ $setting_field_id ] = isset( $new_instance[ $setting_field_id ] ) ? esc_url_raw( $new_instance[ $setting_field_id ] ) : $widget_setting_defaults[ $setting_field_id ];
