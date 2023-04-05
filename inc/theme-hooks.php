@@ -280,7 +280,7 @@ if ( ! function_exists( 'cream_magazine_social_links_action' ) ) {
 				?>
 				<li>
 					<a
-						href="<?php echo esc_url( $twitter_link ); ?>"
+						href="<?php echo esc_url( $instagram_link ); ?>"
 						<?php
 						if ( $show_on_new_tab ) {
 							?>
@@ -297,7 +297,7 @@ if ( ! function_exists( 'cream_magazine_social_links_action' ) ) {
 				?>
 				<li>
 					<a
-						href="<?php echo esc_url( $twitter_link ); ?>"
+						href="<?php echo esc_url( $youtube_link ); ?>"
 						<?php
 						if ( $show_on_new_tab ) {
 							?>
@@ -314,7 +314,7 @@ if ( ! function_exists( 'cream_magazine_social_links_action' ) ) {
 				?>
 				<li>
 					<a
-						href="<?php echo esc_url( $twitter_link ); ?>"
+						href="<?php echo esc_url( $vk_link ); ?>"
 						<?php
 						if ( $show_on_new_tab ) {
 							?>
@@ -331,7 +331,7 @@ if ( ! function_exists( 'cream_magazine_social_links_action' ) ) {
 				?>
 				<li>
 					<a
-						href="<?php echo esc_url( $twitter_link ); ?>"
+						href="<?php echo esc_url( $linkedin_link ); ?>"
 						<?php
 						if ( $show_on_new_tab ) {
 							?>
@@ -348,7 +348,7 @@ if ( ! function_exists( 'cream_magazine_social_links_action' ) ) {
 				?>
 				<li>
 					<a
-						href="<?php echo esc_url( $twitter_link ); ?>"
+						href="<?php echo esc_url( $vimeo_link ); ?>"
 						<?php
 						if ( $show_on_new_tab ) {
 							?>

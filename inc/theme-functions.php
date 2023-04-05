@@ -538,6 +538,8 @@ if ( ! function_exists( 'cream_magazine_excerpt_length' ) ) {
 
 		return $excerpt_length;
 	}
+
+	add_filter( 'excerpt_length', 'cream_magazine_excerpt_length' );
 }
 
 if ( ! function_exists( 'cream_magazine_menu_description' ) ) {
