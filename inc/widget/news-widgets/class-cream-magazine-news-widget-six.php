@@ -117,18 +117,20 @@ class Cream_Magazine_News_Widget_Six extends WP_Widget {
 
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
+		$widget_setting_defaults = $this->widget_setting_defaults;
+
 		$post_args = array(
 			'post_type'           => 'post',
 			'ignore_sticky_posts' => true,
-			'posts_per_page'      => absint( $instance['post_no'] ),
+			'posts_per_page'      => isset( $instance['post_no'] ) ? absint( $instance['post_no'] ) : $widget_setting_defaults['post_no'],
 		);
 
 		if ( 'slug' === $this->key ) {
 			if ( 'none' !== $instance['post_cat'] ) {
-				$post_args['category_name'] = $instance['post_cat'];
+				$post_args['category_name'] = isset( $instance['post_cat'] ) ? $instance['post_cat'] : $widget_setting_defaults['post_cat'];
 			}
 		} else {
-			$post_args['cat'] = absint( $instance['post_cat'] );
+			$post_args['cat'] = isset( $instance['post_cat'] ) ? absint( $instance['post_cat'] ) : $widget_setting_defaults['post_cat'];
 		}
 
 		$post_query = new WP_Query( $post_args );
@@ -165,15 +167,15 @@ class Cream_Magazine_News_Widget_Six extends WP_Widget {
 											?>
 										</div><!-- .post_thumb -->
 										<div class="post-holder">
-											<?php cream_magazine_post_categories_meta( $instance['show_categories_meta'] ); ?>
+											<?php cream_magazine_post_categories_meta( isset( $instance['show_categories_meta'] ) ? $instance['show_categories_meta'] : $widget_setting_defaults['show_categories_meta'] ); ?>
 											<div class="post_title"> 
 												<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 											</div>
 											<?php
 											cream_magazine_post_meta(
-												$instance['show_date_meta'],
-												$instance['show_author_meta'],
-												$instance['show_cmnt_no_meta'],
+												isset( $instance['show_date_meta'] ) ? $instance['show_date_meta'] : $widget_setting_defaults['show_date_meta'],
+												isset( $instance['show_author_meta'] ) ? $instance['show_author_meta'] : $widget_setting_defaults['show_author_meta'],
+												isset( $instance['show_cmnt_no_meta'] ) ? $instance['show_cmnt_no_meta'] : $widget_setting_defaults['show_cmnt_no_meta'],
 												false
 											);
 											?>
@@ -216,9 +218,9 @@ class Cream_Magazine_News_Widget_Six extends WP_Widget {
 													</div>
 													<?php
 													cream_magazine_post_meta(
-														$instance['show_date_meta'],
-														$instance['show_author_meta'],
-														$instance['show_cmnt_no_meta'],
+														isset( $instance['show_date_meta'] ) ? $instance['show_date_meta'] : $widget_setting_defaults['show_date_meta'],
+														isset( $instance['show_author_meta'] ) ? $instance['show_author_meta'] : $widget_setting_defaults['show_author_meta'],
+														isset( $instance['show_cmnt_no_meta'] ) ? $instance['show_cmnt_no_meta'] : $widget_setting_defaults['show_cmnt_no_meta'],
 														false
 													);
 													?>

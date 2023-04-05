@@ -85,6 +85,8 @@ class Cream_Magazine_Author_Widget extends WP_Widget {
 
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
+		$widget_setting_defaults = $this->widget_setting_defaults;
+
 		echo $args['before_widget']; // phpcs:ignore
 
 			$author_page_query_args = array(
@@ -93,19 +95,19 @@ class Cream_Magazine_Author_Widget extends WP_Widget {
 			);
 
 			if ( $instance['author_page'] ) {
-				$author_page_query_args['page_id'] = absint( $instance['author_page'] );
+				$author_page_query_args['page_id'] = isset( $instance['author_page'] ) ? absint( $instance['author_page'] ) : $widget_setting_defaults['author_page'];
 			}
 
 			$author = new WP_Query( $author_page_query_args );
 
-			if ( $author->have_posts() ) :
+			if ( $author->have_posts() ) {
 
 				if ( ! empty( $title ) ) {
 					echo $args['before_title']; // phpcs:ignore
 					echo esc_html( $title );
 					echo $args['after_title']; // phpcs:ignore
 				}
-				while ( $author->have_posts() ) :
+				while ( $author->have_posts() ) {
 					$author->the_post();
 					?>
 					<div class="cm_author_widget">
@@ -133,16 +135,16 @@ class Cream_Magazine_Author_Widget extends WP_Widget {
 						if ( isset( $instance['author_link_title'] ) ) {
 							?>
 							<div class="author-detail-link">
-								<a href="<?php the_permalink(); ?>"><?php echo esc_html( $instance['author_link_title'] ); ?></a>
+								<a href="<?php the_permalink(); ?>"><?php echo isset( $instance['author_link_title'] ) ? esc_html( $instance['author_link_title'] ) : esc_html( $widget_setting_defaults['author_link_title'] ); ?></a>
 							</div>
 							<?php
 						}
 						?>
 					</div><!-- .cm_author_widget -->
 					<?php
-				endwhile;
+				}
 				wp_reset_postdata();
-			endif;
+			}
 		echo $args['after_widget']; // phpcs:ignore
 	}
 
