@@ -63,7 +63,6 @@ if ( ! class_exists( 'Cream_Magazine_Blog_Page_Customize' ) ) {
 				array(
 					'sanitize_callback' => 'wp_validate_boolean',
 					'default'           => $defaults['cream_magazine_enable_blog_author_meta'],
-					'transport'         => 'postMessage',
 				)
 			);
 
