@@ -111,7 +111,7 @@ class Cream_Magazine_Post_Widget extends WP_Widget {
 			'post_type'      => 'post',
 		);
 
-		if ( ! isset( $instance['post_choice'] ) ) {
+		if ( isset( $instance['post_choice'] ) ) {
 
 			if ( 'most_commented' === $instance['post_choice'] ) {
 				$post_query_args['orderby'] = 'comment_count';
