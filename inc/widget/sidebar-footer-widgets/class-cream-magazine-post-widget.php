@@ -102,10 +102,12 @@ class Cream_Magazine_Post_Widget extends WP_Widget {
 
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
+		$widget_setting_defaults = $this->widget_setting_defaults;
+
 		echo $args['before_widget']; // phpcs:ignore
 
 		$post_query_args = array(
-			'posts_per_page' => absint( $instance['post_no'] ),
+			'posts_per_page' => isset( $instance['post_no'] ) ? absint( $instance['post_no'] ) : $widget_setting_defaults['post_no'],
 			'post_type'      => 'post',
 		);
 
@@ -119,7 +121,7 @@ class Cream_Magazine_Post_Widget extends WP_Widget {
 
 		$post_query = new WP_Query( $post_query_args );
 
-		if ( $post_query->have_posts() ) :
+		if ( $post_query->have_posts() ) {
 			echo $args['before_title']; // phpcs:ignore
 			echo esc_html( $title );
 			echo $args['after_title']; // phpcs:ignore
@@ -149,9 +151,9 @@ class Cream_Magazine_Post_Widget extends WP_Widget {
 								</div>
 								<?php
 								cream_magazine_post_meta(
-									$instance['show_date_meta'],
-									$instance['show_author_meta'],
-									$instance['show_cmnt_no_meta'],
+									isset( $instance['show_date_meta'] ) ? $instance['show_date_meta'] : $widget_setting_defaults['show_date_meta'],
+									isset( $instance['show_author_meta'] ) ? $instance['show_author_meta'] : $widget_setting_defaults['show_author_meta'],
+									isset( $instance['show_cmnt_no_meta'] ) ? $instance['show_cmnt_no_meta'] : $widget_setting_defaults['show_cmnt_no_meta'],
 									false
 								);
 								?>
@@ -164,7 +166,7 @@ class Cream_Magazine_Post_Widget extends WP_Widget {
 				?>
 			</div><!-- .cm_relatedpost_widget -->
 			<?php
-		endif;
+		}
 
 		echo $args['after_widget']; // phpcs:ignore
 	}
