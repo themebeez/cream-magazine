@@ -1,19 +1,28 @@
 <?php
+/**
+ * Setup WooCommerce for theme.
+ *
+ * @since 1.0.0
+ *
+ * @package Cream_Magazine
+ */
 
 /**
- * Cream Magazine WooCommerce Class
+ * Class to setup WooCommerce for theme.
+ *
+ * @since 1.0.0
  */
 class Cream_Magazine_WooCommerce {
 
 	/**
-	 * Setup class.
+	 * Setup WooCommerce.
 	 *
 	 * @return  void
 	 */
 	public function __construct() {
-		
+
 		add_action( 'init', array( $this, 'remove_breadcrumbs' ), 10 );
-		add_action( 'after_setup_theme', array( $this, 'setup' ), 10 );		
+		add_action( 'after_setup_theme', array( $this, 'setup' ), 10 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 10 );
 
 		add_filter( 'body_class', array( $this, 'active_body_class' ), 10, 1 );
@@ -42,11 +51,10 @@ class Cream_Magazine_WooCommerce {
 	 *
 	 * @return void
 	 */
-
 	public function enqueue_scripts() {
 
-		$font_path   = WC()->plugin_url() . '/assets/fonts/';
-		
+		$font_path = WC()->plugin_url() . '/assets/fonts/';
+
 		$inline_font = '@font-face {
 				font-family: "star";
 				src: url("' . $font_path . 'star.eot");
@@ -68,7 +76,7 @@ class Cream_Magazine_WooCommerce {
 	 * @return array $classes modified to include 'woocommerce-active' class.
 	 */
 	public function active_body_class( $classes ) {
-		
+
 		$classes[] = 'cm_woocommerce woocommerce-active';
 
 		return $classes;
@@ -84,7 +92,6 @@ class Cream_Magazine_WooCommerce {
 
 		return 12;
 	}
-	
 
 	/**
 	 * Product gallery thumnbail columns.
@@ -95,13 +102,14 @@ class Cream_Magazine_WooCommerce {
 
 		return 4;
 	}
+
 	/**
 	 * Removes default woocommerce breadcrumb.
 	 *
 	 * @return void.
 	 */
-	function remove_breadcrumbs() {
+	public function remove_breadcrumbs() {
 
-	    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+		remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 	}
 }

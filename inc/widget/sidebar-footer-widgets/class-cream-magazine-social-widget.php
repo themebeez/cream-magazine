@@ -1,178 +1,257 @@
 <?php
+/**
+ * Widget class definition for CM: Social Widget.
+ *
+ * @since 1.0.0
+ *
+ * @package Cream_Magazine
+ */
 
+/**
+ * Widget class - Cream_Magazine_Social_Widget.
+ *
+ * @since 1.0.0
+ *
+ * @package Cream_Magazine
+ */
 class Cream_Magazine_Social_Widget extends WP_Widget {
- 
-    function __construct() { 
+	/**
+	 * Widget setting default values.
+	 *
+	 * @since 2.1.2
+	 *
+	 * @var array
+	 */
+	public $widget_setting_defaults = array();
 
-        parent::__construct(
-            'cream-magazine-social-widget',  // Base ID
-            esc_html__( 'CM: Social Widget', 'cream-magazine' ),   // Name
-            array(
-                'classname' => 'social_widget_style_1',
-                'description' => esc_html__( 'Displays links to social sites.', 'cream-magazine' ), 
-            )
-        );
- 
-    }
- 
-    public function widget( $args, $instance ) {
+	/**
+	 * Widget setting fields.
+	 *
+	 * @since 2.1.2
+	 *
+	 * @var array
+	 */
+	public $widget_setting_fields = array();
 
-        $title          = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-        $facebook       = ! empty( $instance['facebook'] ) ? $instance['facebook'] : '';
-        $twitter        = ! empty( $instance['twitter'] ) ? $instance['twitter'] : '';
-        $instagram      = ! empty( $instance['instagram'] ) ? $instance['instagram'] : '';
-        $linkedin       = ! empty( $instance['linkedin'] ) ? $instance['linkedin'] : '';
-        $youtube        = ! empty( $instance['youtube'] ) ? $instance['youtube'] : '';
-        $pinterest      = ! empty( $instance['pinterest'] ) ? $instance['pinterest'] : '';
+	/**
+	 * Define id, name and description of the widget.
+	 *
+	 * @since 1.0.0
+	 */
+	public function __construct() {
 
-		echo $args[ 'before_widget' ];
-        if( !empty( $title ) ) {
-            echo $args['before_title'];
-            echo esc_html( $title );
-            echo $args['after_title'];
-        }
-        ?>
-        <div class="widget-contents">
-            <ul>
-                <?php
-                if( !empty( $facebook ) ) {
-                    ?>
-                    <li class="fb">
-                        <a href="<?php echo esc_url( $facebook ); ?>" target="_blank"><i class="fa fa-facebook-f"></i><span><?php esc_html_e( 'Like', 'cream-magazine' ); ?></span></a>
-                    </li>
-                    <?php
-                }
-                if( !empty( $twitter ) ) {
-                    ?>
-                    <li class="tw">
-                        <a href="<?php echo esc_url( $twitter ); ?>" target="_blank"><i class="fa fa-twitter"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
-                    </li>
-                    <?php
-                }
-                if( !empty( $instagram ) ) {
-                    ?>
-                    <li class="insta">
-                        <a href="<?php echo esc_url( $instagram ); ?>" target="_blank"><i class="fa fa-instagram"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
-                    </li>
-                    <?php
-                }
-                if( !empty( $linkedin ) ) {
-                    ?>
-                    <li class="linken">
-                        <a href="<?php echo esc_url( $linkedin ); ?>" target="_blank"><i class="fa fa-linkedin"></i><span><?php esc_html_e( 'Connect', 'cream-magazine' ); ?></span></a>
-                    </li>
-                    <?php
-                }
-                if( !empty( $pinterest ) ) {
-                    ?>
-                    <li class="pin">
-                        <a href="<?php echo esc_url( $pinterest ); ?>" target="_blank"><i class="fa fa-pinterest"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
-                    </li>
-                    <?php
-                }
-                if( !empty( $youtube ) ) {
-                    ?>
-                    <li class="yt">
-                        <a href="<?php echo esc_url( $youtube ); ?>" target="_blank"><i class="fa fa-youtube-play"></i><span><?php esc_html_e( 'Follow', 'cream-magazine' ); ?></span></a>
-                    </li>
-                    <?php
-                }
-                ?>
-            </ul>
-        </div><!-- .widget-contents -->
-        <?php		
-			
-		echo $args[ 'after_widget' ]; 
- 
-    }
- 
-    public function form( $instance ) {
-        $instance = wp_parse_args( (array) $instance, 
-            array(
-                'title'         => '',
-                'facebook'      => '',
-                'twitter'       => '',
-                'instagram'     => '',
-                'linkedin'      => '',
-                'youtube'       => '',
-                'pinterest'     => '',
-            ) 
-        );
-        ?>
-        <p>
-            <strong><?php esc_html_e( 'At frontend this widget looks like as below:', 'cream-magazine' ); ?></strong> 
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/admin/images/widget-placeholders/cm-social-widget.png' ); ?>" style="max-width: 100%; height: auto;"> 
-        </p>
+		parent::__construct(
+			'cream-magazine-social-widget',
+			esc_html__( 'CM: Social Widget', 'cream-magazine' ),
+			array(
+				'classname'   => 'social_widget_style_1',
+				'description' => esc_html__( 'Displays links to social sites.', 'cream-magazine' ),
+			)
+		);
 
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
-                <strong><?php esc_html_e( 'Title: ', 'cream-magazine' ); ?></strong>
-            </label>
-            <input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>">
-        </p>
+		$this->widget_setting_defaults = array(
+			'title'           => '',
+			'facebook_title'  => esc_html__( 'Like', 'cream-magazine' ),
+			'facebook'        => '',
+			'twitter_title'   => esc_html__( 'Follow', 'cream-magazine' ),
+			'twitter'         => '',
+			'instagram_title' => esc_html__( 'Follow', 'cream-magazine' ),
+			'instagram'       => '',
+			'linkedin_title'  => esc_html__( 'Connect', 'cream-magazine' ),
+			'linkedin'        => '',
+			'youtube_title'   => esc_html__( 'Follow', 'cream-magazine' ),
+			'youtube'         => '',
+			'pinterest_title' => esc_html__( 'Follow', 'cream-magazine' ),
+			'pinterest'       => '',
+		);
 
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'facebook' ) ); ?>">
-                <strong><?php esc_html_e( 'Facebook Link:', 'cream-magazine' ); ?></strong>
-            </label>
-            <input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'facebook' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'facebook' ) ); ?>" value="<?php echo esc_attr( $instance['facebook'] ); ?>">
-        </p>
+		$this->widget_setting_fields = array(
+			'title'           => array(
+				'type'  => 'text',
+				'label' => esc_html__( 'Title', 'cream_magazine' ),
+			),
+			'facebook_title'  => array(
+				'type'  => 'text',
+				'label' => esc_html__( 'Facebook Link Label', 'cream_magazine' ),
+			),
+			'facebook'        => array(
+				'type'  => 'url',
+				'label' => esc_html__( 'Facebook Link', 'cream_magazine' ),
+			),
+			'twitter_title'   => array(
+				'type'  => 'text',
+				'label' => esc_html__( 'Twitter Link Label', 'cream_magazine' ),
+			),
+			'twitter'         => array(
+				'type'  => 'url',
+				'label' => esc_html__( 'Twitter Link', 'cream_magazine' ),
+			),
+			'instagram_title' => array(
+				'type'  => 'text',
+				'label' => esc_html__( 'Instagram Link Label', 'cream_magazine' ),
+			),
+			'instagram'       => array(
+				'type'  => 'url',
+				'label' => esc_html__( 'Instagram Link', 'cream_magazine' ),
+			),
+			'linkedin_title'  => array(
+				'type'  => 'text',
+				'label' => esc_html__( 'LinkedIn Link Label', 'cream_magazine' ),
+			),
+			'linkedin'        => array(
+				'type'  => 'url',
+				'label' => esc_html__( 'LinkedIn Link', 'cream_magazine' ),
+			),
+			'youtube_title'   => array(
+				'type'  => 'text',
+				'label' => esc_html__( 'YouTube Link Label', 'cream_magazine' ),
+			),
+			'youtube'         => array(
+				'type'  => 'url',
+				'label' => esc_html__( 'YouTube Link', 'cream_magazine' ),
+			),
+			'pinterest_title' => array(
+				'type'  => 'text',
+				'label' => esc_html__( 'Pinterest Link Label', 'cream_magazine' ),
+			),
+			'pinterest'       => array(
+				'type'  => 'url',
+				'label' => esc_html__( 'Pinterest Link', 'cream_magazine' ),
+			),
+		);
+	}
 
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>">
-                <strong><?php esc_html_e( 'Twitter Link:', 'cream-magazine' ); ?></strong>
-            </label>
-            <input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'twitter' ) ); ?>" value="<?php echo esc_attr( $instance['twitter'] ); ?>">
-        </p> 
+	/**
+	 * Renders widget at the frontend.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $args Provides the HTML you can use to display the widget title class and widget content class.
+	 * @param array $instance The settings for the instance of the widget..
+	 */
+	public function widget( $args, $instance ) {
 
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'instagram' ) ); ?>">
-                <strong><?php esc_html_e( 'Instagram Link:', 'cream-magazine' ); ?></strong>
-            </label>
-            <input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'instagram' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'instagram' ) ); ?>" value="<?php echo esc_attr( $instance['instagram'] ); ?>">
-        </p> 
+		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'linkedin' ) ); ?>">
-                <strong><?php esc_html_e( 'linkedin Link:', 'cream-magazine' ); ?></strong>
-            </label>
-            <input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'linkedin' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'linkedin' ) ); ?>" value="<?php echo esc_attr( $instance['linkedin'] ); ?>">
-        </p>
+		$widget_setting_defaults = $this->widget_setting_defaults;
 
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'youtube' ) ); ?>">
-                <strong><?php esc_html_e( 'Youtube Link:', 'cream-magazine' ); ?></strong>
-            </label>
-            <input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'youtube' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'youtube' ) ); ?>" value="<?php echo esc_attr( $instance['youtube'] ); ?>">
-        </p>
+		echo $args['before_widget']; // phpcs:ignore
 
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'pinterest' ) ); ?>">
-                <strong><?php esc_html_e( 'Pinterest Link:', 'cream-magazine' ); ?></strong>
-            </label>
-            <input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'pinterest' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'pinterest' ) ); ?>" value="<?php echo esc_attr( $instance['pinterest'] ); ?>">
-        </p>          
+		if ( ! empty( $title ) ) {
+			echo $args['before_title']; // phpcs:ignore
+			echo esc_html( $title );
+			echo $args['after_title']; // phpcs:ignore
+		}
+		?>
+		<div class="widget-contents">
+			<ul>
+				<?php
+				if ( isset( $instance['facebook'] ) ) {
+					?>
+					<li class="fb">
+						<a href="<?php echo esc_url( $instance['facebook'] ); ?>" target="_blank">
+							<i class="fa fa-facebook-f"></i><span><?php echo isset( $instance['facebook_title'] ) ? esc_html( $instance['facebook_title'] ) : esc_html( $widget_setting_defaults['facebook_title'] ); ?></span>
+						</a>
+					</li>
+					<?php
+				}
+				if ( isset( $instance['twitter'] ) ) {
+					?>
+					<li class="tw">
+						<a href="<?php echo esc_url( $instance['twitter'] ); ?>" target="_blank">
+							<i class="fa fa-twitter"></i><span><?php echo isset( $instance['twitter_title'] ) ? esc_html( $instance['twitter_title'] ) : esc_html( $widget_setting_defaults['twitter_title'] ); ?></span>
+						</a>
+					</li>
+					<?php
+				}
+				if ( isset( $instance['instagram'] ) ) {
+					?>
+					<li class="insta">
+						<a href="<?php echo esc_url( $instance['instagram'] ); ?>" target="_blank">
+							<i class="fa fa-instagram"></i><span><?php echo isset( $instance['instagram_title'] ) ? esc_html( $instance['instagram_title'] ) : esc_html( $widget_setting_defaults['instagram_title'] ); ?></span>
+						</a>
+					</li>
+					<?php
+				}
+				if ( isset( $instance['linkedin'] ) ) {
+					?>
+					<li class="linken">
+						<a href="<?php echo esc_url( $instance['linkedin'] ); ?>" target="_blank">
+							<i class="fa fa-linkedin"></i><span><?php echo isset( $instance['linkedin_title'] ) ? esc_html( $instance['linkedin_title'] ) : esc_html( $widget_setting_defaults['linkedin_title'] ); ?></span>
+						</a>
+					</li>
+					<?php
+				}
+				if ( isset( $instance['pinterest'] ) ) {
+					?>
+					<li class="pin">
+						<a href="<?php echo esc_url( $instance['pinterest'] ); ?>" target="_blank">
+							<i class="fa fa-pinterest"></i><span><?php echo isset( $instance['pinterest_title'] ) ? esc_html( $instance['pinterest_title'] ) : esc_html( $widget_setting_defaults['pinterest_title'] ); ?></span>
+						</a>
+					</li>
+					<?php
+				}
+				if ( isset( $instance['youtube'] ) ) {
+					?>
+					<li class="yt">
+						<a href="<?php echo esc_url( $instance['youtube'] ); ?>" target="_blank">
+							<i class="fa fa-youtube-play"></i><span><?php echo isset( $instance['youtube_title'] ) ? esc_html( $instance['youtube_title'] ) : esc_html( $widget_setting_defaults['youtube_title'] ); ?></span>
+						</a>
+					</li>
+					<?php
+				}
+				?>
+			</ul>
+		</div><!-- .widget-contents -->
 		<?php
-    }
- 
-    public function update( $new_instance, $old_instance ) {
- 
-        $instance                   = $old_instance;
 
-        $instance[ 'title' ]        = isset( $new_instance[ 'title' ] ) ? sanitize_text_field( $new_instance[ 'title' ] ) : '';
+		echo $args['after_widget']; // phpcs:ignore
 
-        $instance[ 'facebook' ]     = isset( $new_instance[ 'facebook' ] ) ? esc_url_raw( $new_instance[ 'facebook' ] ) : '';
+	}
 
-        $instance[ 'twitter' ]      = isset( $new_instance[ 'twitter' ] ) ? esc_url_raw( $new_instance[ 'twitter' ] ) : '';
+	/**
+	 * Adds setting fields to the widget and renders them in the form.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $instance The settings for the instance of the widget..
+	 */
+	public function form( $instance ) {
 
-        $instance[ 'instagram' ]    = isset( $new_instance[ 'instagram' ] ) ? esc_url_raw( $new_instance[ 'instagram' ] ) : '';
+		$instance = wp_parse_args( (array) $instance, $this->widget_setting_defaults );
 
-        $instance[ 'linkedin' ]     = isset( $new_instance[ 'linkedin' ] ) ? esc_url_raw( $new_instance[ 'linkedin' ] ) : '';
+		$widget_setting_fields = $this->widget_setting_fields;
 
-        $instance[ 'youtube' ]      = isset( $new_instance[ 'youtube' ] ) ? esc_url_raw( $new_instance[ 'youtube' ] ) : '';
+		$widget_setting_fields_copy = $widget_setting_fields;
 
-        $instance[ 'pinterest' ]    = isset( $new_instance[ 'pinterest' ] ) ? esc_url_raw( $new_instance[ 'pinterest' ] ) : '';
+		foreach ( $widget_setting_fields_copy as $widget_setting_key => $widget_setting_field_detail ) {
+			$widget_setting_fields[ $widget_setting_key ]['id']    = $this->get_field_id( $widget_setting_key );
+			$widget_setting_fields[ $widget_setting_key ]['name']  = $this->get_field_name( $widget_setting_key );
+			$widget_setting_fields[ $widget_setting_key ]['value'] = $instance[ $widget_setting_key ];
+		}
+		?>
+		<p class="cm-widget-frontend-sample-wrapper">
+			<strong><?php esc_html_e( 'At frontend this widget looks like as below:', 'cream-magazine' ); ?></strong> 
+			<img src="<?php echo esc_url( get_template_directory_uri() . '/admin/images/widget-placeholders/cm-social-widget.png' ); ?>" style="max-width: 100%; height: auto;"> 
+		</p>
+		<?php
+		foreach ( $widget_setting_fields as $field ) {
 
-        return $instance;
-    } 
+			cream_magazine_render_widget_setting_field( $field );
+		}
+	}
+
+	/**
+	 * Sanitizes and saves the instance of the widget.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $new_instance The settings for the new instance of the widget.
+	 * @param array $old_instance The settings for the old instance of the widget.
+	 * @return array Sanitized instance of the widget.
+	 */
+	public function update( $new_instance, $old_instance ) {
+
+		return cream_magazine_sanitize_widget_setting_fields( $this->widget_setting_fields, $this->widget_setting_defaults, $new_instance, $old_instance );
+	}
 }

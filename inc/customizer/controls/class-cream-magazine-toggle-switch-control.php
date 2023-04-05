@@ -1,17 +1,20 @@
 <?php
 /**
- * Checkbox toggle custom control
+ * Customize Toggle Switch Control.
  *
- * @package WordPress
- * @subpackage inc/customizer
- * @version 1.1.0
- * @author  Denis Žoljom <http://madebydenis.com/>
- * @license https://www.gnu.org/licenses/gpl-3.0.txt GNU/GPLv3
- * @link https://github.com/dingo-d/wordpress-theme-customizer-extra-custom-controls
- * @since  1.0.0
+ * @since 1.0.0
+ *
+ * @package Cream_Magazine
  */
-if( ! class_exists( 'Cream_Magazine_Toggle_Switch_Control' ) ) {
 
+if ( ! class_exists( 'Cream_Magazine_Toggle_Switch_Control' ) ) {
+	/**
+	 * Customize Toggle Switch Control Class.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @see WP_Customize_Control
+	 */
 	class Cream_Magazine_Toggle_Switch_Control extends WP_Customize_Control {
 
 		/**
@@ -20,19 +23,25 @@ if( ! class_exists( 'Cream_Magazine_Toggle_Switch_Control' ) ) {
 		 * @var string
 		 */
 		public $type = 'toogle-switch';
-		
+
 		/**
-		 * Control scripts and styles enqueue
+		 * Enqueue control related scripts/styles.
 		 *
 		 * @since 1.0.0
 		 */
 		public function enqueue() {
 
-			wp_enqueue_style( 'cream-magazine-toggle-switch', get_template_directory_uri() . '/admin/css/toggle-switch.css' );
+			wp_enqueue_style(
+				'cream-magazine-toggle-switch',
+				get_template_directory_uri() . '/admin/css/toggle-switch.css',
+				null,
+				CREAM_MAGAZINE_VERSION,
+				'all'
+			);
 		}
 
 		/**
-		 * Control method
+		 * Renders the control wrapper and calls $this->render_content() for the internals.
 		 *
 		 * @since 1.0.0
 		 */
@@ -40,12 +49,20 @@ if( ! class_exists( 'Cream_Magazine_Toggle_Switch_Control' ) ) {
 			?>
 			<div class="checkbox_switch">
 				<div class="onoffswitch">
-				    <input type="checkbox" id="<?php echo esc_attr( $this->id ); ?>" name="<?php echo esc_attr( $this->id ); ?>" class="onoffswitch-checkbox" value="<?php echo esc_attr( $this->value() ); ?>" <?php $this->link(); ?> <?php $this->link() . checked( $this->value() ); ?>>
-				    <label class="onoffswitch-label" for="<?php echo esc_attr( $this->id ); ?>"></label>
+					<input
+						type="checkbox"
+						id="<?php echo esc_attr( $this->id ); ?>"
+						name="<?php echo esc_attr( $this->id ); ?>"
+						class="onoffswitch-checkbox"
+						value="<?php echo esc_attr( $this->value() ); ?>"
+						<?php $this->link(); ?>
+						<?php $this->link() . checked( $this->value() ); ?>
+					>
+					<label class="onoffswitch-label" for="<?php echo esc_attr( $this->id ); ?>"></label>
 				</div>
 				<span class="customize-control-title onoffswitch_label"><?php echo esc_html( $this->label ); ?></span>
 				<?php
-				if( !empty( $this->description ) ) {
+				if ( ! empty( $this->description ) ) {
 					?>
 					<span class="customize-control-desc"><?php echo esc_html( $this->description ); ?></span>
 					<?php

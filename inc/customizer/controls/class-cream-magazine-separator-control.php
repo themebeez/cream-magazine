@@ -1,17 +1,20 @@
 <?php
 /**
- * Separator Control
+ * Customize Separator Control.
+ *
+ * @since 1.0.0
  *
  * @package Cream_Magazine
- * @subpackage inc/customizer
- * @version 1.1.0
- * @author  Denis Žoljom <http://madebydenis.com/>
- * @license https://www.gnu.org/licenses/gpl-3.0.txt GNU/GPLv3
- * @link https://github.com/dingo-d/wordpress-theme-customizer-extra-custom-controls
- * @since  1.0.0
  */
-if( ! class_exists( 'Cream_Magazine_Separator_Control' ) ) {
-	
+
+if ( ! class_exists( 'Cream_Magazine_Separator_Control' ) ) {
+	/**
+	 * Customize Separator Control Class.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @see WP_Customize_Control
+	 */
 	class Cream_Magazine_Separator_Control extends WP_Customize_Control {
 		/**
 		 * Control type
@@ -19,8 +22,9 @@ if( ! class_exists( 'Cream_Magazine_Separator_Control' ) ) {
 		 * @var string
 		 */
 		public $type = 'separator';
+
 		/**
-		 * Control method
+		 * Renders the control wrapper and calls $this->render_content() for the internals.
 		 *
 		 * @since 1.0.0
 		 */

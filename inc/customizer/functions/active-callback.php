@@ -1,214 +1,216 @@
 <?php
 /**
- * Active Callback functions for this theme
+ * Collection of active callback functions.
+ *
+ * @since 1.0.0
  *
  * @package Cream_Magazine
  */
 
-/*
- *	Active Callback For When Ticker News Is Enabled
- */
-if( ! function_exists( 'cream_magaine_is_ticker_news_enabled' ) ) {
-
+if ( ! function_exists( 'cream_magaine_is_ticker_news_enabled' ) ) {
+	/**
+	 * Checks if news ticker is enabled.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  object $control WP Customize Control.
+	 * @return boolean
+	 */
 	function cream_magaine_is_ticker_news_enabled( $control ) {
-		
-		if( $control->manager->get_setting( 'cream_magazine_enable_ticker_news' )->value() == true ) {
-			return true;
-		} else {
-			return false;
-		}
+
+		return $control->manager->get_setting( 'cream_magazine_enable_ticker_news' )->value();
 	}
 }
 
-/*
- *	Active Callback For When Banner/Slider Is Enabled
- */
-if( ! function_exists( 'cream_magaine_is_banner_active' ) ) {
 
+if ( ! function_exists( 'cream_magaine_is_banner_active' ) ) {
+	/**
+	 * Checks if banner/slider is enabled.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  object $control WP Customize Control.
+	 * @return boolean
+	 */
 	function cream_magaine_is_banner_active( $control ) {
-		
-		if( $control->manager->get_setting( 'cream_magazine_enable_banner' )->value() == true ) {
-			return true;
-		} else {
-			return false;
-		}
+
+		return $control->manager->get_setting( 'cream_magazine_enable_banner' )->value();
 	}
 }
 
-/*
- * Active callback function for when header layout one is active	
- */
-if( ! function_exists( 'cream_magaine_is_header_one_active' ) ) {
 
+if ( ! function_exists( 'cream_magaine_is_header_one_active' ) ) {
+	/**
+	 * Checks if header layout one is enabled.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  object $control WP Customize Control.
+	 * @return boolean
+	 */
 	function cream_magaine_is_header_one_active( $control ) {
-		
-		if( $control->manager->get_setting( 'cream_magazine_select_header_layout' )->value() == 'header_1' ) {
-			return true;
-		} else {
-			return false;
-		}
+
+		return ( 'header_1' === $control->manager->get_setting( 'cream_magazine_select_header_layout' )->value() ) ? true : false;
 	}
 }
 
 
-/*
- * Active callback function for when header layout two is active	
- */
-if( ! function_exists( 'cream_magaine_is_header_two_active' ) ) {
-
+if ( ! function_exists( 'cream_magaine_is_header_two_active' ) ) {
+	/**
+	 * Checks if header layout two is enabled.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  object $control WP Customize Control.
+	 * @return boolean
+	 */
 	function cream_magaine_is_header_two_active( $control ) {
-		
-		if( $control->manager->get_setting( 'cream_magazine_select_header_layout' )->value() == 'header_2' ) {
-			return true;
-		} else {
-			return false;
-		}
+
+		return ( 'header_2' === $control->manager->get_setting( 'cream_magazine_select_header_layout' )->value() ) ? true : false;
 	}
 }
 
 
-/*
- *	Active Callback For When Related Section Is Active
- */
-if( ! function_exists( 'cream_magaine_is_related_section_active' ) ) {
-
+if ( ! function_exists( 'cream_magaine_is_related_section_active' ) ) {
+	/**
+	 * Checks if related section is enabled.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  object $control WP Customize Control.
+	 * @return boolean
+	 */
 	function cream_magaine_is_related_section_active( $control ) {
-		
-		if( $control->manager->get_setting( 'cream_magazine_enable_related_section' )->value() == true ) {
-			return true;
-		} else {
-			return false;
-		}
+
+		return $control->manager->get_setting( 'cream_magazine_enable_related_section' )->value();
 	}
 }
 
 
-/*
- *	Active Callback For When Enable Common Sidebar Position For Post Is Active
- */
-if( ! function_exists( 'cream_magazine_is_post_common_sidebar_position_active' ) ) {
-
+if ( ! function_exists( 'cream_magazine_is_post_common_sidebar_position_active' ) ) {
+	/**
+	 * Checks if common sidebar position for post single is enabled.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  object $control WP Customize Control.
+	 * @return boolean
+	 */
 	function cream_magazine_is_post_common_sidebar_position_active( $control ) {
-		
-		if( $control->manager->get_setting( 'cream_magazine_enable_post_common_sidebar_position' )->value() == true ) {
-			return true;
-		} else {
-			return false;
-		}
+
+		return $control->manager->get_setting( 'cream_magazine_enable_post_common_sidebar_position' )->value();
 	}
 }
 
 
-/*
- *	Active Callback For When Enable Common Sidebar Position For Page Is Active
- */
-if( ! function_exists( 'cream_magazine_is_page_common_sidebar_position_active' ) ) {
 
+if ( ! function_exists( 'cream_magazine_is_page_common_sidebar_position_active' ) ) {
+	/**
+	 * Checks if common sidebar position for page is enabled.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  object $control WP Customize Control.
+	 * @return boolean
+	 */
 	function cream_magazine_is_page_common_sidebar_position_active( $control ) {
-		
-		if( $control->manager->get_setting( 'cream_magazine_enable_page_common_sidebar_position' )->value() == true ) {
-			return true;
-		} else {
-			return false;
-		}
+
+		return $control->manager->get_setting( 'cream_magazine_enable_page_common_sidebar_position' )->value();
 	}
 }
 
 
-/*
- *	Active Callback For When Common Background Color For Categories Meta Is Active
- */
-if( ! function_exists( 'cream_magazine_is_common_categories_bg_color_active' ) ) {
-
+if ( ! function_exists( 'cream_magazine_is_common_categories_bg_color_active' ) ) {
+	/**
+	 * Checks if common background color for category meta is enabled.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  object $control WP Customize Control.
+	 * @return boolean
+	 */
 	function cream_magazine_is_common_categories_bg_color_active( $control ) {
-		
-		if( $control->manager->get_setting( 'cream_magazine_enable_common_cat_color' )->value() == true ) {
-			return true;
-		} else {
-			return false;
-		}
+
+		return $control->manager->get_setting( 'cream_magazine_enable_common_cat_color' )->value();
 	}
 }
 
 
-/*
- *	Active Callback For When Common Background Color For Categories Meta Is Not Active
- */
-if( ! function_exists( 'cream_magazine_is_common_categories_bg_color_not_active' ) ) {
-
+if ( ! function_exists( 'cream_magazine_is_common_categories_bg_color_not_active' ) ) {
+	/**
+	 * Checks if common background color for category meta is disabled.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  object $control WP Customize Control.
+	 * @return boolean
+	 */
 	function cream_magazine_is_common_categories_bg_color_not_active( $control ) {
-		
-		if( $control->manager->get_setting( 'cream_magazine_enable_common_cat_color' )->value() == false ) {
-			return true;
-		} else {
-			return false;
-		}
+
+		return ! $control->manager->get_setting( 'cream_magazine_enable_common_cat_color' )->value();
 	}
 }
 
 
-/*
- *	Active Callback For When Footer Widget Area Is Active
- */
-if( ! function_exists( 'cream_magazine_is_footer_widget_area_active' ) ) {
-
+if ( ! function_exists( 'cream_magazine_is_footer_widget_area_active' ) ) {
+	/**
+	 * Checks if footer widget area is enabled.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  object $control WP Customize Control.
+	 * @return boolean
+	 */
 	function cream_magazine_is_footer_widget_area_active( $control ) {
-		
-		if( $control->manager->get_setting( 'cream_magazine_show_footer_widget_area' )->value() == true ) {
-			return true;
-		} else {
-			return false;
-		}
+
+		return $control->manager->get_setting( 'cream_magazine_show_footer_widget_area' )->value();
 	}
 }
 
 
-/*
- *	Active Callback For When Sidebar Is Active On Mobile Devices
- */
-if( ! function_exists( 'cream_magazine_is_sidebar_on_mobile_active' ) ) {
-
+if ( ! function_exists( 'cream_magazine_is_sidebar_on_mobile_active' ) ) {
+	/**
+	 * Checks if sidebar is active on mobile devices.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  object $control WP Customize Control.
+	 * @return boolean
+	 */
 	function cream_magazine_is_sidebar_on_mobile_active( $control ) {
-		
-		if( $control->manager->get_setting( 'cream_magazine_show_sidebar_on_mobile_n_tablet' )->value() == true ) {
-			return true;
-		} else {
-			return false;
-		}
+
+		return $control->manager->get_setting( 'cream_magazine_show_sidebar_on_mobile_n_tablet' )->value();
 	}
 }
 
 
-/*
- *	Active Callback for when static front page is set
- */
-if( ! function_exists( 'cream_magazine_is_static_home_page_set' ) ) {
-
+if ( ! function_exists( 'cream_magazine_is_static_home_page_set' ) ) {
+	/**
+	 * Checks if static home page is set.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  object $control WP Customize Control.
+	 * @return boolean
+	 */
 	function cream_magazine_is_static_home_page_set( $control ) {
-		
-		if ( $control->manager->get_setting( 'show_on_front' )->value() == 'page' ) {
 
-			return true;
-		} else {
-			
-			return false;
-		}
+		return ( 'page' === $control->manager->get_setting( 'show_on_front' )->value() ) ? true : false;
 	}
 }
 
 
-if( ! function_exists( 'cream_magazine_is_breadcrumbs_active' ) ) {
-
+if ( ! function_exists( 'cream_magazine_is_breadcrumbs_active' ) ) {
+	/**
+	 * Checks if breadcrumbs is enabled.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  object $control WP Customize Control.
+	 * @return boolean
+	 */
 	function cream_magazine_is_breadcrumbs_active( $control ) {
 
-		$enabled = $control->manager->get_setting( 'cream_magazine_enable_breadcrumb' )->value();
-
-		if( $enabled == true ) {
-
-			return true;
-		} else {
-
-			return false;
-		}
+		return $control->manager->get_setting( 'cream_magazine_enable_breadcrumb' )->value();
 	}
 }

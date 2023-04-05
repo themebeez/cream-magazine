@@ -11,12 +11,12 @@ $cream_magazine_sidebar_position = '';
 
 if ( is_front_page() ) {
 
-	if ( is_page_template( 'template-home.php' )  ) {
+	if ( is_page_template( 'template-home.php' ) ) {
 
 		$cream_magazine_sidebar_position = cream_magazine_get_option( 'cream_magazine_homepage_sidebar' );
 	} else {
 
-		if ( cream_magazine_get_option( 'cream_magazine_enable_home_content' ) == true ) {
+		if ( true === cream_magazine_get_option( 'cream_magazine_enable_home_content' ) ) {
 
 			$cream_magazine_sidebar_position = cream_magazine_get_option( 'cream_magazine_homepage_sidebar' );
 		} else {
@@ -29,7 +29,7 @@ if ( is_front_page() ) {
 	$cream_magazine_sidebar_position = cream_magazine_sidebar_position();
 }
 
-if ( ! is_active_sidebar( 'sidebar' ) || $cream_magazine_sidebar_position == 'none'  ) {
+if ( ! is_active_sidebar( 'sidebar' ) || 'none' === $cream_magazine_sidebar_position ) {
 	return;
 }
 
@@ -41,20 +41,20 @@ $cream_magazine_show_sidebar_on_mobile_n_tablet = cream_magazine_get_option( 'cr
 
 $cream_magazine_sidebar_after_content = cream_magazine_get_option( 'cream_magazine_show_sidebar_after_contents_on_mobile_n_tablet' );
 
-if( $cream_magazine_sidebar_position == 'left' ) {
+if ( 'left' === $cream_magazine_sidebar_position ) {
 
 	$cream_magazine_sidebar_class .= ' order-1';
-} 
+}
 
-if( $cream_magazine_is_sticky == true ) {
+if ( true === $cream_magazine_is_sticky ) {
 	$cream_magazine_sidebar_class .= ' sticky_portion';
 }
 
-if( ! $cream_magazine_show_sidebar_on_mobile_n_tablet ) {
+if ( ! $cream_magazine_show_sidebar_on_mobile_n_tablet ) {
 	$cream_magazine_sidebar_class .= ' hide-tablet hide-mobile';
 }
 
-if( $cream_magazine_sidebar_after_content ) {
+if ( $cream_magazine_sidebar_after_content ) {
 	$cream_magazine_sidebar_class .= ' cm-order-2-mobile-tablet';
 }
 ?>

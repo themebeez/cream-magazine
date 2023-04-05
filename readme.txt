@@ -17,7 +17,7 @@ Cream Magazine is a news & magazine WordPress theme with a clean & modern design
 
 == License ==
 
-Cream Magazine WordPress Theme, Copyright (C) 2022, themebeez.
+Cream Magazine WordPress Theme, Copyright (C) 2023, themebeez.
 Cream Magazine is distributed under the terms of the GNU GPL
 
 
@@ -42,8 +42,6 @@ Copyright (c) 2011-2020 The Bootstrap Authors, Inc., [MIT](http://opensource.org
 
 * Owl Carousel https://github.com/OwlCarousel2/OwlCarousel2/, Copyright (c) 2014 Owl, [MIT](http://opensource.org/licenses/MIT)
 
-* Zepto Lazy https://github.com/eisbehr-/jquery.lazy, Copyright 2012 - 2018, Daniel 'Eisbehr' Kern, [MIT, GPLv2](http://opensource.org/licenses/MIT, http://www.gnu.org/licenses/gpl-2.0.html)
-
 * Sticky https://github.com/garand/sticky, Copyright 2014-2016 Anthony Garand, [MIT](http://opensource.org/licenses/MIT)
 
 * Stellarnav https://github.com/vinnymoreira/stellarnav, Copyright (c) 2016 Vinny Moreira, [MIT](http://opensource.org/licenses/MIT)
@@ -55,8 +53,6 @@ Copyright (c) 2011-2020 The Bootstrap Authors, Inc., [MIT](http://opensource.org
 * Font Awesome http://fontawesome.io/license/, [SIL OFL 1.1, MIT](http://scripts.sil.org/OFL, http://opensource.org/licenses/mit-license.html)
 
 * Animate https://github.com/daneden/animate.css, Copyright (c) 2018 Daniel Eden, [MIT](http://opensource.org/licenses/MIT)
-
-* Choosen https://github.com/harvesthq/chosen, Copyright (c) 2011-2018 Harvest, [MIT](http://opensource.org/licenses/MIT)
 
 * Images Included, header_1.jpg, header_2.jpg, cm-author-widget.png, cm-full-widget-one.png, cm-full-widget-three.png, cm-full-widget-two.png, cm-half-widget-one.png, cm-half-widget-three.png, cm-half-widget-two.png, cm-post-widget.png, cm-social-widget.png, sidebar_left.jpg, sidebar_right.png, and sidebar_none.png, self created GPLv2 
 
@@ -108,9 +104,25 @@ Cream Magazine includes support for Contact Form 7 and Woocommerce.
 
 == Changelog ==
 
+= Version 2.1.2 - 4 April, 2023 =
+
+- Updated: Body and headings typography options. Support for websafe fonts and Google fonts.
+- Removed: Image lazy load settings from customize.
+- Removed: Unwanted files, functions, and codes.
+- Removed: Chosen JS.
+- Added: Slimselect JS.
+- Removed: Zepto lazyload JS.
+- Updated: WPCS maintained.
+- Updated: Custom widgets.
+- Updated: Dynamic CSS minified.
+- Updated: Alpha color picker control in customize.
+- Removed: Everest backup plugin recommendation notice.
+
+
 = Version 2.1.1 - 13 March, 2023 =
 
 - Added: UDP agent. #89
+
 
 = Version 2.1.0 - 29 May, 2022 =
 
