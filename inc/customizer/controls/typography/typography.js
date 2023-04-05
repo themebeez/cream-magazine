@@ -180,10 +180,19 @@ wp.customize.controlConstructor['cream-magazine-typography'] = wp.customize.Cont
 
             let fontFamily = thisEle.val();
             let fontSource = thisEle.find('option[value="' + fontFamily + '"]').data('source');
+
+            settingValue.source = fontSource;
+            settingValue.font_family = fontFamily;
             
             if ( fontSource === 'google' ) {
                 fontVariantsSelectEle.val('400');
                 settingValue.font_variants = '400';
+
+                let googleFontURL = generateGoogleFontURL(settingValue.font_family, settingValue.font_variants);
+                settingValue.font_url = googleFontURL;
+
+                let fontURLEle = jQuery('#cream-magazine-font-url-' + control.id);
+                fontURLEle.val(googleFontURL);
             } else {
                 fontVariantsSelectEle.val('');
                 settingValue.font_variants = '';
@@ -191,9 +200,6 @@ wp.customize.controlConstructor['cream-magazine-typography'] = wp.customize.Cont
 
             fontWeightSelectEle.val('inherit');
             settingValue.font_weight = 'inherit';
-
-            settingValue.source = fontSource;
-            settingValue.font_family = fontFamily;
 
             saveSetting(control.id, settingValue);
         });
