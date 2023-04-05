@@ -166,7 +166,7 @@ if ( ! function_exists( 'cream_magazine_post_meta' ) ) {
 					) {
 						?>
 						<li class="comments">
-							<a href="<?php the_permalink(); ?>"><?php echo esc_html( get_comments_number() ); ?></a>
+							<a href="<?php echo esc_url( get_permalink() . '#comments' ); ?>"><?php echo esc_html( get_comments_number() ); ?></a>
 						</li><!-- .comments -->
 						<?php
 					}

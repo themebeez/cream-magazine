@@ -97,6 +97,77 @@ if ( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 				.primary-navigation ul li a span.menu-item-description {';
 			$css .= "background-color: {$primary_theme_color}";
 			$css .= '}';
+
+			$css .= 'a:hover,
+				.post_title h2 a:hover,
+				.post_title h2 a:focus,
+				.post_meta li a:hover,
+				.post_meta li a:focus,
+				ul.social-icons li a[href*=".com"]:hover::before,
+				.ticker_carousel .owl-nav button.owl-prev i, 
+				.ticker_carousel .owl-nav button.owl-next i,
+				.news_ticker_wrap .ticker_items .item a:hover,
+				.news_ticker_wrap .ticker_items .item a:focus,
+				.cm_banner .post_title h2 a:hover,
+				.cm_banner .post_meta li a:hover,
+				.cm_middle_post_widget_one .post_title h2 a:hover, 
+				.cm_middle_post_widget_one .post_meta li a:hover,
+				.cm_middle_post_widget_three .post_thumb .post-holder a:hover,
+				.cm_middle_post_widget_three .post_thumb .post-holder a:focus,
+				.cm_middle_post_widget_six .middle_widget_six_carousel .item .card .card_content a:hover, 
+				.cm_middle_post_widget_six .middle_widget_six_carousel .item .card .card_content a:focus,
+				.cm_post_widget_twelve .card .post-holder a:hover, 
+				.cm_post_widget_twelve .card .post-holder a:focus,
+				.cm_post_widget_seven .card .card_content a:hover, 
+				.cm_post_widget_seven .card .card_content a:focus,
+				.copyright_section a:hover,
+				.footer_nav ul li a:hover,
+				.breadcrumb ul li:last-child span,
+				.pagination .page-numbers:hover,
+				#comments ol.comment-list li article footer.comment-meta .comment-metadata span.edit-link a:hover,
+				#comments ol.comment-list li article .reply a:hover,
+				.social-share ul li a:hover,
+				ul.social-icons li a:hover,
+				ul.social-icons li a:focus,
+				.woocommerce ul.products li.product a:hover,
+				.woocommerce ul.products li.product .price,
+				.woocommerce .woocommerce-pagination ul.page-numbers li a.page-numbers:hover,
+				.woocommerce div.product p.price, 
+				.woocommerce div.product span.price,
+				.video_section .video_details .post_title h2 a:hover,
+				.primary-navigation.dark li a:hover,
+				footer .footer_inner a:hover,
+				.footer-widget-container ul.post_meta li:hover span, 
+				.footer-widget-container ul.post_meta li:hover a,
+				ul.post_meta li a:hover,
+				.cm-post-widget-two .big-card .post-holder .post_title h2 a:hover,
+				.cm-post-widget-two .big-card .post_meta li a:hover,
+				.copyright_section .copyrights a,
+				.breadcrumb ul li a:hover, 
+				.breadcrumb ul li a:hover span {';
+			$css .= "color: {$primary_theme_color}";
+			$css .= '}';
+
+			$css .= '.ticker_carousel .owl-nav button.owl-prev, 
+				.ticker_carousel .owl-nav button.owl-next,
+				.error_foot form input[type="submit"], 
+				.widget_search form input[type="submit"],
+				.pagination .page-numbers:hover,
+				#comments form input[type="submit"],
+				.social-share ul li a:hover,
+				.header-search-container .search-form-entry,
+				.widget_product_search .woocommerce-product-search button[type="submit"],
+				.woocommerce .woocommerce-pagination ul.page-numbers li span.current,
+				.woocommerce .woocommerce-pagination ul.page-numbers li a.page-numbers:hover,
+				.woocommerce a.remove:hover,
+				.ticker_carousel .owl-nav button.owl-prev:hover, 
+				.ticker_carousel .owl-nav button.owl-next:hover,
+				footer .widget.widget_search form input[type="submit"]:hover,
+				.trending_widget_carousel .owl-dots button.owl-dot,
+				.the_content blockquote,
+				.widget_tag_cloud .tagcloud a:hover {';
+			$css .= "border-color: {$primary_theme_color}";
+			$css .= '}';
 		}
 
 		if ( ! empty( $header_overlay ) ) {
@@ -233,13 +304,13 @@ if ( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 		}
 
 		if ( cream_magazine_get_option( 'cream_magazine_content_link_color' ) ) {
-			$css .= '.the_content a:hover, .the_content a:hover {';
+			$css .= '.the_content a {';
 			$css .= 'color: ' . esc_attr( cream_magazine_get_option( 'cream_magazine_content_link_color' ) ) . ';';
 			$css .= '}';
 		}
 
 		if ( cream_magazine_get_option( 'cream_magazine_content_link_hover_color' ) ) {
-			$css .= '.the_content a:hover, .the_content a:hover';
+			$css .= '.the_content a:hover {';
 			$css .= 'color: ' . esc_attr( cream_magazine_get_option( 'cream_magazine_content_link_hover_color' ) ) . ';';
 			$css .= '}';
 		}
