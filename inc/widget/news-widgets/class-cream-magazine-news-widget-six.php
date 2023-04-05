@@ -126,8 +126,8 @@ class Cream_Magazine_News_Widget_Six extends WP_Widget {
 		);
 
 		if ( 'slug' === $this->key ) {
-			if ( 'none' !== $instance['post_cat'] ) {
-				$post_args['category_name'] = isset( $instance['post_cat'] ) ? $instance['post_cat'] : $widget_setting_defaults['post_cat'];
+			if ( isset( $instance['post_cat'] ) && 'none' !== $instance['post_cat'] ) {
+				$post_args['category_name'] = $instance['post_cat'];
 			}
 		} else {
 			$post_args['cat'] = isset( $instance['post_cat'] ) ? absint( $instance['post_cat'] ) : $widget_setting_defaults['post_cat'];
