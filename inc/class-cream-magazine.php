@@ -323,7 +323,6 @@ class Cream_Magazine {
 			'show_news_ticker'           => cream_magazine_get_option( 'cream_magazine_enable_ticker_news' ),
 			'show_banner_slider'         => cream_magazine_get_option( 'cream_magazine_enable_banner' ),
 			'show_to_top_btn'            => cream_magazine_get_option( 'cream_magazine_enable_scroll_top_button' ),
-			'enable_image_lazy_load'     => cream_magazine_get_option( 'cream_magazine_enable_lazy_load' ),
 			'enable_sticky_sidebar'      => cream_magazine_get_option( 'cream_magazine_enable_sticky_sidebar' ),
 			'enable_sticky_menu_section' => cream_magazine_get_option( 'cream_magazine_enable_sticky_menu_section' ),
 		);

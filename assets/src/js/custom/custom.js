@@ -16,21 +16,6 @@
             $("nav.main-navigation").sticky();
         }
 
-
-        /* Initialize Image Lazyload */
-
-        if (cream_magazine_script_obj.enable_image_lazy_load == '1') {
-
-            $('.lazy-image').lazy({
-                effect: "fadeIn",
-                afterLoad: function(element) {
-                    // called after an element was successfully handled
-                    element.addClass('image-loaded');
-                    element.removeClass('lazy-image');
-                }
-            });
-        }
-
         /*
         =============================================
         = Init Primary navigation
