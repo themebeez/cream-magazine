@@ -206,6 +206,8 @@ ul.social-icons li a[href*=".com"]::before {
     font-size: 14px;
 }
 
+ul.social-icons li a[href*="fb.com"]::before,
+ul.social-icons li a[href*="messenger.com"]::before,
 ul.social-icons li a[href*="facebook.com"]::before {
 
     content: "\f09a";
