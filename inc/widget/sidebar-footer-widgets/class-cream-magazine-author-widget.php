@@ -1,147 +1,194 @@
 <?php
+/**
+ * Widget class definition for CM: Author Widget.
+ *
+ * @since 1.0.0
+ *
+ * @package Cream_Magazine
+ */
 
+/**
+ * Widget class - Cream_Magazine_Author_Widget.
+ *
+ * @since 1.0.0
+ *
+ * @package Cream_Magazine
+ */
 class Cream_Magazine_Author_Widget extends WP_Widget {
- 
-    function __construct() { 
 
-        parent::__construct(
-            'cream-magazine-author-widget',  // Base ID
-            esc_html__( 'CM: Author Widget', 'cream-magazine' ),   // Name
-            array(
-                'description' => esc_html__( 'Displays Brief Author Description.', 'cream-magazine' ), 
-            )
-        );
- 
-    }
- 
-    public function widget( $args, $instance ) {
+	/**
+	 * Widget setting default values.
+	 *
+	 * @since 2.1.2
+	 *
+	 * @var array
+	 */
+	public $widget_setting_defaults = array();
 
-        $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-            
-        $author_page = !empty( $instance['author_page'] ) ? $instance['author_page'] : ''; 
+	/**
+	 * Widget setting fields.
+	 *
+	 * @since 2.1.2
+	 *
+	 * @var array
+	 */
+	public $widget_setting_fields = array();
 
-        $author_link_title = !empty( $instance['author_link_title'] ) ? $instance['author_link_title'] : ''; 
+	/**
+	 * Define id, name and description of the widget.
+	 *
+	 * @since 1.0.0
+	 */
+	public function __construct() {
 
-        echo $args[ 'before_widget' ];
+		parent::__construct(
+			'cream-magazine-author-widget',
+			esc_html__( 'CM: Author Widget', 'cream-magazine' ),
+			array(
+				'description' => esc_html__( 'Displays Brief Author Description.', 'cream-magazine' ),
+			)
+		);
 
-            $author_args = array(
-                'post_type' => 'page',
-                'posts_per_page' => 1,
-            ); 
+		$this->widget_setting_defaults = array(
+			'title'             => '',
+			'author_page'       => '',
+			'author_link_title' => '',
+		);
 
-            if( $author_page > 0 ) {
-                $author_args['page_id'] = absint( $author_page );
-            }
+		$this->widget_setting_fields = array(
+			'title'             => array(
+				'type'  => 'text',
+				'label' => esc_html__( 'Title', 'cream_magazine' ),
+			),
+			'author_page'       => array(
+				'type'      => 'select',
+				'label'     => esc_html__( 'Author Page', 'cream_magazine' ),
+				'choices'   => cream_magazine_get_pages_dropdown_choices(),
+				'data_type' => 'number',
+			),
+			'author_link_title' => array(
+				'type'  => 'text',
+				'label' => esc_html__( 'Author Link Title', 'cream_magazine' ),
+			),
+		);
+	}
 
-            $author = new WP_Query( $author_args );
+	/**
+	 * Renders widget at the frontend.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $args Provides the HTML you can use to display the widget title class and widget content class.
+	 * @param array $instance The settings for the instance of the widget..
+	 */
+	public function widget( $args, $instance ) {
 
-            if( $author->have_posts() ) :
-                if( !empty( $title ) ) {
-                    echo $args['before_title'];
-                    echo esc_html( $title );
-                    echo $args['after_title'];
-                }
-                while( $author->have_posts() ) : $author->the_post();
-                    ?>
-                    <div class="cm_author_widget">
-                        <div class="author_thumb <?php cream_magazine_thumbnail_class(); ?>">
-                            <?php
-                            if( has_post_thumbnail() ) {
-                                
-                                $lazy_thumbnail = cream_magazine_get_option( 'cream_magazine_enable_lazy_load' );
+		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
-                                if( $lazy_thumbnail == true ) {
-                                    cream_magazine_lazy_thumbnail( 'cream-magazine-thumbnail-3' );
-                                } else {
-                                    cream_magazine_normal_thumbnail( 'cream-magazine-thumbnail-3' );
-                                }
-                            }
-                            ?>
-                        </div><!-- .author_thumb -->
-                        <div class="author_name">
-                            <h4><?php the_title(); ?></h4>
-                        </div><!-- .author_name -->
-                        <?php
-                        if( get_the_excerpt() ) {
-                            ?>
-                            <div class="author_desc">
-                                <?php the_excerpt(); ?>
-                            </div><!-- .author_desc -->
-                            <?php 
-                        }
-                        
-                        if( !empty( $author_link_title ) ) { 
-                            ?>
-                            <div class="author-detail-link">
-                                <a href="<?php the_permalink(); ?>"><?php echo esc_html( $author_link_title ); ?></a>
-                            </div>
-                            <?php
-                            }
-                        ?>
-                    </div><!-- .cm_author_widget -->
-                    <?php
-                endwhile;
-                wp_reset_postdata();                
-            endif;
-        echo $args[ 'after_widget' ]; 
- 
-    }
- 
-    public function form( $instance ) {
-        $defaults = array(
-            'title' => '',
-            'author_page' => '',
-            'author_link_title' => '',
-        );
+		echo $args['before_widget']; // phpcs:ignore
 
-        $instance = wp_parse_args( (array) $instance, $defaults );
+			$author_page_query_args = array(
+				'post_type'      => 'page',
+				'posts_per_page' => 1,
+			);
 
-        ?>
-        <p>
-            <strong><?php esc_html_e( 'At frontend this widget looks like as below:', 'cream-magazine' ); ?></strong> 
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/admin/images/widget-placeholders/cm-author-widget.png' ); ?>" style="max-width: 100%; height: auto;"> 
-        </p>
+			if ( $instance['author_page'] ) {
+				$author_page_query_args['page_id'] = absint( $instance['author_page'] );
+			}
 
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id('title') ); ?>">
-                <strong><?php esc_html_e('Title', 'cream-magazine'); ?></strong>
-            </label>
-            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('title') ); ?>" name="<?php echo esc_attr( $this->get_field_name('title') ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />   
-        </p>
+			$author = new WP_Query( $author_page_query_args );
 
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'author_page' ) )?>"><strong><?php echo esc_html__( 'Author Page', 'cream-magazine' ); ?></strong></label>
-            <?php
-                wp_dropdown_pages( array(
-                    'id'               => esc_attr( $this->get_field_id( 'author_page' ) ),
-                    'class'            => 'widefat',
-                    'name'             => esc_attr( $this->get_field_name( 'author_page' ) ),
-                    'selected'         => esc_attr( $instance[ 'author_page' ] ),
-                    'show_option_none' => esc_html__( '&mdash; Select Page &mdash;', 'cream-magazine' ),
-                    )
-                );
-            ?>
-        </p>
+			if ( $author->have_posts() ) :
 
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id('author_link_title') ); ?>">
-                <strong><?php esc_html_e('Author Link Title', 'cream-magazine'); ?></strong>
-            </label>
-            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('author_link_title') ); ?>" name="<?php echo esc_attr( $this->get_field_name('author_link_title') ); ?>" type="text" value="<?php echo esc_attr( $instance['author_link_title'] ); ?>" />   
-        </p>
-        <?php 
-    }
- 
-    public function update( $new_instance, $old_instance ) {
- 
-        $instance                       = $old_instance;
+				if ( ! empty( $title ) ) {
+					echo $args['before_title']; // phpcs:ignore
+					echo esc_html( $title );
+					echo $args['after_title']; // phpcs:ignore
+				}
+				while ( $author->have_posts() ) :
+					$author->the_post();
+					?>
+					<div class="cm_author_widget">
+						<?php
+						if ( has_post_thumbnail() ) {
+							?>
+							<div class="author_thumb <?php cream_magazine_thumbnail_class(); ?>">
+								<?php cream_magazine_get_post_thumbnail( 'cream-magazine-thumbnail-3' ); ?>
+							</div><!-- .author_thumb -->
+							<?php
+						}
+						?>
+						<div class="author_name">
+							<h4><?php the_title(); ?></h4>
+						</div><!-- .author_name -->
+						<?php
+						if ( get_the_excerpt() ) {
+							?>
+							<div class="author_desc">
+								<?php the_excerpt(); ?>
+							</div><!-- .author_desc -->
+							<?php
+						}
 
-        $instance['title']              = isset( $new_instance['title'] ) ? sanitize_text_field( $new_instance['title'] ) : '';
+						if ( isset( $instance['author_link_title'] ) ) {
+							?>
+							<div class="author-detail-link">
+								<a href="<?php the_permalink(); ?>"><?php echo esc_html( $instance['author_link_title'] ); ?></a>
+							</div>
+							<?php
+						}
+						?>
+					</div><!-- .cm_author_widget -->
+					<?php
+				endwhile;
+				wp_reset_postdata();
+			endif;
+		echo $args['after_widget']; // phpcs:ignore
+	}
 
-        $instance['author_page']        = isset( $new_instance['author_page'] ) ? absint( $new_instance['author_page'] ) : '';
+	/**
+	 * Adds setting fields to the widget and renders them in the form.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $instance The settings for the instance of the widget..
+	 */
+	public function form( $instance ) {
 
-        $instance['author_link_title']  = isset( $new_instance['author_link_title'] ) ? sanitize_text_field( $new_instance['author_link_title'] ) : '';
+		$instance = wp_parse_args( (array) $instance, $this->widget_setting_defaults );
 
-        return $instance;
-    } 
+		$widget_setting_fields = $this->widget_setting_fields;
+
+		$widget_setting_fields_copy = $widget_setting_fields;
+
+		foreach ( $widget_setting_fields_copy as $widget_setting_key => $widget_setting_field_detail ) {
+			$widget_setting_fields[ $widget_setting_key ]['id']    = $this->get_field_id( $widget_setting_key );
+			$widget_setting_fields[ $widget_setting_key ]['name']  = $this->get_field_name( $widget_setting_key );
+			$widget_setting_fields[ $widget_setting_key ]['value'] = $instance[ $widget_setting_key ];
+		}
+		?>
+		<p class="cm-widget-frontend-sample-wrapper">
+			<strong><?php esc_html_e( 'At frontend this widget looks like as below:', 'cream-magazine' ); ?></strong> 
+			<img src="<?php echo esc_url( get_template_directory_uri() . '/admin/images/widget-placeholders/cm-author-widget.png' ); ?>" style="max-width: 100%; height: auto;"> 
+		</p>
+		<?php
+		foreach ( $widget_setting_fields as $field ) {
+
+			cream_magazine_render_widget_setting_field( $field );
+		}
+	}
+
+	/**
+	 * Sanitizes and saves the instance of the widget.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $new_instance The settings for the new instance of the widget.
+	 * @param array $old_instance The settings for the old instance of the widget.
+	 * @return array Sanitized instance of the widget.
+	 */
+	public function update( $new_instance, $old_instance ) {
+
+		return cream_magazine_sanitize_widget_setting_fields( $this->widget_setting_fields, $this->widget_setting_defaults, $new_instance, $old_instance );
+	}
 }

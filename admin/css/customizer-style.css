@@ -1,33 +1,4 @@
-/*CHOSEN*/
-.chosen-container-single .chosen-single {
-    border-radius: 0px;
-    height: 28px;
-    background: #FFF;
-    border-color: #DDDDDD;
-    line-height: 28px;
-    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.06);
-    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.06);
-}
-
-.chosen-container-single .chosen-single div b {
-    background-position: 0px 4px;
-}
-
-.chosen-container-active.chosen-with-drop .chosen-single div b {
-    background-position: -18px 4px;
-}
-
-.chosen-container-multi .chosen-choices li {
-    float: none;
-}
-
-.chosen-container .chosen-drop {
-    position: relative;
-}
-
-
 /* Radio Image */
-
 .customize-control-radio .radio-image-control-title {
 
     margin-bottom: 5px;
@@ -63,7 +34,6 @@
 /**
  * Alpha Color Picker CSS
  */
-
 .customize-control-alpha-color .wp-picker-container .iris-picker {
     border-bottom:none;
 }
@@ -194,4 +164,303 @@
 .customize-control-separator {
 
     margin-bottom: 0px;
+}
+
+
+/* -------------------------------------------------------------------------- 
+	Responsive Switcher
+  -------------------------------------------------------------------------- */
+
+.customize-control.has-switchers .customize-control-title {
+    display: block;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.customize-control.has-switchers .customize-control-title span {
+    line-height: 20px
+}
+
+.customize-control .responsive-switchers {
+    width: auto;
+    float: right;
+}
+
+.customize-control .responsive-switchers-open.responsive-switchers li {
+    display: block
+}
+
+.customize-control .responsive-switchers li {
+    float: left;
+    margin: 0
+}
+
+.customize-control .responsive-switchers li button {
+    display: inline-block;
+    position: relative;
+    margin-left: 5px;
+    color: #555;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    -webkit-transition: background-color .5s;
+    transition: background-color .5s;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.customize-control .responsive-switchers li button svg {
+    fill: #888888;
+    height: 16px;
+    width: 16px;
+}
+
+.customize-control .responsive-switchers li button.active svg {
+    fill: #2271b1;
+}
+
+.customize-control .responsive-switchers li button:hover {
+    background-color: transparent;
+}
+
+.customize-control .responsive-switchers li:not(.desktop) button.active {
+    color: #0085ba;
+    background-color: transparent;
+}
+
+.customize-control .responsive-switchers.responsive-switchers-open li button.active {
+    color: #0085ba;
+}
+
+.customize-control .responsive-switchers li button i {
+    width: auto;
+    height: auto;
+    font-size: inherit;
+    line-height: 18px
+}
+
+.customize-control.has-switchers>.responsive-control-wrap:not(.active) {
+    display: none;
+    width: 100%
+}
+
+body.rtl .customize-control-checkbox input[type=checkbox] {
+    margin: 0 0 0 6px
+}
+
+body.rtl .customize-control-checkbox input[type=checkbox]:checked:before,
+body.rtl .customize-control-ocean-multi-check input[type=checkbox]:checked:before {
+    right: 0;
+    left: auto
+}
+
+body.rtl .customize-control .responsive-switchers,
+body.rtl .customize-control .responsive-switchers li button {
+    margin-right: 5px;
+    margin-left: 0
+}
+
+body.rtl .customize-control .responsive-switchers li {
+    float: right
+}
+
+@media screen and (max-width:768px) {
+    body .customize-control .responsive-switchers {
+        display: none
+    }
+
+    body .customize-control.has-switchers>.responsive-control-wrap:not(.active) {
+        display: inline-block
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    body .customize-control.has-switchers>.responsive-control-wrap {
+        display: inline-block
+    }
+
+    body .customize-control.has-switchers>.responsive-control-wrap:not(.tablet) {
+        display: none
+    }
+}
+
+@media screen and (max-width:480px) {
+    body .customize-control.has-switchers>.responsive-control-wrap {
+        display: inline-block
+    }
+
+    body .customize-control.has-switchers>.responsive-control-wrap:not(.mobile) {
+        display: none
+    }
+}
+
+
+/*
+Slim Select Override
+*/
+.ss-main {
+    display: block;
+    min-height: 37px;
+}
+
+.ss-content {
+    position: relative;
+    display: none;
+} 
+
+
+.customize-hidden {
+    display: none;
+}
+
+.customize-display {
+    display: block;
+}
+
+
+.box-border-expand-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.cream-magazine-control-toggle-button {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.cream-magazine-control-toggle-button:hover {
+    box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+}
+
+.cream-magazine-control-modal {
+    display: none;
+}
+
+.cream-magazine-control-modal.modal-open {
+    display: block;
+    position: relative;
+    margin-top: 5px;
+    box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+}
+
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cream-magazine-customize-control-label.flex {
+    align-items: center;
+}
+
+.cream-magazine-customize-control-section-inner.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cream-magazine-customizer-control-section-field-wrapper {
+    margin-bottom: 10px;
+}
+
+.cream-magazine-customize-button-group {
+    display: flex;
+}
+
+.cream-magazine-customize-button {
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    transition-duration: 0.2s;
+}
+
+.cream-magazine-customize-button.secondary:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.cream-magazine-customize-button.active,
+.cream-magazine-customize-button:hover {
+    background-color: #0085ba;
+    color: #ffffff;
+    border-color: #0085ba;
+    fill: #ffffff;
+}
+
+.cream-magazine-customize-button.no-style {
+    background: transparent;
+    border: none;
+    padding: 0px;
+}
+
+.cream-magazine-customize-button.no-style:hover {
+    background: transparent;
+    border: none;
+    color: #0085ba;
+}
+
+.cream-magazine-customize-reset-button .dashicons {
+    font-size: 14px;
+    color: #888888;
+}
+
+.cream-magazine-customize-reset-button:hover .dashicons {
+    color: #0085ba;
+}
+
+.cream-magazine-unit-wrapper {
+    position: relative;
+}
+
+.unit-dropdown-toggle-button {
+    width: 45px;
+    height: 35px;
+    border-radius: 3px;
+    margin-left: 5px;
+    text-transform: uppercase;
+}
+
+.cream-magazine-unit-dropdown {
+    display: none;
+}
+
+.cream-magazine-unit-dropdown.dropdown-open {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 5px;
+    z-index: 1;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    margin-left: 5px;
+    box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+}
+
+.cream-magazine-unit-dropdown .cream-magazine-customize-button {
+    border: none;
+    width: 100%;
+    padding: 10px 5px;
+    text-transform: uppercase;
+}
+
+.responsive-control-wrap {
+    display: none;
+}
+
+.responsive-control-wrap.active,
+.non-responsive-control-wrap {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cream-magazine-slider-input .slider-input {
+    width: 45px !important;
+    margin: 0px !important;
 }

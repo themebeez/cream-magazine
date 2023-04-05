@@ -1,93 +1,97 @@
 <?php
-
 /**
- * Sanitization Function - Multiple Categories
- * 
- * @param $input, $setting
- * @return $input
+ * Collection of sanitization callback functions.
+ *
+ * @since 1.0.0
+ *
+ * @package Cream_Magazine
  */
-if( !function_exists( 'cream_magazine_sanitize_multiple_cat_select' ) ) {
 
-    function cream_magazine_sanitize_multiple_cat_select( $input, $setting ) {
+if ( ! function_exists( 'cream_magazine_sanitize_multiple_cat_select' ) ) {
+	/**
+	 * Sanitizes multi select value.
+	 *
+	 * @param array  $value Setting value.
+	 * @param object $setting Setting object.
+	 * @return array
+	 */
+	function cream_magazine_sanitize_multiple_cat_select( $value, $setting ) {
 
-        if(!empty($input)){
+		if ( ! empty( $value ) ) {
 
-            $input = array_map('sanitize_text_field', $input);
-        }
-
-        return $input;
-    } 
+			return array_map( 'sanitize_text_field', $value );
+		} else {
+			return $setting->default;
+		}
+	}
 }
 
 
-/**
- * Sanitization Function - Select
- *
- * @param $input
- * @param $setting
- * @return sanitized output
- *
- */
-if ( !function_exists('cream_magazine_sanitize_select') ) {
+if ( ! function_exists( 'cream_magazine_sanitize_select' ) ) {
+	/**
+	 * Sanitizes single select value.
+	 *
+	 * @param string $value Setting value.
+	 * @param object $setting Setting object.
+	 * @return string
+	 */
+	function cream_magazine_sanitize_select( $value, $setting ) {
 
-    function cream_magazine_sanitize_select( $input, $setting ) {
+		// Ensure input is a slug.
+		$value = sanitize_key( $value );
 
-        // Ensure input is a slug.
-        $input = sanitize_key( $input );
-        // Get list of choices from the control associated with the setting.
-        $choices = $setting->manager->get_control( $setting->id )->choices;
-        // If the input is a valid key, return it; otherwise, return the default.
-        return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-    }
-}
+		// Get list of choices from the control associated with the setting.
+		$choices = $setting->manager->get_control( $setting->id )->choices;
 
-/**
- * Sanitization Function - Number
- *
- * @param $input
- * @param $setting
- * @return sanitized output
- *
- */
-if ( !function_exists('cream_magazine_sanitize_number') ) {
-
-    function cream_magazine_sanitize_number( $input, $setting ) {
-        
-        $number = absint( $input );
-        // If the input is a positibe number, return it; otherwise, return the default.
-        return ( $number ? $number : $setting->default );
-    }
+		// If the input is a valid key, return it; otherwise, return the default.
+		return ( array_key_exists( $value, $choices ) ? $value : $setting->default );
+	}
 }
 
 
+if ( ! function_exists( 'cream_magazine_sanitize_number' ) ) {
+	/**
+	 * Sanitizes number value.
+	 *
+	 * @param string $value Setting value.
+	 * @param object $setting Setting object.
+	 * @return string
+	 */
+	function cream_magazine_sanitize_number( $value, $setting ) {
 
-/**
- * Sanitize colors.
- *
- * @since 2.0.0
- * @param string $value The color.
- * @return string
- */
-if( ! function_exists( 'cream_magazine_color_sanitize_callback' ) ) {
+		$number = absint( $value );
+		// If the input is a positibe number, return it; otherwise, return the default.
+		return ( $number ? $number : $setting->default );
+	}
+}
 
-    function cream_magazine_color_sanitize_callback( $value ) {
 
-        // This pattern will check and match 3/6/8-character hex, rgb, rgba, hsl, & hsla colors.
-        $pattern = '/^(\#[\da-f]{3}|\#[\da-f]{6}|\#[\da-f]{8}|rgba\(((\d{1,2}|1\d\d|2([0-4]\d|5[0-5]))\s*,\s*){2}((\d{1,2}|1\d\d|2([0-4]\d|5[0-5]))\s*)(,\s*(0\.\d+|1))\)|hsla\(\s*((\d{1,2}|[1-2]\d{2}|3([0-5]\d|60)))\s*,\s*((\d{1,2}|100)\s*%)\s*,\s*((\d{1,2}|100)\s*%)(,\s*(0\.\d+|1))\)|rgb\(((\d{1,2}|1\d\d|2([0-4]\d|5[0-5]))\s*,\s*){2}((\d{1,2}|1\d\d|2([0-4]\d|5[0-5]))\s*)|hsl\(\s*((\d{1,2}|[1-2]\d{2}|3([0-5]\d|60)))\s*,\s*((\d{1,2}|100)\s*%)\s*,\s*((\d{1,2}|100)\s*%)\))$/';
+if ( ! function_exists( 'cream_magazine_color_sanitize_callback' ) ) {
+	/**
+	 * Sanitizes RGBA color value.
+	 *
+	 * @param string $value Setting value.
+	 * @param object $setting Setting object.
+	 * @return string
+	 */
+	function cream_magazine_color_sanitize_callback( $value, $setting ) {
 
-        \preg_match( $pattern, $value, $matches );
+		// This pattern will check and match 3/6/8-character hex, rgb, rgba, hsl, & hsla colors.
+		$pattern = '/^(\#[\da-f]{3}|\#[\da-f]{6}|\#[\da-f]{8}|rgba\(((\d{1,2}|1\d\d|2([0-4]\d|5[0-5]))\s*,\s*){2}((\d{1,2}|1\d\d|2([0-4]\d|5[0-5]))\s*)(,\s*(0\.\d+|1))\)|hsla\(\s*((\d{1,2}|[1-2]\d{2}|3([0-5]\d|60)))\s*,\s*((\d{1,2}|100)\s*%)\s*,\s*((\d{1,2}|100)\s*%)(,\s*(0\.\d+|1))\)|rgb\(((\d{1,2}|1\d\d|2([0-4]\d|5[0-5]))\s*,\s*){2}((\d{1,2}|1\d\d|2([0-4]\d|5[0-5]))\s*)|hsl\(\s*((\d{1,2}|[1-2]\d{2}|3([0-5]\d|60)))\s*,\s*((\d{1,2}|100)\s*%)\s*,\s*((\d{1,2}|100)\s*%)\))$/';
 
-        // Return the 1st match found.
-        if ( isset( $matches[0] ) ) {
-            if ( is_string( $matches[0] ) ) {
-                return $matches[0];
-            }
-            if ( is_array( $matches[0] ) && isset( $matches[0][0] ) ) {
-                return $matches[0][0];
-            }
-        }
+		\preg_match( $pattern, $value, $matches );
 
-        // If no match was found, return an empty string.
-        return '';
-    }
+		// Return the 1st match found.
+		if ( isset( $matches[0] ) ) {
+			if ( is_string( $matches[0] ) ) {
+				return $matches[0];
+			}
+			if ( is_array( $matches[0] ) && isset( $matches[0][0] ) ) {
+				return $matches[0][0];
+			}
+		}
+
+		// If no match was found, return an empty string.
+		return $setting->default;
+	}
 }

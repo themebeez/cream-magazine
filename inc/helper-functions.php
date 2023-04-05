@@ -6,18 +6,17 @@
  */
 
 if ( ! function_exists( 'cream_magazine_get_option' ) ) {
-
 	/**
-	 * Get theme option.
+	 * Get theme setting value.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $key Option key.
-	 * @return mixed Option value.
+	 * @param string $key Setting key.
+	 * @return mixed $value Setting value.
 	 */
 	function cream_magazine_get_option( $key ) {
 
-	    if ( empty( $key ) ) {
+		if ( empty( $key ) ) {
 			return;
 		}
 
@@ -33,8 +32,7 @@ if ( ! function_exists( 'cream_magazine_get_option' ) ) {
 
 		if ( null !== $default_value ) {
 			$value = get_theme_mod( $key, $default_value );
-		}
-		else {
+		} else {
 			$value = get_theme_mod( $key );
 		}
 
@@ -44,7 +42,6 @@ if ( ! function_exists( 'cream_magazine_get_option' ) ) {
 
 
 if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
-
 	/**
 	 * Get default theme options.
 	 *
@@ -52,455 +49,434 @@ if ( ! function_exists( 'cream_magazine_get_default_theme_options' ) ) {
 	 *
 	 * @return array Default theme options.
 	 */
-
 	function cream_magazine_get_default_theme_options() {
 
-    	$defaults = array();
+		$defaults = array(
+			'cream_magazine_enable_home_content'           => false,
+			'cream_magazine_select_site_layout'            => 'fullwidth',
+			'cream_magazine_enable_ticker_news'            => false,
+			'cream_magazine_show_ticker_news'              => 'choice_1',
+			'cream_magazine_ticker_news_title'             => esc_html__( 'Breaking News', 'cream-magazine' ),
+			'cream_magazine_ticker_news_posts_no'          => 5,
+			'cream_magazine_enable_banner'                 => false,
+			'cream_magazine_banner_posts_no'               => 3,
+			'cream_magazine_enable_banner_categories_meta' => true,
+			'cream_magazine_enable_banner_author_meta'     => true,
+			'cream_magazine_enable_banner_date_meta'       => true,
+			'cream_magazine_enable_banner_cmnts_no_meta'   => true,
+			'cream_magazine_homepage_sidebar'              => 'right',
+			'cream_magazine_enable_top_header'             => false,
+			'cream_magazine_enable_sticky_menu_section'    => false,
+			'cream_magazine_enable_home_button'            => false,
+			'cream_magazine_enable_search_button'          => false,
+			'cream_magazine_enable_menu_description'       => false,
+			'cream_magazine_select_header_layout'          => 'header_1',
+			'cream_magazine_header_overlay_color'          => 'rgba(0,0,0,0.2)',
+			'cream_magazine_enable_scroll_top_button'      => true,
+			'cream_magazine_show_footer_widget_area'       => true,
+			'cream_magazine_show_footer_widget_area_on_mobile_n_tablet' => true,
+			'cream_magazine_copyright_credit'              => '',
+			'cream_magazine_enable_blog_categories_meta'   => true,
+			'cream_magazine_enable_blog_author_meta'       => true,
+			'cream_magazine_enable_blog_date_meta'         => true,
+			'cream_magazine_enable_blog_cmnts_no_meta'     => true,
+			'cream_magazine_show_blog_post_excerpt'        => false,
+			'cream_magazine_select_blog_sidebar_position'  => 'right',
+			'cream_magazine_enable_archive_categories_meta' => true,
+			'cream_magazine_enable_archive_author_meta'    => true,
+			'cream_magazine_enable_archive_date_meta'      => true,
+			'cream_magazine_enable_archive_cmnts_no_meta'  => true,
+			'cream_magazine_show_archive_post_excerpt'     => false,
+			'cream_magazine_select_archive_sidebar_position' => 'right',
+			'cream_magazine_enable_search_categories_meta' => true,
+			'cream_magazine_enable_search_author_meta'     => true,
+			'cream_magazine_enable_search_date_meta'       => true,
+			'cream_magazine_enable_search_cmnts_no_meta'   => true,
+			'cream_magazine_show_search_post_excerpt'      => false,
+			'cream_magazine_show_pages_on_search_results'  => true,
+			'cream_magazine_select_search_sidebar_position' => 'right',
+			'cream_magazine_hide_pages_on_search_results'  => false,
+			'cream_magazine_enable_post_single_tags_meta'  => true,
+			'cream_magazine_enable_post_single_author_meta' => true,
+			'cream_magazine_enable_post_single_date_meta'  => true,
+			'cream_magazine_enable_post_single_categories_meta' => true,
+			'cream_magazine_enable_post_single_featured_image' => true,
+			'cream_magazine_enable_post_single_featured_image_caption' => false,
+			'cream_magazine_enable_post_single_cmnts_no_meta' => true,
+			'cream_magazine_enable_author_section'         => true,
+			'cream_magazine_enable_related_section'        => true,
+			'cream_magazine_related_section_title'         => '',
+			'cream_magazine_related_section_posts_number'  => 6,
+			'cream_magazine_enable_related_section_categories_meta' => true,
+			'cream_magazine_enable_related_section_author_meta' => true,
+			'cream_magazine_enable_related_section_date_meta' => true,
+			'cream_magazine_enable_related_section_cmnts_no_meta' => true,
+			'cream_magazine_enable_post_common_sidebar_position' => false,
+			'cream_magazine_select_post_common_sidebar_position' => 'right',
+			'cream_magazine_enable_page_single_featured_image' => true,
+			'cream_magazine_enable_page_single_featured_image_caption' => false,
+			'cream_magazine_enable_page_common_sidebar_position' => false,
+			'cream_magazine_select_page_common_sidebar_position' => 'right',
+			'cream_magazine_enable_category_meta'          => true,
+			'cream_magazine_enable_date_meta'              => true,
+			'cream_magazine_enable_author_meta'            => true,
+			'cream_magazine_enable_tag_meta'               => true,
+			'cream_magazine_enable_comment_meta'           => true,
+			'cream_magazine_post_excerpt_length'           => 15,
+			'cream_magazine_facebook_link'                 => '',
+			'cream_magazine_twitter_link'                  => '',
+			'cream_magazine_instagram_link'                => '',
+			'cream_magazine_youtube_link'                  => '',
+			'cream_magazine_vk_link'                       => '',
+			'cream_magazine_linkedin_link'                 => '',
+			'cream_magazine_vimeo_link'                    => '',
+			'cream_magazine_show_social_links_in_new_tab'  => true,
+			'cream_magazine_enable_breadcrumb'             => true,
+			'cream_magazine_breadcrumb_sources'            => 'default',
+			'cream_magazine_enable_sticky_sidebar'         => true,
+			'cream_magazine_show_sidebar_on_mobile_n_tablet' => true,
+			'cream_magazine_show_sidebar_after_contents_on_mobile_n_tablet' => false,
+			'cream_magazine_primary_theme_color'           => '#FF3D00',
+			'cream_magazine_enable_common_cat_color'       => true,
+			'cream_magazine_common_cat_bg_color'           => '#FF3D00',
+			'cream_magazine_cat_bg_color_1'                => '#FF3D00',
+			'cream_magazine_cat_bg_color_2'                => '#FF3D00',
+			'cream_magazine_cat_bg_color_3'                => '#FF3D00',
+			'cream_magazine_cat_bg_color_4'                => '#FF3D00',
+			'cream_magazine_cat_bg_color_5'                => '#FF3D00',
+			'cream_magazine_cat_bg_color_6'                => '#FF3D00',
+			'cream_magazine_cat_bg_color_7'                => '#FF3D00',
+			'cream_magazine_cat_bg_color_8'                => '#FF3D00',
+			'cream_magazine_cat_bg_color_9'                => '#FF3D00',
+			'cream_magazine_common_cat_txt_color'          => '#fff',
+			'cream_magazine_cat_hover_bg_color'            => '#010101',
+			'cream_magazine_cat_hover_txt_color'           => '#fff',
+			'cream_magazine_content_link_color'            => '#FF3D00',
+			'cream_magazine_content_link_hover_color'      => '#010101',
+			'cream_magazine_save_value_as'                 => 'slug',
+			'cream_magazine_display_top_widget_area'       => true,
+			'cream_magazine_display_middle_widget_area'    => true,
+			'cream_magazine_display_bottom_widget_area'    => true,
+			'cream_magazine_tagline_color'                 => '#000000',
+			'cream_magazine_disable_link_focus_outline'    => false,
+			'cream_magazine_disable_link_decoration_on_hover' => true,
+			'cream_magazine_body_font'                     => wp_json_encode(
+				array(
+					'source'        => 'websafe',
+					'font_family'   => 'Arial, sans-serif',
+					'font_variants' => '',
+					'font_url'      => '',
+					'font_weight'   => 'inherit',
+				)
+			),
+			'cream_magazine_headings_font'                 => wp_json_encode(
+				array(
+					'source'        => 'websafe',
+					'font_family'   => 'Arial, sans-serif',
+					'font_variants' => '',
+					'font_url'      => '',
+					'font_weight'   => 'inherit',
+				)
+			),
+		);
 
-        $defaults['cream_magazine_enable_home_content'] = false;
+		if ( class_exists( 'WooCommerce' ) ) {
 
-        $defaults['cream_magazine_select_site_layout'] = 'fullwidth';
+			$defaults['cream_magazine_select_woocommerce_sidebar_position'] = 'right';
+		}
 
-    	$defaults['cream_magazine_enable_ticker_news'] = false;
-        $defaults['cream_magazine_show_ticker_news'] = 'choice_1';
-    	$defaults['cream_magazine_ticker_news_title'] = esc_html__( 'Breaking News', 'cream-magazine' );
-    	$defaults['cream_magazine_ticker_news_posts_no'] = 5;
-
-    	$defaults['cream_magazine_enable_banner'] = false;
-        $defaults['cream_magazine_banner_posts_no'] = 3;
-        $defaults['cream_magazine_enable_banner_categories_meta'] = true;
-        $defaults['cream_magazine_enable_banner_author_meta'] = true;
-        $defaults['cream_magazine_enable_banner_date_meta'] = true;
-    	$defaults['cream_magazine_enable_banner_cmnts_no_meta'] = true;
-
-    	$defaults['cream_magazine_homepage_sidebar'] = 'right';
-
-        $defaults['cream_magazine_enable_top_header'] = false;
-    	$defaults['cream_magazine_enable_sticky_menu_section'] = false;
-        $defaults['cream_magazine_enable_home_button'] = false;
-    	$defaults['cream_magazine_enable_search_button'] = false;
-        $defaults['cream_magazine_enable_menu_description'] = false;
-        $defaults['cream_magazine_select_header_layout'] = 'header_1';
-        $defaults['cream_magazine_header_overlay_color'] = 'rgba(0,0,0,0.2)';
-        
-        $defaults['cream_magazine_enable_scroll_top_button'] = true;
-        $defaults['cream_magazine_show_footer_widget_area'] = true;
-        $defaults['cream_magazine_show_footer_widget_area_on_mobile_n_tablet'] = true;
-    	$defaults['cream_magazine_copyright_credit'] = '';
-
-        $defaults['cream_magazine_enable_blog_categories_meta'] = true;
-        $defaults['cream_magazine_enable_blog_author_meta'] = true;
-        $defaults['cream_magazine_enable_blog_date_meta'] = true;
-        $defaults['cream_magazine_enable_blog_cmnts_no_meta'] = true;
-        $defaults['cream_magazine_show_blog_post_excerpt'] = false;
-    	$defaults['cream_magazine_select_blog_sidebar_position'] = 'right';
-
-        $defaults['cream_magazine_enable_archive_categories_meta'] = true;
-        $defaults['cream_magazine_enable_archive_author_meta'] = true;
-        $defaults['cream_magazine_enable_archive_date_meta'] = true;
-        $defaults['cream_magazine_enable_archive_cmnts_no_meta'] = true;
-        $defaults['cream_magazine_show_archive_post_excerpt'] = false;
-    	$defaults['cream_magazine_select_archive_sidebar_position'] = 'right';
-
-        $defaults['cream_magazine_enable_search_categories_meta'] = true;
-        $defaults['cream_magazine_enable_search_author_meta'] = true;
-        $defaults['cream_magazine_enable_search_date_meta'] = true;
-        $defaults['cream_magazine_enable_search_cmnts_no_meta'] = true;
-        $defaults['cream_magazine_show_search_post_excerpt'] = false;
-        $defaults['cream_magazine_show_pages_on_search_results'] = true;
-    	$defaults['cream_magazine_select_search_sidebar_position'] = 'right';
-        $defaults['cream_magazine_hide_pages_on_search_results'] = false;
-
-        $defaults['cream_magazine_enable_post_single_tags_meta'] = true;
-        $defaults['cream_magazine_enable_post_single_author_meta'] = true;
-        $defaults['cream_magazine_enable_post_single_date_meta'] = true;
-        $defaults['cream_magazine_enable_post_single_categories_meta'] = true;
-        $defaults['cream_magazine_enable_post_single_featured_image'] = true;
-        $defaults['cream_magazine_enable_post_single_featured_image_caption'] = false;
-        $defaults['cream_magazine_enable_post_single_cmnts_no_meta'] = true;
-    	$defaults['cream_magazine_enable_author_section'] = true;
-    	$defaults['cream_magazine_enable_related_section'] = true;
-    	$defaults['cream_magazine_related_section_title'] = '';
-    	$defaults['cream_magazine_related_section_posts_number'] = 6;
-        $defaults['cream_magazine_enable_related_section_categories_meta'] = true;
-        $defaults['cream_magazine_enable_related_section_author_meta'] = true;
-        $defaults['cream_magazine_enable_related_section_date_meta'] = true;
-        $defaults['cream_magazine_enable_related_section_cmnts_no_meta'] = true;
-        $defaults['cream_magazine_enable_post_common_sidebar_position'] = false;
-        $defaults['cream_magazine_select_post_common_sidebar_position'] = 'right';
-
-        $defaults['cream_magazine_enable_page_single_featured_image'] = true;
-        $defaults['cream_magazine_enable_page_single_featured_image_caption'] = false;
-        $defaults['cream_magazine_enable_page_common_sidebar_position'] = false;
-        $defaults['cream_magazine_select_page_common_sidebar_position'] = 'right';
-
-    	$defaults['cream_magazine_enable_category_meta'] = true;
-    	$defaults['cream_magazine_enable_date_meta'] = true;
-    	$defaults['cream_magazine_enable_author_meta'] = true;
-    	$defaults['cream_magazine_enable_tag_meta'] = true;
-    	$defaults['cream_magazine_enable_comment_meta'] = true;
-
-    	$defaults['cream_magazine_post_excerpt_length'] = 15;
-
-        $defaults['cream_magazine_facebook_link'] = '';
-        $defaults['cream_magazine_twitter_link'] = '';
-        $defaults['cream_magazine_instagram_link'] = '';
-        $defaults['cream_magazine_youtube_link'] = '';
-        $defaults['cream_magazine_vk_link'] = '';
-        $defaults['cream_magazine_linkedin_link'] = '';
-        $defaults['cream_magazine_vimeo_link'] = '';
-        $defaults['cream_magazine_show_social_links_in_new_tab'] = true;
-
-        $defaults['cream_magazine_enable_breadcrumb'] = true;
-        $defaults['cream_magazine_breadcrumb_sources'] = 'default';
-        
-        $defaults['cream_magazine_enable_sticky_sidebar'] = true;
-        $defaults['cream_magazine_show_sidebar_on_mobile_n_tablet'] = true;
-        $defaults['cream_magazine_show_sidebar_after_contents_on_mobile_n_tablet'] = false;
-
-        $defaults['cream_magazine_enable_lazy_load'] = false;
-
-        $defaults['cream_magazine_primary_theme_color'] = '#FF3D00';
-
-        $defaults['cream_magazine_enable_common_cat_color'] = true;
-        $defaults['cream_magazine_common_cat_bg_color'] = '#FF3D00';
-
-        $defaults['cream_magazine_cat_bg_color_1'] = '#FF3D00';
-        $defaults['cream_magazine_cat_bg_color_2'] = '#FF3D00';
-        $defaults['cream_magazine_cat_bg_color_3'] = '#FF3D00';
-        $defaults['cream_magazine_cat_bg_color_4'] = '#FF3D00';
-        $defaults['cream_magazine_cat_bg_color_5'] = '#FF3D00';
-        $defaults['cream_magazine_cat_bg_color_6'] = '#FF3D00';
-        $defaults['cream_magazine_cat_bg_color_7'] = '#FF3D00';
-        $defaults['cream_magazine_cat_bg_color_8'] = '#FF3D00';
-        $defaults['cream_magazine_cat_bg_color_9'] = '#FF3D00';
-
-        $defaults['cream_magazine_common_cat_txt_color'] = '#fff';
-
-        $defaults['cream_magazine_cat_hover_bg_color'] = '#010101';
-        $defaults['cream_magazine_cat_hover_txt_color'] = '#fff';
-
-        $defaults['cream_magazine_content_link_color'] = '#FF3D00';
-        $defaults['cream_magazine_content_link_hover_color'] = '#010101';
-
-        $defaults['cream_magazine_save_value_as'] = 'slug';
-
-        $defaults['cream_magazine_body_font_family'] = 'Muli:400,400i,600,600i,700,700i,800,800i';
-        $defaults['cream_magazine_headings_font_family'] = 'Roboto:400,400i,500,500i,700,700i';
-
-        $defaults['cream_magazine_display_top_widget_area'] = true;
-        $defaults['cream_magazine_display_middle_widget_area'] = true;
-        $defaults['cream_magazine_display_bottom_widget_area'] = true;
-
-        $defaults['cream_magazine_tagline_color'] = '#000000';
-
-        $defaults['cream_magazine_disable_link_focus_outline'] = false;
-        $defaults['cream_magazine_disable_link_decoration_on_hover'] = true;
-
-        if( class_exists( 'WooCommerce' ) ) {
-
-            $defaults['cream_magazine_select_woocommerce_sidebar_position'] = 'right';
-        }  
-
-
-    	return $defaults;
-
+		return $defaults;
 	}
 }
 
 
-/**
- * Funtion To Get Google Fonts
- */
-if ( !function_exists( 'cream_magazine_fonts_url' ) ) :
+if ( ! function_exists( 'cream_magazine_sidebar_position' ) ) {
+	/**
+	 * Return position of sidebar.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return string
+	 */
+	function cream_magazine_sidebar_position() {
 
-    /**
-     * Return Font's URL.
-     *
-     * @since 1.0.0
-     * @return string Fonts URL.
-     */
-    function cream_magazine_fonts_url() {
+		$sidebar_position = '';
 
-        $fonts_url = '';
-        $fonts     = array();
-        $subsets   = 'latin,latin-ext';
+		if ( class_exists( 'WooCommerce' ) ) {
 
-        // Headings Font Family
-        $fonts[] = cream_magazine_get_option( 'cream_magazine_headings_font_family' );
+			if (
+				is_woocommerce() ||
+				is_cart() ||
+				is_account_page() ||
+				is_checkout()
+			) {
 
-        // Body Font Family
-        $fonts[] = cream_magazine_get_option( 'cream_magazine_body_font_family' );
+				$sidebar_position = cream_magazine_get_option( 'cream_magazine_select_woocommerce_sidebar_position' );
+			} else {
 
-        if( ! empty( $fonts ) ) {
+				if ( is_home() ) {
+					$sidebar_position = cream_magazine_get_option( 'cream_magazine_select_blog_sidebar_position' );
+				}
 
-            $fonts = array_unique( $fonts );
-        } else {
+				if ( is_archive() ) {
+					$sidebar_position = cream_magazine_get_option( 'cream_magazine_select_archive_sidebar_position' );
+				}
 
-            $fonts[] = 'Roboto:400,400i,500,500i,700,700i';
+				if ( is_search() ) {
+					$sidebar_position = cream_magazine_get_option( 'cream_magazine_select_search_sidebar_position' );
+				}
 
-            $fonts[] = 'Muli:400,400i,600,600i,700,700i';
-        }
+				if ( is_single() ) {
 
-        $query_args = array(
-            'family' => implode( '|', $fonts ),
-            'subset' => 'latin,latin-ext',
-        );
+					$common_post_sidebar = cream_magazine_get_option( 'cream_magazine_enable_post_common_sidebar_position' );
 
-        $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+					if ( true === $common_post_sidebar ) {
+						$sidebar_position = cream_magazine_get_option( 'cream_magazine_select_post_common_sidebar_position' );
+					} else {
 
-        return esc_url_raw( $fonts_url );
-    }
-endif;
+						$sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
+					}
+				}
 
+				if ( is_page() ) {
 
-/**
- * Funtion To Get Sidebar Position
- */
-if ( !function_exists( 'cream_magazine_sidebar_position' ) ) :
+					$common_post_sidebar = cream_magazine_get_option( 'cream_magazine_enable_page_common_sidebar_position' );
 
-    /**
-     * Return Position of Sidebar.
-     *
-     * @since 1.0.0
-     * @return string Fonts URL.
-     */
-    function cream_magazine_sidebar_position() {
+					if ( true === $common_post_sidebar ) {
+						$sidebar_position = cream_magazine_get_option( 'cream_magazine_select_page_common_sidebar_position' );
+					} else {
 
-        $sidebar_position = '';
+						$sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
+					}
+				}
+			}
+		} else {
+			if ( is_home() ) {
+				$sidebar_position = cream_magazine_get_option( 'cream_magazine_select_blog_sidebar_position' );
+			}
 
-        if( class_exists( 'Woocommerce' ) ) {
-            if( is_woocommerce() || is_cart() || is_account_page() || is_checkout() ) {
+			if ( is_archive() ) {
+				$sidebar_position = cream_magazine_get_option( 'cream_magazine_select_archive_sidebar_position' );
+			}
 
-                $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_woocommerce_sidebar_position' );
-            } else {
-                
-                if( is_home() ) {
-                    $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_blog_sidebar_position' );
-                }
+			if ( is_search() ) {
+				$sidebar_position = cream_magazine_get_option( 'cream_magazine_select_search_sidebar_position' );
+			}
 
-                if( is_archive() ) {
-                    $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_archive_sidebar_position' );
-                }
+			if ( is_single() ) {
 
-                if( is_search() ) {
-                    $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_search_sidebar_position' );
-                }
+				$common_post_sidebar = cream_magazine_get_option( 'cream_magazine_enable_post_common_sidebar_position' );
 
-                if( is_single() ) {
+				if ( true === $common_post_sidebar ) {
+					$sidebar_position = cream_magazine_get_option( 'cream_magazine_select_post_common_sidebar_position' );
+				} else {
 
-                    $common_post_sidebar = cream_magazine_get_option( 'cream_magazine_enable_post_common_sidebar_position' );
-                    
-                    if( $common_post_sidebar == true ) {
-                        $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_post_common_sidebar_position' );
-                    } else {
+					$sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
+				}
+			}
 
-                        $sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
-                    }
-                }
+			if ( is_page() ) {
 
-                if( is_page() ) {
+				$common_post_sidebar = cream_magazine_get_option( 'cream_magazine_enable_page_common_sidebar_position' );
 
-                    $common_post_sidebar = cream_magazine_get_option( 'cream_magazine_enable_page_common_sidebar_position' );
+				if ( true === $common_post_sidebar ) {
+					$sidebar_position = cream_magazine_get_option( 'cream_magazine_select_page_common_sidebar_position' );
+				} else {
 
-                    if( $common_post_sidebar == true ) {
-                        $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_page_common_sidebar_position' );
-                    } else {
+					$sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
+				}
+			}
+		}
 
-                        $sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
-                    }
-                }
-            }
-        } else {
-            if( is_home() ) {
-                $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_blog_sidebar_position' );
-            }
+		if ( empty( $sidebar_position ) ) {
+			$sidebar_position = 'right';
+		}
 
-            if( is_archive() ) {
-                $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_archive_sidebar_position' );
-            }
-
-            if( is_search() ) {
-                $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_search_sidebar_position' );
-            }
-
-            if( is_single() ) {
-
-                $common_post_sidebar = cream_magazine_get_option( 'cream_magazine_enable_post_common_sidebar_position' );
-                
-                if( $common_post_sidebar == true ) {
-                    $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_post_common_sidebar_position' );
-                } else {
-
-                    $sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
-                }
-            }
-
-            if( is_page() ) {
-
-                $common_post_sidebar = cream_magazine_get_option( 'cream_magazine_enable_page_common_sidebar_position' );
-
-                if( $common_post_sidebar == true ) {
-                    $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_page_common_sidebar_position' );
-                } else {
-
-                    $sidebar_position = get_post_meta( get_the_ID(), 'cream_magazine_sidebar_position', true );
-                }
-            }
-        }
-        
-        if( empty( $sidebar_position ) ) {
-            $sidebar_position = 'right';
-        }
-
-        return $sidebar_position;
-    }
-endif;
-
-
-
-/**
- * Funtion To Check Sidebar Sticky
- */
-if ( !function_exists( 'cream_magazine_check_sticky_sidebar' ) ) :
-
-    /**
-     * Return True or False
-     *
-     * @since 1.0.0
-     * @return boolean.
-     */
-    function cream_magazine_check_sticky_sidebar() {
-
-        $is_sticky_sidebar = cream_magazine_get_option( 'cream_magazine_enable_sticky_sidebar' );
-
-        if( $is_sticky_sidebar == true ) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-endif;
-
-
-/**
- * Function To Get WooCommerce Sidebar
- */
-if( ! function_exists( 'cream_magazine_woocommerce_sidebar' ) ) {
-
-    function cream_magazine_woocommerce_sidebar() {
-
-        $sidebar_position = cream_magazine_get_option( 'cream_magazine_select_woocommerce_sidebar_position' );
-
-        if( ! is_active_sidebar( 'woocommerce-sidebar' ) || $sidebar_position == 'none' ) {
-
-            return;
-        }
-
-        $sidebar_class = 'cm-col-lg-4 cm-col-12';
-
-        $is_sticky = cream_magazine_check_sticky_sidebar();
-
-        $show_sidebar_on_mobile_n_tablet = cream_magazine_get_option( 'cream_magazine_show_sidebar_on_mobile_n_tablet' );
-
-        $sidebar_after_content = cream_magazine_get_option( 'cream_magazine_show_sidebar_after_contents_on_mobile_n_tablet' );
-
-        if( $sidebar_position == 'left' ) {
-
-            $sidebar_class .= ' order-1';
-        } 
-
-        if( $is_sticky == true ) {
-
-            $sidebar_class .= ' sticky_portion';
-        }
-
-        if( ! $show_sidebar_on_mobile_n_tablet ) {
-
-            $sidebar_class .= ' hide-tablet hide-mobile';
-        }
-
-        if( $sidebar_after_content ) {
-
-            $sidebar_class .= ' cm-order-2-mobile-tablet';
-        }
-        ?>
-        <div class="<?php echo esc_attr( $sidebar_class ); ?>">
-            <aside id="secondary" class="sidebar-widget-area">
-                <?php dynamic_sidebar( 'woocommerce-sidebar' ); ?>
-            </aside><!-- #secondary -->
-        </div><!-- .col.sticky_portion -->
-        <?php
-    }
+		return $sidebar_position;
+	}
 }
 
 
-/**
- * Function To Get Thumbnail Class
- */
-if( ! function_exists( 'cream_magazine_thumbnail_class' ) ) {
+if ( ! function_exists( 'cream_magazine_check_sticky_sidebar' ) ) {
+	/**
+	 * Checks if sidebar is set sticky.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return boolean.
+	 */
+	function cream_magazine_check_sticky_sidebar() {
 
-    function cream_magazine_thumbnail_class() {
-
-        $thumbnail_class = 'post_thumb';
-
-        echo esc_attr( $thumbnail_class );
-    }
+		return cream_magazine_get_option( 'cream_magazine_enable_sticky_sidebar' );
+	}
 }
 
 
-if( ! function_exists( 'cream_magazine_front_page_middle_area_class' ) ) {
 
-    function cream_magazine_front_page_middle_area_class() {
+if ( ! function_exists( 'cream_magazine_woocommerce_sidebar' ) ) {
+	/**
+	 * Return position of WooCommerce sidebar.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return string
+	 */
+	function cream_magazine_woocommerce_sidebar() {
 
-        $container_class = '';
+		$sidebar_position = cream_magazine_get_option( 'cream_magazine_select_woocommerce_sidebar_position' );
 
-        $sidebar_position = cream_magazine_get_option( 'cream_magazine_homepage_sidebar' );
+		if (
+			! is_active_sidebar( 'woocommerce-sidebar' ) ||
+			'none' === $sidebar_position
+		) {
 
-        $is_sticky = cream_magazine_check_sticky_sidebar();
+			return;
+		}
 
-        if( $sidebar_position != 'none' && is_active_sidebar( 'sidebar' ) ) {
+		$sidebar_class = 'cm-col-lg-4 cm-col-12';
 
-            if( $is_sticky ) {
+		$is_sticky = cream_magazine_check_sticky_sidebar();
 
-                $container_class = 'cm-col-lg-8 cm-col-12 sticky_portion';
-            } else {
+		$show_sidebar_on_mobile_n_tablet = cream_magazine_get_option( 'cream_magazine_show_sidebar_on_mobile_n_tablet' );
 
-                $container_class = 'cm-col-lg-8 cm-col-12';
-            }
+		$sidebar_after_content = cream_magazine_get_option( 'cream_magazine_show_sidebar_after_contents_on_mobile_n_tablet' );
 
-            if( $sidebar_position == 'left' ) {
+		if ( 'left' === $sidebar_position ) {
 
-                $container_class .= ' order-2';
-            }
-        } else {
+			$sidebar_class .= ' order-1';
+		}
 
-            $container_class = 'cm-col-lg-12 cm-col-12';
-        }
+		if ( true === $is_sticky ) {
 
-        return $container_class;
-    }
+			$sidebar_class .= ' sticky_portion';
+		}
+
+		if ( ! $show_sidebar_on_mobile_n_tablet ) {
+
+			$sidebar_class .= ' hide-tablet hide-mobile';
+		}
+
+		if ( $sidebar_after_content ) {
+
+			$sidebar_class .= ' cm-order-2-mobile-tablet';
+		}
+		?>
+		<div class="<?php echo esc_attr( $sidebar_class ); ?>">
+			<aside id="secondary" class="sidebar-widget-area">
+				<?php dynamic_sidebar( 'woocommerce-sidebar' ); ?>
+			</aside><!-- #secondary -->
+		</div><!-- .col.sticky_portion -->
+		<?php
+	}
 }
 
 
-/**
- * Filter For Main Query
- */
-if( ! function_exists( 'cream_magazine_main_query_filter' ) ) :
+if ( ! function_exists( 'cream_magazine_thumbnail_class' ) ) {
+	/**
+	 * Print CSS class for post thumbnail wrapper.
+	 *
+	 * @since 1.0.0
+	 */
+	function cream_magazine_thumbnail_class() {
 
-    function cream_magazine_main_query_filter( $query ) {
+		echo 'post_thumb';
+	}
+}
 
-        if ( is_admin() ) {
 
-            return $query;
-        }
+if ( ! function_exists( 'cream_magazine_front_page_middle_area_class' ) ) {
+	/**
+	 * Set CSS class for front page middle area.
+	 *
+	 * @since 1.0.0
+	 */
+	function cream_magazine_front_page_middle_area_class() {
 
-        if ( $query->is_search && ( cream_magazine_get_option( 'cream_magazine_hide_pages_on_search_results' ) == true ) ) {
-            
-            $query->set('post_type', 'post');
-        }
+		$container_class = '';
 
-        return $query;
-    }
-endif;
-add_filter( 'pre_get_posts', 'cream_magazine_main_query_filter' );
+		$sidebar_position = cream_magazine_get_option( 'cream_magazine_homepage_sidebar' );
+
+		$is_sticky = cream_magazine_check_sticky_sidebar();
+
+		if (
+			'none' !== $sidebar_position &&
+			is_active_sidebar( 'sidebar' )
+		) {
+
+			$container_class = ( $is_sticky ) ? 'cm-col-lg-8 cm-col-12 sticky_portion' : 'cm-col-lg-8 cm-col-12';
+
+			if ( 'left' === $sidebar_position ) {
+				$container_class .= ' order-2';
+			}
+		} else {
+
+			$container_class = 'cm-col-lg-12 cm-col-12';
+		}
+
+		return $container_class;
+	}
+}
+
+
+
+if ( ! function_exists( 'cream_magazine_main_query_filter' ) ) {
+	/**
+	 * Removes pages from search results.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param object $query WP Query instance.
+	 * @return object
+	 */
+	function cream_magazine_main_query_filter( $query ) {
+
+		if ( is_admin() ) {
+
+			return $query;
+		}
+
+		if (
+			$query->is_search &&
+			true === cream_magazine_get_option( 'cream_magazine_hide_pages_on_search_results' )
+		) {
+			$query->set( 'post_type', 'post' );
+		}
+
+		return $query;
+	}
+
+	add_action( 'pre_get_posts', 'cream_magazine_main_query_filter' );
+}
+
+
+
+if ( ! function_exists( 'cream_magazine_get_post_taxonomy_select_choices' ) ) {
+	/**
+	 * Gets all terms associated to given taxonomy, and returns array of taxonomy id/slug and name pairs.
+	 *
+	 * @since 2.1.2
+	 *
+	 * @param string $taxonomy Post taxonomy.
+	 * @param string $key Slug or ID.
+	 */
+	function cream_magazine_get_post_taxonomy_select_choices( $taxonomy, $key = 'slug' ) {
+
+		$select_choices = array();
+		$taxonomy_terms = get_terms( $taxonomy );
+
+		if ( $taxonomy_terms ) {
+
+			foreach ( $taxonomy_terms as $taxonomy_term ) {
+
+				if ( 'id' === $key ) {
+
+					$select_choices[ $taxonomy_term->id ] = $taxonomy_term->name;
+				} else {
+					$select_choices[ $taxonomy_term->slug ] = $taxonomy_term->name;
+				}
+			}
+		}
+
+		return $select_choices;
+	}
+}

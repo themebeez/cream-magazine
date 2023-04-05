@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:disable
 /**
  * Breadcrumb Trail - A breadcrumb menu script for WordPress.
  *

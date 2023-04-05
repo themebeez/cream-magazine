@@ -16,7 +16,10 @@ function cream_magazine_woocommerce_loop_columns() {
 
 	$sidebar_position = cream_magazine_sidebar_position();
 
-	if( $sidebar_position != 'none' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
+	if (
+		'none' !== $sidebar_position &&
+		is_active_sidebar( 'woocommerce-sidebar' )
+	) {
 
 		return 3;
 	} else {
@@ -34,16 +37,19 @@ add_filter( 'loop_shop_columns', 'cream_magazine_woocommerce_loop_columns' );
  */
 function cream_magazine_woocommerce_related_products_args( $args ) {
 
-	$columns = '';
+	$columns          = '';
 	$sidebar_position = cream_magazine_sidebar_position();
 
-	if( $sidebar_position != 'none' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
+	if (
+		'none' !== $sidebar_position &&
+		is_active_sidebar( 'woocommerce-sidebar' )
+	) {
 
-		$columns = 3;
+		$columns        = 3;
 		$posts_per_page = 3;
 	} else {
 
-		$columns = 4;
+		$columns        = 4;
 		$posts_per_page = 4;
 	}
 
@@ -88,6 +94,7 @@ if ( ! function_exists( 'cream_magazine_woocommerce_product_columns_wrapper_clos
 }
 add_action( 'woocommerce_after_shop_loop', 'cream_magazine_woocommerce_product_columns_wrapper_close', 40 );
 
+
 /**
  * Remove default WooCommerce wrapper.
  */
@@ -106,57 +113,60 @@ if ( ! function_exists( 'cream_magazine_woocommerce_wrapper_before' ) ) {
 	function cream_magazine_woocommerce_wrapper_before() {
 		?>
 		<div class="cm-container">
-		    <div class="inner-page-wrapper">
-		        <div id="primary" class="content-area">
-		            <main id="main" class="site-main">
-		                <div class="cm_woocommerce_pages">
-		                    <?php
-		                    /**
-							* Hook - cream_magazine_breadcrumb.
-							*
-							* @hooked cream_magazine_breadcrumb_action - 10
-							*/
+			<div class="inner-page-wrapper">
+				<div id="primary" class="content-area">
+					<main id="main" class="site-main">
+						<div class="cm_woocommerce_pages">
+							<?php
+							/**
+							 * Hook - cream_magazine_breadcrumb.
+							 *
+							 * @hooked cream_magazine_breadcrumb_action - 10
+							 */
 							do_action( 'cream_magazine_breadcrumb' );
-		                    ?>
-		                    <div class="woocommerce-container clearfix">
-		                    	<div class="row">		                    	
-			                    	<?php
-			                    	$sidebar_position = cream_magazine_sidebar_position(); 
+							?>
+							<div class="woocommerce-container clearfix">
+								<div class="row">		                    	
+									<?php
+									$sidebar_position = cream_magazine_sidebar_position();
 
-			                    	$is_sticky = cream_magazine_check_sticky_sidebar();
+									$is_sticky = cream_magazine_check_sticky_sidebar();
 
-			                    	$sidebar_after_content = cream_magazine_get_option( 'cream_magazine_show_sidebar_after_contents_on_mobile_n_tablet' );
+									$sidebar_after_content = cream_magazine_get_option( 'cream_magazine_show_sidebar_after_contents_on_mobile_n_tablet' );
 
 									$main_class = 'cm-col-lg-8 cm-col-12';
 
-			                    	if( $sidebar_position != 'none' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
+									if (
+										'none' !== $sidebar_position &&
+										is_active_sidebar( 'woocommerce-sidebar' )
+									) {
 
-			                    		if( $is_sticky == true ) {
+										if ( true === $is_sticky ) {
 
 											$main_class .= ' sticky_portion';
 										}
 
-										if( $sidebar_position == 'left' ) {
+										if ( 'left' === $sidebar_position ) {
 
 											$main_class .= ' order-2';
 										}
 
-										if( $sidebar_after_content ) {
+										if ( $sidebar_after_content ) {
 
 											$main_class .= ' cm-order-1-mobile-tablet';
 										}
+									} else {
 
-			                    	} else {
-
-			                    		$main_class = 'cm-col-lg-12 cm-col-12';
-			                    	}
-			                    	?>
-			                        <div class="<?php echo esc_attr( $main_class ); ?>">
-			                            <div class="content-entry">
+										$main_class = 'cm-col-lg-12 cm-col-12';
+									}
+									?>
+									<div class="<?php echo esc_attr( $main_class ); ?>">
+										<div class="content-entry">
 											<?php
 	}
 }
 add_action( 'woocommerce_before_main_content', 'cream_magazine_woocommerce_wrapper_before' );
+
 
 if ( ! function_exists( 'cream_magazine_woocommerce_wrapper_after' ) ) {
 	/**
@@ -167,16 +177,16 @@ if ( ! function_exists( 'cream_magazine_woocommerce_wrapper_after' ) ) {
 	 * @return void
 	 */
 	function cream_magazine_woocommerce_wrapper_after() {
-									?>
+		?>
 									</div><!-- .content-entry -->
-		                        </div>
-		                        <?php cream_magazine_woocommerce_sidebar(); ?>
-		                        </div><!-- .woocommerce-container -->
-		                    </div><!-- .row -->
-		                </div><!-- .cm_woocommerce_pages -->
-		            </main><!-- #main.site-main -->
-		        </div><!-- #primary.content-area -->
-		    </div><!-- .inner-page-wrapper -->
+								</div>
+								<?php cream_magazine_woocommerce_sidebar(); ?>
+								</div><!-- .woocommerce-container -->
+							</div><!-- .row -->
+						</div><!-- .cm_woocommerce_pages -->
+					</main><!-- #main.site-main -->
+				</div><!-- #primary.content-area -->
+			</div><!-- .inner-page-wrapper -->
 		</div><!-- .cm-container -->
 		<?php
 	}
@@ -248,7 +258,7 @@ if ( ! function_exists( 'cream_magazine_woocommerce_header_cart' ) ) {
 	 * @return void
 	 */
 	function cream_magazine_woocommerce_header_cart() {
-		
+
 		if ( is_cart() ) {
 			$class = 'current-menu-item';
 		} else {
