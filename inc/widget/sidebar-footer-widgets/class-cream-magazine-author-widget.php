@@ -94,8 +94,8 @@ class Cream_Magazine_Author_Widget extends WP_Widget {
 				'posts_per_page' => 1,
 			);
 
-			if ( $instance['author_page'] ) {
-				$author_page_query_args['page_id'] = isset( $instance['author_page'] ) ? absint( $instance['author_page'] ) : $widget_setting_defaults['author_page'];
+			if ( isset( $instance['author_page'] ) ) {
+				$author_page_query_args['page_id'] = absint( $instance['author_page'] );
 			}
 
 			$author = new WP_Query( $author_page_query_args );
