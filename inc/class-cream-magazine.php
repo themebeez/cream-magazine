@@ -273,6 +273,22 @@ class Cream_Magazine {
 			);
 		}
 
+		wp_enqueue_style(
+			'fontAwesome-4',
+			get_template_directory_uri() . '/assets/dist/fonts/fontAwesome/fontAwesome.min.css',
+			null,
+			CREAM_MAGAZINE_VERSION,
+			'all'
+		);
+
+		wp_enqueue_style(
+			'feather-icons',
+			get_template_directory_uri() . '/assets/dist/fonts/feather/feather.min.css',
+			null,
+			CREAM_MAGAZINE_VERSION,
+			'all'
+		);
+
 		if ( is_rtl() ) {
 
 			wp_enqueue_style(

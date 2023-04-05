@@ -3,7 +3,6 @@
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .
-. @ All the scss files are include from here
 .
 . @ Author : Themebeez
 .
@@ -13,50 +12,23 @@
 .
 . @ Since : 18 April 2018
 .
-. @ Current SCSS version : 2.0.3
-.
-. @ Last Updated : 11 May 2020
 .
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
 
-@charset "UTF-8";
-
-
-// Variables 
-
 @import 'variables/variables-color';
 @import 'variables/variables-typography';
 @import 'variables/woo-variables';
 
-
-// Import mixins  
-
 @import 'mixins/mixins';
-
-
-// CSS framework ( Bootstrap )
 
 @import 'base/base';
 @import 'framework/bootstrap';
 
-
-// External plugins & library
-
-
 @import 'plugins/owlcarousel';
 @import 'plugins/animate';
-
-
-// Icon fonts ( eg: fontAwesome )
-
-
-@import 'fonticons/fonticon';
-
-
-// Custom Stylesheet ( Table of content inside at styles )
 
 @import 'custom/post-meta';
 @import 'custom/cream-magazine';
@@ -83,14 +55,6 @@
 @import 'wordpress/wpstyles';
 @import 'wordpress/woocommerce';
 
-
-// Responsive or Media query
-
-
 @import 'responsive/responsive';
-
-
-// Keyframes 
-
 
 @import 'custom/keyframe';
