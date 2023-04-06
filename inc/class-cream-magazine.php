@@ -269,7 +269,9 @@ class Cream_Magazine {
 		if ( cream_magazine_has_google_fonts() ) {
 			wp_enqueue_style( // phpcs:ignore
 				'cream-magazine-fonts',
-				cream_magazine_get_google_fonts_url()
+				cream_magazine_get_google_fonts_url(),
+				array(),
+				null,
 			);
 		}
 
