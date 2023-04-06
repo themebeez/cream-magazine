@@ -58,17 +58,17 @@ class Cream_Magazine_Author_Widget extends WP_Widget {
 		$this->widget_setting_fields = array(
 			'title'             => array(
 				'type'  => 'text',
-				'label' => esc_html__( 'Title', 'cream_magazine' ),
+				'label' => esc_html__( 'Title', 'cream-magazine' ),
 			),
 			'author_page'       => array(
 				'type'      => 'select',
-				'label'     => esc_html__( 'Author Page', 'cream_magazine' ),
+				'label'     => esc_html__( 'Author Page', 'cream-magazine' ),
 				'choices'   => cream_magazine_get_pages_dropdown_choices(),
 				'data_type' => 'number',
 			),
 			'author_link_title' => array(
 				'type'  => 'text',
-				'label' => esc_html__( 'Author Link Title', 'cream_magazine' ),
+				'label' => esc_html__( 'Author Link Title', 'cream-magazine' ),
 			),
 		);
 	}

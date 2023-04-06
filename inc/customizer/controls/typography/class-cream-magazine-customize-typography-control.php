@@ -295,7 +295,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 			<# if ( 'font_weight' in savedValue ) { #>
 				<div class="cream-magazine-customize-control-section cream-magazine-typography-section font-weight">
 					<div class="cream-magazine-customize-control-section-inner cream-magazine-typography-section-inner no-flex">
-						<span class="label"><?php echo esc_html__( 'Font Weights', 'cream-magazine' ); ?></span>
+						<span class="label"><?php echo esc_html__( 'Font Weight', 'cream-magazine' ); ?></span>
 						<select
 							class="cream-magazine-font-weight-select"
 							id="cream-magazine-font-weight-select-{{ data.id }}"

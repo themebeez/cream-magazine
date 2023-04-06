@@ -95,3 +95,58 @@ if ( ! function_exists( 'cream_magazine_color_sanitize_callback' ) ) {
 		return $setting->default;
 	}
 }
+
+
+if ( ! function_exists( 'cream_magazine_sanitize_font' ) ) {
+	/**
+	 * Sanitizes font control value.
+	 *
+	 * @param string $value Setting value.
+	 * @param object $setting Setting object.
+	 * @return string
+	 */
+	function cream_magazine_sanitize_font( $value, $setting ) {
+
+		$value = json_decode( $value, true );
+
+		$sanitized_value = array();
+
+		if (
+			! isset( $value['source'] ) ||
+			(
+				'google' !== $value['source'] &&
+				'websafe' !== $value['source']
+			)
+		) {
+			return $setting->default;
+		} else {
+			$sanitized_value['source'] = sanitize_text_field( $value['source'] );
+		}
+
+		if ( ! isset( $value['font_family'] ) ) {
+			return $setting->value;
+		} else {
+			$sanitized_value['font_family'] = sanitize_text_field( $value['font_family'] );
+		}
+
+		if ( ! isset( $value['font_variants'] ) ) {
+			return $setting->value;
+		} else {
+			$sanitized_value['font_variants'] = sanitize_text_field( $value['font_variants'] );
+		}
+
+		if ( ! isset( $value['font_url'] ) ) {
+			return $setting->value;
+		} else {
+			$sanitized_value['font_url'] = sanitize_text_field( $value['font_url'] );
+		}
+
+		if ( ! isset( $value['font_weight'] ) ) {
+			return $setting->value;
+		} else {
+			$sanitized_value['font_weight'] = sanitize_text_field( $value['font_weight'] );
+		}
+
+		return wp_json_encode( $sanitized_value );
+	}
+}

@@ -61,11 +61,11 @@ class Cream_Magazine_Post_Widget extends WP_Widget {
 		$this->widget_setting_fields = array(
 			'title'             => array(
 				'type'  => 'text',
-				'label' => esc_html__( 'Title', 'cream_magazine' ),
+				'label' => esc_html__( 'Title', 'cream-magazine' ),
 			),
 			'post_choice'       => array(
 				'type'    => 'select',
-				'label'   => esc_html__( 'Type of Posts', 'cream_magazine' ),
+				'label'   => esc_html__( 'Type of Posts', 'cream-magazine' ),
 				'choices' => array(
 					'recent'         => esc_html__( 'Recent Posts', 'cream-magazine' ),
 					'most_commented' => esc_html__( 'Most Commented', 'cream-magazine' ),
@@ -73,19 +73,19 @@ class Cream_Magazine_Post_Widget extends WP_Widget {
 			),
 			'post_no'           => array(
 				'type'  => 'number',
-				'label' => esc_html__( 'No of Posts', 'cream_magazine' ),
+				'label' => esc_html__( 'No of Posts', 'cream-magazine' ),
 			),
 			'show_author_meta'  => array(
 				'type'  => 'checkbox',
-				'label' => esc_html__( 'Show Post Author', 'cream_magazine' ),
+				'label' => esc_html__( 'Show Post Author', 'cream-magazine' ),
 			),
 			'show_date_meta'    => array(
 				'type'  => 'checkbox',
-				'label' => esc_html__( 'Show Posted Date', 'cream_magazine' ),
+				'label' => esc_html__( 'Show Posted Date', 'cream-magazine' ),
 			),
 			'show_cmnt_no_meta' => array(
 				'type'  => 'checkbox',
-				'label' => esc_html__( 'Show Post Comments Number', 'cream_magazine' ),
+				'label' => esc_html__( 'Show Post Comments Number', 'cream-magazine' ),
 			),
 		);
 	}

@@ -68,55 +68,55 @@ class Cream_Magazine_Social_Widget extends WP_Widget {
 		$this->widget_setting_fields = array(
 			'title'           => array(
 				'type'  => 'text',
-				'label' => esc_html__( 'Title', 'cream_magazine' ),
+				'label' => esc_html__( 'Title', 'cream-magazine' ),
 			),
 			'facebook_title'  => array(
 				'type'  => 'text',
-				'label' => esc_html__( 'Facebook Link Label', 'cream_magazine' ),
+				'label' => esc_html__( 'Facebook Link Label', 'cream-magazine' ),
 			),
 			'facebook'        => array(
 				'type'  => 'url',
-				'label' => esc_html__( 'Facebook Link', 'cream_magazine' ),
+				'label' => esc_html__( 'Facebook Link', 'cream-magazine' ),
 			),
 			'twitter_title'   => array(
 				'type'  => 'text',
-				'label' => esc_html__( 'Twitter Link Label', 'cream_magazine' ),
+				'label' => esc_html__( 'Twitter Link Label', 'cream-magazine' ),
 			),
 			'twitter'         => array(
 				'type'  => 'url',
-				'label' => esc_html__( 'Twitter Link', 'cream_magazine' ),
+				'label' => esc_html__( 'Twitter Link', 'cream-magazine' ),
 			),
 			'instagram_title' => array(
 				'type'  => 'text',
-				'label' => esc_html__( 'Instagram Link Label', 'cream_magazine' ),
+				'label' => esc_html__( 'Instagram Link Label', 'cream-magazine' ),
 			),
 			'instagram'       => array(
 				'type'  => 'url',
-				'label' => esc_html__( 'Instagram Link', 'cream_magazine' ),
+				'label' => esc_html__( 'Instagram Link', 'cream-magazine' ),
 			),
 			'linkedin_title'  => array(
 				'type'  => 'text',
-				'label' => esc_html__( 'LinkedIn Link Label', 'cream_magazine' ),
+				'label' => esc_html__( 'LinkedIn Link Label', 'cream-magazine' ),
 			),
 			'linkedin'        => array(
 				'type'  => 'url',
-				'label' => esc_html__( 'LinkedIn Link', 'cream_magazine' ),
+				'label' => esc_html__( 'LinkedIn Link', 'cream-magazine' ),
 			),
 			'youtube_title'   => array(
 				'type'  => 'text',
-				'label' => esc_html__( 'YouTube Link Label', 'cream_magazine' ),
+				'label' => esc_html__( 'YouTube Link Label', 'cream-magazine' ),
 			),
 			'youtube'         => array(
 				'type'  => 'url',
-				'label' => esc_html__( 'YouTube Link', 'cream_magazine' ),
+				'label' => esc_html__( 'YouTube Link', 'cream-magazine' ),
 			),
 			'pinterest_title' => array(
 				'type'  => 'text',
-				'label' => esc_html__( 'Pinterest Link Label', 'cream_magazine' ),
+				'label' => esc_html__( 'Pinterest Link Label', 'cream-magazine' ),
 			),
 			'pinterest'       => array(
 				'type'  => 'url',
-				'label' => esc_html__( 'Pinterest Link', 'cream_magazine' ),
+				'label' => esc_html__( 'Pinterest Link', 'cream-magazine' ),
 			),
 		);
 	}
