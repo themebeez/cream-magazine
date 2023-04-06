@@ -70,7 +70,7 @@ if ( ! class_exists( 'Cream_Magazine_Typography_Customize' ) ) {
 				'cream_magazine_body_font',
 				array(
 					'default'           => $defaults['cream_magazine_body_font'],
-					'sanitize_callback' => '',
+					'sanitize_callback' => 'cream_magazine_sanitize_font',
 				)
 			);
 
@@ -89,7 +89,7 @@ if ( ! class_exists( 'Cream_Magazine_Typography_Customize' ) ) {
 				'cream_magazine_headings_font',
 				array(
 					'default'           => $defaults['cream_magazine_headings_font'],
-					'sanitize_callback' => '',
+					'sanitize_callback' => 'cream_magazine_sanitize_font',
 				)
 			);
 
