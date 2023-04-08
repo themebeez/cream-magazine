@@ -272,6 +272,7 @@ class Cream_Magazine {
 				cream_magazine_get_google_fonts_url(),
 				array(),
 				null,
+				'all'
 			);
 		}
 

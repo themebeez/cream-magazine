@@ -4,7 +4,7 @@ Contributors: themebeez
 Requires at least: 5.0.0
 Requires PHP: 5.6
 Tested up to: 6.2
-Stable tag: 2.1.2
+Stable tag: 2.1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, news, right-sidebar, theme-options, footer-widgets, left-sidebar, grid-layout, rtl-language-support
@@ -104,7 +104,12 @@ Cream Magazine includes support for Contact Form 7 and Woocommerce.
 
 == Changelog ==
 
-= Version 2.1.2 - 4 April, 2023 =
+= Version 2.1.3 - 8 April, 2023 =
+
+- Fixed: PHP error in version less than 7.4 - `Parse error: syntax error, unexpected ')' in /home/ashok/Local Sites/themetest56/app/public/wp-content/themes/cream-magazine/inc/class-cream-magazine.php on line 276` [#GitHubIssue110](https://github.com/themebeez/cream-magazine/issues/110)
+- Fixed: Issue with header image [#GitHubIssue111](https://github.com/themebeez/cream-magazine/issues/111)
+
+= Version 2.1.2 - 6 April, 2023 =
 
 - Updated: Body and headings typography options. Support for websafe fonts and Google fonts.
 - Removed: Image lazy load settings from customize.
