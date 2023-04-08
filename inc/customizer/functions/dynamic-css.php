@@ -178,7 +178,7 @@ if ( ! function_exists( 'cream_magazine_dynamic_styles' ) ) {
 
 		if ( has_header_image() ) {
 			$css .= 'header.cm-header-style-one {';
-			$css .= 'background-image: url(' . header_image() . ');';
+			$css .= 'background-image: url(' . esc_url( get_header_image() ) . ');';
 			$css .= '}';
 		}
 
