@@ -214,7 +214,7 @@ if ( ! function_exists( 'cream_magazine_post_categories_meta' ) ) {
 			if ( $categories_list ) {
 				?>
 				<div class="entry_cats">
-					<?php echo wp_kses_post( $categories_list ); // phpcs:ignore?>
+					<?php echo wp_kses_post( $categories_list ); // phpcs:ignore ?>
 				</div><!-- .entry_cats -->
 				<?php
 			}
@@ -341,8 +341,6 @@ if ( ! function_exists( 'cream_magazine_post_thumbnail' ) ) {
 
 			return;
 		}
-
-		$lazy_thumbnail = cream_magazine_get_option( 'cream_magazine_enable_lazy_load' );
 
 		if (
 			is_archive() ||
