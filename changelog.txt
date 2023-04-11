@@ -1,3 +1,39 @@
+= Version 2.1.4 - 11 April, 2023 =
+
+- Fixed: PHP error - `PHP Fatal error: Uncaught ArgumentCountError: Too few arguments to function get_day_link(), 1 passed in /wp-content/themes/cream-magazine/third-party/breadcrumbs.php on line 802 and exactly 3 expected.` [#GitHubIssue113](https://github.com/themebeez/cream-magazine/issues/113)
+
+
+= Version 2.1.3 - 8 April, 2023 =
+
+- Fixed: PHP error in version less than 7.4 - `Parse error: syntax error, unexpected ')' in /home/ashok/Local Sites/themetest56/app/public/wp-content/themes/cream-magazine/inc/class-cream-magazine.php on line 276` [#GitHubIssue110](https://github.com/themebeez/cream-magazine/issues/110)
+- Fixed: Issue with header image [#GitHubIssue111](https://github.com/themebeez/cream-magazine/issues/111)
+
+
+= Version 2.1.2 - 6 April, 2023 =
+
+- Updated: Body and headings typography options. Support for websafe fonts and Google fonts.
+- Removed: Image lazy load settings from customize.
+- Removed: Unwanted files, functions, and codes.
+- Removed: Chosen JS.
+- Added: Slimselect JS.
+- Removed: Zepto lazyload JS.
+- Updated: WPCS maintained.
+- Updated: Custom widgets.
+- Updated: Dynamic CSS minified.
+- Updated: Alpha color picker control in customize.
+- Removed: Everest backup plugin recommendation notice.
+
+
+= Version 2.1.1 - 13 March, 2023 =
+
+- Added: UDP agent. #89
+
+
+= Version 2.1.0 - 29 May, 2022 =
+
+- Added: Everest Backup plugin recommendation notice.
+
+
 = Version 2.0.9 - 15 September, 2021 =
 
 - Added: Excerpt display option on blog, archive and search pages.
