@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Cream Magazine 2.1.4\n"
+"Project-Id-Version: Cream Magazine 2.1.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/cream-magazine\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-04-11T05:39:52+00:00\n"
+"POT-Creation-Date: 2023-05-02T08:37:25+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: cream-magazine\n"
@@ -139,45 +139,45 @@ msgstr ""
 msgid "Site Background"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:216
+#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:219
 #: inc/customizer/options/class-cream-magazine-typography-customize.php:82
 #: inc/customizer/options/class-cream-magazine-typography-customize.php:101
 msgid "Font Family"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:223
+#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:226
 msgid "Websafe Fonts"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:242
+#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:245
 msgid "Google Fonts"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:273
+#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:276
 msgid "Variants"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:298
+#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:301
 msgid "Font Weight"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:334
+#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:337
 msgid "Font Size"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:594
+#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:605
 msgid "Line Height"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:691
+#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:702
 msgid "Letter Spacing"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:952
+#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:971
 msgid "Text Style"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:1038
+#: inc/customizer/controls/typography/class-cream-magazine-customize-typography-control.php:1057
 msgid "Text Transform"
 msgstr ""
 
