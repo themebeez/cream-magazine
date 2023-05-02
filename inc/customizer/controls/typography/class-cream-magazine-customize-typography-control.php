@@ -14,7 +14,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 /**
  * Custom Customize Typography Control.
  *
- * @since 1.0.2
+ * @since 2.1.2
  */
 class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 
@@ -112,7 +112,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 			'slimselect',
 			$select_asset_uri . 'css/slimselect.css',
 			null,
-			CREAM_MAGAZINE_VERSION,
+			'2.0.2',
 			'all'
 		);
 
@@ -128,7 +128,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 			'slimselect',
 			$select_asset_uri . 'js/slimselect.min.js',
 			null,
-			CREAM_MAGAZINE_VERSION,
+			'2.0.2',
 			true
 		);
 
@@ -150,8 +150,11 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 
 		parent::to_json();
 
-		$setting_value              = ( $this->value() ) ? $this->value() : $this->setting->default;
-		$json_decoded_setting_value = json_decode( $setting_value, true );
+		$setting_value                = ( $this->value() ) ? $this->value() : $this->setting->default;
+		$json_decoded_setting_default = json_decode( $this->setting->default, true );
+		$json_decoded_setting_value   = json_decode( $setting_value, true );
+
+		$setting_value = wp_json_encode( cream_magazine_recursive_parse_args( $json_decoded_setting_value, $json_decoded_setting_default ) );
 
 		$this->json['id']                 = $this->id;
 		$this->json['label']              = $this->label;
@@ -358,6 +361,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 										<#
 										let desktopFontSize = ( savedValue.font_sizes.desktop.value ) ? savedValue.font_sizes.desktop.value : defaultValue.font_sizes.desktop.value;
 										let desktopFontSizeUnit = ( savedValue.font_sizes.desktop.unit ) ? savedValue.font_sizes.desktop.unit : defaultValue.font_sizes.desktop.unit;
+										let isDesktopFontSizeUnitChangeable = ( savedValue.font_sizes.desktop.unit_changeable ) ? savedValue.font_sizes.desktop.unit_changeable : defaultValue.font_sizes.desktop.unit_changeable;
 										#>
 										<input
 											{{{ data.fontSizeInputAttrs }}}
@@ -376,6 +380,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 												name="cream-magazine-desktop-font-size-unit-{{ data.id }}"
 												id="cream-magazine-desktop-font-size-unit-{{ data.id }}"
 												data-control="{{ data.id }}"
+												data-changeable="{{ isDesktopFontSizeUnitChangeable }}"
 											>
 												<span>{{ desktopFontSizeUnit }}</span>
 												<input
@@ -415,6 +420,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 										<#
 										let tabletFontSize = ( savedValue.font_sizes.tablet.value ) ? savedValue.font_sizes.tablet.value : defaultValue.font_sizes.tablet.value;
 										let tabletFontSizeUnit = ( savedValue.font_sizes.tablet.unit ) ? savedValue.font_sizes.tablet.unit : defaultValue.font_sizes.tablet.unit;
+										let isTabletFontSizeUnitChangeable = ( savedValue.font_sizes.tablet.unit_changeable ) ? savedValue.font_sizes.tablet.unit_changeable : defaultValue.font_sizes.tablet.unit_changeable;
 										#>
 										<input 
 											{{{ data.fontSizeInputAttrs }}}	
@@ -433,6 +439,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 												name="cream-magazine-tablet-font-size-unit-{{ data.id }}"
 												id="cream-magazine-tablet-font-size-unit-{{ data.id }}"
 												data-control="{{ data.id }}"
+												data-changeable="{{ isTabletFontSizeUnitChangeable }}"
 											>
 												<span>{{ tabletFontSizeUnit }}</span>
 												<input
@@ -472,6 +479,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 										<#
 										let mobileFontSize = ( savedValue.font_sizes.mobile.value ) ? savedValue.font_sizes.mobile.value : defaultValue.font_sizes.mobile.value;
 										let mobileFontSizeUnit = ( savedValue.font_sizes.mobile.unit ) ? savedValue.font_sizes.mobile.unit : defaultValue.font_sizes.mobile.unit;
+										let isMobileFontSizeUnitChangeable = ( savedValue.font_sizes.mobile.unit_changeable ) ? savedValue.font_sizes.mobile.unit_changeable : defaultValue.font_sizes.mobile.unit_changeable;
 										#>
 										<input
 											{{{ data.fontSizeInputAttrs }}}
@@ -490,6 +498,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 												name="cream-magazine-mobile-font-size-unit-{{ data.id }}"
 												id="cream-magazine-mobile-font-size-unit-{{ data.id }}"
 												data-control="{{ data.id }}"
+												data-changeable="{{ isMobileFontSizeUnitChangeable }}"
 											>
 												<span>{{ mobileFontSizeUnit }}</span>
 												<input
@@ -531,6 +540,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 										<#
 										let normalFontSize = ( savedValue.font_size.value ) ? savedValue.font_size.value : defaultValue.font_size.value;
 										let normalFontSizeUnit = ( savedValue.font_size.unit ) ? savedValue.font_size.unit : defaultValue.font_size.unit;
+										let isNormalFontSizeUnitChangeable = ( savedValue.font_size.unit_changeable ) ? savedValue.font_size.unit_changeable : defaultValue.font_size.unit_changeable;
 										#>
 										<input
 											{{{ data.fontSizeInputAttrs }}}
@@ -549,6 +559,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 												name="cream-magazine-desktop-font-size-unit-{{ data.id }}"
 												id="cream-magazine-desktop-font-size-unit-{{ data.id }}"
 												data-control="{{ data.id }}"
+												data-changeable="{{ isNormalFontSizeUnitChangeable }}"
 											>
 												<span>{{ normalFontSizeUnit }}</span>
 												<input
@@ -716,6 +727,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 										<#
 										let desktopLetterSpacing = ( savedValue.letter_spacings.desktop.value ) ? savedValue.letter_spacings.desktop.value : defaultValue.letter_spacings.desktop.value;
 										let desktopLetterSpacingUnit = ( savedValue.letter_spacings.desktop.unit ) ? savedValue.letter_spacings.desktop.unit : defaultValue.letter_spacings.desktop.unit;
+										let isDesktopLetterSpacingUnitChangeable = ( savedValue.letter_spacings.desktop.unit_changeable ) ? savedValue.letter_spacings.desktop.unit_changeable : defaultValue.letter_spacings.desktop.unit_changeable;
 										#>
 										<input
 											{{{ data.letterSpacingInputAttrs }}}
@@ -734,6 +746,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 												name="cream-magazine-desktop-letter-spacing-unit-{{ data.id }}"
 												id="cream-magazine-desktop-letter-spacing-unit-{{ data.id }}"
 												data-control="{{ data.id }}"
+												data-changeable="{{ isDesktopLetterSpacingUnitChangeable }}"
 											>
 												<span>{{ desktopLetterSpacingUnit }}</span>
 												<input
@@ -773,6 +786,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 										<#
 										let tabletLetterSpacing = ( savedValue.letter_spacings.tablet.value ) ? savedValue.letter_spacings.tablet.value : defaultValue.letter_spacings.tablet.value;
 										let tabletLetterSpacingUnit = ( savedValue.letter_spacings.tablet.unit ) ? savedValue.letter_spacings.tablet.unit : defaultValue.letter_spacings.tablet.unit;
+										let isTabletLetterSpacingUnitChangeable = ( savedValue.letter_spacings.tablet.unit_changeable ) ? savedValue.letter_spacings.tablet.unit_changeable : defaultValue.letter_spacings.tablet.unit_changeable;
 										#>
 										<input
 											{{{ data.letterSpacingInputAttrs }}}
@@ -792,6 +806,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 												id="cream-magazine-tablet-letter-spacing-unit-{{ data.id }}"
 												value="{{ tabletLetterSpacingUnit }}"
 												data-control="{{ data.id }}"
+												data-changeable="{{ isTabletLetterSpacingUnitChangeable }}"
 											>
 												<span>{{ tabletLetterSpacingUnit }}</span>
 												<input
@@ -830,6 +845,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 										<#
 										let mobileLetterSpacing = ( savedValue.letter_spacings.mobile.value ) ? savedValue.letter_spacings.mobile.value : defaultValue.letter_spacings.mobile.value;
 										let mobileLetterSpacingUnit = ( savedValue.letter_spacings.mobile.unit ) ? savedValue.letter_spacings.mobile.unit : defaultValue.letter_spacings.mobile.unit;
+										let isMobileLetterSpacingUnitChangeable = ( savedValue.letter_spacings.mobile.unit_changeable ) ? savedValue.letter_spacings.mobile.unit_changeable : defaultValue.letter_spacings.mobile.unit_changeable;
 										#>
 										<input
 											{{{ data.letterSpacingInputAttrs }}}
@@ -848,6 +864,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 												name="cream-magazine-mobile-letter-spacing-unit-{{ data.id }}"
 												id="cream-magazine-mobile-letter-spacing-unit-{{ data.id }}"
 												data-control="{{ data.id }}"
+												data-changeable="{{ isMobileLetterSpacingUnitChangeable }}"
 											>
 												<span>{{ mobileLetterSpacingUnit }}</span>
 												<input
@@ -889,6 +906,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 										<#
 										let normalLetterSpacing = ( savedValue.letter_spacing.value ) ? savedValue.letter_spacing.value : defaultValue.letter_spacing.value;
 										let normalLetterSpacingUnit = ( savedValue.letter_spacing.unit ) ? savedValue.letter_spacing.unit : defaultValue.letter_spacing.unit;
+										let isNormalLetterSpacingUnitChangeable = ( savedValue.letter_spacing.unit_changeable ) ? savedValue.letter_spacing.unit_changeable : defaultValue.letter_spacing.unit_changeable;
 										#>
 										<input
 											{{{ data.letterSpacingInputAttrs }}}
@@ -907,6 +925,7 @@ class Cream_Magazine_Customize_Typography_Control extends WP_Customize_Control {
 												name="cream-magazine-normal-letter-spacing-unit-{{ data.id }}"
 												id="cream-magazine-normal-letter-spacing-unit-{{ data.id }}"
 												data-control="{{ data.id }}"
+												data-changeable="{{ isNormalLetterSpacingUnitChangeable }}"
 											>
 												<span>{{ normalLetterSpacingUnit }}</span>
 												<input
