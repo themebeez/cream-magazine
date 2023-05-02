@@ -100,7 +100,7 @@ wp.customize.controlConstructor['cream-magazine-typography'] = wp.customize.Cont
             let fontVariantsArray = (fontVariantsSelectEleVal.length > 0) ? fontVariantsSelectEleVal : control.params.defaultFontWeights;
             let uniqueFontVariants = [];
 
-            if (fontVariantsArray.length > 0 ) {  
+            if (fontVariantsArray.length > 0) {
                 fontVariantsArray.forEach(function (fontVariant) {
                     if (!uniqueFontVariants.includes(parseInt(fontVariant))) {
                         uniqueFontVariants.push(parseInt(fontVariant));
@@ -111,7 +111,7 @@ wp.customize.controlConstructor['cream-magazine-typography'] = wp.customize.Cont
             let fontVariantsOptionsEles = '<option value="inherit" selected>Inherit</option>';
 
             if (uniqueFontVariants.length > 0) {
-                uniqueFontVariants.forEach(function(uniqueFontVariant) {
+                uniqueFontVariants.forEach(function (uniqueFontVariant) {
                     fontVariantsOptionsEles += '<option value="' + uniqueFontVariant + '">' + uniqueFontVariant + '</option>';
                 });
             }
@@ -142,12 +142,12 @@ wp.customize.controlConstructor['cream-magazine-typography'] = wp.customize.Cont
 
             if (uniqueFontVariants.length > 0) {
                 uniqueFontVariants.forEach(function (uniqueFontVariant) {
-                    if ( parseInt( fontWeightSelectEleVal ) === uniqueFontVariant ) {
+                    if (parseInt(fontWeightSelectEleVal) === uniqueFontVariant) {
                         fontVariantsOptionsEles += '<option value="' + uniqueFontVariant + '" selected>' + uniqueFontVariant + '</option>';
                     } else {
                         fontVariantsOptionsEles += '<option value="' + uniqueFontVariant + '">' + uniqueFontVariant + '</option>';
                     }
-                    
+
                 });
             }
 
@@ -183,8 +183,8 @@ wp.customize.controlConstructor['cream-magazine-typography'] = wp.customize.Cont
 
             settingValue.source = fontSource;
             settingValue.font_family = fontFamily;
-            
-            if ( fontSource === 'google' ) {
+
+            if (fontSource === 'google') {
                 fontVariantsSelectEle.val('400');
                 settingValue.font_variants = '400';
 
@@ -272,19 +272,56 @@ wp.customize.controlConstructor['cream-magazine-typography'] = wp.customize.Cont
                 let thisEle = jQuery(this);
                 let settingValue = getSettingValue(control.id);
                 let targetDevice = thisEle.data('device');
-                switch (targetDevice) {
-                    case 'desktop':
-                        settingValue.font_sizes.desktop.unit = thisEle.val();
-                        break;
-                    case 'tablet':
-                        settingValue.font_sizes.tablet.unit = thisEle.val();
-                        break;
-                    case 'mobile':
-                        settingValue.font_sizes.mobile.unit = thisEle.val();
-                        break;
-                    default:
-                        settingValue.font_size.unit = thisEle.val();
+
+                let fontSizeInputEle = jQuery('#cream-magazine-' + targetDevice + '-font-size-' + control.id);
+
+                if (thisEle.val() === 'rem' || thisEle.val() === 'em') {
+                    let fontSizeInputEleVal = fontSizeInputEle.val();
+                    console.log(typeof fontSizeInputEleVal);
+
+                    if (typeof fontSizeInputEleVal === 'string' && fontSizeInputEleVal.includes('.')) {
+                        fontSizeInputEleVal = parseFloat(fontSizeInputEleVal).toFixed(1);
+                    } else {
+                        fontSizeInputEleVal = Number(fontSizeInputEleVal);
+                    }
+
+                    console.log(Number.isInteger(fontSizeInputEleVal));
+                    if (Number.isInteger(fontSizeInputEleVal)) {
+                        fontSizeInputEleVal = parseFloat(fontSizeInputEleVal / 16).toFixed(1);
+                    }
+                    console.log(fontSizeInputEleVal);
+                    fontSizeInputEle.attr('step', '0.1');
+                    fontSizeInputEle.val(fontSizeInputEleVal);
+                } else {
+
+                    let fontSizeInputEleVal = fontSizeInputEle.val();
+
+                    if (typeof fontSizeInputEleVal === 'string' && fontSizeInputEleVal.includes('.')) {
+                        fontSizeInputEleVal = parseFloat(fontSizeInputEleVal).toFixed(1);
+                    } else {
+                        fontSizeInputEleVal = Number(fontSizeInputEleVal);
+                    }
+
+                    fontSizeInputEleVal = parseInt(fontSizeInputEleVal * 16);
+
+                    fontSizeInputEle.attr('step', '1');
+                    fontSizeInputEle.val(fontSizeInputEleVal);
                 }
+
+                if (thisEle.val())
+                    switch (targetDevice) {
+                        case 'desktop':
+                            settingValue.font_sizes.desktop.unit = thisEle.val();
+                            break;
+                        case 'tablet':
+                            settingValue.font_sizes.tablet.unit = thisEle.val();
+                            break;
+                        case 'mobile':
+                            settingValue.font_sizes.mobile.unit = thisEle.val();
+                            break;
+                        default:
+                            settingValue.font_size.unit = thisEle.val();
+                    }
                 saveSetting(control.id, settingValue);
             });
 
@@ -338,6 +375,41 @@ wp.customize.controlConstructor['cream-magazine-typography'] = wp.customize.Cont
                 let thisEle = jQuery(this);
                 let settingValue = getSettingValue(control.id);
                 let targetDevice = thisEle.data('device');
+
+                let letterSpacingInputEle = jQuery('#cream-magazine-' + targetDevice + '-letter-spacing-' + control.id);
+
+                if (thisEle.val() === 'rem' || thisEle.val() === 'em') {
+
+                    let letterSpacingInputEleVal = letterSpacingInputEle.val();
+
+                    if (typeof letterSpacingInputEleVal === 'string' && letterSpacingInputEleVal.includes('.')) {
+                        letterSpacingInputEleVal = parseFloat(letterSpacingInputEleVal).toFixed(1);
+                    } else {
+                        letterSpacingInputEleVal = Number(letterSpacingInputEleVal);
+                    }
+
+                    if (Number.isInteger(letterSpacingInputEleVal)) {
+                        letterSpacingInputEleVal = parseFloat(letterSpacingInputEleVal / 16).toFixed(1);
+                    }
+
+                    letterSpacingInputEle.attr('step', '0.1');
+                    letterSpacingInputEle.val(letterSpacingInputEleVal);
+                } else {
+
+                    let letterSpacingInputEleVal = letterSpacingInputEle.val();
+
+                    if (typeof letterSpacingInputEleVal === 'string' && letterSpacingInputEleVal.includes('.')) {
+                        letterSpacingInputEleVal = parseFloat(letterSpacingInputEleVal).toFixed(1);
+                    } else {
+                        letterSpacingInputEleVal = Number(letterSpacingInputEleVal);
+                    }
+
+                    letterSpacingInputEleVal = parseInt(letterSpacingInputEleVal * 16);
+
+                    letterSpacingInputEle.attr('step', '1');
+                    letterSpacingInputEle.val(letterSpacingInputEleVal);
+                }
+
                 switch (targetDevice) {
                     case 'desktop':
                         settingValue.letter_spacings.desktop.unit = thisEle.val();
@@ -554,7 +626,7 @@ wp.customize.controlConstructor['cream-magazine-typography'] = wp.customize.Cont
 
                     if (italicVariantsCount === 0) {
 
-                        if ( normalVariantsArray[0] !== 400 ) {
+                        if (normalVariantsArray[0] !== 400) {
 
                             fontURL += modifiedFontFamily + ':wght@' + normalVariantsArray[0];
                         } else {
@@ -563,9 +635,9 @@ wp.customize.controlConstructor['cream-magazine-typography'] = wp.customize.Cont
                         }
                     } else if (italicVariantsCount === 1) {
 
-                        if ( italicVariantsArray[0] === 400 ) {
+                        if (italicVariantsArray[0] === 400) {
 
-                            if ( normalVariantsArray[0] !== 400 ) {
+                            if (normalVariantsArray[0] !== 400) {
 
                                 fontURL += modifiedFontFamily + ':ital,wght@0,' + normalVariantsArray[0] + ';1,400';
                             } else {
