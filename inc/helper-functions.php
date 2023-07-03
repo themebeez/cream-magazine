@@ -464,13 +464,19 @@ if ( ! function_exists( 'cream_magazine_get_post_taxonomy_select_choices' ) ) {
 		$select_choices = array();
 		$taxonomy_terms = get_terms( $taxonomy );
 
+		if ( 'slug' === $key ) {
+			$select_choices['none'] = esc_html__( 'Select Category', 'cream-magazine' );
+		} else {
+			$select_choices[0] = esc_html__( 'Select Category', 'cream-magazine' );
+		}
+
 		if ( $taxonomy_terms ) {
 
 			foreach ( $taxonomy_terms as $taxonomy_term ) {
 
 				if ( 'id' === $key ) {
 
-					$select_choices[ $taxonomy_term->id ] = $taxonomy_term->name;
+					$select_choices[ $taxonomy_term->term_id ] = $taxonomy_term->name;
 				} else {
 					$select_choices[ $taxonomy_term->slug ] = $taxonomy_term->name;
 				}

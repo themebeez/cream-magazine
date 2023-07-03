@@ -134,17 +134,7 @@ if ( ! function_exists( 'cream_magazine_get_category_dropdown_choices' ) ) {
 	 */
 	function cream_magazine_get_category_dropdown_choices( $key = 'slug' ) {
 
-		$category_choices = array();
-
-		if ( 'slug' === $key ) {
-			$category_choices['none'] = esc_html__( 'Select Category', 'cream-magazine' );
-		} else {
-			$category_choices[0] = esc_html__( 'Select Category', 'cream-magazine' );
-		}
-
-		$category_terms = cream_magazine_get_post_taxonomy_select_choices( 'category', $key );
-
-		return array_merge( $category_choices, $category_terms );
+		return cream_magazine_get_post_taxonomy_select_choices( 'category', $key );
 	}
 }
 
