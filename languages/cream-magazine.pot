@@ -2,16 +2,16 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Cream Magazine 2.1.5\n"
+"Project-Id-Version: Cream Magazine 2.1.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/cream-magazine\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-05-02T12:20:44+00:00\n"
+"POT-Creation-Date: 2023-07-03T07:42:29+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.7.1\n"
+"X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: cream-magazine\n"
 
 #. Theme Name of the theme
@@ -442,7 +442,7 @@ msgid "Save Option&rsquo;s Value As"
 msgstr ""
 
 #: inc/customizer/options/class-cream-magazine-global-customize.php:81
-msgid "This option lets you save value of category, page, post, etc. either as slug or id. Select ID if your site language is other than English."
+msgid "This option lets you save value of category, page, post, etc. either as slug or id. Select ID if your site language is other than English. Reresh the page once this option is changed."
 msgstr ""
 
 #: inc/customizer/options/class-cream-magazine-global-customize.php:101
@@ -700,6 +700,17 @@ msgstr ""
 msgid "Breaking News"
 msgstr ""
 
+#: inc/helper-functions.php:468
+#: inc/helper-functions.php:470
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:80
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:80
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:80
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:80
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:80
+#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:80
+msgid "Select Category"
+msgstr ""
+
 #: inc/metabox/class-cream-magazine-post-meta.php:79
 msgid "Right"
 msgstr ""
@@ -848,18 +859,7 @@ msgstr ""
 msgid "Woocommerce Sidebar"
 msgstr ""
 
-#: inc/widget/functions.php:140
-#: inc/widget/functions.php:142
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-eleven.php:80
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-nine.php:80
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-one.php:80
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-six.php:80
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-three.php:80
-#: inc/widget/news-widgets/class-cream-magazine-news-widget-two.php:80
-msgid "Select Category"
-msgstr ""
-
-#: inc/widget/functions.php:161
+#: inc/widget/functions.php:151
 msgid "Select Page"
 msgstr ""
 
