@@ -543,7 +543,7 @@ class Cream_Magazine {
 	 */
 	public function search_form( $form ) {
 
-		$form = '<form role="search" class="cm-search-form" method="get" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Type Here', 'cream-magazine' ) . '" value="' . get_search_query() . '" ><button type="submit" class="cm-submit-btn"><i class="feather icon-search"></i></button></form>';
+		$form = '<form role="search" class="cm-search-form" method="get" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Search...', 'cream-magazine' ) . '" value="' . get_search_query() . '" ><button type="submit" class="cm-submit-btn"><i class="feather icon-search"></i></button></form>';
 
 		return $form;
 	}
