@@ -15,22 +15,27 @@ msgstr ""
 "X-Domain: cream-magazine\n"
 
 #. Theme Name of the theme
+#: style.css
 msgid "Cream Magazine"
 msgstr ""
 
 #. Theme URI of the theme
+#: style.css
 msgid "https://themebeez.com/themes/cream-magazine/"
 msgstr ""
 
 #. Description of the theme
+#: style.css
 msgid "Cream Magazine is a news & magazine WordPress theme with a clean & modern design suitable for everyone who wish to share their stories, publish a breaking daily news or write on different topics. Everything in Cream Magazine is very easy to deal with, after assigning a front-page one can fully get started to build a website though WordPress Live Customizer.Cream magazine is build taking SEO, Speed & Responsive in mind. Build-in features like lazy load for images has been implemented to make cream mag load faster & extra library files have been bundled to minimize  HTTP requests. For more information go to https://themebeez.com/themes/cream-magazine/"
 msgstr ""
 
 #. Author of the theme
+#: style.css
 msgid "themebeez"
 msgstr ""
 
 #. Author URI of the theme
+#: style.css
 msgid "https://themebeez.com/"
 msgstr ""
 
