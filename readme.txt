@@ -3,8 +3,8 @@
 Contributors: themebeez
 Requires at least: 5.0.0
 Requires PHP: 5.6
-Tested up to: 6.2.2
-Stable tag: 2.1.6
+Tested up to: 6.4.3
+Stable tag: 2.1.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, news, right-sidebar, theme-options, footer-widgets, left-sidebar, grid-layout, rtl-language-support
@@ -17,7 +17,7 @@ Cream Magazine is a news & magazine WordPress theme with a clean & modern design
 
 == License ==
 
-Cream Magazine WordPress Theme, Copyright (C) 2023, themebeez.
+Cream Magazine WordPress Theme, Copyright (C) 2024, themebeez.
 Cream Magazine is distributed under the terms of the GNU GPL
 
 
@@ -103,6 +103,13 @@ Cream Magazine includes support for Contact Form 7 and Woocommerce.
 
 
 == Changelog ==
+
+= Version 2.1.7 - 5 March, 2024 =
+
+- Fixed: PHP error, `PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated`.
+- Tested: Upto PHP version 8.3.
+- Tested: Upto WordPress version 6.4.3.
+
 
 = Version 2.1.6 - 3 July, 2023 =
 
