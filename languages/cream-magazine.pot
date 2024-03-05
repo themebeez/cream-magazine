@@ -1,17 +1,17 @@
-# Copyright (C) 2023 themebeez
+# Copyright (C) 2024 themebeez
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Cream Magazine 2.1.6\n"
+"Project-Id-Version: Cream Magazine 2.1.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/cream-magazine\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-07-03T07:42:29+00:00\n"
+"POT-Creation-Date: 2024-03-05T06:06:40+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.8.1\n"
+"X-Generator: WP-CLI 2.9.0\n"
 "X-Domain: cream-magazine\n"
 
 #. Theme Name of the theme
@@ -108,7 +108,7 @@ msgid "XL"
 msgstr ""
 
 #: inc/class-cream-magazine.php:546
-msgid "Type Here"
+msgid "Search..."
 msgstr ""
 
 #: inc/customizer/class-cream-magazine-customize.php:100
