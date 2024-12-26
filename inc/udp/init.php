@@ -16,8 +16,8 @@ global $this_agent_ver, $engine_url, $root_dir, $udp_admin_notice_displayed;
 // Config
 // -------------------------------------------
 
-$engine_url     = 'https://udp.creamcode.org/';
-$this_agent_ver = '1.0.1';
+$engine_url     = 'https://udp.creamcode.org/v1/sync';
+$this_agent_ver = '1.0.3';
 
 // -------------------------------------------
 // Which agent to load ?
@@ -45,7 +45,7 @@ if ( ! isset( $all_installed_agents[ basename( $root_dir ) ] ) ) {
 // load this agent, only if it is the latest version and this agent is installed.
 if ( $this_agent_is_latest && isset( $all_installed_agents[ basename( $root_dir ) ] ) ) {
 	if ( ! class_exists( 'Udp_Agent' ) ) {
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . '/udp/class-udp-agent.php';
+		require_once plugin_dir_path( __DIR__ ) . '/udp/class-udp-agent.php';
 	}
 	new Udp_Agent( $this_agent_ver, $root_dir, $engine_url, $udp_admin_notice_displayed );
 	if ( ! isset( $udp_admin_notice_displayed ) || ! $udp_admin_notice_displayed ) {
@@ -96,17 +96,17 @@ if ( $this_agent_is_latest && isset( $all_installed_agents[ basename( $root_dir 
 
 				$content = '<p>' . sprintf(
 					/* translators: %s: agent name */
-					esc_html__( '%s is asking to allow tracking your non-sensitive WordPress data?', 'cream-magazine' ),
+					esc_html__( '%s is asking to allow tracking your non-sensitive WordPress data?', 'AGENT_TEXT_DOMAIN' ),
 					$agent_name
 				) . '</p>';
 
 				$content .= '<p>';
 
-				$content .= '<a href="' . esc_url( admin_url( '?udp-agent-allow-access=yes' ) ) . '" class="button button-primary udp-agent-access_tracking-yes" style="margin-right: 10px">' . esc_html__( 'Allow', 'cream-magazine' ) . '</a>';
+				$content .= '<a href="' . esc_url( admin_url( '?udp-agent-allow-access=yes' ) ) . '" class="button button-primary udp-agent-access_tracking-yes" style="margin-right: 10px">' . esc_html__( 'Allow', 'AGENT_TEXT_DOMAIN' ) . '</a>';
 
-				$content .= '<a href="' . esc_url( admin_url( '?udp-agent-allow-access=no' ) ) . '" class="button button-secondary udp-agent-access_tracking-yes" style="margin-right: 10px">' . esc_html__( 'Do not show again', 'cream-magazine' ) . '</a>';
+				$content .= '<a href="' . esc_url( admin_url( '?udp-agent-allow-access=no' ) ) . '" class="button button-secondary udp-agent-access_tracking-yes" style="margin-right: 10px">' . esc_html__( 'Do not show again', 'AGENT_TEXT_DOMAIN' ) . '</a>';
 
-				$content .= '<a href="' . esc_url( admin_url( '?udp-agent-allow-access=later' ) ) . '" class="button button-secondary udp-agent-access_tracking-yes" style="margin-right: 10px">' . esc_html__( 'Later', 'cream-magazine' ) . '</a>';
+				$content .= '<a href="' . esc_url( admin_url( '?udp-agent-allow-access=later' ) ) . '" class="button button-secondary udp-agent-access_tracking-yes" style="margin-right: 10px">' . esc_html__( 'Later', 'AGENT_TEXT_DOMAIN' ) . '</a>';
 
 				$content .= '</p>';
 
@@ -115,7 +115,7 @@ if ( $this_agent_is_latest && isset( $all_installed_agents[ basename( $root_dir 
 					function () use ( $content ) {
 						add_action(
 							'admin_notices',
-							function() use ( $content ) {
+							function () use ( $content ) {
 								$class = 'is-dismissible  notice notice-warning';
 								printf( '<div class="%1$s">%2$s</div>', esc_attr( $class ), wp_kses_post( $content ) );
 							}
@@ -140,10 +140,9 @@ if ( file_exists( $root_dir . DIRECTORY_SEPARATOR . basename( $root_dir ) . '.ph
 
 			// authorize this agent with engine.
 			if ( ! class_exists( 'Udp_Agent' ) ) {
-				require_once plugin_dir_path( dirname( __FILE__ ) ) . '/udp/class-udp-agent.php';
+				require_once plugin_dir_path( __DIR__ ) . '/udp/class-udp-agent.php';
 			}
 			$agent = new Udp_Agent( $this_agent_ver, $root_dir, $engine_url );
-			$agent->do_handshake();
 
 			// show admin notice if user selected "no" but new agent is installed.
 			$show_admin_notice = get_option( 'udp_agent_allow_tracking' );
@@ -169,7 +168,7 @@ if ( ! function_exists( 'cc_udp_agent_send_data_on_action' ) ) {
 
 		// authorize this agent with engine.
 		if ( ! class_exists( 'Udp_Agent' ) ) {
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . '/udp/class-udp-agent.php';
+			require_once plugin_dir_path( __DIR__ ) . '/udp/class-udp-agent.php';
 		}
 		$agent = new Udp_Agent( $this_agent_ver, $root_dir, $engine_url );
 		$agent->send_data_to_engine();
@@ -183,7 +182,7 @@ add_action( 'cc_udp_agent_send_data', 'cc_udp_agent_send_data_on_action' );
  */
 add_action(
 	'after_switch_theme',
-	function() use ( $root_dir ) {
+	function () use ( $root_dir ) {
 		global $this_agent_ver;
 
 		wp_schedule_single_event( time() + 10, 'cc_udp_agent_send_data', array( $root_dir ) );
@@ -212,7 +211,7 @@ add_action(
  */
 add_action(
 	'activate_plugin',
-	function() use ( $root_dir ) {
+	function () use ( $root_dir ) {
 		wp_schedule_single_event( time() + 10, 'cc_udp_agent_send_data', array( $root_dir ) );
 	}
 );
@@ -222,7 +221,7 @@ add_action(
  */
 add_action(
 	'deactivate_plugin',
-	function() use ( $root_dir ) {
+	function () use ( $root_dir ) {
 		wp_schedule_single_event( time() + 10, 'cc_udp_agent_send_data', array( $root_dir ) );
 	}
 );
