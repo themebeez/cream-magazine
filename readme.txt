@@ -104,12 +104,11 @@ Cream Magazine includes support for Contact Form 7 and Woocommerce.
 
 == Changelog ==
 
-= Version 2.1.8 - 25 December, 2024 =
+= Version 2.1.8 - 27 December, 2024 =
 - Added: Theme welcome notice.
 - Added: Udp agent.
 - Tested: Upto PHP version 8.3.11
 - Tested: Upto WordPress version 6.7
-
 
 
 = Version 2.1.7 - 5 March, 2024 =
