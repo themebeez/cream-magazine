@@ -3,8 +3,8 @@
 Contributors: themebeez
 Requires at least: 5.0.0
 Requires PHP: 5.6
-Tested up to: 6.7
-Stable tag: 2.1.8
+Tested up to: 6.8
+Stable tag: 2.1.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, news, right-sidebar, theme-options, footer-widgets, left-sidebar, grid-layout, rtl-language-support
@@ -103,6 +103,11 @@ Cream Magazine includes support for Contact Form 7 and Woocommerce.
 
 
 == Changelog ==
+
+= Version 2.1.9 - 25 March, 2025 =
+- Tested: Upto PHP version 8.3.11
+- Tested: Upto WordPress version 6.8
+
 
 = Version 2.1.8 - 27 December, 2024 =
 - Added: Theme welcome notice.

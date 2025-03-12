@@ -7,9 +7,9 @@
  * @package Cream_Magazine
  */
 
-$cream_magazine_theme = wp_get_theme( 'cream-magazine' );
-
-define( 'CREAM_MAGAZINE_VERSION', $cream_magazine_theme->get( 'Version' ) );
+if ( ! defined( 'CREAM_MAGAZINE_VERSION' ) ) {
+	define( 'CREAM_MAGAZINE_VERSION', '2.1.9' );
+}
 
 require get_template_directory() . '/inc/class-cream-magazine.php';
 
