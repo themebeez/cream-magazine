@@ -3,7 +3,7 @@
 Contributors: themebeez
 Requires at least: 5.0.0
 Requires PHP: 5.6
-Tested up to: 6.7
+Tested up to: 6.8
 Stable tag: 2.1.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -102,12 +102,13 @@ Cream Magazine includes support for Contact Form 7 and Woocommerce.
 
 == Changelog ==
 
-= Version 2.1.9 - ? March, 2025 =
+= Version 2.1.9 - 25 March, 2025 =
 
 - Removed: Fontawesome and Feather icon fonts.
 - Updated: Font icons with Fontawesome svg icons.
 - Updated: Theme CSS.
-- Tested: Up to PHP version .
+- Tested: Up to PHP 8.3.11
+- Tested: Upto WordPress version 6.8
 
 = Version 2.1.8 - 27 December, 2024 =
 - Added: Theme welcome notice.
