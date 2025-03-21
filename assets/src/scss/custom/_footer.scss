@@ -12,10 +12,17 @@
     background: $secondary_color;
     color: $white;
     border: none;
-    padding: 12px 15px;
+    padding: 0;
     border-radius: 2px;
     @include transation_delay(); 
     display: none;
+    height: 45px;
+    width: 45px;
+
+    svg {
+        color: $white;
+        fill: $white;
+    }
 }
 
 #toTop:hover {

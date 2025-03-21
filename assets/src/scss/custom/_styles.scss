@@ -174,15 +174,26 @@ body.boxed .page-wrapper .cm-container {
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel .owl-nav button.owl-next {
 
-    line-height: 40px;
-    width: 40px;
-    height: 40px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
     border-radius: 0;
     margin: 0 2px;
-    background:$secondary_color;
     text-align: center;
-    @include transation_delay();
     color: $white;
+    background:$secondary_color;
+    @include transation_delay();
+    border-radius: 2px;
+
+    svg {
+        color: $white;
+        fill: $white;
+        height: 14px;
+        width: 14px;
+    }
 }
 
 /* Owl Carousel issue at mobile scrolling */

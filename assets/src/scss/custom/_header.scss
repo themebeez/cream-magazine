@@ -128,9 +128,23 @@ header.general-header #sticky-wrapper nav.main-navigation {
     color:$white;
 }
 
+.primary-navigation.dark li.home-btn a svg {
+    color: $white;
+    fill: $white;
+    height: 16px;
+    width: 16px;
+}
+
 .primary-navigation li.primarynav_search_icon {
 
    float:right;
+}
+
+.primary-navigation li.primarynav_search_icon a svg {
+    color: $white;
+    fill: $white;
+    height: 16px;
+    width: 16px;
 }
 
 .header-search-container {
@@ -192,71 +206,72 @@ ul.social-icons li a {
     font-size: 0;
     height: 0;
     margin-right: 0;
-    line-height: 30px;
+    line-height: 1;
     width: 30px;
-    height: 30px;
     text-align: center;
 }
 
-ul.social-icons li a[href*=".com"]::before {
+ul.social-icons li a[href*=".com"] svg {
     
-    font-family: 'FontAwesome';
     color: $primary_color;
     @include transation_delay();
     font-size: 14px;
+    height: 14px;
+    width: 14px;
 }
 
-ul.social-icons li a[href*="fb.com"]::before,
-ul.social-icons li a[href*="messenger.com"]::before,
-ul.social-icons li a[href*="facebook.com"]::before {
+ul.social-icons li a[href*="fb.com"] svg,
+ul.social-icons li a[href*="messenger.com"] svg,
+ul.social-icons li a[href*="facebook.com"] svg {
 
-    content: "\f09a";
     color:$facebook;
+    fill: $facebook;
 }
 
-ul.social-icons li a[href*="twitter.com"]::before {
+ul.social-icons li a[href*="twitter.com"] svg,
+ul.social-icons li a[href*="x.com"] svg {
 
-    content: "\f099";
-    color:$twitter;
+    color: #000000;
+    fill: #000000;
 }
 
-ul.social-icons li a[href*="instagram.com"]::before {
+ul.social-icons li a[href*="instagram.com"] svg {
 
-    content: "\f16d";
     color:$instagram;
+    fill:$instagram; 
 }
 
-ul.social-icons li a[href*="youtube.com"]::before {
+ul.social-icons li a[href*="youtube.com"] svg {
 
-    content: "\f16a";
     color:$youtube;
+    fill:$youtube;
 }
 
-ul.social-icons li a[href*="vk.com"]::before {
+ul.social-icons li a[href*="vk.com"] svg {
 
-    content: "\f189";
     color:$vk;
+    fill:$vk;
 }
 
-ul.social-icons li a[href*="linkedin.com"]::before {
+ul.social-icons li a[href*="linkedin.com"] svg {
 
-    content: "\f0e1";
     color:$linkedin;
+    fill:$linkedin;
 }
 
-ul.social-icons li a[href*="vimeo.com"]::before {
+ul.social-icons li a[href*="vimeo.com"] svg {
 
-    content: "\f27d";
     color: $vimeo;
+    fill: $vimeo;
 }
 
-ul.social-icons li a[href*="pinterest.com"]::before {
+ul.social-icons li a[href*="pinterest.com"] svg {
 
-    content: "\f0d2";
     color: $pinterest;
+    fill: $pinterest;
 }
 
-ul.social-icons li a[href*=".com"]:hover::before {
+ul.social-icons li a[href*=".com"]:hover svg {
 
     color: $secondary_color;
 }

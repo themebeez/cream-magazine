@@ -106,18 +106,22 @@ footer .widget .cm_author_widget .author-detail-link a:hover {
 
 .social_widget_style_1 ul li a {
 
-    display: block;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
     overflow: auto;
-    color: $white;
+    color: $white !important;
     border: none;
-    padding: 10px 0px;
+    padding: 10px 15px;
     font-size: 14px;
 }
 
-.social_widget_style_1 ul li a i {
-	
-	width: 50px;
-	display: inline-block;
+.social_widget_style_1 ul li a svg {
+    color: $white;
+    fill: $white;
+    height: 14px;
+    width: 14px;
+    display: inline-block;
     text-align: center;
     border-right: 1px solid rgba(255,255,255,0.1);
 }
@@ -144,7 +148,7 @@ footer .widget .cm_author_widget .author-detail-link a:hover {
 
 .social_widget_style_1 ul li.tw a {
 
-    background: $twitter;
+    background: #000000;
 }
 
 .social_widget_style_1 ul li.insta a {
