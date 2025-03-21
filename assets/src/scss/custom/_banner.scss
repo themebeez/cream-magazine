@@ -41,6 +41,11 @@
    @include transation_delay();    
 }
 
+.cm_banner .post_meta li a .cm-meta-icon svg {
+    color: $auth_date_cmnt_color_bg;
+    fill: $auth_date_cmnt_color_bg; 
+}
+
 .cm_banner .lazy-thumb {
 
     padding-bottom:0;

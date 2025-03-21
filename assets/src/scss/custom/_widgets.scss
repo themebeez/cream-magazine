@@ -216,6 +216,13 @@
     z-index: 1;
 }
 
+.cm-search-form .cm-submit-btn svg {
+    color: $primary_color;
+    fill: $primary_color;
+    height: 16px;
+    width: 16px;
+}
+
 .cm-search-form .cm-submit-btn:hover {
     
     border:none;

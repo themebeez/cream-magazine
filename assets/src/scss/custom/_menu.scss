@@ -206,24 +206,23 @@ body.primary-navigation-noscroll-x {
 
 .primary-navigation li.has-sub>a:after {
 
-    content: '\f0d7';
-    font-family: 'FontAwesome';
-    margin-left: 5px;
+    content: '\203A';
+    display: inline-block;
+    margin-left: 10px;
+    transform: rotate(90deg);
 }
 
 .primary-navigation li li.has-sub>a:after {
 
-    content: '\f0da';
-    font-family: 'FontAwesome';
-    margin-left: 5px;
+    
+    content: '\203A';
+    transform: rotate(0deg);
 }
 
 .primary-navigation li.drop-left li.has-sub>a:after {
     
-    float: left;
-    content: '\f0d9';
-    font-family: 'FontAwesome';
-    margin-right: 10px;
+    content: '\203A';
+    transform: rotate(0deg);
 }
 
 .primary-navigation.hide-arrows li.has-sub>a:after,
@@ -269,8 +268,17 @@ body.primary-navigation-noscroll-x {
 }
 
 .primary-navigation.mobile>ul>li>a.dd-toggle {
+    align-items: center;
     padding: 0;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    svg {
+        color: #ffffff;
+        fill: #ffffff;
+        height: 14px;
+        width: 14px;
+    }
 }
 
 .primary-navigation li.call-btn-mobile,
@@ -298,6 +306,17 @@ body.primary-navigation-noscroll-x {
     color: #777;
     padding: 10px 15px;
     box-sizing: border-box;
+}
+
+.primary-navigation .menu-toggle {
+    line-height: 1;
+}
+
+.primary-navigation .menu-toggle svg {
+    color: #ffffff;
+    fill: #ffffff;
+    height: 24px;
+    width: 24px;
 }
 
 .primary-navigation .full {
