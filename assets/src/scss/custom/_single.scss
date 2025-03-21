@@ -155,26 +155,24 @@ body.single .content-entry article.post-detail .post_tags {
 .post-navigation .nav-links .nav-previous a,
 .post-navigation .nav-links .nav-next a {
     
-    display:block;
+    align-items: center;
+    display: flex;
+    column-gap: 10px;
     position:relative;
     font-size: 15px;
     padding: 10px 20px;
     color: #fff;
     background-color: $secondary_color;
-}
 
-.post-navigation .nav-links .nav-previous a::before {
-
-    content:"\f104";
-    font-family:'FontAwesome';
-    margin-right: 15px;
-}
-
-.post-navigation .nav-links .nav-next a::after {
-    
-    content:"\f105";
-    font-family:'FontAwesome';
-    margin-left: 15px;
+    .cm-post-nav-icon {
+        line-height: 1;
+        svg {
+            color: $white;
+            fill: $white;
+            height: 14px;
+            width: 14px;
+        }
+    }
 }
 
 
@@ -299,15 +297,6 @@ body.single .content-entry article.post-detail .post_tags {
     
     padding:0;
     font-weight:normal;
-}
-
-.comments-area .comment-metadata .comment-edit-link::before  {
-
-    content:'\e867';
-    font-family:'feather';
-    margin-right: 3px;
-    font-weight: normal;
-    font-size: 12px;
 }
 
 .comments-area .comment-content {

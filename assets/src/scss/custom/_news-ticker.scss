@@ -24,21 +24,29 @@
 }
 
 .news_ticker_wrap .ticker_head {
-    
-    display: block;
+    align-items: center;
+    column-gap: 5px;
+    display: flex;
     max-width: 200px;
     overflow: hidden;
     background-color: $secondary_color;
     color: $white;
     padding: 0 10px;
     text-align: center;
+
+    .ticker_icon {
+        line-height: 1;
+        svg {
+            color: $white;
+            fill: $white;
+        }
+    }
 }
 
 .news_ticker_wrap .ticker_head .ticker_title {
     
     display: inline-block;
-    font-size: 15px;
-    margin-left: 3px;
+    font-size: 14px;
 }
 
 .news_ticker_wrap .ticker_items {
@@ -88,14 +96,20 @@
     background-color: $white;
     color: $secondary_color;
     border: 1px solid $border_color;
-    border-radius: 0px;
+    border-radius: 2px;
+    
+
+    svg {
+        color: $secondary_color;
+        fill: $secondary_color;
+    }
 }
 
-.ticker_carousel.owl-carousel .owl-nav button i {
-
-    color: $secondary_color;
-    font-size: inherit;
-    line-height: inherit;
+.ticker_carousel.owl-carousel .owl-nav button:hover {
+    svg {
+        color: $primary_color;
+        fill: $primary_color;
+    }
 }
 
 @media( max-width: 575px ) {

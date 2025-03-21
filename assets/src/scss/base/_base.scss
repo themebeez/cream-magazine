@@ -118,12 +118,14 @@ a {
     color: $primary_color;
     text-decoration: none;
     @include transation_delay();
+    transition: 0.3s ease-out;
 }
 
 a:hover {
 
     color: $third_color;
     text-decoration: underline;
+    transition: 0.3s ease-in;
 }
 
 a:focus {

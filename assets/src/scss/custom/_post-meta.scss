@@ -69,7 +69,19 @@ ul.post_meta li a {
 
 ul.post_meta li a {
 	
-	display: inline-block;
+	align-items: center;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+ul.post_meta li.entry_cats {
+	align-items: center;
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+ul.post_meta li.entry_cats a {
+	margin-left: 5px;
 }
 
 ul.post_meta li a:hover {
@@ -78,37 +90,20 @@ ul.post_meta li a:hover {
 	@include transation_delay();
 }
 
-ul.post_meta li a::before {
-	
-	font-family: 'feather';
-	font-size: 14px;
+ul.post_meta li span.cm-meta-icon {
+	line-height: 1;
+}
+
+ul.post_meta li a span.cm-meta-icon {
 	margin-right: 5px;
-}
+}	
 
-ul.post_meta li.post_author a::before {
-	
-	content: '\e8e9';
-}
 
-ul.post_meta li.posted_date a::before {
-	
-	content: '\e83a';
-}
-
-ul.post_meta li.comments a::before {
-	
-	content: '\e891';
-}
-
-ul.post_meta li.entry_cats {
+ul.post_meta li span.cm-meta-icon svg {
 	color: $auth_date_cmnt_color;
-}
-
-ul.post_meta li.entry_cats::before {
-	font-family: 'feather';
-	font-size: 14px;
-	margin-right: 5px;
-	content: '\e90d';
+	fill: $auth_date_cmnt_color;
+	height: 14px;
+	width: 14px;
 }
 
 
@@ -129,8 +124,7 @@ ul.post_meta li.entry_cats::before {
 
 .post_tags a::before {
 
-    content:'\e8d2';
-    font-family: 'feather';
+    content:'\0023';
     margin-right: 5px;
 }
 
