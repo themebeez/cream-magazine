@@ -102,12 +102,13 @@ Cream Magazine includes support for Contact Form 7 and Woocommerce.
 
 == Changelog ==
 
-= Version 2.1.9 - ? March, 2025 =
+= Version 2.1.9 - 27 March, 2025 =
 
 - Removed: Fontawesome and Feather icon fonts.
 - Updated: Font icons with Fontawesome svg icons.
 - Updated: Theme CSS.
-- Tested: Up to PHP version .
+- Tested: Up to PHP version 8.4.
+
 
 = Version 2.1.8 - 27 December, 2024 =
 - Added: Theme welcome notice.
