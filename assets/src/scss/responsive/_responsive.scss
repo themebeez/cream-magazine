@@ -281,11 +281,6 @@
 		margin-bottom: 30px;
 	}
 
-	.cm-post-widget-two .small-card { 
-
-		margin-bottom: 30px;
-	}
-
 	.cm-post-widget-two .small-card .post-holder .post_title h2 {
 
 		font-size: $typo_medium;
@@ -566,6 +561,10 @@
 		margin-bottom: 30px;
 	}
 
+	.cm-post-widget-two .row.cm-row-small-posts {
+	    row-gap: 20px;
+	}
+
 	.cm-post-widget-two .big-card {
 
 		margin-bottom: 20px;
@@ -579,11 +578,6 @@
 	.cm-post-widget-two .big-card .post-holder .post_title h2 {
 
 		font-size: 20px;
-	}
-
-	.cm-post-widget-two .small-card {
-
-		margin-bottom: 15px;
 	}
 
 
