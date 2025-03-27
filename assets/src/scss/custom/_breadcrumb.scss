@@ -23,8 +23,7 @@ body.home .breadcrumb {
     margin: 0px;
 }
 
-.breadcrumb ul li a,
-.breadcrumb ul li span {
+.breadcrumb ul li a {
     
     position: relative;
     display: inline-block;
@@ -33,16 +32,14 @@ body.home .breadcrumb {
     color: $breadcrumb_link_color;
 }
 
-.breadcrumb ul li a:hover,
-.breadcrumb ul li a:hover span {
+.breadcrumb ul li a:hover {
 
     color: $secondary_color;
 }
             
 .breadcrumb ul li a:after {
 
-    content: '\f105';
-    font-family: 'fontAwesome';
+    content: '>';
     padding: 0 10px;
 }
 
@@ -59,7 +56,6 @@ body.home .breadcrumb {
 .breadcrumb ul li:first-child a:before {
 
     content:"\f015";
-    font-family:'fontAwesome';
     font-size:16px;
     padding:0;
     color:inherit;

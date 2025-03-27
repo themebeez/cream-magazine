@@ -17,6 +17,10 @@
 
 /* cm-post-widget-two || Full News Widget 1 */
 
+.cm-post-widget-two .row.cm-row-small-posts {
+  row-gap: 30px;
+}
+
 .cm-post-widget-two .lazy-thumb {
 
     padding-bottom: 56.25%;
@@ -58,6 +62,12 @@
 	
 	color: $auth_date_cmnt_color_bg;	
 }
+
+.cm-post-widget-two .big-card .post_meta li a .cm-meta-icon svg {
+    color: $auth_date_cmnt_color_bg;
+    fill: $auth_date_cmnt_color_bg;
+}
+
 
 .cm-post-widget-two .big-card .post_meta li a:hover {
 	
@@ -188,11 +198,15 @@
 .cm_middle_post_widget_six .middle_widget_six_carousel .owl-nav .owl-prev,
 .cm_middle_post_widget_six .middle_widget_six_carousel .owl-nav .owl-next {
 	
-	border-radius: 0px;
+	border-radius: 2px;
     margin: 0px;
     height: 35px;
     width: 35px;
     line-height: 35px;
+}
+
+.cm_middle_post_widget_six .middle_widget_six_carousel .owl-nav .owl-next {
+    margin-left: 5px;
 }
 
 .cm_middle_post_widget_six .lazy-thumb {
@@ -218,6 +232,12 @@
 .cm_middle_post_widget_six .cm-post-meta a {
 	
 	color: $auth_date_cmnt_color_bg;
+}
+
+.cm_middle_post_widget_six .cm-post-meta a .cm-meta-icon svg {
+    
+    color: $auth_date_cmnt_color_bg;
+    fill: $auth_date_cmnt_color_bg;
 }
 
 
